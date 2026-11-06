@@ -183,7 +183,7 @@
     },
     {
       "source": "10_review/20261106_deep_review/exploratory/README_RU.md",
-      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/README_RU.md",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/README.md",
       "sha256": "f6d062a5aa23c3229c5a3eb4f16e7c347aad145338e3f6129447d48c1b72b12a",
       "role": "historical_review"
     },
@@ -367,7 +367,7 @@
     },
     {
       "source": "10_review/20261106_v2_review/exploratory/README_RU.md",
-      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/README_RU.md",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/README.md",
       "sha256": "f3cfa759f9641af27327bb04ab8d5db14fa2424c58e59e16203dc4ae3b34c6b9",
       "role": "historical_review"
     },

@@ -67,7 +67,7 @@
       "bytes": 422,
       "sha256": "ba9179dce71426c1dd7069156e8fc1df6c81983fe90260e69bf46b2acbff0640"
     },
-    "02_xdf/README_RU.md": {
+    "02_xdf/README.md": {
       "bytes": 1841,
       "sha256": "2ea467ca2664e39664cfcbf26b0e006fe9ba4c4310aa185301cc67976678a2d8"
     },
@@ -92,8 +92,8 @@
       "sha256": "3cf3f5b64653462fa4c9037bfe316faf6432bac6e28edf3754b21d0a101f3e9f"
     },
     "03_docs/MEMORY_AND_PROTOCOL_RU.md": {
-      "bytes": 6661,
-      "sha256": "0435c3a96b945860646fd2b7a603a010e20dc0c1a2d095793317eee42e20b4b5"
+      "bytes": 6655,
+      "sha256": "b933f4b4b124d1f8ea77b9245a243a4d79abc756c684a65f6587fb8e2615cc11"
     },
     "03_docs/ORIENTATION_RU.md": {
       "bytes": 717,
@@ -155,13 +155,13 @@
       "bytes": 164,
       "sha256": "89d6ae8c3b73281b96e63327fc8b681670f447225cdadb25c467494eee747787"
     },
-    "04_reports/README_RU.md": {
+    "04_reports/README.md": {
       "bytes": 1524,
       "sha256": "42189e021d741df3145e2415937896ad9bfa3bc3492698728f8f483c14ac5e16"
     },
     "04_reports/REPORT_REFERENCES.json": {
-      "bytes": 77264,
-      "sha256": "77aa29b4185ca6cbc8c2d393e3b2ea7c6d54f81db54b3c3662b96b795ce5f8a8"
+      "bytes": 77219,
+      "sha256": "56b39e8942cbfc7b72508556851e81c0bb63ef12028a8c08c4f9775aad10e787"
     },
     "04_reports/REPORT_REFERENCES_RU.md": {
       "bytes": 10638,
@@ -183,7 +183,7 @@
       "bytes": 11427,
       "sha256": "f91d024ef8537eeb52edcf4817bcf197839c73766d2fb2f1c814ee27f05c91bf"
     },
-    "05_tools/README_RU.md": {
+    "05_tools/README.md": {
       "bytes": 1833,
       "sha256": "7cdfa6ee45ea076d017d04585f5c0a0f1a9f666c8047df8608e65fbf57b8525e"
     },
@@ -263,13 +263,13 @@
       "bytes": 186,
       "sha256": "3404455dcbad641e81bd0ced332afd03601d5eb2088075f85c5c7f134f789874"
     },
-    "07_evidence/README_RU.md": {
+    "07_evidence/README.md": {
       "bytes": 1459,
       "sha256": "a4b808193b7e72ad3b18fb1b12543a29f26af809f18478dcd86c929ddcdcc903"
     },
     "07_evidence/SOURCE_MAP.json": {
-      "bytes": 39933,
-      "sha256": "8241f997d3909d946ae08445b6a717100885a717db8c88c6b4558eef53a908fa"
+      "bytes": 39927,
+      "sha256": "dd6b50f2341e8622a3656a10940b8f030ed72022c9ccbad943617a2706b835e2"
     },
     "07_evidence/catalog/GENERATION_REPORT_before_packaging.json": {
       "bytes": 705,
@@ -403,7 +403,7 @@
       "bytes": 13405,
       "sha256": "9136d77235aac4c158cbd0eb7e1cbe0361d142e2665e3264f0003f9b03ab88f3"
     },
-    "07_evidence/protocol/README_RU.md": {
+    "07_evidence/protocol/README.md": {
       "bytes": 1348,
       "sha256": "0d18ce38844acca745af1d8b06f6d470298cb327657870da1c6b8e7ce7bcacc2"
     },
@@ -503,7 +503,7 @@
       "bytes": 7347,
       "sha256": "395b2fda70c3e7fde4141aedfbea9aa926c9ee9c2737a9fab505dabcf6122b41"
     },
-    "07_evidence/reviews/20261106_deep_review/exploratory/README_RU.md": {
+    "07_evidence/reviews/20261106_deep_review/exploratory/README.md": {
       "bytes": 898,
       "sha256": "f6d062a5aa23c3229c5a3eb4f16e7c347aad145338e3f6129447d48c1b72b12a"
     },
@@ -631,7 +631,7 @@
       "bytes": 5215,
       "sha256": "3507b2379bc18a1fdbd92d0250d2089004e76791b232729216e88fe5643f5c26"
     },
-    "07_evidence/reviews/20261106_v2_review/exploratory/README_RU.md": {
+    "07_evidence/reviews/20261106_v2_review/exploratory/README.md": {
       "bytes": 470,
       "sha256": "f3cfa759f9641af27327bb04ab8d5db14fa2424c58e59e16203dc4ae3b34c6b9"
     },
@@ -739,7 +739,7 @@
       "bytes": 6341,
       "sha256": "aa0685a9588f94fa1cef423e9a4aeb7495366f13ccef2d648fba62c95d07cc06"
     },
-    "08_tests/README_RU.md": {
+    "08_tests/README.md": {
       "bytes": 1211,
       "sha256": "33a25eb5e19123a7d4ef36dca28f4c1c4b70efd77cd01050aea84afbdc83bd3d"
     },
@@ -759,7 +759,7 @@
       "bytes": 23276,
       "sha256": "4baaf49ef67ac1e40d70c53dd04feb91dce9c32f1a7b4133d4d9c8fb55c6b512"
     },
-    "09_re_tools/README_RU.md": {
+    "09_re_tools/README.md": {
       "bytes": 3571,
       "sha256": "bf55cedf0fde3be0d73f37fc5bf9286467b253369e0814ebb9a139dec14b45d0"
     },
@@ -827,7 +827,7 @@
       "bytes": 3347,
       "sha256": "0f54ab5d760b5d9177493bbc584aaa308279f99eda25db3574aee2d7127514e5"
     },
-    "10_references/README_RU.md": {
+    "10_references/README.md": {
       "bytes": 1268,
       "sha256": "a9d3b1c0c2400260b0ed0ba9c8d3a80f1e85ded09ae961e9a3d7664fa144809b"
     },
