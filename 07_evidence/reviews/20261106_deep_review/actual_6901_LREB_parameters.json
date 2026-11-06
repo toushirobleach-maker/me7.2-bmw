@@ -1,0 +1,122 @@
+[
+  {
+    "name": "CLRZWTMS",
+    "file_offset": "0x1a723",
+    "cpu": "0x81a723",
+    "original_raw": 0,
+    "patched_raw": 0,
+    "unchanged": true,
+    "unit": "codeword",
+    "value": 0,
+    "code_reader": "0x8752a0",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "DTMR",
+    "file_offset": "0x1a724",
+    "cpu": "0x81a724",
+    "original_raw": 5,
+    "patched_raw": 5,
+    "unchanged": true,
+    "unit": "degC_delta",
+    "value": 3.75,
+    "code_reader": "0x875164",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "DTMTMRW",
+    "file_offset": "0x1a725",
+    "cpu": "0x81a725",
+    "original_raw": 8,
+    "patched_raw": 8,
+    "unchanged": true,
+    "unit": "degC_delta",
+    "value": 6.0,
+    "code_reader": "0x875292",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TARAU",
+    "file_offset": "0x1a749",
+    "cpu": "0x81a749",
+    "original_raw": 49,
+    "patched_raw": 49,
+    "unchanged": true,
+    "unit": "degC",
+    "value": -11.25,
+    "code_reader": "0x875102",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TASHS",
+    "file_offset": "0x1a74a",
+    "cpu": "0x81a74a",
+    "original_raw": 151,
+    "patched_raw": 151,
+    "unchanged": true,
+    "unit": "degC",
+    "value": 65.25,
+    "code_reader": "0x875120",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TLRHS",
+    "file_offset": "0x1a753",
+    "cpu": "0x81a753",
+    "original_raw": 20,
+    "patched_raw": 20,
+    "unchanged": true,
+    "unit": "seconds",
+    "value": 2.0,
+    "code_reader": "0x8750ea",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TMRA1",
+    "file_offset": "0x1a75c",
+    "cpu": "0x81a75c",
+    "original_raw": 89,
+    "patched_raw": 89,
+    "unchanged": true,
+    "unit": "degC",
+    "value": 18.75,
+    "code_reader": "0x87515c",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TMRA2",
+    "file_offset": "0x1a75d",
+    "cpu": "0x81a75d",
+    "original_raw": 89,
+    "patched_raw": 89,
+    "unchanged": true,
+    "unit": "degC",
+    "value": 18.75,
+    "code_reader": "0x875196",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TMRAK",
+    "file_offset": "0x1a75e",
+    "cpu": "0x81a75e",
+    "original_raw": 89,
+    "patched_raw": 89,
+    "unchanged": true,
+    "unit": "degC",
+    "value": 18.75,
+    "code_reader": "0x8751d0",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  },
+  {
+    "name": "TMSHS",
+    "file_offset": "0x1a75f",
+    "cpu": "0x81a75f",
+    "original_raw": 184,
+    "patched_raw": 184,
+    "unchanged": true,
+    "unit": "degC",
+    "value": 90.0,
+    "code_reader": "0x875112",
+    "evidence": "current 6901 code, matched to FR LREB dataflow; E650 conversion used for engineering units"
+  }
+]

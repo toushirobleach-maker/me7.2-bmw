@@ -1,0 +1,197 @@
+[
+  {
+    "name": "CLAKAT",
+    "file_offset": "0x11617",
+    "index": "0x3e",
+    "original_raw": "0x21",
+    "patched_raw": "0x21",
+    "dispatch_call_site": "0x8566f8",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLAKAT2",
+    "file_offset": "0x11618",
+    "index": "0x3f",
+    "original_raw": "0x21",
+    "patched_raw": "0x21",
+    "dispatch_call_site": "0x856706",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLAKOS",
+    "file_offset": "0x1161a",
+    "index": "0x41",
+    "original_raw": "0x24",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x85b424",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLALASH",
+    "file_offset": "0x11624",
+    "index": "0x4b",
+    "original_raw": "0x25",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x82c38e",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLALASH2",
+    "file_offset": "0x11625",
+    "index": "0x4c",
+    "original_raw": "0x25",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x82c39c",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLALSH",
+    "file_offset": "0x1162f",
+    "index": "0x56",
+    "original_raw": "0x25",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x857e02",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLALSH2",
+    "file_offset": "0x11630",
+    "index": "0x57",
+    "original_raw": "0x25",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x857e10",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLASLPE",
+    "file_offset": "0x1164c",
+    "index": "0x73",
+    "original_raw": "0x25",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x85b592",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLASLVE",
+    "file_offset": "0x11651",
+    "index": "0x78",
+    "original_raw": "0x25",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x85b618",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLAHSH",
+    "file_offset": "0x11613",
+    "index": "0x3a",
+    "original_raw": "0x25",
+    "patched_raw": "0x25",
+    "dispatch_call_site": "0x854d6c",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLAHSH2",
+    "file_offset": "0x11614",
+    "index": "0x3b",
+    "original_raw": "0x25",
+    "patched_raw": "0x25",
+    "dispatch_call_site": "0x854e46",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLAHSV",
+    "file_offset": "0x11615",
+    "index": "0x3c",
+    "original_raw": "0x0",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x854bb8",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  },
+  {
+    "name": "CLAHSV2",
+    "file_offset": "0x11616",
+    "index": "0x3d",
+    "original_raw": "0x0",
+    "patched_raw": "0x0",
+    "dispatch_call_site": "0x854c92",
+    "dispatcher": "0x8296E2",
+    "table_base": "0x8115D9",
+    "indexed_read_sites": [
+      "0x828FA2",
+      "0x82938A"
+    ],
+    "note": "E650 symbol order supports selected current code paths; not a global address translation for other blocks."
+  }
+]

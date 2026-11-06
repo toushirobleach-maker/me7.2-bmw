@@ -1,0 +1,220 @@
+{
+  "title": "KFZWOP / KFZW1 consumer search pass-2 — 6901I41D",
+  "date_utc": "2026-11-06",
+  "sw": "6901I41D / 7532675",
+  "prior_report": "02_definitions/6901I41D_proven/PROMOTION_KFZW_REPORT.json",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "decoder_calibration": [
+    {"raw": "9F17", "decoded": "BSET 0xFD2E.9"},
+    {"raw": "D7400602", "decoded": "EXTP #0x206,#1"},
+    {"raw": "C2F43016", "decoded": "MOVBZ R4,0x1630"}
+  ],
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "dpp": {"DPP0": "0x204", "DPP1": "0x205", "DPP2": "0x0E0", "source": "0x80BCE4"},
+  "policy": "PROVEN only with (1) consumer+raw+EXTP/DPP phys (2) independent semantic (3) falsifier checked and failed to fire. No promotion on plausibility or foreign A2L alone.",
+  "counts": {
+    "PROVEN_ADDR": 0,
+    "STILL_STRUCT": 2,
+    "promoted_to_proven": []
+  },
+  "pass2_strategies": {
+    "1_cal_word_xrefs_EXTP206": {
+      "claim": "Code reads descriptor words at CPU 0x817946 / 0x8179AC (file 0x17946 / 0x179AC) under EXTP#206 or DPP1 mem",
+      "page_math": {
+        "0x817946": {"page": "0x205", "mem_in_page": "0x3946", "DPP1_logical_mem16": "0x7946"},
+        "0x8179AC": {"page": "0x205", "mem_in_page": "0x39AC", "DPP1_logical_mem16": "0x79AC"},
+        "note": "EXTP#206 base is 0x818000 — these phys addrs are NOT on page 206"
+      },
+      "searched": [
+        "LE imm 0x7946 / 0x79AC / 0x3946 / 0x39AC / 0x1946 / 0x19AC as MOV #imm or mem16 opcode imm",
+        "All 1716 EXTP #0x206 windows: next mem16 ops vs watch set {7946,3946,79AC,39AC,1946,19AC,0220,0BC2,...}"
+      ],
+      "result": {
+        "LE_0x7946_entire_BIN": 0,
+        "LE_0x79AC_entire_BIN": 0,
+        "MOV_Rn_0x7946": 0,
+        "MOV_Rn_mem_0x7946": 0,
+        "MOV_Rn_mem_0x79AC": 0,
+        "EXTP206_mem_watch_hits": 0,
+        "EXTP_Rform_then_mem_0220_or_0BC2": 0
+      },
+      "near_miss_decoded": {
+        "cpu": "0x867F88",
+        "raw": "F2FC4479",
+        "text": "MOV R12,0x7944",
+        "loads_value": "0x2CBC (bytes at 0x817944), NOT 0x0220 at +2",
+        "follow": "MOV R13,0x79BE → value 0x2EBC; MOV R14,0xE45A; CALLS 0x00,0x791A",
+        "why_not": "Consumes neighbor scalar/map id 0x2CBC; no [R+#2] walk onto word 0x7946. Target CALLS 0x791A is internal-ROM/segment-0 style (body not in this 512 KiB flash listing at 0x80791A=FFFF)."
+      },
+      "status": "FAIL — no flash-visible xref to descriptor slots holding 0x0220/0x0BC2"
+    },
+    "2_interpolator_descriptor_tables": {
+      "claim": "CALLS sites pass R12=base loaded from [Rp+] table of map descriptors containing 0x0220/0x0BC2",
+      "method": "Census MOV R12,#imm; MOV R13,#page within 16 B then CALLS; also MOV Rn,#0x79xx bases for [R+] walks",
+      "result": {
+        "R12_R13_CALLS_pairs_total": 760,
+        "pairs_with_R13_eq_0x204": 0,
+        "pairs_with_R13_eq_0x205": 0,
+        "pairs_with_R13_eq_0x206": "many (thermostat-style; all bases on page 206)",
+        "MOV_Rn_imm_0x7940_to_0x79C0": 0,
+        "MOV_R12_hash_0220": 0,
+        "MOV_R12_hash_0BC2": 0,
+        "MOV_Rn_hash_7946_79AC_3946_39AC": 0
+      },
+      "status": "FAIL — no descriptor-table walk into KFZW bases; page-204 far-ptr idiom absent on this SW"
+    },
+    "3_axis_and_headers_near_maps": {
+      "claim": "Characteristic headers / nmot×rl axes immediately before 0x10220 / 0x10BC2 identify dims via local hdr",
+      "KFZWOP_pre_bytes_file_0x10200": "zeros then foreign-looking pad; z@0x10220 starts 13 13 13… — no local 10 10 / 16×16 hdr word",
+      "KFZW1_pre_bytes": "continues prior map cells; z@0x10BC2 starts 11 11… — no local 18 10 / 24×16 hdr",
+      "FR_axes": "KFZWOP nmot×rl; KFZW1 nmot×rl (ZWGRU) — semantic only",
+      "status": "FAIL for dims-from-6901-header; FR axes OK as evidence_2 family hint only"
+    },
+    "4_FR_ZWGRU_MDBAS": {
+      "FR_index": "07_analysis/fr_full_index",
+      "KFZWOP": {"pages": [50, 51, 959], "function": "MDBAS", "text": "KFZWOP NMOT W RL W KF optimum ignition angle"},
+      "KFZW1": {"pages": [208, 209, 959], "function": "ZWGRU", "text": "part-load map variant 1 in ZWGRU diagram with KFZW2/KFZWVL"},
+      "ASCII_in_BIN": {"KFZW": 0, "ZWGRU": 0, "MDBAS": 0, "ZWOPT": 0},
+      "status": "SEMANTIC_OK — does not supply flash address consumer"
+    },
+    "5_split_imm_and_DPP0_short": {
+      "claim": "0x0BC2 / 0x0220 appear as MOV imm (possibly misaligned search) or DPP0 mem16 without EXTP",
+      "MOV_Rn_hash_0220": 0,
+      "MOV_Rn_hash_0BC2": 0,
+      "raw_C2_0B_sites": [
+        {"file": "0x1348E", "note": "axis run …AA0B B60B C20B CE0B… — breakpoint value 0x0BC2, not map base load"},
+        {"file": "0x14D8A", "note": "data pattern with e0 00 separators"},
+        {"file": "0x14E56", "note": "same family"},
+        {"file": "0x179AC", "note": "cal word itself (KFZW1 offset pair)"}
+      ],
+      "DPP0_mem16_0220_instr_shaped": [
+        {"cpu": "0x858CBF", "raw": "029A2002", "text": "ADD 0x9A,0x0220", "why_not": "SFR/ALU false positive"},
+        {"cpu": "0x86F43F", "raw": "02C42002", "text": "ADD CC8IC,0x0220", "why_not": "SFR false positive"}
+      ],
+      "MOV_or_MOVBZ_Rn_mem_0220": 0,
+      "MOV_or_MOVBZ_Rn_mem_0BC2": 0,
+      "status": "FAIL"
+    },
+    "6_ASCII_and_ZWGRU_code_strings": {
+      "result": "no KFZW*/ZWGRU/MDBAS/zwopt ASCII in BIN; no disassembly anchor from strings",
+      "status": "FAIL"
+    }
+  },
+  "items": [
+    {
+      "id": "KFZWOP",
+      "name": "KFZWOP",
+      "addr_file": "0x10220",
+      "cpu": "0x810220",
+      "page_mem": {"page": "0x204", "mem": "0x0220"},
+      "sibling": {"name": "KFZWOP2", "addr_file": "0x10320", "cpu": "0x810320", "mem": "0x0320"},
+      "verdict": "STILL_STRUCT",
+      "claim_tested": "Flash code on 6901 loads table base 0x810220 into a map interpolator with recoverable dimensions",
+      "evidence_1_consumer": {
+        "status": "FAIL",
+        "pass1_plus_pass2": "No MOV #0x0220; no far-ptr page 0x204; no EXTP#204; no mem16 0x0220 map load; no LE 0x7946 xref to cal slot holding 0x0220; no [Rp+] descriptor walk proven",
+        "indirect_cal_slot": {
+          "cpu": "0x817946",
+          "file": "0x17946",
+          "words_le": ["0x0220", "0x0320"],
+          "xref": "NONE (LE 0x7946 count=0 in entire BIN)",
+          "status": "NOT_A_CONSUMER"
+        },
+        "result": "Address consumer not identified in 512 KiB flash"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL_FR_ONLY",
+        "fr_6901_family": {
+          "symbol": "KFZWOP",
+          "function": "MDBAS",
+          "pages": [50, 51],
+          "role": "optimum ignition angle map nmot×rl — proven as FR semantics, not address"
+        },
+        "foreign_sw": "E5A0 A2L MAP 0x810220 GkfWSb 16×16 zw_sb_q0p75 — перенесено из другого SW",
+        "live_bytes": "car-dump diffs on span (pass1) show live object; not name/consumer proof"
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifiers": [
+          "If DPP1 mem16 0x7946 referenced the cal word pair, LE 0x7946 would exist — count 0",
+          "If far-ptr style used page 0x204 for these maps, R13=#0x204 pairs would exist — count 0",
+          "If EXTP#206 read mem 0x3946/0x0220 for this object, window scan would hit — count 0"
+        ],
+        "result": "All three fired as negative. Residual: access only via internal ROM / runtime-built pointer not visible as imm in this dump — cannot claim unused."
+      },
+      "dimensions": {
+        "claimed": "16×16",
+        "status": "перенесено из другого SW",
+        "proven_by_6901_code": false
+      },
+      "scale_signed_0p75": {
+        "status": "перенесено из другого SW / FR SY angle hint only",
+        "proven_by_6901_code": false
+      },
+      "missing_piece": "Instruction (or proven ROM-helper contract) that places 0x810220 / mem 0x0220 into interpolator R12 (or equivalent) with page 0x204"
+    },
+    {
+      "id": "KFZW1",
+      "name": "KFZW1",
+      "addr_file": "0x10BC2",
+      "cpu": "0x810BC2",
+      "page_mem": {"page": "0x204", "mem": "0x0BC2"},
+      "sibling": {"name": "KFZW2", "addr_file": "0x10D42", "cpu": "0x810D42", "mem": "0x0D42"},
+      "verdict": "STILL_STRUCT",
+      "claim_tested": "Flash code on 6901 loads table base 0x810BC2 into a map interpolator with recoverable dimensions",
+      "evidence_1_consumer": {
+        "status": "FAIL",
+        "pass1_plus_pass2": "No MOV #0x0BC2; no packed C2 0B 04 02; no EXTP/DPP mem load of map base; LE 0x79AC count=0; raw C2 0B elsewhere are axis breakpoints or the cal word itself",
+        "indirect_cal_slot": {
+          "cpu": "0x8179AC",
+          "file": "0x179AC",
+          "words_le": ["0x0BC2", "0x0D42", "0x0EC2"],
+          "xref": "NONE (LE 0x79AC count=0)",
+          "status": "NOT_A_CONSUMER"
+        },
+        "axis_related_not_map": {
+          "cpu": "0x85276C",
+          "note": "R12=#0x19BD → SNM24ZUUB-class axis via CALLS 74DA; still no z-base 0x0BC2 (pass1, reconfirmed)"
+        },
+        "result": "Address consumer not identified in 512 KiB flash"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL_FR_ONLY",
+        "fr_6901_family": {
+          "symbol": "KFZW1",
+          "function": "ZWGRU",
+          "pages": [208, 209],
+          "role": "basic/part-load ignition map variant 1 nmot×rl — FR semantics OK"
+        },
+        "foreign_sw": "E5A0 A2L MAP 0x810BC2 16×24 GkfWSb zw_sb_q0p75 — перенесено",
+        "live_bytes": "car-dump full-span advance (pass1)"
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifiers": [
+          "MOV Rn,#0x0BC2 exhaustive — 0",
+          "LE 0x79AC descriptor address — 0",
+          "R13=#0x204 far-ptr — 0"
+        ],
+        "result": "Negatives hold. Same residual as KFZWOP (internal ROM / opaque indirection)."
+      },
+      "dimensions": {
+        "claimed": "16×24 (rl×nmot)",
+        "status": "перенесено из другого SW",
+        "proven_by_6901_code": false
+      },
+      "scale_signed_0p75": {
+        "status": "перенесено из другого SW / FR SY angle hint only",
+        "proven_by_6901_code": false
+      },
+      "missing_piece": "Same as KFZWOP for base 0x810BC2 / mem 0x0BC2"
+    }
+  ],
+  "extp_page_census_pass2": {
+    "EXTP_#0x204": 0,
+    "EXTP_#0x205": 0,
+    "EXTP_#0x206": 1716,
+    "EXTP_#0x207": 183
+  },
+  "overall_verdict": "Both maps remain STILL_STRUCT. Pass-2 closed the cal-word/DPP1/descriptor-table hypotheses with hard zero-counts (including LE 0x7946 and LE 0x79AC absent from the entire image). FR MDBAS/ZWGRU semantics confirmed; address consumer still not flash-proven. Do not promote to XDF PROVEN_ADDR."
+}

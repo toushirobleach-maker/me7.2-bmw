@@ -1,0 +1,57 @@
+{
+  "before_approx": {
+    "PROVEN": 12,
+    "STRUCT": 34,
+    "HYPOTHESIS": 10
+  },
+  "after": {
+    "PROVEN": 31,
+    "HYPOTHESIS": 3,
+    "STRUCT": 22
+  },
+  "promoted_to_PROVEN": [
+    "[PROVEN] CRC32 calibration stored LE",
+    "[PROVEN] MP descriptor start CPU LE",
+    "[PROVEN] CWKONLS",
+    "[PROVEN] CWKONABG",
+    "[PROVEN] SAP passport bit @0x1A5EC",
+    "[PROVEN] CWDKAT",
+    "[PROVEN] ESKONF[3] SLP bits",
+    "[PROVEN] ESKONF[5] SLV bits",
+    "[PROVEN] ESKONF[0..8]",
+    "[PROVEN] CLALSH class",
+    "[PROVEN] CLALSH2 class",
+    "[PROVEN] CLALASH class",
+    "[PROVEN] CLALASH2 class",
+    "[PROVEN] CLAHSH class",
+    "[PROVEN] CLAHSH2 class",
+    "[PROVEN] CLASLPE class",
+    "[PROVEN] CLASLVE class",
+    "[PROVEN] DTEVE/TEV class (DTC 0x62 idx 0x82)",
+    "[PROVEN] CLAHSV class (car cleared)",
+    "[PROVEN] CLAHSV2 class (car cleared)",
+    "[PROVEN] DFPM class window [0..0x7F]",
+    "[PROVEN] TARAU",
+    "[PROVEN] TASHS",
+    "[PROVEN] TMSHS",
+    "[PROVEN] TMRA1",
+    "[PROVEN] TMRA2",
+    "[PROVEN] TMRAK",
+    "[PROVEN] CLRZWTMS",
+    "[PROVEN] DTMR (delta)",
+    "[PROVEN] DTMTMRW (delta)",
+    "[PROVEN] DECAT / rear O2 registration suppress"
+  ],
+  "still_hyp": [
+    "[HYP] CWDAGR",
+    "[HYP] MSLBAS",
+    "[HYP] CWDAGR → 00"
+  ],
+  "notes": [
+    "CLA/PROKON/DTEVE/DECAT patch: PROVEN via PROMOTION_CLA_PROKON_REPORT.json",
+    "SAP OFF/COMBO remain STRUCT (MSLBAS still HYPOTHESIS)",
+    "MSLUB + speed words: HYP→STRUCT only",
+    "Thermo/fan/IMMO-name/KFZW/TLRHS scale: still STRUCT",
+    "CWDAGR + MSLBAS: still HYPOTHESIS"
+  ]
+}

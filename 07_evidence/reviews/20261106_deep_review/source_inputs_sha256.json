@@ -1,0 +1,67 @@
+[
+  {
+    "path": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+    "size": 524288,
+    "sha256": "PRIVATE_IMAGE_SHA256_REMOVED"
+  },
+  {
+    "path": "09_patched/ME72_7532675_LR_nosap_norear_20261105T212916Z.bin",
+    "size": 524288,
+    "sha256": "ad06db2cd348bf67ef6a5043565c68c756a33c19556839900165778fa9c77d3a"
+  },
+  {
+    "path": "09_patched/ME72_7532675_LR_nosap_norear_20261105T212916Z_REPORT.json",
+    "size": 8443,
+    "sha256": "0991c62cf2a50c4aaef6db7ed0d5896474f9b1521ec979cdb100aa44d41432cf"
+  },
+  {
+    "path": "09_patched/ME72_7532675_LR_nosap_norear_20261105T212916Z_RU.md",
+    "size": 6230,
+    "sha256": "db6433bfba1a2d507f7ccb2391e7c3073f3cdb624a769cb0e36771e6f56f5325"
+  },
+  {
+    "path": "01_documentation/BMW-XDFs/Me7.2/Funktionsramen_full/BMW Me7_2_English_Funktionsramen.pdf",
+    "size": 14372145,
+    "sha256": "485d0483dfc41d667711c90a526031afe798f27c29ec825b0e6df8fa56726535"
+  },
+  {
+    "path": "01_documentation/Infineon_C166_Instruction_Set_OpenGK_mirror.pdf",
+    "size": 1207784,
+    "sha256": "89997ccf7b94038e674405cbcb7fbc64c6a9df7dd0c7d42b4985b4a07f3f1ced"
+  },
+  {
+    "path": "02_definitions/BMW-XDFs/Me7.2/BMW ME7.2 X5 4.4 V8/E5A0_000.a2l",
+    "size": 4143827,
+    "sha256": "f002558a0e5a528e58ac191e2e057f052d3ff185e69cd1a192c50b9ce9aca413"
+  },
+  {
+    "path": "02_definitions/BMW-XDFs/Me7.2/BMW ME7.2 X5 4.4 V8/E650_000.a2l",
+    "size": 3616701,
+    "sha256": "0054ed56983418796bcca1fa2b1778f33d4ea75f7ff0a536aa327b19afe02a59"
+  },
+  {
+    "path": "02_definitions/sostisoft/6901.6902.ME72.xdf",
+    "size": 316874,
+    "sha256": "b92a78bb5066e42161e3cf3c131912c7d97605fc1b72e623c127ade1416a6d2e"
+  },
+  {
+    "path": "07_analysis/live_adapt_warm_idle_20261105.json",
+    "size": 14121,
+    "sha256": "6a50a79f498238da37969c015fe65c5ccf27d12687648396404b96fa0092c9d4"
+  },
+  {
+    "path": "07_analysis/live_lreb_bits_20261105.json",
+    "size": 4903,
+    "sha256": "2c5fe604428b5df592bc339cf90d605a28baf7812f71572f2e254465cd38aa01"
+  },
+  {
+    "path": "07_analysis/live_lreb_why_20261105.json",
+    "size": 4860,
+    "sha256": "f8712bb9f1b89283a253c8e2541d75838d5d7f771c18e24bd926a004dbd59e84"
+  },
+  {
+    "path": "07_analysis/live_dtc_A0_20261105.json",
+    "size": 5417,
+    "sha256": "fd070e2b0fdac542af75d1131400aade8cfe1f9d2d02a03504aef370397a93db"
+  }
+]

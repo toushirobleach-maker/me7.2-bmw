@@ -1,0 +1,133 @@
+{
+  "public_edition": true,
+  "policy": "One stock analysis BIN is included by owner choice. Vehicle images/logs, SP-Daten raw files, and complete reference documents are not distributed. No links to the full FR PDF/archive are provided.",
+  "assets": [
+    {
+      "id": "stock-reconstruction",
+      "aliases": [
+        "ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+        "stock_reconstructed_512KiB.bin"
+      ],
+      "local_path": "00_stock/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+      "note": "The single bundled analysis reconstruction. Known incomplete sparse coverage, 37/38 checks; not a directly writable full image.",
+      "distributed": true,
+      "known_sha256": "5ec2443311b6173e4f0bb770eb1f84c0a15a270d3bd6ac52648a77d450db5dd9"
+    },
+    {
+      "id": "sp-program",
+      "aliases": [
+        "7532675A.0PA",
+        "program.0PA"
+      ],
+      "local_path": "local/sp_daten/program.0PA",
+      "note": "User-owned BMW SP-Daten E53/EK726 program, selected for matching hardware/ZUSB.",
+      "distributed": false,
+      "known_sha256": "73599565b990018edb2733ce521f11d2f75a13d1ce8cd017f805ab8a144afb76"
+    },
+    {
+      "id": "sp-calibration",
+      "aliases": [
+        "G7533626.0DA",
+        "calibration.0DA"
+      ],
+      "local_path": "local/sp_daten/calibration.0DA",
+      "note": "User-owned matching calibration data file.",
+      "distributed": false,
+      "known_sha256": "bd0fc06cf0e835db61ab6d8027b9a702d5fa605866db0e3e31e1865df652dd5c"
+    },
+    {
+      "id": "sp-dat",
+      "aliases": [
+        "EK726.DAT"
+      ],
+      "local_path": "local/sp_daten/EK726.DAT",
+      "note": "User-owned programming logistics mapping; validate vehicle variant before programming.",
+      "distributed": false
+    },
+    {
+      "id": "full-fr",
+      "aliases": [
+        "BMW Me7_2_English_Funktionsramen.pdf",
+        "Me7_2_English_Funktionsramen.pdf",
+        "BMW_ME72_Funktionsrahmen_1043p.pdf"
+      ],
+      "local_path": "local/references/BMW_ME72_Funktionsrahmen_1043p.pdf",
+      "note": "Locally obtained full 1043-page FR; not the 20-page preview.",
+      "distributed": false,
+      "known_sha256": "485d0483dfc41d667711c90a526031afe798f27c29ec825b0e6df8fa56726535"
+    },
+    {
+      "id": "fr-preview",
+      "aliases": [
+        "bmw-me7-2-english-funktionsramen.pdf"
+      ],
+      "local_path": "local/references/FR_preview_20p.pdf",
+      "note": "Historical 20-page preview, not a substitute for full FR.",
+      "distributed": false
+    },
+    {
+      "id": "fr-text",
+      "aliases": [
+        "full_text.txt",
+        "pages.jsonl"
+      ],
+      "local_path": "local/references/fr_index/",
+      "note": "Derived locally from full FR; complete extracted text not distributed.",
+      "distributed": false
+    },
+    {
+      "id": "c166-manual",
+      "aliases": [
+        "Infineon_C166_Instruction_Set.pdf",
+        "Infineon_C166_Instruction_Set_OpenGK_mirror.pdf",
+        "Infineon_C166_Instruction_Set_OpenGK_mirror.txt",
+        "Infineon_C166_Instruction_Set.txt"
+      ],
+      "local_path": "local/references/Infineon_C166_Instruction_Set.pdf",
+      "note": "User-supplied manufacturer instruction-set manual.",
+      "distributed": false
+    },
+    {
+      "id": "bmw-training",
+      "aliases": [
+        "BMW_ME72_Training.pdf",
+        "BMW_ME72_Training.txt",
+        "BOSCH_ME72_Systems_Overview.pdf",
+        "BOSCH_ME72_Systems_Overview.txt"
+      ],
+      "local_path": "local/references/BMW_ME72_Training.pdf",
+      "note": "Manufacturer training/reference, supplied by the user.",
+      "distributed": false
+    },
+    {
+      "id": "e5a0-a2l",
+      "aliases": [
+        "E5A0_000.a2l"
+      ],
+      "local_path": "local/definitions/E5A0_000.a2l",
+      "note": "External different-build A2L for semantic comparison; not address proof for 6901I41D.",
+      "distributed": false
+    },
+    {
+      "id": "factory-programming",
+      "aliases": [
+        "10EK726.prg",
+        "10EK726.ipo",
+        "10EK726_full.asm",
+        "EK726Prog_ipo.asm"
+      ],
+      "local_path": "local/factory/",
+      "note": "Licensed user-provided BMW jobs/IPO and locally generated listings; needed only for independent fixture regeneration/review.",
+      "distributed": false
+    },
+    {
+      "id": "factory-diagnostics",
+      "aliases": [
+        "me72kwp1.prg"
+      ],
+      "local_path": "local/factory/me72kwp1.prg",
+      "note": "User-provided diagnostics jobs for independent SGBD interpretation.",
+      "distributed": false
+    }
+  ]
+}

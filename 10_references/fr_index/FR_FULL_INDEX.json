@@ -1,0 +1,5130 @@
+{
+  "meta": {
+    "source_pdf": "01_documentation/BMW-XDFs/Me7.2/Funktionsramen_full/BMW Me7_2_English_Funktionsramen.pdf",
+    "pdf_pages": 1043,
+    "empty_pages": 0,
+    "extract_seconds": 21.35,
+    "extractor": "pypdf 6.x",
+    "note": "pdf_page is 1-based pypdf index; printed FR page numbers may differ (Vivace headers)."
+  },
+  "project_match": {
+    "fr_header_project": "BMW 8-Zyl ME-7.2 M62LEV 3,5l und 4,4 l, variable Einl.-NW",
+    "our_target": "6901I41D / 7532675 / M62B44LEV",
+    "applicability": "HIGH — same ME7.2 M62LEV family FR (Vivace 2000). Still no absolute flash addresses; SW revision may differ from 6901I41D (2003 freigabe)."
+  },
+  "sections_count": 939,
+  "unique_sections": 280,
+  "sections": [
+    {
+      "section": "MS",
+      "version": "3.0",
+      "printed_page": 6,
+      "pdf_page": 6
+    },
+    {
+      "section": "ASCETBLK",
+      "version": "1.0",
+      "printed_page": 7,
+      "pdf_page": 7
+    },
+    {
+      "section": "ASCETSDB",
+      "version": "1.23",
+      "printed_page": 10,
+      "pdf_page": 10
+    },
+    {
+      "section": "SYABK",
+      "version": "8.2",
+      "printed_page": 28,
+      "pdf_page": 28
+    },
+    {
+      "section": "MSF",
+      "version": "9.10",
+      "printed_page": 30,
+      "pdf_page": 30
+    },
+    {
+      "section": "MDFAW",
+      "version": "3.150",
+      "printed_page": 31,
+      "pdf_page": 31
+    },
+    {
+      "section": "BBVL",
+      "version": "1.20",
+      "printed_page": 38,
+      "pdf_page": 38
+    },
+    {
+      "section": "MDMAX",
+      "version": "4.20",
+      "printed_page": 39,
+      "pdf_page": 39
+    },
+    {
+      "section": "MDKOG",
+      "version": "9.50",
+      "printed_page": 40,
+      "pdf_page": 40
+    },
+    {
+      "section": "BGMDLM",
+      "version": "1.70",
+      "printed_page": 44,
+      "pdf_page": 44
+    },
+    {
+      "section": "MDZUL",
+      "version": "4.10",
+      "printed_page": 45,
+      "pdf_page": 45
+    },
+    {
+      "section": "MDKOL",
+      "version": "3.10",
+      "printed_page": 48,
+      "pdf_page": 48
+    },
+    {
+      "section": "MDIST",
+      "version": "10.2",
+      "printed_page": 49,
+      "pdf_page": 49
+    },
+    {
+      "section": "MDBAS",
+      "version": "4.30",
+      "printed_page": 50,
+      "pdf_page": 50
+    },
+    {
+      "section": "MDMIN",
+      "version": "5.10",
+      "printed_page": 51,
+      "pdf_page": 51
+    },
+    {
+      "section": "MDVERB",
+      "version": "2.0",
+      "printed_page": 52,
+      "pdf_page": 52
+    },
+    {
+      "section": "MDVER",
+      "version": "1.30",
+      "printed_page": 53,
+      "pdf_page": 53
+    },
+    {
+      "section": "MDVERAD",
+      "version": "5.40",
+      "printed_page": 55,
+      "pdf_page": 55
+    },
+    {
+      "section": "MDNSTAB",
+      "version": "1.10",
+      "printed_page": 59,
+      "pdf_page": 59
+    },
+    {
+      "section": "STMD",
+      "version": "4.10",
+      "printed_page": 60,
+      "pdf_page": 60
+    },
+    {
+      "section": "MDWAN",
+      "version": "5.10",
+      "printed_page": 61,
+      "pdf_page": 61
+    },
+    {
+      "section": "ARMD",
+      "version": "2.60",
+      "printed_page": 63,
+      "pdf_page": 63
+    },
+    {
+      "section": "BBKURU",
+      "version": "1.10",
+      "printed_page": 67,
+      "pdf_page": 67
+    },
+    {
+      "section": "MDIHGS",
+      "version": "1.60",
+      "printed_page": 68,
+      "pdf_page": 68
+    },
+    {
+      "section": "BGMIGS",
+      "version": "1.10",
+      "printed_page": 69,
+      "pdf_page": 69
+    },
+    {
+      "section": "BBGANG",
+      "version": "16.20",
+      "printed_page": 70,
+      "pdf_page": 70
+    },
+    {
+      "section": "BBSAWE",
+      "version": "22.50",
+      "printed_page": 71,
+      "pdf_page": 71
+    },
+    {
+      "section": "MDRED",
+      "version": "11.10",
+      "printed_page": 73,
+      "pdf_page": 73
+    },
+    {
+      "section": "NMAXMD",
+      "version": "5.30",
+      "printed_page": 76,
+      "pdf_page": 76
+    },
+    {
+      "section": "VMAXMD",
+      "version": "3.30",
+      "printed_page": 78,
+      "pdf_page": 78
+    },
+    {
+      "section": "MSMD",
+      "version": "1.10",
+      "printed_page": 80,
+      "pdf_page": 80
+    },
+    {
+      "section": "LLRBB",
+      "version": "2.40",
+      "printed_page": 81,
+      "pdf_page": 81
+    },
+    {
+      "section": "LLRNS",
+      "version": "517.30",
+      "printed_page": 83,
+      "pdf_page": 83
+    },
+    {
+      "section": "LLRRM",
+      "version": "7.20",
+      "printed_page": 88,
+      "pdf_page": 88
+    },
+    {
+      "section": "LLRMR",
+      "version": "4.40",
+      "printed_page": 92,
+      "pdf_page": 92
+    },
+    {
+      "section": "DLLR",
+      "version": "36.10",
+      "printed_page": 94,
+      "pdf_page": 94
+    },
+    {
+      "section": "BGLBZ",
+      "version": "5.10",
+      "printed_page": 99,
+      "pdf_page": 99
+    },
+    {
+      "section": "LLRABG",
+      "version": "1.20",
+      "printed_page": 100,
+      "pdf_page": 100
+    },
+    {
+      "section": "EGFE",
+      "version": "2.0",
+      "printed_page": 104,
+      "pdf_page": 104
+    },
+    {
+      "section": "GGHFM",
+      "version": "53.50",
+      "printed_page": 105,
+      "pdf_page": 105
+    },
+    {
+      "section": "DHFM",
+      "version": "63.20",
+      "printed_page": 108,
+      "pdf_page": 108
+    },
+    {
+      "section": "BGMSZS",
+      "version": "10.60",
+      "printed_page": 111,
+      "pdf_page": 111
+    },
+    {
+      "section": "DEGFE",
+      "version": "2.10",
+      "printed_page": 116,
+      "pdf_page": 116
+    },
+    {
+      "section": "BGSRM",
+      "version": "9.10",
+      "printed_page": 118,
+      "pdf_page": 118
+    },
+    {
+      "section": "BGTEMPK",
+      "version": "3.40",
+      "printed_page": 123,
+      "pdf_page": 123
+    },
+    {
+      "section": "BGRLP",
+      "version": "3.20",
+      "printed_page": 125,
+      "pdf_page": 125
+    },
+    {
+      "section": "GGDSAS",
+      "version": "4.50",
+      "printed_page": 131,
+      "pdf_page": 131
+    },
+    {
+      "section": "BGTEV",
+      "version": "1.60",
+      "printed_page": 143,
+      "pdf_page": 143
+    },
+    {
+      "section": "MDFUE",
+      "version": "9.20",
+      "printed_page": 148,
+      "pdf_page": 148
+    },
+    {
+      "section": "FUEDK",
+      "version": "6.20",
+      "printed_page": 149,
+      "pdf_page": 149
+    },
+    {
+      "section": "BGWDKM",
+      "version": "1.0",
+      "printed_page": 153,
+      "pdf_page": 153
+    },
+    {
+      "section": "BGTABST",
+      "version": "3.60",
+      "printed_page": 154,
+      "pdf_page": 154
+    },
+    {
+      "section": "GK",
+      "version": "3.40",
+      "printed_page": 158,
+      "pdf_page": 158
+    },
+    {
+      "section": "ESVST",
+      "version": "5.10",
+      "printed_page": 160,
+      "pdf_page": 160
+    },
+    {
+      "section": "ESGRU",
+      "version": "32.10",
+      "printed_page": 161,
+      "pdf_page": 161
+    },
+    {
+      "section": "ESSTT",
+      "version": "16.30",
+      "printed_page": 162,
+      "pdf_page": 162
+    },
+    {
+      "section": "ESNST",
+      "version": "3.90",
+      "printed_page": 166,
+      "pdf_page": 166
+    },
+    {
+      "section": "ESWL",
+      "version": "7.50",
+      "printed_page": 171,
+      "pdf_page": 171
+    },
+    {
+      "section": "ESKS",
+      "version": "1.20",
+      "printed_page": 172,
+      "pdf_page": 172
+    },
+    {
+      "section": "ESWE",
+      "version": "1.10",
+      "printed_page": 174,
+      "pdf_page": 174
+    },
+    {
+      "section": "ESUK",
+      "version": "2.60",
+      "printed_page": 175,
+      "pdf_page": 175
+    },
+    {
+      "section": "EA",
+      "version": "139.10",
+      "printed_page": 184,
+      "pdf_page": 184
+    },
+    {
+      "section": "AES",
+      "version": "1.50",
+      "printed_page": 189,
+      "pdf_page": 189
+    },
+    {
+      "section": "RKTI",
+      "version": "1.60",
+      "printed_page": 192,
+      "pdf_page": 192
+    },
+    {
+      "section": "COSA",
+      "version": "6.20",
+      "printed_page": 193,
+      "pdf_page": 193
+    },
+    {
+      "section": "AEVAB",
+      "version": "2.10",
+      "printed_page": 196,
+      "pdf_page": 196
+    },
+    {
+      "section": "CIFINA",
+      "version": "1.30",
+      "printed_page": 203,
+      "pdf_page": 203
+    },
+    {
+      "section": "AEKP",
+      "version": "4.10",
+      "printed_page": 204,
+      "pdf_page": 204
+    },
+    {
+      "section": "ZUE",
+      "version": "258.100",
+      "printed_page": 206,
+      "pdf_page": 206
+    },
+    {
+      "section": "ZUESZ",
+      "version": "2.10",
+      "printed_page": 207,
+      "pdf_page": 207
+    },
+    {
+      "section": "ZWGRU",
+      "version": "18.20",
+      "printed_page": 208,
+      "pdf_page": 208
+    },
+    {
+      "section": "ZWWL",
+      "version": "4.10",
+      "printed_page": 210,
+      "pdf_page": 210
+    },
+    {
+      "section": "MDZW",
+      "version": "1.90",
+      "printed_page": 211,
+      "pdf_page": 211
+    },
+    {
+      "section": "ZWKS",
+      "version": "1.10",
+      "printed_page": 212,
+      "pdf_page": 212
+    },
+    {
+      "section": "ZWMIN",
+      "version": "1.50",
+      "printed_page": 213,
+      "pdf_page": 213
+    },
+    {
+      "section": "RUV",
+      "version": "42.0",
+      "printed_page": 214,
+      "pdf_page": 214
+    },
+    {
+      "section": "ZNDAUS",
+      "version": "8.10",
+      "printed_page": 215,
+      "pdf_page": 215
+    },
+    {
+      "section": "EGKE",
+      "version": "1.1",
+      "printed_page": 216,
+      "pdf_page": 216
+    },
+    {
+      "section": "GGKS",
+      "version": "7.10",
+      "printed_page": 218,
+      "pdf_page": 218
+    },
+    {
+      "section": "KRKE",
+      "version": "10.12",
+      "printed_page": 219,
+      "pdf_page": 219
+    },
+    {
+      "section": "KRRA",
+      "version": "16.80",
+      "printed_page": 227,
+      "pdf_page": 227
+    },
+    {
+      "section": "KRDY",
+      "version": "19.10",
+      "printed_page": 237,
+      "pdf_page": 237
+    },
+    {
+      "section": "DKRS",
+      "version": "28.10",
+      "printed_page": 242,
+      "pdf_page": 242
+    },
+    {
+      "section": "DKRNT",
+      "version": "11.10",
+      "printed_page": 247,
+      "pdf_page": 247
+    },
+    {
+      "section": "DKRTP",
+      "version": "11.10",
+      "printed_page": 252,
+      "pdf_page": 252
+    },
+    {
+      "section": "WNWEIN",
+      "version": "5.30",
+      "printed_page": 254,
+      "pdf_page": 254
+    },
+    {
+      "section": "WANWKW",
+      "version": "11.50",
+      "printed_page": 257,
+      "pdf_page": 257
+    },
+    {
+      "section": "WNWR",
+      "version": "4.40",
+      "printed_page": 261,
+      "pdf_page": 261
+    },
+    {
+      "section": "WNWTST",
+      "version": "1.10",
+      "printed_page": 267,
+      "pdf_page": 267
+    },
+    {
+      "section": "LAMKO",
+      "version": "3.140",
+      "printed_page": 268,
+      "pdf_page": 268
+    },
+    {
+      "section": "LAMFAW",
+      "version": "3.30",
+      "printed_page": 271,
+      "pdf_page": 271
+    },
+    {
+      "section": "LAKH",
+      "version": "3.20",
+      "printed_page": 272,
+      "pdf_page": 272
+    },
+    {
+      "section": "SLS",
+      "version": "91.20",
+      "printed_page": 275,
+      "pdf_page": 275
+    },
+    {
+      "section": "BBKHZ",
+      "version": "17.60",
+      "printed_page": 282,
+      "pdf_page": 282
+    },
+    {
+      "section": "BGMSABG",
+      "version": "2.10",
+      "printed_page": 286,
+      "pdf_page": 286
+    },
+    {
+      "section": "KHMD",
+      "version": "2.20",
+      "printed_page": 287,
+      "pdf_page": 287
+    },
+    {
+      "section": "DSLSLR",
+      "version": "2.30",
+      "printed_page": 289,
+      "pdf_page": 289
+    },
+    {
+      "section": "MDTRIP",
+      "version": "2.10",
+      "printed_page": 301,
+      "pdf_page": 301
+    },
+    {
+      "section": "ATM",
+      "version": "21.40",
+      "printed_page": 302,
+      "pdf_page": 302
+    },
+    {
+      "section": "DKAT",
+      "version": "59.30",
+      "printed_page": 310,
+      "pdf_page": 310
+    },
+    {
+      "section": "KATV",
+      "version": "1.20",
+      "printed_page": 324,
+      "pdf_page": 324
+    },
+    {
+      "section": "GKEB",
+      "version": "3.0",
+      "printed_page": 325,
+      "pdf_page": 325
+    },
+    {
+      "section": "GKRA",
+      "version": "3.0",
+      "printed_page": 327,
+      "pdf_page": 327
+    },
+    {
+      "section": "LREB",
+      "version": "123.60",
+      "printed_page": 328,
+      "pdf_page": 328
+    },
+    {
+      "section": "LR",
+      "version": "74.50",
+      "printed_page": 338,
+      "pdf_page": 338
+    },
+    {
+      "section": "LRINI",
+      "version": "1.0",
+      "printed_page": 352,
+      "pdf_page": 352
+    },
+    {
+      "section": "LRKA",
+      "version": "15.10",
+      "printed_page": 353,
+      "pdf_page": 353
+    },
+    {
+      "section": "LRHK",
+      "version": "33.10",
+      "printed_page": 365,
+      "pdf_page": 365
+    },
+    {
+      "section": "BBTEGA",
+      "version": "3.40",
+      "printed_page": 371,
+      "pdf_page": 371
+    },
+    {
+      "section": "TEBEB",
+      "version": "9.10",
+      "printed_page": 378,
+      "pdf_page": 378
+    },
+    {
+      "section": "TEB",
+      "version": "95.10",
+      "printed_page": 380,
+      "pdf_page": 380
+    },
+    {
+      "section": "ATEV",
+      "version": "2.0",
+      "printed_page": 402,
+      "pdf_page": 402
+    },
+    {
+      "section": "DTEVN",
+      "version": "22.100",
+      "printed_page": 403,
+      "pdf_page": 403
+    },
+    {
+      "section": "DLDP",
+      "version": "16.31",
+      "printed_page": 404,
+      "pdf_page": 404
+    },
+    {
+      "section": "BGPUK",
+      "version": "1.10",
+      "printed_page": 407,
+      "pdf_page": 407
+    },
+    {
+      "section": "DLDPE",
+      "version": "4.30",
+      "printed_page": 409,
+      "pdf_page": 409
+    },
+    {
+      "section": "GGDMTL",
+      "version": "3.10",
+      "printed_page": 410,
+      "pdf_page": 410
+    },
+    {
+      "section": "DDMTL",
+      "version": "1.112",
+      "printed_page": 411,
+      "pdf_page": 411
+    },
+    {
+      "section": "DHDMTE",
+      "version": "2.10",
+      "printed_page": 440,
+      "pdf_page": 440
+    },
+    {
+      "section": "HDMTL",
+      "version": "1.20",
+      "printed_page": 442,
+      "pdf_page": 442
+    },
+    {
+      "section": "GGFSTT",
+      "version": "1.40",
+      "printed_page": 443,
+      "pdf_page": 443
+    },
+    {
+      "section": "DFSTT",
+      "version": "1.40",
+      "printed_page": 449,
+      "pdf_page": 449
+    },
+    {
+      "section": "BGKV",
+      "version": "1.20",
+      "printed_page": 459,
+      "pdf_page": 459
+    },
+    {
+      "section": "LRAEB",
+      "version": "5.40",
+      "printed_page": 461,
+      "pdf_page": 461
+    },
+    {
+      "section": "LRA",
+      "version": "117.10",
+      "printed_page": 463,
+      "pdf_page": 463
+    },
+    {
+      "section": "BBBO",
+      "version": "2.10",
+      "printed_page": 475,
+      "pdf_page": 475
+    },
+    {
+      "section": "DKVS",
+      "version": "17.60",
+      "printed_page": 476,
+      "pdf_page": 476
+    },
+    {
+      "section": "FGRUE",
+      "version": "2.10",
+      "printed_page": 490,
+      "pdf_page": 490
+    },
+    {
+      "section": "BBFGR",
+      "version": "3.60",
+      "printed_page": 492,
+      "pdf_page": 492
+    },
+    {
+      "section": "FGRMD",
+      "version": "4.10",
+      "printed_page": 498,
+      "pdf_page": 498
+    },
+    {
+      "section": "FGRAUS",
+      "version": "1.0",
+      "printed_page": 511,
+      "pdf_page": 511
+    },
+    {
+      "section": "GGPED",
+      "version": "1.50",
+      "printed_page": 513,
+      "pdf_page": 513
+    },
+    {
+      "section": "GGPEDV",
+      "version": "1.10",
+      "printed_page": 523,
+      "pdf_page": 523
+    },
+    {
+      "section": "DVEUE",
+      "version": "1.0",
+      "printed_page": 524,
+      "pdf_page": 524
+    },
+    {
+      "section": "GGDVE",
+      "version": "1.51",
+      "printed_page": 525,
+      "pdf_page": 525
+    },
+    {
+      "section": "BGDVE",
+      "version": "2.50",
+      "printed_page": 534,
+      "pdf_page": 534
+    },
+    {
+      "section": "ADVE",
+      "version": "2.12",
+      "printed_page": 548,
+      "pdf_page": 548
+    },
+    {
+      "section": "GGEGAS",
+      "version": "8.20",
+      "printed_page": 560,
+      "pdf_page": 560
+    },
+    {
+      "section": "DKUPPL",
+      "version": "1.40",
+      "printed_page": 561,
+      "pdf_page": 561
+    },
+    {
+      "section": "GGDG",
+      "version": "1.5",
+      "printed_page": 562,
+      "pdf_page": 562
+    },
+    {
+      "section": "BGNMOT",
+      "version": "4.10",
+      "printed_page": 564,
+      "pdf_page": 564
+    },
+    {
+      "section": "BGNG",
+      "version": "7.10",
+      "printed_page": 565,
+      "pdf_page": 565
+    },
+    {
+      "section": "DDG",
+      "version": "11.10",
+      "printed_page": 568,
+      "pdf_page": 568
+    },
+    {
+      "section": "DPH",
+      "version": "20.20",
+      "printed_page": 571,
+      "pdf_page": 571
+    },
+    {
+      "section": "BBNMIN",
+      "version": "1.1",
+      "printed_page": 574,
+      "pdf_page": 574
+    },
+    {
+      "section": "BBSTT",
+      "version": "11.20",
+      "printed_page": 575,
+      "pdf_page": 575
+    },
+    {
+      "section": "MOTAUS",
+      "version": "12.10",
+      "printed_page": 576,
+      "pdf_page": 576
+    },
+    {
+      "section": "AMUENE",
+      "version": "1.20",
+      "printed_page": 578,
+      "pdf_page": 578
+    },
+    {
+      "section": "BBPEDBR",
+      "version": "1.20",
+      "printed_page": 579,
+      "pdf_page": 579
+    },
+    {
+      "section": "GGVFZG",
+      "version": "10.20",
+      "printed_page": 580,
+      "pdf_page": 580
+    },
+    {
+      "section": "DVFZ",
+      "version": "21.10",
+      "printed_page": 581,
+      "pdf_page": 581
+    },
+    {
+      "section": "HLS",
+      "version": "16.20",
+      "printed_page": 582,
+      "pdf_page": 582
+    },
+    {
+      "section": "GGLSV",
+      "version": "2.30",
+      "printed_page": 588,
+      "pdf_page": 588
+    },
+    {
+      "section": "GGLSH",
+      "version": "3.30",
+      "printed_page": 599,
+      "pdf_page": 599
+    },
+    {
+      "section": "DLSV",
+      "version": "36.10",
+      "printed_page": 609,
+      "pdf_page": 609
+    },
+    {
+      "section": "DLSVV",
+      "version": "3.30",
+      "printed_page": 625,
+      "pdf_page": 625
+    },
+    {
+      "section": "DLSH",
+      "version": "29.10",
+      "printed_page": 627,
+      "pdf_page": 627
+    },
+    {
+      "section": "DLSA",
+      "version": "51.10",
+      "printed_page": 634,
+      "pdf_page": 634
+    },
+    {
+      "section": "DLSAHK",
+      "version": "8.10",
+      "printed_page": 645,
+      "pdf_page": 645
+    },
+    {
+      "section": "DLSSA",
+      "version": "14.80",
+      "printed_page": 654,
+      "pdf_page": 654
+    },
+    {
+      "section": "DHLS",
+      "version": "31.10",
+      "printed_page": 666,
+      "pdf_page": 666
+    },
+    {
+      "section": "GGUB",
+      "version": "11.10",
+      "printed_page": 671,
+      "pdf_page": 671
+    },
+    {
+      "section": "DU5REF",
+      "version": "1.20",
+      "printed_page": 673,
+      "pdf_page": 673
+    },
+    {
+      "section": "GGTFM",
+      "version": "36.40",
+      "printed_page": 674,
+      "pdf_page": 674
+    },
+    {
+      "section": "GGTFA",
+      "version": "15.10",
+      "printed_page": 681,
+      "pdf_page": 681
+    },
+    {
+      "section": "GGTKA",
+      "version": "1.10",
+      "printed_page": 683,
+      "pdf_page": 683
+    },
+    {
+      "section": "GGTFUMG",
+      "version": "4.40",
+      "printed_page": 684,
+      "pdf_page": 684
+    },
+    {
+      "section": "GGTSG",
+      "version": "1.10",
+      "printed_page": 686,
+      "pdf_page": 686
+    },
+    {
+      "section": "UETM",
+      "version": "2.10",
+      "printed_page": 687,
+      "pdf_page": 687
+    },
+    {
+      "section": "ETR",
+      "version": "8.20",
+      "printed_page": 688,
+      "pdf_page": 688
+    },
+    {
+      "section": "DTHM",
+      "version": "4.70",
+      "printed_page": 689,
+      "pdf_page": 689
+    },
+    {
+      "section": "MLS",
+      "version": "49.50",
+      "printed_page": 695,
+      "pdf_page": 695
+    },
+    {
+      "section": "KOS",
+      "version": "107.10",
+      "printed_page": 698,
+      "pdf_page": 698
+    },
+    {
+      "section": "BGRBS",
+      "version": "2.30",
+      "printed_page": 703,
+      "pdf_page": 703
+    },
+    {
+      "section": "DSWEC",
+      "version": "5.10",
+      "printed_page": 704,
+      "pdf_page": 704
+    },
+    {
+      "section": "STA",
+      "version": "7.20",
+      "printed_page": 706,
+      "pdf_page": 706
+    },
+    {
+      "section": "DSTS",
+      "version": "1.20",
+      "printed_page": 708,
+      "pdf_page": 708
+    },
+    {
+      "section": "DSTA",
+      "version": "3.10",
+      "printed_page": 709,
+      "pdf_page": 709
+    },
+    {
+      "section": "ALE",
+      "version": "2.2",
+      "printed_page": 710,
+      "pdf_page": 710
+    },
+    {
+      "section": "KVA",
+      "version": "42.20",
+      "printed_page": 713,
+      "pdf_page": 713
+    },
+    {
+      "section": "VERST",
+      "version": "2.40",
+      "printed_page": 714,
+      "pdf_page": 714
+    },
+    {
+      "section": "STECK",
+      "version": "394.30",
+      "printed_page": 715,
+      "pdf_page": 715
+    },
+    {
+      "section": "CANUE",
+      "version": "1.40",
+      "printed_page": 717,
+      "pdf_page": 717
+    },
+    {
+      "section": "CANDME",
+      "version": "1.180",
+      "printed_page": 718,
+      "pdf_page": 718
+    },
+    {
+      "section": "CANEGS",
+      "version": "1.90",
+      "printed_page": 723,
+      "pdf_page": 723
+    },
+    {
+      "section": "DCGE",
+      "version": "13.20",
+      "printed_page": 726,
+      "pdf_page": 726
+    },
+    {
+      "section": "CANINS",
+      "version": "1.110",
+      "printed_page": 727,
+      "pdf_page": 727
+    },
+    {
+      "section": "DCINS",
+      "version": "5.20",
+      "printed_page": 728,
+      "pdf_page": 728
+    },
+    {
+      "section": "GGAIRB",
+      "version": "1.20",
+      "printed_page": 730,
+      "pdf_page": 730
+    },
+    {
+      "section": "CANLWS",
+      "version": "1.10",
+      "printed_page": 731,
+      "pdf_page": 731
+    },
+    {
+      "section": "CANASR",
+      "version": "1.80",
+      "printed_page": 732,
+      "pdf_page": 732
+    },
+    {
+      "section": "DCAS",
+      "version": "8.30",
+      "printed_page": 739,
+      "pdf_page": 739
+    },
+    {
+      "section": "DASC",
+      "version": "1.40",
+      "printed_page": 740,
+      "pdf_page": 740
+    },
+    {
+      "section": "CANTXU",
+      "version": "1.10",
+      "printed_page": 742,
+      "pdf_page": 742
+    },
+    {
+      "section": "DCTXU",
+      "version": "1.10",
+      "printed_page": 745,
+      "pdf_page": 745
+    },
+    {
+      "section": "BBLOR",
+      "version": "1.30",
+      "printed_page": 746,
+      "pdf_page": 746
+    },
+    {
+      "section": "DGLOR",
+      "version": "2.30",
+      "printed_page": 747,
+      "pdf_page": 747
+    },
+    {
+      "section": "CANACC",
+      "version": "1.100",
+      "printed_page": 752,
+      "pdf_page": 752
+    },
+    {
+      "section": "DCACC",
+      "version": "1.30",
+      "printed_page": 755,
+      "pdf_page": 755
+    },
+    {
+      "section": "DACC",
+      "version": "1.60",
+      "printed_page": 756,
+      "pdf_page": 756
+    },
+    {
+      "section": "BGMRACC",
+      "version": "1.10",
+      "printed_page": 758,
+      "pdf_page": 758
+    },
+    {
+      "section": "BBACC",
+      "version": "1.30",
+      "printed_page": 759,
+      "pdf_page": 759
+    },
+    {
+      "section": "DMDUE",
+      "version": "9.90",
+      "printed_page": 760,
+      "pdf_page": 760
+    },
+    {
+      "section": "DMDLU",
+      "version": "4.60",
+      "printed_page": 761,
+      "pdf_page": 761
+    },
+    {
+      "section": "DMDDLU",
+      "version": "7.40",
+      "printed_page": 766,
+      "pdf_page": 766
+    },
+    {
+      "section": "DMDLUA",
+      "version": "4.10",
+      "printed_page": 770,
+      "pdf_page": 770
+    },
+    {
+      "section": "DMDFON",
+      "version": "6.20",
+      "printed_page": 772,
+      "pdf_page": 772
+    },
+    {
+      "section": "DMDLAD",
+      "version": "3.10",
+      "printed_page": 799,
+      "pdf_page": 799
+    },
+    {
+      "section": "DMDMIL",
+      "version": "3.30",
+      "printed_page": 800,
+      "pdf_page": 800
+    },
+    {
+      "section": "DMDTSB",
+      "version": "1.20",
+      "printed_page": 810,
+      "pdf_page": 810
+    },
+    {
+      "section": "DEKON",
+      "version": "3.40",
+      "printed_page": 812,
+      "pdf_page": 812
+    },
+    {
+      "section": "DECJ",
+      "version": "16.11",
+      "printed_page": 813,
+      "pdf_page": 813
+    },
+    {
+      "section": "DKOSE",
+      "version": "6.20",
+      "printed_page": 816,
+      "pdf_page": 816
+    },
+    {
+      "section": "DMLSE",
+      "version": "7.20",
+      "printed_page": 818,
+      "pdf_page": 818
+    },
+    {
+      "section": "DNWSE",
+      "version": "6.20",
+      "printed_page": 819,
+      "pdf_page": 819
+    },
+    {
+      "section": "DSLVE",
+      "version": "13.20",
+      "printed_page": 821,
+      "pdf_page": 821
+    },
+    {
+      "section": "DSLPE",
+      "version": "9.20",
+      "printed_page": 823,
+      "pdf_page": 823
+    },
+    {
+      "section": "DEKPE",
+      "version": "11.11",
+      "printed_page": 824,
+      "pdf_page": 824
+    },
+    {
+      "section": "DTEVE",
+      "version": "9.30",
+      "printed_page": 826,
+      "pdf_page": 826
+    },
+    {
+      "section": "DDMPME",
+      "version": "1.30",
+      "printed_page": 828,
+      "pdf_page": 828
+    },
+    {
+      "section": "DDMMVE",
+      "version": "4.20",
+      "printed_page": 830,
+      "pdf_page": 830
+    },
+    {
+      "section": "DSTAE",
+      "version": "2.20",
+      "printed_page": 832,
+      "pdf_page": 832
+    },
+    {
+      "section": "DETS",
+      "version": "2.20",
+      "printed_page": 834,
+      "pdf_page": 834
+    },
+    {
+      "section": "DEVE",
+      "version": "6.30",
+      "printed_page": 835,
+      "pdf_page": 835
+    },
+    {
+      "section": "DMILE",
+      "version": "8.20",
+      "printed_page": 837,
+      "pdf_page": 837
+    },
+    {
+      "section": "DEPCL",
+      "version": "1.20",
+      "printed_page": 839,
+      "pdf_page": 839
+    },
+    {
+      "section": "DTOP",
+      "version": "3.10",
+      "printed_page": 840,
+      "pdf_page": 840
+    },
+    {
+      "section": "DFPM",
+      "version": "3.20",
+      "printed_page": 841,
+      "pdf_page": 841
+    },
+    {
+      "section": "DFCM",
+      "version": "1.10",
+      "printed_page": 847,
+      "pdf_page": 847
+    },
+    {
+      "section": "DFPMNL",
+      "version": "1.20",
+      "printed_page": 848,
+      "pdf_page": 848
+    },
+    {
+      "section": "DFFT",
+      "version": "1.40",
+      "printed_page": 849,
+      "pdf_page": 849
+    },
+    {
+      "section": "DFFTK",
+      "version": "2.70",
+      "printed_page": 851,
+      "pdf_page": 851
+    },
+    {
+      "section": "DFFTCNV",
+      "version": "1.51",
+      "printed_page": 852,
+      "pdf_page": 852
+    },
+    {
+      "section": "BGRML",
+      "version": "1.20",
+      "printed_page": 854,
+      "pdf_page": 854
+    },
+    {
+      "section": "DUMWEX",
+      "version": "3.10",
+      "printed_page": 855,
+      "pdf_page": 855
+    },
+    {
+      "section": "DWUC",
+      "version": "13.0",
+      "printed_page": 856,
+      "pdf_page": 856
+    },
+    {
+      "section": "DIMC",
+      "version": "28.30",
+      "printed_page": 857,
+      "pdf_page": 857
+    },
+    {
+      "section": "DMIL",
+      "version": "28.30",
+      "printed_page": 860,
+      "pdf_page": 860
+    },
+    {
+      "section": "BGKMST",
+      "version": "5.10",
+      "printed_page": 861,
+      "pdf_page": 861
+    },
+    {
+      "section": "OBDSV",
+      "version": "1.20",
+      "printed_page": 862,
+      "pdf_page": 862
+    },
+    {
+      "section": "SCATT",
+      "version": "20.30",
+      "printed_page": 863,
+      "pdf_page": 863
+    },
+    {
+      "section": "TC1MOD",
+      "version": "20.80",
+      "printed_page": 864,
+      "pdf_page": 864
+    },
+    {
+      "section": "TC2MOD",
+      "version": "21.20",
+      "printed_page": 868,
+      "pdf_page": 868
+    },
+    {
+      "section": "TC5MOD",
+      "version": "20.10",
+      "printed_page": 870,
+      "pdf_page": 870
+    },
+    {
+      "section": "TC6MOD",
+      "version": "21.50",
+      "printed_page": 871,
+      "pdf_page": 871
+    },
+    {
+      "section": "TC9MOD",
+      "version": "7.10",
+      "printed_page": 872,
+      "pdf_page": 872
+    },
+    {
+      "section": "TCSORT",
+      "version": "3.10",
+      "printed_page": 876,
+      "pdf_page": 876
+    },
+    {
+      "section": "PROKON",
+      "version": "8.110",
+      "printed_page": 878,
+      "pdf_page": 878
+    },
+    {
+      "section": "UFUE",
+      "version": "4.10",
+      "printed_page": 890,
+      "pdf_page": 890
+    },
+    {
+      "section": "UFEING",
+      "version": "10.10",
+      "printed_page": 891,
+      "pdf_page": 891
+    },
+    {
+      "section": "UFMZF",
+      "version": "1.10",
+      "printed_page": 893,
+      "pdf_page": 893
+    },
+    {
+      "section": "UFMZUL",
+      "version": "5.10",
+      "printed_page": 894,
+      "pdf_page": 894
+    },
+    {
+      "section": "UFNSC",
+      "version": "2.10",
+      "printed_page": 896,
+      "pdf_page": 896
+    },
+    {
+      "section": "UFMIST",
+      "version": "2.10",
+      "printed_page": 897,
+      "pdf_page": 897
+    },
+    {
+      "section": "UFREAC",
+      "version": "2.20",
+      "printed_page": 898,
+      "pdf_page": 898
+    },
+    {
+      "section": "UFFGRC",
+      "version": "2.50",
+      "printed_page": 900,
+      "pdf_page": 900
+    },
+    {
+      "section": "UFFGRE",
+      "version": "2.30",
+      "printed_page": 902,
+      "pdf_page": 902
+    },
+    {
+      "section": "UFMSRC",
+      "version": "6.30",
+      "printed_page": 903,
+      "pdf_page": 903
+    },
+    {
+      "section": "UFMVER",
+      "version": "2.10",
+      "printed_page": 905,
+      "pdf_page": 905
+    },
+    {
+      "section": "UFNC",
+      "version": "2.20",
+      "printed_page": 906,
+      "pdf_page": 906
+    },
+    {
+      "section": "UFRLC",
+      "version": "4.10",
+      "printed_page": 909,
+      "pdf_page": 909
+    },
+    {
+      "section": "UFZWC",
+      "version": "2.20",
+      "printed_page": 913,
+      "pdf_page": 913
+    },
+    {
+      "section": "UMAUSC",
+      "version": "1.11",
+      "printed_page": 915,
+      "pdf_page": 915
+    },
+    {
+      "section": "UMFPW",
+      "version": "2.10",
+      "printed_page": 916,
+      "pdf_page": 916
+    },
+    {
+      "section": "UMFSEL",
+      "version": "1.10",
+      "printed_page": 917,
+      "pdf_page": 917
+    },
+    {
+      "section": "UMKOM",
+      "version": "2.10",
+      "printed_page": 918,
+      "pdf_page": 918
+    },
+    {
+      "section": "UMTOUT",
+      "version": "2.10",
+      "printed_page": 921,
+      "pdf_page": 921
+    },
+    {
+      "section": "URADCC",
+      "version": "2.20",
+      "printed_page": 923,
+      "pdf_page": 923
+    },
+    {
+      "section": "URCPU",
+      "version": "2.10",
+      "printed_page": 924,
+      "pdf_page": 924
+    },
+    {
+      "section": "URMEM",
+      "version": "1.11",
+      "printed_page": 926,
+      "pdf_page": 926
+    },
+    {
+      "section": "URPAK",
+      "version": "1.10",
+      "printed_page": 928,
+      "pdf_page": 928
+    },
+    {
+      "section": "URRAM",
+      "version": "2.10",
+      "printed_page": 929,
+      "pdf_page": 929
+    },
+    {
+      "section": "URROM",
+      "version": "2.20",
+      "printed_page": 930,
+      "pdf_page": 930
+    },
+    {
+      "section": "SREAKT",
+      "version": "5.10",
+      "printed_page": 931,
+      "pdf_page": 931
+    },
+    {
+      "section": "DUF",
+      "version": "4.10",
+      "printed_page": 932,
+      "pdf_page": 932
+    },
+    {
+      "section": "DUR",
+      "version": "1.20",
+      "printed_page": 933,
+      "pdf_page": 933
+    },
+    {
+      "section": "T2DFA",
+      "version": "1.40",
+      "printed_page": 936,
+      "pdf_page": 936
+    },
+    {
+      "section": "EEPROM",
+      "version": "11.10",
+      "printed_page": 939,
+      "pdf_page": 939
+    },
+    {
+      "section": "T2DMTL",
+      "version": "1.40",
+      "printed_page": 941,
+      "pdf_page": 941
+    },
+    {
+      "section": "EEDAT",
+      "version": "2.20",
+      "printed_page": 943,
+      "pdf_page": 943
+    }
+  ],
+  "symbol_count": 7752,
+  "top_symbols": [
+    {
+      "symbol": "FDEF",
+      "pages": 300,
+      "hits": 300
+    },
+    {
+      "symbol": "NOTNOT",
+      "pages": 211,
+      "hits": 211
+    },
+    {
+      "symbol": "NMOT",
+      "pages": 157,
+      "hits": 157
+    },
+    {
+      "symbol": "PROKON",
+      "pages": 140,
+      "hits": 140
+    },
+    {
+      "symbol": "FFRS",
+      "pages": 140,
+      "hits": 140
+    },
+    {
+      "symbol": "BGNMOT",
+      "pages": 131,
+      "hits": 131
+    },
+    {
+      "symbol": "GGTFM",
+      "pages": 127,
+      "hits": 127
+    },
+    {
+      "symbol": "RRSS",
+      "pages": 123,
+      "hits": 123
+    },
+    {
+      "symbol": "DDMTL",
+      "pages": 98,
+      "hits": 98
+    },
+    {
+      "symbol": "CARB",
+      "pages": 90,
+      "hits": 90
+    },
+    {
+      "symbol": "EGFE",
+      "pages": 89,
+      "hits": 89
+    },
+    {
+      "symbol": "TMOT",
+      "pages": 89,
+      "hits": 89
+    },
+    {
+      "symbol": "TRUE",
+      "pages": 87,
+      "hits": 87
+    },
+    {
+      "symbol": "DSLSLR",
+      "pages": 85,
+      "hits": 85
+    },
+    {
+      "symbol": "DFPM",
+      "pages": 81,
+      "hits": 81
+    },
+    {
+      "symbol": "FALSEFALSE",
+      "pages": 81,
+      "hits": 81
+    },
+    {
+      "symbol": "LREB",
+      "pages": 79,
+      "hits": 79
+    },
+    {
+      "symbol": "BBSTT",
+      "pages": 77,
+      "hits": 77
+    },
+    {
+      "symbol": "BGDVE",
+      "pages": 77,
+      "hits": 77
+    },
+    {
+      "symbol": "DKVS",
+      "pages": 76,
+      "hits": 76
+    },
+    {
+      "symbol": "DLSV",
+      "pages": 75,
+      "hits": 75
+    },
+    {
+      "symbol": "DKAT",
+      "pages": 74,
+      "hits": 74
+    },
+    {
+      "symbol": "GGDVE",
+      "pages": 73,
+      "hits": 73
+    },
+    {
+      "symbol": "DLSAHK",
+      "pages": 72,
+      "hits": 72
+    },
+    {
+      "symbol": "GGDSAS",
+      "pages": 72,
+      "hits": 72
+    },
+    {
+      "symbol": "DLSH",
+      "pages": 71,
+      "hits": 71
+    },
+    {
+      "symbol": "DMDFON",
+      "pages": 70,
+      "hits": 70
+    },
+    {
+      "symbol": "MDFAW",
+      "pages": 70,
+      "hits": 70
+    },
+    {
+      "symbol": "FCMCLR",
+      "pages": 70,
+      "hits": 70
+    },
+    {
+      "symbol": "DLSA",
+      "pages": 68,
+      "hits": 68
+    },
+    {
+      "symbol": "LRHK",
+      "pages": 67,
+      "hits": 67
+    },
+    {
+      "symbol": "VIRAMRAM",
+      "pages": 67,
+      "hits": 67
+    },
+    {
+      "symbol": "DLDP",
+      "pages": 65,
+      "hits": 65
+    },
+    {
+      "symbol": "FALSE",
+      "pages": 63,
+      "hits": 63
+    },
+    {
+      "symbol": "GGUB",
+      "pages": 62,
+      "hits": 62
+    },
+    {
+      "symbol": "BBKHZ",
+      "pages": 61,
+      "hits": 61
+    },
+    {
+      "symbol": "GGTFA",
+      "pages": 61,
+      "hits": 61
+    },
+    {
+      "symbol": "BGMSZS",
+      "pages": 60,
+      "hits": 60
+    },
+    {
+      "symbol": "DMDMIL",
+      "pages": 60,
+      "hits": 60
+    },
+    {
+      "symbol": "ADVE",
+      "pages": 57,
+      "hits": 57
+    },
+    {
+      "symbol": "DHLS",
+      "pages": 57,
+      "hits": 57
+    },
+    {
+      "symbol": "STEND",
+      "pages": 57,
+      "hits": 57
+    },
+    {
+      "symbol": "MXMX",
+      "pages": 56,
+      "hits": 56
+    },
+    {
+      "symbol": "MNMN",
+      "pages": 56,
+      "hits": 56
+    },
+    {
+      "symbol": "GGPED",
+      "pages": 55,
+      "hits": 55
+    },
+    {
+      "symbol": "STERVK",
+      "pages": 54,
+      "hits": 54
+    },
+    {
+      "symbol": "GGKS",
+      "pages": 52,
+      "hits": 52
+    },
+    {
+      "symbol": "GGVFZG",
+      "pages": 51,
+      "hits": 51
+    },
+    {
+      "symbol": "ZYLZA",
+      "pages": 51,
+      "hits": 51
+    },
+    {
+      "symbol": "BLOKNR",
+      "pages": 51,
+      "hits": 51
+    },
+    {
+      "symbol": "MDKOG",
+      "pages": 50,
+      "hits": 50
+    },
+    {
+      "symbol": "FUEDK",
+      "pages": 50,
+      "hits": 50
+    },
+    {
+      "symbol": "TANS",
+      "pages": 50,
+      "hits": 50
+    },
+    {
+      "symbol": "LRKA",
+      "pages": 49,
+      "hits": 49
+    },
+    {
+      "symbol": "KRRA",
+      "pages": 49,
+      "hits": 49
+    },
+    {
+      "symbol": "AEVAB",
+      "pages": 48,
+      "hits": 48
+    },
+    {
+      "symbol": "LAMKO",
+      "pages": 48,
+      "hits": 48
+    },
+    {
+      "symbol": "MDRED",
+      "pages": 48,
+      "hits": 48
+    },
+    {
+      "symbol": "CANEGS",
+      "pages": 47,
+      "hits": 47
+    },
+    {
+      "symbol": "FGRMD",
+      "pages": 47,
+      "hits": 47
+    },
+    {
+      "symbol": "DTHM",
+      "pages": 47,
+      "hits": 47
+    },
+    {
+      "symbol": "GGLSV",
+      "pages": 47,
+      "hits": 47
+    },
+    {
+      "symbol": "BGSRM",
+      "pages": 46,
+      "hits": 46
+    },
+    {
+      "symbol": "CANINS",
+      "pages": 46,
+      "hits": 46
+    },
+    {
+      "symbol": "LLRNS",
+      "pages": 46,
+      "hits": 46
+    },
+    {
+      "symbol": "GGLSH",
+      "pages": 46,
+      "hits": 46
+    },
+    {
+      "symbol": "NMIN",
+      "pages": 46,
+      "hits": 46
+    },
+    {
+      "symbol": "VFZG",
+      "pages": 46,
+      "hits": 46
+    },
+    {
+      "symbol": "DHFM",
+      "pages": 45,
+      "hits": 45
+    },
+    {
+      "symbol": "BITBIT",
+      "pages": 45,
+      "hits": 45
+    },
+    {
+      "symbol": "BGTABST",
+      "pages": 44,
+      "hits": 44
+    },
+    {
+      "symbol": "DTEVN",
+      "pages": 44,
+      "hits": 44
+    },
+    {
+      "symbol": "BGRLP",
+      "pages": 43,
+      "hits": 43
+    },
+    {
+      "symbol": "ESUK",
+      "pages": 43,
+      "hits": 43
+    },
+    {
+      "symbol": "GGTFUMG",
+      "pages": 43,
+      "hits": 43
+    },
+    {
+      "symbol": "ARMD",
+      "pages": 42,
+      "hits": 42
+    },
+    {
+      "symbol": "DLLR",
+      "pages": 42,
+      "hits": 42
+    },
+    {
+      "symbol": "BGTEV",
+      "pages": 41,
+      "hits": 41
+    },
+    {
+      "symbol": "DFSTT",
+      "pages": 41,
+      "hits": 41
+    },
+    {
+      "symbol": "DMDSTP",
+      "pages": 41,
+      "hits": 41
+    }
+  ],
+  "family_symbol_pages": {
+    "BMSL": [
+      275,
+      276,
+      281
+    ],
+    "B_lr": [
+      371,
+      378,
+      609
+    ],
+    "B_lr2": [
+      371,
+      378,
+      609
+    ],
+    "B_lrssa": [
+      378
+    ],
+    "B_lrssa2": [
+      378
+    ],
+    "B_sls": [
+      378,
+      609
+    ],
+    "CDAGR": [
+      885,
+      886,
+      887,
+      946,
+      979
+    ],
+    "CDATR": [
+      886,
+      887,
+      946,
+      979
+    ],
+    "CDATS": [
+      886,
+      887,
+      946,
+      979
+    ],
+    "CDCACC": [
+      757,
+      946
+    ],
+    "CDCBM": [
+      569,
+      570
+    ],
+    "CDCCACC": [
+      755
+    ],
+    "CDCCAS": [
+      739,
+      946
+    ],
+    "CDCCGE": [
+      727,
+      755,
+      946
+    ],
+    "CDCCINS": [
+      729,
+      946
+    ],
+    "CDCCTXU": [
+      745,
+      946
+    ],
+    "CDCDHDMTE": [
+      441
+    ],
+    "CDCDMPME": [
+      828
+    ],
+    "CDCDSL": [
+      138
+    ],
+    "CDCDSU": [
+      138
+    ],
+    "CDCDSVLU": [
+      139
+    ],
+    "CDCDVEE": [
+      551,
+      554,
+      946
+    ],
+    "CDCDVEF": [
+      536,
+      538,
+      946
+    ],
+    "CDCDVEL": [
+      550,
+      554,
+      946
+    ],
+    "CDCDVEN": [
+      537,
+      538,
+      946
+    ],
+    "CDCDVER": [
+      551,
+      554,
+      946
+    ],
+    "CDCDVEU": [
+      538,
+      946
+    ],
+    "CDCDVEV": [
+      537,
+      538,
+      946
+    ],
+    "CDCETS": [
+      834,
+      946
+    ],
+    "CDCEV": [
+      836
+    ],
+    "CDCEV1": [
+      836,
+      946
+    ],
+    "CDCEV2": [
+      836,
+      946
+    ],
+    "CDCEV3": [
+      836,
+      946
+    ],
+    "CDCEV4": [
+      836,
+      946
+    ],
+    "CDCEV5": [
+      836,
+      946
+    ],
+    "CDCEV6": [
+      836,
+      946
+    ],
+    "CDCEV7": [
+      836,
+      946
+    ],
+    "CDCEV8": [
+      836,
+      946
+    ],
+    "CDCFRAO": [
+      481,
+      946
+    ],
+    "CDCFRAO2": [
+      481,
+      946
+    ],
+    "CDCFRAU": [
+      481,
+      946
+    ],
+    "CDCFRAU2": [
+      481,
+      946
+    ],
+    "CDCFRST": [
+      481,
+      946
+    ],
+    "CDCFRST2": [
+      481,
+      946
+    ],
+    "CDCHSH": [
+      666,
+      668,
+      946
+    ],
+    "CDCHSH2": [
+      668,
+      946
+    ],
+    "CDCHSV": [
+      668,
+      946
+    ],
+    "CDCHSV2": [
+      668,
+      946
+    ],
+    "CDCKOS": [
+      816,
+      946
+    ],
+    "CDCKPE": [
+      825,
+      946
+    ],
+    "CDCKRNT": [
+      249,
+      946
+    ],
+    "CDCKROF": [
+      249,
+      946
+    ],
+    "CDCKRTP": [
+      252,
+      946
+    ],
+    "CDCKUPPL": [
+      561
+    ],
+    "CDCLASH": [
+      650,
+      946
+    ],
+    "CDCLASH2": [
+      650,
+      946
+    ],
+    "CDCLATP": [
+      640,
+      946
+    ],
+    "CDCLATP2": [
+      640,
+      946
+    ],
+    "CDCLATV": [
+      640,
+      946
+    ],
+    "CDCLATV2": [
+      640,
+      946
+    ],
+    "CDCLDPE": [
+      409,
+      946
+    ],
+    "CDCLM": [
+      108
+    ],
+    "CDCLSH": [
+      630,
+      946
+    ],
+    "CDCLSH2": [
+      630,
+      946
+    ],
+    "CDCLSVV": [
+      626
+    ],
+    "CDCMD": [
+      802,
+      877,
+      946
+    ],
+    "CDCMD01": [
+      802,
+      877,
+      946
+    ],
+    "CDCMD02": [
+      802,
+      946
+    ],
+    "CDCMD03": [
+      802,
+      946
+    ],
+    "CDCMD04": [
+      802,
+      946
+    ],
+    "CDCMD05": [
+      802,
+      946
+    ],
+    "CDCMD06": [
+      802,
+      946
+    ],
+    "CDCMD07": [
+      802,
+      946
+    ],
+    "CDCMD08": [
+      802,
+      946
+    ],
+    "CDCMILE": [
+      838,
+      946
+    ],
+    "CDCMLE": [
+      818,
+      946
+    ],
+    "CDCMVE": [
+      831
+    ],
+    "CDCN": [
+      569,
+      570
+    ],
+    "CDCNWSE": [
+      819,
+      820,
+      946
+    ],
+    "CDCPH": [
+      572,
+      946
+    ],
+    "CDCPH2": [
+      572,
+      946
+    ],
+    "CDCRKAT": [
+      481,
+      946
+    ],
+    "CDCRKAT2": [
+      481,
+      946
+    ],
+    "CDCRKAZ": [
+      481,
+      946
+    ],
+    "CDCRKAZ2": [
+      481,
+      946
+    ],
+    "CDCSIZE": [
+      881,
+      888,
+      1030
+    ],
+    "CDCSLPE": [
+      823,
+      946
+    ],
+    "CDCSLS": [
+      298,
+      946
+    ],
+    "CDCSLS2": [
+      298,
+      946
+    ],
+    "CDCSLV": [
+      298,
+      946
+    ],
+    "CDCSLV2": [
+      298,
+      946
+    ],
+    "CDCSLVE": [
+      821,
+      946
+    ],
+    "CDCSTA": [
+      709,
+      710,
+      946
+    ],
+    "CDCSTAE": [
+      832,
+      946
+    ],
+    "CDCSTS": [
+      708,
+      946
+    ],
+    "CDCTA": [
+      681,
+      946
+    ],
+    "CDCTEVE": [
+      827,
+      946
+    ],
+    "CDCTHM": [
+      693
+    ],
+    "CDCTKA": [
+      683,
+      946
+    ],
+    "CDCTM": [
+      677,
+      946
+    ],
+    "CDCTUM": [
+      685,
+      946
+    ],
+    "CDCU5REF": [
+      673,
+      946
+    ],
+    "CDCUB": [
+      672,
+      946
+    ],
+    "CDCUFMV": [
+      932,
+      947
+    ],
+    "CDCUFSKA": [
+      932,
+      947
+    ],
+    "CDCURRAM": [
+      934,
+      947
+    ],
+    "CDCURROM": [
+      934,
+      947
+    ],
+    "CDCURRST": [
+      934,
+      947
+    ],
+    "CDCXYZ": [
+      935
+    ],
+    "CDDMTL": [
+      410,
+      433,
+      437,
+      442,
+      829,
+      830,
+      886,
+      887,
+      947,
+      979
+    ],
+    "CDDST": [
+      885,
+      886,
+      887,
+      947,
+      979
+    ],
+    "CDEFST": [
+      458,
+      886,
+      947
+    ],
+    "CDFO": [
+      772,
+      773,
+      785,
+      786,
+      947
+    ],
+    "CDFON": [
+      797
+    ],
+    "CDFST": [
+      455,
+      887,
+      979
+    ],
+    "CDHSH": [
+      669,
+      885,
+      886,
+      887,
+      947,
+      979
+    ],
+    "CDHSV": [
+      324,
+      669,
+      858,
+      885,
+      886,
+      887,
+      947,
+      979
+    ],
+    "CDKACC": [
+      757,
+      947
+    ],
+    "CDKAT": [
+      315,
+      316,
+      320,
+      886,
+      887,
+      947,
+      979
+    ],
+    "CDKATLK": [
+      314,
+      316,
+      323,
+      947
+    ],
+    "CDKCAS": [
+      739
+    ],
+    "CDKDVEE": [
+      554,
+      947
+    ],
+    "CDKDVEF": [
+      538,
+      947
+    ],
+    "CDKDVEL": [
+      554,
+      947
+    ],
+    "CDKDVEN": [
+      538,
+      947
+    ],
+    "CDKDVER": [
+      554,
+      947
+    ],
+    "CDKDVEU": [
+      538,
+      947
+    ],
+    "CDKDVEV": [
+      538,
+      947
+    ],
+    "CDKLSV2": [
+      620,
+      947
+    ],
+    "CDKRTP": [
+      218,
+      947
+    ],
+    "CDKS": [
+      246,
+      247
+    ],
+    "CDKS1": [
+      242,
+      244,
+      247,
+      947
+    ],
+    "CDKS2": [
+      242,
+      244,
+      247,
+      947
+    ],
+    "CDKS3": [
+      242,
+      244,
+      247,
+      947
+    ],
+    "CDKS4": [
+      242,
+      244,
+      247,
+      947
+    ],
+    "CDKSIZE": [
+      881,
+      888,
+      1030
+    ],
+    "CDKSTS": [
+      708,
+      947
+    ],
+    "CDKTUM": [
+      685,
+      947
+    ],
+    "CDKUFMV": [
+      932,
+      947
+    ],
+    "CDKUFSKA": [
+      932,
+      947
+    ],
+    "CDKURRAM": [
+      934,
+      947
+    ],
+    "CDKURROM": [
+      934,
+      947
+    ],
+    "CDKURRST": [
+      934,
+      947
+    ],
+    "CDKVS": [
+      482,
+      485,
+      887,
+      947,
+      980
+    ],
+    "CDLASH": [
+      649,
+      650,
+      887,
+      947,
+      980
+    ],
+    "CDLATP": [
+      640,
+      641,
+      887,
+      947,
+      980
+    ],
+    "CDLATV": [
+      640,
+      641,
+      887,
+      947,
+      980
+    ],
+    "CDLDP": [
+      858,
+      887,
+      980
+    ],
+    "CDLFRAO": [
+      481,
+      947
+    ],
+    "CDLFRAO2": [
+      481,
+      947
+    ],
+    "CDLFRAU": [
+      482,
+      947
+    ],
+    "CDLFRAU2": [
+      482,
+      947
+    ],
+    "CDLFRST": [
+      482,
+      947
+    ],
+    "CDLFRST2": [
+      482,
+      947
+    ],
+    "CDLLR": [
+      97,
+      886,
+      887,
+      947,
+      980
+    ],
+    "CDLRKAT": [
+      482,
+      947
+    ],
+    "CDLRKAT2": [
+      482,
+      947
+    ],
+    "CDLRKAZ": [
+      482,
+      947
+    ],
+    "CDLRKAZ2": [
+      482,
+      947
+    ],
+    "CDLSA": [
+      886,
+      887,
+      947,
+      980
+    ],
+    "CDLSH": [
+      620,
+      623,
+      631,
+      885,
+      887,
+      947,
+      980
+    ],
+    "CDLSV": [
+      619,
+      620,
+      858,
+      885,
+      887,
+      947,
+      980
+    ],
+    "CDLSVV": [
+      625
+    ],
+    "CDMD": [
+      760,
+      761,
+      763,
+      767,
+      770,
+      772,
+      773,
+      799,
+      801,
+      802,
+      885,
+      887,
+      947,
+      980
+    ],
+    "CDNWS": [
+      267,
+      886,
+      887,
+      947,
+      980
+    ],
+    "CDNWS2": [
+      267,
+      887,
+      980
+    ],
+    "CDSLS": [
+      299,
+      858,
+      885,
+      887,
+      889,
+      947,
+      980
+    ],
+    "CDSLSE": [
+      887,
+      947,
+      980
+    ],
+    "CDSWE": [
+      704,
+      885,
+      887,
+      947,
+      980
+    ],
+    "CDTACC": [
+      757,
+      947
+    ],
+    "CDTANKL": [
+      887,
+      947,
+      980
+    ],
+    "CDTBM": [
+      569,
+      570
+    ],
+    "CDTCACC": [
+      755
+    ],
+    "CDTCAS": [
+      739,
+      947
+    ],
+    "CDTCGE": [
+      727,
+      755,
+      947
+    ],
+    "CDTCINS": [
+      729,
+      947
+    ],
+    "CDTCTXU": [
+      745,
+      947
+    ],
+    "CDTDHDMTE": [
+      441
+    ],
+    "CDTDMPME": [
+      828
+    ],
+    "CDTDSL": [
+      138
+    ],
+    "CDTDSU": [
+      138
+    ],
+    "CDTDSVLU": [
+      139
+    ],
+    "CDTDVEE": [
+      551,
+      554,
+      947
+    ],
+    "CDTDVEF": [
+      536,
+      538,
+      947
+    ],
+    "CDTDVEL": [
+      550,
+      554,
+      947
+    ],
+    "CDTDVEN": [
+      537,
+      538,
+      947
+    ],
+    "CDTDVER": [
+      551,
+      554,
+      947
+    ],
+    "CDTDVEU": [
+      538,
+      947
+    ],
+    "CDTDVEV": [
+      537,
+      538,
+      947
+    ],
+    "CDTES": [
+      403,
+      859,
+      887,
+      947,
+      980
+    ],
+    "CDTETS": [
+      834,
+      947
+    ],
+    "CDTEV": [
+      836
+    ],
+    "CDTEV1": [
+      836,
+      947
+    ],
+    "CDTEV2": [
+      836,
+      947
+    ],
+    "CDTEV3": [
+      836,
+      947
+    ],
+    "CDTEV4": [
+      836,
+      947
+    ],
+    "CDTEV5": [
+      836,
+      947
+    ],
+    "CDTEV6": [
+      836,
+      947
+    ],
+    "CDTEV7": [
+      836,
+      947
+    ],
+    "CDTEV8": [
+      836,
+      947
+    ],
+    "CDTHSH": [
+      666,
+      668,
+      947
+    ],
+    "CDTHSH2": [
+      668,
+      947
+    ],
+    "CDTHSV": [
+      668,
+      948
+    ],
+    "CDTHSV2": [
+      668,
+      948
+    ],
+    "CDTKOS": [
+      816,
+      948
+    ],
+    "CDTKPE": [
+      825,
+      948
+    ],
+    "CDTKRNT": [
+      249,
+      948
+    ],
+    "CDTKROF": [
+      249,
+      948
+    ],
+    "CDTKRTP": [
+      252,
+      948
+    ],
+    "CDTKUPPL": [
+      561
+    ],
+    "CDTLASH": [
+      650,
+      948
+    ],
+    "CDTLASH2": [
+      650,
+      948
+    ],
+    "CDTLATP": [
+      640,
+      948
+    ],
+    "CDTLATP2": [
+      640,
+      948
+    ],
+    "CDTLATV": [
+      640,
+      948
+    ],
+    "CDTLATV2": [
+      640,
+      948
+    ],
+    "CDTLDPE": [
+      409,
+      948
+    ],
+    "CDTLM": [
+      108
+    ],
+    "CDTLSH": [
+      630,
+      948
+    ],
+    "CDTLSH2": [
+      630,
+      948
+    ],
+    "CDTLSV2": [
+      620,
+      948
+    ],
+    "CDTLSVV": [
+      626
+    ],
+    "CDTMD": [
+      802,
+      948
+    ],
+    "CDTMD01": [
+      802,
+      948
+    ],
+    "CDTMD02": [
+      802,
+      948
+    ],
+    "CDTMD03": [
+      802,
+      948
+    ],
+    "CDTMD04": [
+      802,
+      948
+    ],
+    "CDTMD05": [
+      802,
+      948
+    ],
+    "CDTMD06": [
+      802,
+      948
+    ],
+    "CDTMD07": [
+      802,
+      948
+    ],
+    "CDTMD08": [
+      802,
+      948
+    ],
+    "CDTMILE": [
+      838,
+      839,
+      948
+    ],
+    "CDTMLE": [
+      818,
+      948
+    ],
+    "CDTMVE": [
+      831
+    ],
+    "CDTN": [
+      569,
+      570
+    ],
+    "CDTNWSE": [
+      819,
+      820,
+      948
+    ],
+    "CDTPH": [
+      572,
+      948
+    ],
+    "CDTPH2": [
+      572,
+      948
+    ],
+    "CDTSIZE": [
+      881,
+      888,
+      1030
+    ],
+    "CDTSLPE": [
+      823,
+      948
+    ],
+    "CDTSLS": [
+      298,
+      948
+    ],
+    "CDTSLS2": [
+      298,
+      948
+    ],
+    "CDTSLV": [
+      298,
+      948
+    ],
+    "CDTSLV2": [
+      298,
+      948
+    ],
+    "CDTSLVE": [
+      821,
+      948
+    ],
+    "CDTSTA": [
+      709,
+      710,
+      948
+    ],
+    "CDTSTAE": [
+      832,
+      948
+    ],
+    "CDTSTS": [
+      708,
+      948
+    ],
+    "CDTTA": [
+      681,
+      948
+    ],
+    "CDTTEVE": [
+      827,
+      948
+    ],
+    "CDTTHM": [
+      693
+    ],
+    "CDTTKA": [
+      683,
+      948
+    ],
+    "CDTTM": [
+      677,
+      948
+    ],
+    "CDTTUM": [
+      685,
+      948
+    ],
+    "CDTU5REF": [
+      673,
+      948
+    ],
+    "CDTUB": [
+      672,
+      948
+    ],
+    "CDTUFMV": [
+      932,
+      948
+    ],
+    "CDTUFSKA": [
+      932,
+      948
+    ],
+    "CDTURRAM": [
+      934,
+      948
+    ],
+    "CDTURROM": [
+      934,
+      948
+    ],
+    "CDTURRST": [
+      934,
+      948
+    ],
+    "CDTXYZ": [
+      935
+    ],
+    "CLAACC": [
+      757,
+      948
+    ],
+    "CLABM": [
+      569,
+      570
+    ],
+    "CLACACC": [
+      755
+    ],
+    "CLACAS": [
+      739,
+      948
+    ],
+    "CLACC": [
+      757,
+      980
+    ],
+    "CLACGE": [
+      727,
+      755,
+      948
+    ],
+    "CLACINS": [
+      729,
+      948
+    ],
+    "CLACTXU": [
+      745,
+      948
+    ],
+    "CLADHDMTE": [
+      441
+    ],
+    "CLADMPME": [
+      828
+    ],
+    "CLADSL": [
+      138
+    ],
+    "CLADSU": [
+      138
+    ],
+    "CLADSVLU": [
+      139
+    ],
+    "CLADVEE": [
+      551,
+      554,
+      948
+    ],
+    "CLADVEF": [
+      536,
+      538,
+      948
+    ],
+    "CLADVEL": [
+      550,
+      554,
+      948
+    ],
+    "CLADVEN": [
+      537,
+      538,
+      948
+    ],
+    "CLADVER": [
+      551,
+      554,
+      948
+    ],
+    "CLADVEU": [
+      538,
+      948
+    ],
+    "CLADVEV": [
+      537,
+      538,
+      948
+    ],
+    "CLAETS": [
+      834,
+      948
+    ],
+    "CLAEV": [
+      836
+    ],
+    "CLAEV1": [
+      836,
+      948
+    ],
+    "CLAEV2": [
+      836,
+      948
+    ],
+    "CLAEV3": [
+      836,
+      948
+    ],
+    "CLAEV4": [
+      836,
+      948
+    ],
+    "CLAEV5": [
+      836,
+      948
+    ],
+    "CLAEV6": [
+      836,
+      948
+    ],
+    "CLAEV7": [
+      836,
+      948
+    ],
+    "CLAEV8": [
+      836,
+      948
+    ],
+    "CLAHSH": [
+      666,
+      668,
+      948
+    ],
+    "CLAHSH2": [
+      668,
+      948
+    ],
+    "CLAHSV": [
+      668,
+      948
+    ],
+    "CLAHSV2": [
+      668,
+      948
+    ],
+    "CLAKOS": [
+      816,
+      948
+    ],
+    "CLAKPE": [
+      825,
+      948
+    ],
+    "CLAKRNT": [
+      249,
+      948
+    ],
+    "CLAKROF": [
+      249,
+      948
+    ],
+    "CLAKRTP": [
+      252,
+      949
+    ],
+    "CLAKUPPL": [
+      561
+    ],
+    "CLALASH": [
+      650,
+      949
+    ],
+    "CLALASH2": [
+      650,
+      949
+    ],
+    "CLALATP": [
+      640,
+      949
+    ],
+    "CLALATP2": [
+      640,
+      949
+    ],
+    "CLALATV": [
+      640,
+      949
+    ],
+    "CLALATV2": [
+      640,
+      949
+    ],
+    "CLALDPE": [
+      409,
+      949
+    ],
+    "CLALM": [
+      108
+    ],
+    "CLALSH": [
+      630,
+      949
+    ],
+    "CLALSH2": [
+      630,
+      949
+    ],
+    "CLALSV2": [
+      620,
+      949
+    ],
+    "CLALSVV": [
+      626
+    ],
+    "CLAMD": [
+      810
+    ],
+    "CLAMDSY": [
+      810
+    ],
+    "CLAMILE": [
+      838,
+      949
+    ],
+    "CLAMLE": [
+      818,
+      949
+    ],
+    "CLAMVE": [
+      831
+    ],
+    "CLAN": [
+      569,
+      570
+    ],
+    "CLANWSE": [
+      819,
+      820,
+      949
+    ],
+    "CLAPH": [
+      572,
+      949
+    ],
+    "CLAPH2": [
+      572,
+      949
+    ],
+    "CLAS": [
+      741,
+      980
+    ],
+    "CLASIZE": [
+      881,
+      888,
+      1030
+    ],
+    "CLASLPE": [
+      823,
+      949
+    ],
+    "CLASLS": [
+      298,
+      949
+    ],
+    "CLASLS2": [
+      298,
+      949
+    ],
+    "CLASLV": [
+      298,
+      949
+    ],
+    "CLASLV2": [
+      298,
+      949
+    ],
+    "CLASLVE": [
+      821,
+      949
+    ],
+    "CLASTA": [
+      709,
+      710,
+      949
+    ],
+    "CLASTAE": [
+      832,
+      949
+    ],
+    "CLASTS": [
+      708,
+      949
+    ],
+    "CLATA": [
+      681,
+      949
+    ],
+    "CLATEVE": [
+      827,
+      949
+    ],
+    "CLATHM": [
+      693
+    ],
+    "CLATKA": [
+      683,
+      949
+    ],
+    "CLATM": [
+      677,
+      949
+    ],
+    "CLATUM": [
+      685,
+      949
+    ],
+    "CLAU5REF": [
+      673,
+      949
+    ],
+    "CLAUB": [
+      672,
+      949
+    ],
+    "CLAUFMV": [
+      932,
+      949
+    ],
+    "CLAUFSKA": [
+      932,
+      949
+    ],
+    "CLAURRAM": [
+      934,
+      949
+    ],
+    "CLAURROM": [
+      934,
+      949
+    ],
+    "CLAURRST": [
+      934,
+      949
+    ],
+    "CLAXYZ": [
+      935
+    ],
+    "CWBBFGR": [
+      494,
+      495,
+      497,
+      949
+    ],
+    "CWBFGROF": [
+      494,
+      495,
+      949
+    ],
+    "CWBWEEN": [
+      515,
+      519,
+      522,
+      949
+    ],
+    "CWDASC": [
+      721,
+      722,
+      740,
+      741,
+      742,
+      949
+    ],
+    "CWDDMTL": [
+      416,
+      417,
+      418,
+      419,
+      420,
+      432,
+      436,
+      437,
+      438,
+      439,
+      949
+    ],
+    "CWDDMTL2": [
+      417,
+      418,
+      420,
+      421,
+      422,
+      432,
+      437,
+      949
+    ],
+    "CWDEGFE": [
+      116,
+      117,
+      949
+    ],
+    "CWDKAT": [
+      885
+    ],
+    "CWDKRNT": [
+      218,
+      249,
+      251,
+      949
+    ],
+    "CWDKROF": [
+      218,
+      248,
+      249,
+      251,
+      949
+    ],
+    "CWDKRTP": [
+      218,
+      252,
+      253,
+      949
+    ],
+    "CWDKVS": [
+      885
+    ],
+    "CWDLSA": [
+      637,
+      638
+    ],
+    "CWDLSAHK": [
+      650,
+      949
+    ],
+    "CWDMDE": [
+      801
+    ],
+    "CWDMFAB": [
+      31,
+      32,
+      33,
+      35,
+      36,
+      38,
+      949
+    ],
+    "CWDSLSY": [
+      289,
+      293,
+      298,
+      949
+    ],
+    "CWDSLT": [
+      299,
+      981
+    ],
+    "CWDTES": [
+      885
+    ],
+    "CWDTHM": [
+      689,
+      692,
+      693,
+      949
+    ],
+    "CWDTLECK": [
+      404,
+      885,
+      887,
+      949
+    ],
+    "CWDVMX": [
+      78,
+      79,
+      949
+    ],
+    "CWERFIL": [
+      877,
+      878,
+      883,
+      949
+    ],
+    "CWESSTT": [
+      162,
+      163,
+      949
+    ],
+    "CWFASL": [
+      278,
+      280,
+      281,
+      949
+    ],
+    "CWFGRMD": [
+      502,
+      505,
+      507,
+      510,
+      511,
+      949
+    ],
+    "CWFSTD": [
+      453,
+      454,
+      455,
+      457,
+      458,
+      949
+    ],
+    "CWGGEGAS": [
+      560,
+      561,
+      949
+    ],
+    "CWGGFST": [
+      444,
+      445,
+      446,
+      447,
+      448,
+      949
+    ],
+    "CWGGLSH": [
+      604,
+      605,
+      606,
+      608,
+      949
+    ],
+    "CWGGLSV": [
+      593,
+      594,
+      596,
+      598,
+      949
+    ],
+    "CWGGMFL": [
+      949
+    ],
+    "CWHDMTL": [
+      442,
+      949
+    ],
+    "CWKHMD": [
+      287,
+      288,
+      949
+    ],
+    "CWKHZ": [
+      283,
+      285,
+      286,
+      949
+    ],
+    "CWKLIMA": [
+      887,
+      949
+    ],
+    "CWKONABG": [
+      274,
+      275,
+      883,
+      887,
+      949
+    ],
+    "CWKONFZ1": [
+      887,
+      889,
+      949
+    ],
+    "CWKONLS": [
+      588,
+      596,
+      598,
+      599,
+      606,
+      608,
+      868,
+      883,
+      887,
+      949
+    ],
+    "CWKR": [
+      238,
+      240,
+      949
+    ],
+    "CWLLRMR": [
+      93,
+      949
+    ],
+    "CWLOWR": [
+      746,
+      886,
+      887,
+      949
+    ],
+    "CWMDAPP": [
+      153,
+      154,
+      207,
+      884,
+      887,
+      949
+    ],
+    "CWMDKOG": [
+      42,
+      43,
+      950
+    ],
+    "CWMDWAN": [
+      61,
+      62
+    ],
+    "CWNOCINS": [
+      886,
+      887,
+      950
+    ],
+    "CWNOMIL": [
+      860,
+      950
+    ],
+    "CWNOMSRU": [
+      903,
+      950
+    ],
+    "CWNSABG": [
+      103,
+      886,
+      943
+    ],
+    "CWOBD": [
+      867,
+      868,
+      883,
+      887,
+      950
+    ],
+    "CWPKAPP": [
+      189,
+      191,
+      950
+    ],
+    "CWSLA": [
+      299,
+      981
+    ],
+    "CWSLS": [
+      275,
+      277,
+      278,
+      280,
+      281,
+      950
+    ],
+    "CWSLSOF": [
+      275,
+      278,
+      950
+    ],
+    "CWSTA": [
+      706,
+      708,
+      709,
+      950
+    ],
+    "CWTEZW": [
+      42,
+      43,
+      950
+    ],
+    "CWTF": [
+      158,
+      882,
+      887,
+      950
+    ],
+    "CWUHR": [
+      157,
+      882,
+      887,
+      950
+    ],
+    "CWVSV": [
+      714,
+      950
+    ],
+    "CWZWE": [
+      42,
+      43,
+      950
+    ],
+    "CWZWVMX": [
+      40,
+      43,
+      44,
+      45,
+      950
+    ],
+    "DTEVE": [
+      3,
+      97,
+      300,
+      368,
+      379,
+      404,
+      406,
+      434,
+      461,
+      621,
+      632,
+      640,
+      641,
+      643,
+      648,
+      651,
+      654,
+      826,
+      827,
+      828,
+      946,
+      948,
+      949,
+      954,
+      970,
+      978,
+      981,
+      993,
+      994,
+      998
+    ],
+    "DZW": [
+      898,
+      1005
+    ],
+    "DZWB": [
+      50
+    ],
+    "DZWETA": [
+      211,
+      212,
+      953
+    ],
+    "DZWI": [
+      49,
+      1005
+    ],
+    "DZWKS": [
+      212,
+      1005
+    ],
+    "DZWNWSUE": [
+      50,
+      953
+    ],
+    "DZWOAG": [
+      50,
+      209,
+      1005
+    ],
+    "DZWOAGR": [
+      50,
+      953
+    ],
+    "DZWOL": [
+      50,
+      209,
+      1005
+    ],
+    "DZWOLA": [
+      50,
+      953
+    ],
+    "DZWOM": [
+      50,
+      953
+    ],
+    "DZWOTM": [
+      50,
+      1005
+    ],
+    "DZWS": [
+      211,
+      1005
+    ],
+    "DZWSPAE": [
+      213,
+      1005
+    ],
+    "DZWSPM": [
+      213,
+      953
+    ],
+    "DZWSTTA": [
+      210,
+      953
+    ],
+    "DZWV08": [
+      898
+    ],
+    "DZWWL": [
+      206,
+      210,
+      1005
+    ],
+    "ESKONF": [
+      813,
+      830,
+      953
+    ],
+    "ESKS": [
+      3,
+      160,
+      172,
+      173,
+      336,
+      954,
+      956,
+      959,
+      968,
+      972,
+      975,
+      976,
+      989,
+      1001,
+      1008,
+      1026,
+      1028,
+      1029,
+      1034,
+      1040
+    ],
+    "KFETATE": [
+      384,
+      397,
+      401,
+      957
+    ],
+    "KFETRD": [
+      688,
+      689,
+      957
+    ],
+    "KFETRT": [
+      688,
+      689,
+      957
+    ],
+    "KFZW": [
+      232,
+      897,
+      898,
+      959
+    ],
+    "KFZW1": [
+      208,
+      209,
+      959
+    ],
+    "KFZW2": [
+      208,
+      209,
+      959
+    ],
+    "KFZWKS": [
+      172,
+      173,
+      959
+    ],
+    "KFZWMN": [
+      213,
+      959
+    ],
+    "KFZWMNST": [
+      213,
+      959
+    ],
+    "KFZWOP": [
+      50,
+      51,
+      959
+    ],
+    "KFZWOP2": [
+      50,
+      959
+    ],
+    "KFZWSP": [
+      213
+    ],
+    "KFZWVL": [
+      208,
+      209,
+      959
+    ],
+    "KFZWWLNM": [
+      210,
+      959
+    ],
+    "KFZWWLTM": [
+      210,
+      959
+    ],
+    "KRKE": [
+      4,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      231,
+      232,
+      238,
+      239,
+      240,
+      241,
+      244,
+      245,
+      250,
+      714,
+      954,
+      957,
+      959,
+      963,
+      976,
+      979,
+      989,
+      991
+    ],
+    "KRKFKS": [
+      220,
+      221,
+      959
+    ],
+    "KRKTE": [
+      189,
+      190,
+      191,
+      713,
+      959
+    ],
+    "LR2S": [
+      336,
+      990
+    ],
+    "LR2S2": [
+      336,
+      990
+    ],
+    "LRA2": [
+      325,
+      327,
+      461,
+      462,
+      468,
+      482,
+      990
+    ],
+    "LRAEB": [
+      4,
+      325,
+      326,
+      376,
+      461,
+      462,
+      468,
+      470,
+      472,
+      473,
+      482,
+      641,
+      937,
+      965,
+      969,
+      972,
+      974,
+      979,
+      983,
+      984,
+      985,
+      987,
+      990,
+      991,
+      998,
+      999,
+      1001,
+      1006,
+      1007,
+      1008
+    ],
+    "LRAINT": [
+      463,
+      464,
+      469,
+      470,
+      471,
+      474
+    ],
+    "LRAINT2": [
+      463,
+      469,
+      470,
+      471
+    ],
+    "LRAR": [
+      385,
+      468,
+      990
+    ],
+    "LRARE": [
+      468,
+      482,
+      990
+    ],
+    "LRARE2": [
+      468,
+      482,
+      990
+    ],
+    "LRAREB": [
+      468,
+      990
+    ],
+    "LRBANK1": [
+      339
+    ],
+    "LRBANK2": [
+      339
+    ],
+    "LREB": [
+      4,
+      171,
+      299,
+      300,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      347,
+      349,
+      352,
+      365,
+      367,
+      369,
+      376,
+      379,
+      385,
+      404,
+      461,
+      482
+    ],
+    "LREB100": [
+      336,
+      990
+    ],
+    "LREB100MS": [
+      328,
+      329
+    ],
+    "LREBBAVA": [
+      329,
+      330
+    ],
+    "LREBFRZ1": [
+      328,
+      334
+    ],
+    "LREBFRZ2": [
+      328,
+      335
+    ],
+    "LREBLE": [
+      336,
+      990
+    ],
+    "LREBLE2": [
+      336,
+      990
+    ],
+    "LREBLEANPR": [
+      332
+    ],
+    "LREBLERICN": [
+      328,
+      332
+    ],
+    "LREBMLSA": [
+      328,
+      333
+    ],
+    "LREBPR": [
+      336,
+      990
+    ],
+    "LREBPR2": [
+      336,
+      990
+    ],
+    "LREBPSPA": [
+      328,
+      331
+    ],
+    "LREBPSPWL": [
+      329
+    ],
+    "LREBRI": [
+      336,
+      990
+    ],
+    "LREBRI2": [
+      336,
+      990
+    ],
+    "LREBRICHPR": [
+      332,
+      333
+    ],
+    "LREBRLLR": [
+      329
+    ],
+    "LREBTMLR": [
+      329,
+      330
+    ],
+    "LREBVK": [
+      328,
+      334
+    ],
+    "LRFRIMST": [
+      340
+    ],
+    "LRFRMZ": [
+      348,
+      1022
+    ],
+    "LRFRMZ2": [
+      348,
+      1022
+    ],
+    "LRFRZ": [
+      348,
+      1022
+    ],
+    "LRFRZ2": [
+      348,
+      1022
+    ],
+    "LRHK": [
+      4,
+      327,
+      328,
+      348,
+      352,
+      360,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      631,
+      636,
+      637,
+      641,
+      642,
+      643,
+      651,
+      652,
+      654,
+      655,
+      657,
+      658,
+      659,
+      660,
+      661,
+      945,
+      949,
+      957
+    ],
+    "LRHK2": [
+      367,
+      631,
+      641,
+      651,
+      659,
+      990
+    ],
+    "LRHKB": [
+      367,
+      990
+    ],
+    "LRHKB2": [
+      367,
+      990
+    ],
+    "LRHKG": [
+      367,
+      990
+    ],
+    "LRHKGI": [
+      367,
+      990
+    ],
+    "LRHKP": [
+      367,
+      990
+    ],
+    "LRHKP2": [
+      367,
+      990
+    ],
+    "LRINI": [
+      4,
+      347,
+      348,
+      352,
+      353,
+      983,
+      987,
+      990,
+      999,
+      1013,
+      1014
+    ],
+    "LRIP": [
+      340
+    ],
+    "LRIPXSEL": [
+      339
+    ],
+    "LRKA": [
+      4,
+      270,
+      327,
+      347,
+      348,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      369,
+      949,
+      952,
+      954,
+      956,
+      960,
+      962,
+      966,
+      969,
+      973
+    ],
+    "LRKA2": [
+      327,
+      361,
+      367,
+      990
+    ],
+    "LRKAA": [
+      361,
+      990
+    ],
+    "LRKAA2": [
+      361,
+      990
+    ],
+    "LRKAB1": [
+      353,
+      355
+    ],
+    "LRKAB2": [
+      353
+    ],
+    "LRKABED": [
+      353,
+      354
+    ],
+    "LRKAE": [
+      361,
+      990
+    ],
+    "LRKAE2": [
+      361,
+      990
+    ],
+    "LRKAEI": [
+      361,
+      990
+    ],
+    "LRKAEI2": [
+      361,
+      990
+    ],
+    "LRKAKONF": [
+      353,
+      354
+    ],
+    "LRKAON": [
+      361,
+      990
+    ],
+    "LRKAOUT": [
+      353,
+      361
+    ],
+    "LRKAR": [
+      355,
+      359
+    ],
+    "LRKARG": [
+      361,
+      990
+    ],
+    "LRKARG2": [
+      361,
+      990
+    ],
+    "LRKAS": [
+      355
+    ],
+    "LRKAST": [
+      336,
+      361,
+      990
+    ],
+    "LRKAST2": [
+      336,
+      361,
+      990
+    ],
+    "LRKAZ": [
+      362,
+      1022
+    ],
+    "LRKAZ2": [
+      362,
+      1022
+    ],
+    "LRMONIT": [
+      341
+    ],
+    "LRMONIT2": [
+      343
+    ],
+    "LRNAKT": [
+      539,
+      990
+    ],
+    "LRND": [
+      325,
+      327,
+      336,
+      347,
+      352,
+      990
+    ],
+    "LRND2": [
+      325,
+      327,
+      336,
+      347,
+      352,
+      990
+    ],
+    "LRNDA": [
+      171,
+      299,
+      336,
+      990
+    ],
+    "LRNDA2": [
+      171,
+      300,
+      336,
+      990
+    ],
+    "LRNDIA": [
+      540,
+      990
+    ],
+    "LRNERF": [
+      540,
+      990
+    ],
+    "LRNFG": [
+      540,
+      990
+    ],
+    "LRNRDY": [
+      540,
+      555,
+      990
+    ],
+    "LRNST1": [
+      539,
+      544,
+      960
+    ],
+    "LRNST3": [
+      539,
+      544,
+      960
+    ],
+    "LRNST7": [
+      539,
+      545,
+      960
+    ],
+    "LRNST9": [
+      539,
+      545,
+      960
+    ],
+    "LRNSTEP": [
+      540,
+      1022
+    ],
+    "LRNTESA": [
+      540,
+      990
+    ],
+    "LRNTIM": [
+      540,
+      1022
+    ],
+    "LRNVB": [
+      539,
+      540,
+      543,
+      544,
+      960,
+      990,
+      1022
+    ],
+    "LRNWS": [
+      540,
+      944,
+      990
+    ],
+    "LROBD": [
+      328,
+      331
+    ],
+    "LROFF": [
+      289,
+      290
+    ],
+    "LRPSPA": [
+      336,
+      990
+    ],
+    "LRRL": [
+      336,
+      990
+    ],
+    "LRSEB": [
+      326,
+      336,
+      379
+    ],
+    "LRSHK": [
+      367,
+      652,
+      658,
+      659,
+      661
+    ],
+    "LRSHK5": [
+      367
+    ],
+    "LRSP": [
+      347,
+      367,
+      990
+    ],
+    "LRSP2": [
+      347,
+      367,
+      990
+    ],
+    "LRSSA": [
+      379,
+      990
+    ],
+    "LRSSA2": [
+      379,
+      990
+    ],
+    "LRSTAT": [
+      347,
+      990
+    ],
+    "LRSTAT2": [
+      347,
+      990
+    ],
+    "LRSTTA": [
+      347,
+      990
+    ],
+    "LRSTTA2": [
+      347,
+      990
+    ],
+    "LRTPP": [
+      347,
+      641,
+      659,
+      990
+    ],
+    "LRTPP2": [
+      347,
+      641,
+      659,
+      990
+    ],
+    "LRVK": [
+      336,
+      643,
+      654,
+      990
+    ],
+    "LRVK2": [
+      336,
+      990
+    ],
+    "LRWLA": [
+      336,
+      990
+    ],
+    "LRWPKT": [
+      731
+    ],
+    "LRZA": [
+      341
+    ],
+    "LRZA2": [
+      343
+    ],
+    "MSL": [
+      279,
+      287,
+      300,
+      1024
+    ],
+    "MSL2": [
+      279,
+      287,
+      300,
+      1024
+    ],
+    "MSLBAS": [
+      295,
+      298,
+      961
+    ],
+    "MSLG": [
+      112,
+      114,
+      115,
+      118,
+      961
+    ],
+    "MSLIF": [
+      300,
+      1024
+    ],
+    "MSLIFT": [
+      300,
+      1024,
+      1025
+    ],
+    "MSLIFT2": [
+      300,
+      1024,
+      1025
+    ],
+    "MSLMIN": [
+      300,
+      993
+    ],
+    "MSLMIN2": [
+      300,
+      993
+    ],
+    "MSLMN": [
+      279,
+      300,
+      993
+    ],
+    "MSLNENN": [
+      300,
+      1025
+    ],
+    "MSLNENN2": [
+      301,
+      1025
+    ],
+    "MSLNF": [
+      301,
+      1025
+    ],
+    "MSLNF2": [
+      301,
+      1025
+    ],
+    "MSLNT": [
+      301,
+      1025
+    ],
+    "MSLNT2": [
+      301,
+      1025
+    ],
+    "MSLOFF": [
+      279,
+      284,
+      993
+    ],
+    "MSLOFMX": [
+      296,
+      298,
+      961
+    ],
+    "MSLOFS": [
+      300,
+      301,
+      993,
+      1025
+    ],
+    "MSLOFS2": [
+      300,
+      301,
+      993,
+      1025
+    ],
+    "MSLON": [
+      279,
+      993
+    ],
+    "MSLPMN": [
+      300,
+      993
+    ],
+    "MSLPMN2": [
+      300,
+      993
+    ],
+    "MSLPUB": [
+      279,
+      1025
+    ],
+    "MSLR": [
+      336,
+      993
+    ],
+    "MSLR2": [
+      336,
+      993
+    ],
+    "MSLSTAT": [
+      279,
+      1025
+    ],
+    "MSLT": [
+      301,
+      1025
+    ],
+    "MSLT2": [
+      301,
+      1025
+    ],
+    "MSLUB": [
+      275,
+      276,
+      278,
+      280,
+      281,
+      961
+    ],
+    "MSLV": [
+      301,
+      1025
+    ],
+    "MSLV2": [
+      301,
+      1025
+    ],
+    "MSLVF": [
+      301,
+      1025
+    ],
+    "MSLVF2": [
+      301,
+      1025
+    ],
+    "MSLVFT": [
+      301,
+      1025
+    ],
+    "MSLVFT2": [
+      301,
+      1025
+    ],
+    "MSLVMX": [
+      296,
+      297,
+      298,
+      961
+    ],
+    "MSLVMX2": [
+      298,
+      961
+    ],
+    "MSLVT": [
+      301,
+      1025
+    ],
+    "MSLVT2": [
+      301,
+      1025
+    ],
+    "PROKON": [
+      4,
+      50,
+      59,
+      87,
+      91,
+      93,
+      97,
+      103,
+      106,
+      114,
+      124,
+      128,
+      129,
+      130,
+      141,
+      152,
+      156,
+      158,
+      171,
+      178,
+      192,
+      195,
+      198,
+      201,
+      205,
+      206,
+      219,
+      231,
+      267,
+      270
+    ],
+    "TAMHYS": [
+      696,
+      697,
+      965
+    ],
+    "TAMIALU": [
+      965
+    ],
+    "TAML": [
+      697,
+      1032
+    ],
+    "TAMLAC": [
+      695,
+      696,
+      965
+    ],
+    "TAMLAUS": [
+      696,
+      697,
+      1032
+    ],
+    "TAMLDIA": [
+      697,
+      1032
+    ],
+    "TAMLNH": [
+      697,
+      1032
+    ],
+    "TAMLNL": [
+      697,
+      1032
+    ],
+    "TAMLS": [
+      697,
+      1032
+    ],
+    "TAMLSMN": [
+      695,
+      696,
+      697,
+      965
+    ],
+    "TAMLSMX": [
+      695,
+      696,
+      697,
+      965
+    ],
+    "TAMLSNH": [
+      695,
+      696,
+      697,
+      965
+    ],
+    "TAMLTKA": [
+      695,
+      697,
+      965
+    ],
+    "TAMLU": [
+      695,
+      697,
+      965
+    ],
+    "TARAU": [
+      329,
+      335,
+      336,
+      965,
+      999
+    ],
+    "TEVE": [
+      97,
+      300,
+      368,
+      379,
+      404,
+      406,
+      434,
+      461,
+      621,
+      632,
+      641,
+      651,
+      827,
+      1003,
+      1008,
+      1041
+    ],
+    "TLRHS": [
+      329,
+      335,
+      968
+    ],
+    "TMSHS": [
+      329,
+      335,
+      337,
+      969
+    ]
+  },
+  "public_edition_note": "Page/symbol/section index only; complete PDF/text and extracted quotations require local import."
+}

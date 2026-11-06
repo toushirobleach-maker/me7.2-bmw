@@ -1,0 +1,23 @@
+{
+  "assembly_zusb": "7533625",
+  "type_number": "7500213",
+  "hardware_number": "7532675",
+  "program_revision": "A",
+  "program_file": "7532675A.0PA",
+  "data_id": "7533626",
+  "data_file": "G7533626.0DA",
+  "epk": "6901I41D",
+  "dat_header": [
+    "ZB-NR",
+    "TYP-NR",
+    "HW-NR",
+    "IX",
+    "SW-NR",
+    "AM",
+    "PIN",
+    "S",
+    "CS"
+  ],
+  "dat_line": "7533625,7500213,7532675,A,7533626DA,0FFFFFFFFFD,134,1 E",
+  "note": "7532675 is the HW field here, not the assembly ZUSB. Select vehicle/software compatibility independently."
+}

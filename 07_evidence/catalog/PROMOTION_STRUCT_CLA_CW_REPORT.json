@@ -1,0 +1,2423 @@
+{
+  "epk": "6901I41D",
+  "policy": "PROVEN only with consumer+FR/DTC+falsifier; class0≠monitor off",
+  "promoted_count": 56,
+  "by_kind": {
+    "cla_dfpm": 46,
+    "cw_extp206": 10
+  },
+  "status_counts": {
+    "PROVEN": 100,
+    "STRUCT": 110,
+    "UNLINKED": 80,
+    "HYP": 342
+  },
+  "items": [
+    {
+      "name": "CLADMPME",
+      "addr": "0x115ee",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x15",
+      "dtc_ort": "0xbc",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x83466e",
+        "raw_hex": "e6fc1500da82e296",
+        "decoded": "MOV R12,#0x0015; CALLS 0x82,0x96E2",
+        "phys": "0x8115ee",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "83466E E6FC1500   MOV      R12,#0x0015",
+          "834672 DA82E296   CALLS    0x82,0x96E2",
+          "834676 D4400600   MOV      R4,[R0+#0x0006]",
+          "83467A B840       MOV      [R0],R4",
+          "83467C E6FC1600   MOV      R12,#0x0016",
+          "834680 DA82E296   CALLS    0x82,0x96E2",
+          "834684 06F00E00   ADD      R0,#0x000E",
+          "834688 9860       MOV      R6,[R0+]",
+          "83468A 9870       MOV      R7,[R0+]",
+          "83468C 9880       MOV      R8,[R0+]"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADMPME: [828]",
+          "DFPM class table 0x115D9+0x15=0x115ee",
+          "DTC table 0x153F2: idx 0x15 → Ort 0xbc",
+          "Fault site MOV R12,#0x0015; CALLS 0x82,0x96E2 @ 0x83466e"
+        ],
+        "summary": "Класс DFPM idx 0x15: DTC 0xbc. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xbc / адрес класса не 0x115ee",
+        "check": "idx-1 DTC=0xba, idx+1 DTC=0xbb; 0x115D9+0x15=0x115ee exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADSL",
+      "addr": "0x115f3",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x1a",
+      "dtc_ort": "0xff",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x870948",
+        "raw_hex": "e6fc1a00da82e296",
+        "decoded": "MOV R12,#0x001A; CALLS 0x82,0x96E2",
+        "phys": "0x8115f3",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "870948 E6FC1A00   MOV      R12,#0x001A",
+          "87094C DA82E296   CALLS    0x82,0x96E2",
+          "870950 0802       ADD      R0,#2",
+          "870952 8400ECB9   MOV      [R0],0xB9EC",
+          "870956 A840       MOV      R4,[R0]",
+          "870958 66F4FEFF   AND      R4,#0xFFFE",
+          "87095C B840       MOV      [R0],R4",
+          "87095E A850       MOV      R5,[R0]",
+          "870960 0AF50202   BFLDL    R5,#0x02,#0x02",
+          "870964 B850       MOV      [R0],R5",
+          "870966 A840       MOV      R4,[R0]"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADSL: [138]",
+          "DFPM class table 0x115D9+0x1a=0x115f3",
+          "DTC table 0x153F2: idx 0x1a → Ort 0xff",
+          "Fault site MOV R12,#0x001A; CALLS 0x82,0x96E2 @ 0x870948"
+        ],
+        "summary": "Класс DFPM idx 0x1a: DTC 0xff. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xff / адрес класса не 0x115f3",
+        "check": "idx-1 DTC=0xff, idx+1 DTC=0xa4; 0x115D9+0x1a=0x115f3 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADSU",
+      "addr": "0x115f5",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x1c",
+      "dtc_ort": "0xff",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x82f5a8",
+        "raw_hex": "e6fc1c00da82e296",
+        "decoded": "MOV R12,#0x001C; CALLS 0x82,0x96E2",
+        "phys": "0x8115f5",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "82F5A8 E6FC1C00   MOV      R12,#0x001C",
+          "82F5AC DA82E296   CALLS    0x82,0x96E2",
+          "82F5B0 06F00800   ADD      R0,#0x0008",
+          "82F5B4 9880       MOV      R8,[R0+]",
+          "82F5B6 9890       MOV      R9,[R0+]",
+          "82F5B8 DB00       RETS",
+          "82F5BA F3F83AA2   MOVB     RL4,0xA23A",
+          "82F5BE 3D16       JMPR     CC_NZ,0x0082F5EC",
+          "82F5C0 9A1E0970   JNB      0xFD3C.7,0x0082F5D6",
+          "82F5C4 9A1A07D0   JNB      0xFD34.13,0x0082F5D6"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADSU: [138]",
+          "DFPM class table 0x115D9+0x1c=0x115f5",
+          "DTC table 0x153F2: idx 0x1c → Ort 0xff",
+          "Fault site MOV R12,#0x001C; CALLS 0x82,0x96E2 @ 0x82f5a8"
+        ],
+        "summary": "Класс DFPM idx 0x1c: DTC 0xff. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xff / адрес класса не 0x115f5",
+        "check": "idx-1 DTC=0xa4, idx+1 DTC=0x84; 0x115D9+0x1c=0x115f5 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADSVLU",
+      "addr": "0x115f6",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x1d",
+      "dtc_ort": "0x84",
+      "stock_hex": "22",
+      "consumer": {
+        "ea": "0x8494f6",
+        "raw_hex": "e6fc1d00da82e296",
+        "decoded": "MOV R12,#0x001D; CALLS 0x82,0x96E2",
+        "phys": "0x8115f6",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8494F6 E6FC1D00   MOV      R12,#0x001D",
+          "8494FA DA82E296   CALLS    0x82,0x96E2",
+          "8494FE 06F00800   ADD      R0,#0x0008",
+          "849502 DB00       RETS",
+          "849504 7F21       BSET     0xFD42.7",
+          "849506 BFE0       BSET     0xFFC0.11",
+          "849508 F68EA8F8   MOV      0xF8A8,ZEROS",
+          "84950C EE21       BCLR     0xFD42.14",
+          "84950E D100       ATOMIC   #0",
+          "849510 0AE88480   BFLDL    0xFFD0,#0x80,#0x84",
+          "849514 F21A1CFF   MOV      PW2,0xFF1C"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADSVLU: [139]",
+          "DFPM class table 0x115D9+0x1d=0x115f6",
+          "DTC table 0x153F2: idx 0x1d → Ort 0x84",
+          "Fault site MOV R12,#0x001D; CALLS 0x82,0x96E2 @ 0x8494f6"
+        ],
+        "summary": "Класс DFPM idx 0x1d: DTC 0x84. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x84 / адрес класса не 0x115f6",
+        "check": "idx-1 DTC=0xff, idx+1 DTC=0x85; 0x115D9+0x1d=0x115f6 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVEE",
+      "addr": "0x115f7",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x1e",
+      "dtc_ort": "0x85",
+      "stock_hex": "23",
+      "consumer": {
+        "ea": "0x859a68",
+        "raw_hex": "e6fc1e00da82e296",
+        "decoded": "MOV R12,#0x001E; CALLS 0x82,0x96E2",
+        "phys": "0x8115f7",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "859A68 E6FC1E00   MOV      R12,#0x001E",
+          "859A6C DA82E296   CALLS    0x82,0x96E2",
+          "859A70 D4400800   MOV      R4,[R0+#0x0008]",
+          "859A74 B840       MOV      [R0],R4",
+          "859A76 E6FC2000   MOV      R12,#0x0020",
+          "859A7A DA82E296   CALLS    0x82,0x96E2",
+          "859A7E D4400400   MOV      R4,[R0+#0x0004]",
+          "859A82 B840       MOV      [R0],R4",
+          "859A84 E6FC2300   MOV      R12,#0x0023"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVEE: [551, 554, 948]",
+          "DFPM class table 0x115D9+0x1e=0x115f7",
+          "DTC table 0x153F2: idx 0x1e → Ort 0x85",
+          "Fault site MOV R12,#0x001E; CALLS 0x82,0x96E2 @ 0x859a68"
+        ],
+        "summary": "Класс DFPM idx 0x1e: DTC 0x85. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x85 / адрес класса не 0x115f7",
+        "check": "idx-1 DTC=0x84, idx+1 DTC=0x82; 0x115D9+0x1e=0x115f7 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVEF",
+      "addr": "0x115f8",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x1f",
+      "dtc_ort": "0x82",
+      "stock_hex": "22",
+      "consumer": {
+        "ea": "0x8494da",
+        "raw_hex": "e6fc1f00da82e296",
+        "decoded": "MOV R12,#0x001F; CALLS 0x82,0x96E2",
+        "phys": "0x8115f8",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8494DA E6FC1F00   MOV      R12,#0x001F",
+          "8494DE DA82E296   CALLS    0x82,0x96E2",
+          "8494E2 0802       ADD      R0,#2",
+          "8494E4 A840       MOV      R4,[R0]",
+          "8494E6 8840       MOV      [-R0],R4",
+          "8494E8 E6FC2100   MOV      R12,#0x0021",
+          "8494EC DA82E296   CALLS    0x82,0x96E2",
+          "8494F0 D4400600   MOV      R4,[R0+#0x0006]",
+          "8494F4 B840       MOV      [R0],R4",
+          "8494F6 E6FC1D00   MOV      R12,#0x001D"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVEF: [536, 538, 948]",
+          "DFPM class table 0x115D9+0x1f=0x115f8",
+          "DTC table 0x153F2: idx 0x1f → Ort 0x82",
+          "Fault site MOV R12,#0x001F; CALLS 0x82,0x96E2 @ 0x8494da"
+        ],
+        "summary": "Класс DFPM idx 0x1f: DTC 0x82. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x82 / адрес класса не 0x115f8",
+        "check": "idx-1 DTC=0x85, idx+1 DTC=0x88; 0x115D9+0x1f=0x115f8 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVEL",
+      "addr": "0x115f9",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x20",
+      "dtc_ort": "0x88",
+      "stock_hex": "23",
+      "consumer": {
+        "ea": "0x859a76",
+        "raw_hex": "e6fc2000da82e296",
+        "decoded": "MOV R12,#0x0020; CALLS 0x82,0x96E2",
+        "phys": "0x8115f9",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "859A76 E6FC2000   MOV      R12,#0x0020",
+          "859A7A DA82E296   CALLS    0x82,0x96E2",
+          "859A7E D4400400   MOV      R4,[R0+#0x0004]",
+          "859A82 B840       MOV      [R0],R4",
+          "859A84 E6FC2300   MOV      R12,#0x0023",
+          "859A88 DA82E296   CALLS    0x82,0x96E2",
+          "859A8C 0802       ADD      R0,#2",
+          "859A8E A840       MOV      R4,[R0]",
+          "859A90 8840       MOV      [-R0],R4",
+          "859A92 E6FC2200   MOV      R12,#0x0022"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVEL: [550, 554, 948]",
+          "DFPM class table 0x115D9+0x20=0x115f9",
+          "DTC table 0x153F2: idx 0x20 → Ort 0x88",
+          "Fault site MOV R12,#0x0020; CALLS 0x82,0x96E2 @ 0x859a76"
+        ],
+        "summary": "Класс DFPM idx 0x20: DTC 0x88. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x88 / адрес класса не 0x115f9",
+        "check": "idx-1 DTC=0x82, idx+1 DTC=0x83; 0x115D9+0x20=0x115f9 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVEN",
+      "addr": "0x115fa",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x21",
+      "dtc_ort": "0x83",
+      "stock_hex": "22",
+      "consumer": {
+        "ea": "0x8494e8",
+        "raw_hex": "e6fc2100da82e296",
+        "decoded": "MOV R12,#0x0021; CALLS 0x82,0x96E2",
+        "phys": "0x8115fa",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8494E8 E6FC2100   MOV      R12,#0x0021",
+          "8494EC DA82E296   CALLS    0x82,0x96E2",
+          "8494F0 D4400600   MOV      R4,[R0+#0x0006]",
+          "8494F4 B840       MOV      [R0],R4",
+          "8494F6 E6FC1D00   MOV      R12,#0x001D",
+          "8494FA DA82E296   CALLS    0x82,0x96E2",
+          "8494FE 06F00800   ADD      R0,#0x0008",
+          "849502 DB00       RETS",
+          "849504 7F21       BSET     0xFD42.7",
+          "849506 BFE0       BSET     0xFFC0.11"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVEN: [537, 538, 948]",
+          "DFPM class table 0x115D9+0x21=0x115fa",
+          "DTC table 0x153F2: idx 0x21 → Ort 0x83",
+          "Fault site MOV R12,#0x0021; CALLS 0x82,0x96E2 @ 0x8494e8"
+        ],
+        "summary": "Класс DFPM idx 0x21: DTC 0x83. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x83 / адрес класса не 0x115fa",
+        "check": "idx-1 DTC=0x88, idx+1 DTC=0x86; 0x115D9+0x21=0x115fa exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVER",
+      "addr": "0x115fb",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x22",
+      "dtc_ort": "0x86",
+      "stock_hex": "23",
+      "consumer": {
+        "ea": "0x859a92",
+        "raw_hex": "e6fc2200da82e296",
+        "decoded": "MOV R12,#0x0022; CALLS 0x82,0x96E2",
+        "phys": "0x8115fb",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "859A92 E6FC2200   MOV      R12,#0x0022",
+          "859A96 DA82E296   CALLS    0x82,0x96E2",
+          "859A9A 0802       ADD      R0,#2",
+          "859A9C F2F422B9   MOV      R4,0xB922",
+          "859AA0 9AF40500   JNB      R4.0,0x00859AAE",
+          "859AA4 F2F5B693   MOV      R5,0x93B6",
+          "859AA8 7C85       SHR      R5,#8",
+          "859AAA F7FAA18C   MOVB     0x8CA1,RL5",
+          "859AAE F2F426B9   MOV      R4,0xB926"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVER: [551, 554, 948]",
+          "DFPM class table 0x115D9+0x22=0x115fb",
+          "DTC table 0x153F2: idx 0x22 → Ort 0x86",
+          "Fault site MOV R12,#0x0022; CALLS 0x82,0x96E2 @ 0x859a92"
+        ],
+        "summary": "Класс DFPM idx 0x22: DTC 0x86. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x86 / адрес класса не 0x115fb",
+        "check": "idx-1 DTC=0x83, idx+1 DTC=0x87; 0x115D9+0x22=0x115fb exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVEU",
+      "addr": "0x115fc",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x23",
+      "dtc_ort": "0x87",
+      "stock_hex": "23",
+      "consumer": {
+        "ea": "0x8588e0",
+        "raw_hex": "e6fc2300da82e296",
+        "decoded": "MOV R12,#0x0023; CALLS 0x82,0x96E2",
+        "phys": "0x8115fc",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8588E0 E6FC2300   MOV      R12,#0x0023",
+          "8588E4 DA82E296   CALLS    0x82,0x96E2",
+          "8588E8 0804       ADD      R0,#4",
+          "8588EA DB00       RETS",
+          "8588EC F2F6ECF8   MOV      R6,0xF8EC",
+          "8588F0 69D3       ANDB     RH6,#3",
+          "8588F2 5C26       SHL      R6,#2",
+          "8588F4 F6F604FA   MOV      0xFA04,R6",
+          "8588F8 F2F6E8F8   MOV      R6,0xF8E8",
+          "8588FC 69D3       ANDB     RH6,#3",
+          "8588FE 5C26       SHL      R6,#2"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVEU: [538, 948]",
+          "DFPM class table 0x115D9+0x23=0x115fc",
+          "DTC table 0x153F2: idx 0x23 → Ort 0x87",
+          "Fault site MOV R12,#0x0023; CALLS 0x82,0x96E2 @ 0x8588e0"
+        ],
+        "summary": "Класс DFPM idx 0x23: DTC 0x87. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x87 / адрес класса не 0x115fc",
+        "check": "idx-1 DTC=0x86, idx+1 DTC=0x94; 0x115D9+0x23=0x115fc exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLADVEV",
+      "addr": "0x115fd",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x24",
+      "dtc_ort": "0x94",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x873c58",
+        "raw_hex": "e6fc2400da82e296",
+        "decoded": "MOV R12,#0x0024; CALLS 0x82,0x96E2",
+        "phys": "0x8115fd",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "873C58 E6FC2400   MOV      R12,#0x0024",
+          "873C5C DA82E296   CALLS    0x82,0x96E2",
+          "873C60 0802       ADD      R0,#2",
+          "873C62 0D11       JMPR     CC_UC,0x00873C86",
+          "873C64 A840       MOV      R4,[R0]",
+          "873C66 9AF40E00   JNB      R4.0,0x00873C86",
+          "873C6A A850       MOV      R5,[R0]",
+          "873C6C 66F5FEFF   AND      R5,#0xFFFE",
+          "873C70 B850       MOV      [R0],R5",
+          "873C72 A840       MOV      R4,[R0]",
+          "873C74 66F4FFF0   AND      R4,#0xF0FF"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLADVEV: [537, 538, 948]",
+          "DFPM class table 0x115D9+0x24=0x115fd",
+          "DTC table 0x153F2: idx 0x24 → Ort 0x94",
+          "Fault site MOV R12,#0x0024; CALLS 0x82,0x96E2 @ 0x873c58"
+        ],
+        "summary": "Класс DFPM idx 0x24: DTC 0x94. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x94 / адрес класса не 0x115fd",
+        "check": "idx-1 DTC=0x87, idx+1 DTC=0xa3; 0x115D9+0x24=0x115fd exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAETS",
+      "addr": "0x11600",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x27",
+      "dtc_ort": "0x96",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85ae8e",
+        "raw_hex": "e6fc2700da82e296",
+        "decoded": "MOV R12,#0x0027; CALLS 0x82,0x96E2",
+        "phys": "0x811600",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85AE8E E6FC2700   MOV      R12,#0x0027",
+          "85AE92 DA82E296   CALLS    0x82,0x96E2",
+          "85AE96 0802       ADD      R0,#2",
+          "85AE98 0D05       JMPR     CC_UC,0x0085AEA4",
+          "85AE9A 258F12A1   SUBB     0xA112,ONES",
+          "85AE9E 0D02       JMPR     CC_UC,0x0085AEA4",
+          "85AEA0 F78E12A1   MOVB     0xA112,ZEROS",
+          "85AEA4 F2F436B9   MOV      R4,0xB936",
+          "85AEA8 8AF41E10   JB       R4.1,0x0085AEE8",
+          "85AEAC F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAETS: [834, 948]",
+          "DFPM class table 0x115D9+0x27=0x11600",
+          "DTC table 0x153F2: idx 0x27 → Ort 0x96",
+          "Fault site MOV R12,#0x0027; CALLS 0x82,0x96E2 @ 0x85ae8e"
+        ],
+        "summary": "Класс DFPM idx 0x27: DTC 0x96. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x96 / адрес класса не 0x11600",
+        "check": "idx-1 DTC=0x8c, idx+1 DTC=0x97; 0x115D9+0x27=0x11600 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV1",
+      "addr": "0x11601",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x28",
+      "dtc_ort": "0x97",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85aed2",
+        "raw_hex": "e6fc2800da82e296",
+        "decoded": "MOV R12,#0x0028; CALLS 0x82,0x96E2",
+        "phys": "0x811601",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85AED2 E6FC2800   MOV      R12,#0x0028",
+          "85AED6 DA82E296   CALLS    0x82,0x96E2",
+          "85AEDA 0802       ADD      R0,#2",
+          "85AEDC 0D05       JMPR     CC_UC,0x0085AEE8",
+          "85AEDE 258F13A1   SUBB     0xA113,ONES",
+          "85AEE2 0D02       JMPR     CC_UC,0x0085AEE8",
+          "85AEE4 F78E13A1   MOVB     0xA113,ZEROS",
+          "85AEE8 F2F438B9   MOV      R4,0xB938",
+          "85AEEC 8AF41E10   JB       R4.1,0x0085AF2C",
+          "85AEF0 F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV1: [836, 948]",
+          "DFPM class table 0x115D9+0x28=0x11601",
+          "DTC table 0x153F2: idx 0x28 → Ort 0x97",
+          "Fault site MOV R12,#0x0028; CALLS 0x82,0x96E2 @ 0x85aed2"
+        ],
+        "summary": "Класс DFPM idx 0x28: DTC 0x97. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x97 / адрес класса не 0x11601",
+        "check": "idx-1 DTC=0x96, idx+1 DTC=0x98; 0x115D9+0x28=0x11601 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV2",
+      "addr": "0x11602",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x29",
+      "dtc_ort": "0x98",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85af16",
+        "raw_hex": "e6fc2900da82e296",
+        "decoded": "MOV R12,#0x0029; CALLS 0x82,0x96E2",
+        "phys": "0x811602",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85AF16 E6FC2900   MOV      R12,#0x0029",
+          "85AF1A DA82E296   CALLS    0x82,0x96E2",
+          "85AF1E 0802       ADD      R0,#2",
+          "85AF20 0D05       JMPR     CC_UC,0x0085AF2C",
+          "85AF22 258F14A1   SUBB     0xA114,ONES",
+          "85AF26 0D02       JMPR     CC_UC,0x0085AF2C",
+          "85AF28 F78E14A1   MOVB     0xA114,ZEROS",
+          "85AF2C F2F43AB9   MOV      R4,0xB93A",
+          "85AF30 8AF41F10   JB       R4.1,0x0085AF72",
+          "85AF34 F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV2: [836, 948]",
+          "DFPM class table 0x115D9+0x29=0x11602",
+          "DTC table 0x153F2: idx 0x29 → Ort 0x98",
+          "Fault site MOV R12,#0x0029; CALLS 0x82,0x96E2 @ 0x85af16"
+        ],
+        "summary": "Класс DFPM idx 0x29: DTC 0x98. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x98 / адрес класса не 0x11602",
+        "check": "idx-1 DTC=0x97, idx+1 DTC=0x99; 0x115D9+0x29=0x11602 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV3",
+      "addr": "0x11603",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x2a",
+      "dtc_ort": "0x99",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85af5c",
+        "raw_hex": "e6fc2a00da82e296",
+        "decoded": "MOV R12,#0x002A; CALLS 0x82,0x96E2",
+        "phys": "0x811603",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85AF5C E6FC2A00   MOV      R12,#0x002A",
+          "85AF60 DA82E296   CALLS    0x82,0x96E2",
+          "85AF64 0802       ADD      R0,#2",
+          "85AF66 0D05       JMPR     CC_UC,0x0085AF72",
+          "85AF68 258F15A1   SUBB     0xA115,ONES",
+          "85AF6C 0D02       JMPR     CC_UC,0x0085AF72",
+          "85AF6E F78E15A1   MOVB     0xA115,ZEROS",
+          "85AF72 F2F43CB9   MOV      R4,0xB93C",
+          "85AF76 8AF41F10   JB       R4.1,0x0085AFB8",
+          "85AF7A F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV3: [836, 948]",
+          "DFPM class table 0x115D9+0x2a=0x11603",
+          "DTC table 0x153F2: idx 0x2a → Ort 0x99",
+          "Fault site MOV R12,#0x002A; CALLS 0x82,0x96E2 @ 0x85af5c"
+        ],
+        "summary": "Класс DFPM idx 0x2a: DTC 0x99. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x99 / адрес класса не 0x11603",
+        "check": "idx-1 DTC=0x98, idx+1 DTC=0x9a; 0x115D9+0x2a=0x11603 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV4",
+      "addr": "0x11604",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x2b",
+      "dtc_ort": "0x9a",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85afa2",
+        "raw_hex": "e6fc2b00da82e296",
+        "decoded": "MOV R12,#0x002B; CALLS 0x82,0x96E2",
+        "phys": "0x811604",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85AFA2 E6FC2B00   MOV      R12,#0x002B",
+          "85AFA6 DA82E296   CALLS    0x82,0x96E2",
+          "85AFAA 0802       ADD      R0,#2",
+          "85AFAC 0D05       JMPR     CC_UC,0x0085AFB8",
+          "85AFAE 258F16A1   SUBB     0xA116,ONES",
+          "85AFB2 0D02       JMPR     CC_UC,0x0085AFB8",
+          "85AFB4 F78E16A1   MOVB     0xA116,ZEROS",
+          "85AFB8 F2F43EB9   MOV      R4,0xB93E",
+          "85AFBC 8AF41F10   JB       R4.1,0x0085AFFE",
+          "85AFC0 F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV4: [836, 948]",
+          "DFPM class table 0x115D9+0x2b=0x11604",
+          "DTC table 0x153F2: idx 0x2b → Ort 0x9a",
+          "Fault site MOV R12,#0x002B; CALLS 0x82,0x96E2 @ 0x85afa2"
+        ],
+        "summary": "Класс DFPM idx 0x2b: DTC 0x9a. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x9a / адрес класса не 0x11604",
+        "check": "idx-1 DTC=0x99, idx+1 DTC=0x9b; 0x115D9+0x2b=0x11604 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV5",
+      "addr": "0x11605",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x2c",
+      "dtc_ort": "0x9b",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85afe8",
+        "raw_hex": "e6fc2c00da82e296",
+        "decoded": "MOV R12,#0x002C; CALLS 0x82,0x96E2",
+        "phys": "0x811605",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85AFE8 E6FC2C00   MOV      R12,#0x002C",
+          "85AFEC DA82E296   CALLS    0x82,0x96E2",
+          "85AFF0 0802       ADD      R0,#2",
+          "85AFF2 0D05       JMPR     CC_UC,0x0085AFFE",
+          "85AFF4 258F17A1   SUBB     0xA117,ONES",
+          "85AFF8 0D02       JMPR     CC_UC,0x0085AFFE",
+          "85AFFA F78E17A1   MOVB     0xA117,ZEROS",
+          "85AFFE F2F440B9   MOV      R4,0xB940",
+          "85B002 8AF41F10   JB       R4.1,0x0085B044",
+          "85B006 F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV5: [836, 948]",
+          "DFPM class table 0x115D9+0x2c=0x11605",
+          "DTC table 0x153F2: idx 0x2c → Ort 0x9b",
+          "Fault site MOV R12,#0x002C; CALLS 0x82,0x96E2 @ 0x85afe8"
+        ],
+        "summary": "Класс DFPM idx 0x2c: DTC 0x9b. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x9b / адрес класса не 0x11605",
+        "check": "idx-1 DTC=0x9a, idx+1 DTC=0x9c; 0x115D9+0x2c=0x11605 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV6",
+      "addr": "0x11606",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x2d",
+      "dtc_ort": "0x9c",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85b02e",
+        "raw_hex": "e6fc2d00da82e296",
+        "decoded": "MOV R12,#0x002D; CALLS 0x82,0x96E2",
+        "phys": "0x811606",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85B02E E6FC2D00   MOV      R12,#0x002D",
+          "85B032 DA82E296   CALLS    0x82,0x96E2",
+          "85B036 0802       ADD      R0,#2",
+          "85B038 0D05       JMPR     CC_UC,0x0085B044",
+          "85B03A 258F18A1   SUBB     0xA118,ONES",
+          "85B03E 0D02       JMPR     CC_UC,0x0085B044",
+          "85B040 F78E18A1   MOVB     0xA118,ZEROS",
+          "85B044 F2F442B9   MOV      R4,0xB942",
+          "85B048 8AF43010   JB       R4.1,0x0085B0AC",
+          "85B04C F3F84BFA   MOVB     RL4,0xFA4B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV6: [836, 948]",
+          "DFPM class table 0x115D9+0x2d=0x11606",
+          "DTC table 0x153F2: idx 0x2d → Ort 0x9c",
+          "Fault site MOV R12,#0x002D; CALLS 0x82,0x96E2 @ 0x85b02e"
+        ],
+        "summary": "Класс DFPM idx 0x2d: DTC 0x9c. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x9c / адрес класса не 0x11606",
+        "check": "idx-1 DTC=0x9b, idx+1 DTC=0x9d; 0x115D9+0x2d=0x11606 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV7",
+      "addr": "0x11607",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x2e",
+      "dtc_ort": "0x9d",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x85b074",
+        "raw_hex": "e6fc2e00da82e296",
+        "decoded": "MOV R12,#0x002E; CALLS 0x82,0x96E2",
+        "phys": "0x811607",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85B074 E6FC2E00   MOV      R12,#0x002E",
+          "85B078 DA82E296   CALLS    0x82,0x96E2",
+          "85B07C 0802       ADD      R0,#2",
+          "85B07E 0D16       JMPR     CC_UC,0x0085B0AC",
+          "85B080 258F19A1   SUBB     0xA119,ONES",
+          "85B084 0D13       JMPR     CC_UC,0x0085B0AC",
+          "85B086 F78E19A1   MOVB     0xA119,ZEROS",
+          "85B08A 0D10       JMPR     CC_UC,0x0085B0AC",
+          "85B08C F78E12A1   MOVB     0xA112,ZEROS",
+          "85B090 F78E13A1   MOVB     0xA113,ZEROS"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV7: [836, 948]",
+          "DFPM class table 0x115D9+0x2e=0x11607",
+          "DTC table 0x153F2: idx 0x2e → Ort 0x9d",
+          "Fault site MOV R12,#0x002E; CALLS 0x82,0x96E2 @ 0x85b074"
+        ],
+        "summary": "Класс DFPM idx 0x2e: DTC 0x9d. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x9d / адрес класса не 0x11607",
+        "check": "idx-1 DTC=0x9c, idx+1 DTC=0xe7; 0x115D9+0x2e=0x11607 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAEV8",
+      "addr": "0x11608",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x2f",
+      "dtc_ort": "0xe7",
+      "stock_hex": "23",
+      "consumer": {
+        "ea": "0x849894",
+        "raw_hex": "e6fc2f00da82e296",
+        "decoded": "MOV R12,#0x002F; CALLS 0x82,0x96E2",
+        "phys": "0x811608",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "849894 E6FC2F00   MOV      R12,#0x002F",
+          "849898 DA82E296   CALLS    0x82,0x96E2",
+          "84989C D4400400   MOV      R4,[R0+#0x0004]",
+          "8498A0 B840       MOV      [R0],R4",
+          "8498A2 E6FC3000   MOV      R12,#0x0030",
+          "8498A6 DA82E296   CALLS    0x82,0x96E2",
+          "8498AA 06F00A00   ADD      R0,#0x000A",
+          "8498AE DB00       RETS",
+          "8498B0 F3F8C10B   MOVB     RL4,0x0BC1"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAEV8: [836, 948]",
+          "DFPM class table 0x115D9+0x2f=0x11608",
+          "DTC table 0x153F2: idx 0x2f → Ort 0xe7",
+          "Fault site MOV R12,#0x002F; CALLS 0x82,0x96E2 @ 0x849894"
+        ],
+        "summary": "Класс DFPM idx 0x2f: DTC 0xe7. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xe7 / адрес класса не 0x11608",
+        "check": "idx-1 DTC=0x9d, idx+1 DTC=0xe8; 0x115D9+0x2f=0x11608 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAKOS",
+      "addr": "0x1161a",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x41",
+      "dtc_ort": "0xaa",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x85b424",
+        "raw_hex": "e6fc4100da82e296",
+        "decoded": "MOV R12,#0x0041; CALLS 0x82,0x96E2",
+        "phys": "0x81161a",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85B424 E6FC4100   MOV      R12,#0x0041",
+          "85B428 DA82E296   CALLS    0x82,0x96E2",
+          "85B42C 0802       ADD      R0,#2",
+          "85B42E 0802       ADD      R0,#2",
+          "85B430 DB00       RETS",
+          "85B432 F2F468B9   MOV      R4,0xB968",
+          "85B436 9AF40A70   JNB      R4.7,0x0085B44E",
+          "85B43A E6F5FEFF   MOV      R5,#0xFFFE",
+          "85B43E 64F52EA1   AND      0xA12E,R5",
+          "85B442 E6F2FDFF   MOV      R2,#0xFFFD"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAKOS: [816, 948]",
+          "DFPM class table 0x115D9+0x41=0x1161a",
+          "DTC table 0x153F2: idx 0x41 → Ort 0xaa",
+          "Fault site MOV R12,#0x0041; CALLS 0x82,0x96E2 @ 0x85b424"
+        ],
+        "summary": "Класс DFPM idx 0x41: DTC 0xaa. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xaa / адрес класса не 0x1161a",
+        "check": "idx-1 DTC=0xff, idx+1 DTC=0xa7; 0x115D9+0x41=0x1161a exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAKRNT",
+      "addr": "0x1161c",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x43",
+      "dtc_ort": "0xd6",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x8469a0",
+        "raw_hex": "e6fc4300da82e296",
+        "decoded": "MOV R12,#0x0043; CALLS 0x82,0x96E2",
+        "phys": "0x81161c",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8469A0 E6FC4300   MOV      R12,#0x0043",
+          "8469A4 DA82E296   CALLS    0x82,0x96E2",
+          "8469A8 0802       ADD      R0,#2",
+          "8469AA 84006EB9   MOV      [R0],0xB96E",
+          "8469AE F3F88301   MOVB     RL4,0x0183",
+          "8469B2 3D11       JMPR     CC_NZ,0x008469D6",
+          "8469B4 A840       MOV      R4,[R0]",
+          "8469B6 0AF40202   BFLDL    R4,#0x02,#0x02",
+          "8469BA B840       MOV      [R0],R4",
+          "8469BC A850       MOV      R5,[R0]",
+          "8469BE 1AF52020   BFLDH    R5,#0x20,#0x20"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAKRNT: [249, 948]",
+          "DFPM class table 0x115D9+0x43=0x1161c",
+          "DTC table 0x153F2: idx 0x43 → Ort 0xd6",
+          "Fault site MOV R12,#0x0043; CALLS 0x82,0x96E2 @ 0x8469a0"
+        ],
+        "summary": "Класс DFPM idx 0x43: DTC 0xd6. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xd6 / адрес класса не 0x1161c",
+        "check": "idx-1 DTC=0xa7, idx+1 DTC=0xd7; 0x115D9+0x43=0x1161c exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAKROF",
+      "addr": "0x1161d",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x44",
+      "dtc_ort": "0xd7",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x846a14",
+        "raw_hex": "e6fc4400da82e296",
+        "decoded": "MOV R12,#0x0044; CALLS 0x82,0x96E2",
+        "phys": "0x81161d",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "846A14 E6FC4400   MOV      R12,#0x0044",
+          "846A18 DA82E296   CALLS    0x82,0x96E2",
+          "846A1C 0804       ADD      R0,#4",
+          "846A1E DB00       RETS",
+          "846A20 F3F844F8   MOVB     RL4,0xF844",
+          "846A24 43F80A00   CMPB     RL4,0x000A",
+          "846A28 8D07       JMPR     CC_C,0x00846A38",
+          "846A2A F2F4C0A4   MOV      R4,0xA4C0",
+          "846A2E 42F432FA   CMP      R4,0xFA32",
+          "846A32 9D02       JMPR     CC_NC,0x00846A38"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAKROF: [249, 948]",
+          "DFPM class table 0x115D9+0x44=0x1161d",
+          "DTC table 0x153F2: idx 0x44 → Ort 0xd7",
+          "Fault site MOV R12,#0x0044; CALLS 0x82,0x96E2 @ 0x846a14"
+        ],
+        "summary": "Класс DFPM idx 0x44: DTC 0xd7. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xd7 / адрес класса не 0x1161d",
+        "check": "idx-1 DTC=0xd6, idx+1 DTC=0xd8; 0x115D9+0x44=0x1161d exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAKRTP",
+      "addr": "0x1161e",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x45",
+      "dtc_ort": "0xd8",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x84686e",
+        "raw_hex": "e6fc4500da82e296",
+        "decoded": "MOV R12,#0x0045; CALLS 0x82,0x96E2",
+        "phys": "0x81161e",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "84686E E6FC4500   MOV      R12,#0x0045",
+          "846872 DA82E296   CALLS    0x82,0x96E2",
+          "846876 0804       ADD      R0,#4",
+          "846878 DB00       RETS",
+          "84687A C2FC8501   MOVBZ    R12,0x0185",
+          "84687E 5C1C       SHL      R12,#1",
+          "846880 46FCFF00   CMP      R12,#0x00FF",
+          "846884 FD03       JMPR     CC_ULE,0x0084688C",
+          "846886 F78FAF89   MOVB     0x89AF,ONES",
+          "84688A 0D03       JMPR     CC_UC,0x00846892",
+          "84688C F04C       MOV      R4,R12"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAKRTP: [252, 949]",
+          "DFPM class table 0x115D9+0x45=0x1161e",
+          "DTC table 0x153F2: idx 0x45 → Ort 0xd8",
+          "Fault site MOV R12,#0x0045; CALLS 0x82,0x96E2 @ 0x84686e"
+        ],
+        "summary": "Класс DFPM idx 0x45: DTC 0xd8. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xd8 / адрес класса не 0x1161e",
+        "check": "idx-1 DTC=0xd7, idx+1 DTC=0xd2; 0x115D9+0x45=0x1161e exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAKUPPL",
+      "addr": "0x11623",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x4a",
+      "dtc_ort": "0x68",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x8583a6",
+        "raw_hex": "e6fc4a00da82e296",
+        "decoded": "MOV R12,#0x004A; CALLS 0x82,0x96E2",
+        "phys": "0x811623",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8583A6 E6FC4A00   MOV      R12,#0x004A",
+          "8583AA DA82E296   CALLS    0x82,0x96E2",
+          "8583AE 0804       ADD      R0,#4",
+          "8583B0 DB00       RETS",
+          "8583B2 2802       SUB      R0,#2",
+          "8583B4 840006BA   MOV      [R0],0xBA06",
+          "8583B8 F2F49493   MOV      R4,0x9394",
+          "8583BC D7400602   EXTP     #0x206,#1",
+          "8583C0 42F49233   CMP      R4,0x3392 ; EXTP physical=0x81B392",
+          "8583C4 8D25       JMPR     CC_C,0x00858410"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAKUPPL: [561]",
+          "DFPM class table 0x115D9+0x4a=0x11623",
+          "DTC table 0x153F2: idx 0x4a → Ort 0x68",
+          "Fault site MOV R12,#0x004A; CALLS 0x82,0x96E2 @ 0x8583a6"
+        ],
+        "summary": "Класс DFPM idx 0x4a: DTC 0x68. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x68 / адрес класса не 0x11623",
+        "check": "idx-1 DTC=0xd5, idx+1 DTC=0x11; 0x115D9+0x4a=0x11623 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALATP",
+      "addr": "0x11626",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x4d",
+      "dtc_ort": "0xf",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x856f6a",
+        "raw_hex": "e6fc4d00da82e296",
+        "decoded": "MOV R12,#0x004D; CALLS 0x82,0x96E2",
+        "phys": "0x811626",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "856F6A E6FC4D00   MOV      R12,#0x004D",
+          "856F6E DA82E296   CALLS    0x82,0x96E2",
+          "856F72 0802       ADD      R0,#2",
+          "856F74 840082B9   MOV      [R0],0xB982",
+          "856F78 F2F44C90   MOV      R4,0x904C",
+          "856F7C 66F41000   AND      R4,#0x0010",
+          "856F80 3D12       JMPR     CC_NZ,0x00856FA6",
+          "856F82 A840       MOV      R4,[R0]",
+          "856F84 66F4FEFF   AND      R4,#0xFFFE",
+          "856F88 B840       MOV      [R0],R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALATP: [640, 949]",
+          "DFPM class table 0x115D9+0x4d=0x11626",
+          "DTC table 0x153F2: idx 0x4d → Ort 0xf",
+          "Fault site MOV R12,#0x004D; CALLS 0x82,0x96E2 @ 0x856f6a"
+        ],
+        "summary": "Класс DFPM idx 0x4d: DTC 0xf. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xf / адрес класса не 0x11626",
+        "check": "idx-1 DTC=0x17, idx+1 DTC=0x15; 0x115D9+0x4d=0x11626 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALATP2",
+      "addr": "0x11627",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x4e",
+      "dtc_ort": "0x15",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x857062",
+        "raw_hex": "e6fc4e00da82e296",
+        "decoded": "MOV R12,#0x004E; CALLS 0x82,0x96E2",
+        "phys": "0x811627",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "857062 E6FC4E00   MOV      R12,#0x004E",
+          "857066 DA82E296   CALLS    0x82,0x96E2",
+          "85706A 0802       ADD      R0,#2",
+          "85706C 840084B9   MOV      [R0],0xB984",
+          "857070 F2F47A9F   MOV      R4,0x9F7A",
+          "857074 D7400602   EXTP     #0x206,#1",
+          "857078 42F4F632   CMP      R4,0x32F6 ; EXTP physical=0x81B2F6",
+          "85707C FD02       JMPR     CC_ULE,0x00857082",
+          "85707E CF3F       BSET     0xFD7E.12",
+          "857080 0D01       JMPR     CC_UC,0x00857084"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALATP2: [640, 949]",
+          "DFPM class table 0x115D9+0x4e=0x11627",
+          "DTC table 0x153F2: idx 0x4e → Ort 0x15",
+          "Fault site MOV R12,#0x004E; CALLS 0x82,0x96E2 @ 0x857062"
+        ],
+        "summary": "Класс DFPM idx 0x4e: DTC 0x15. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x15 / адрес класса не 0x11627",
+        "check": "idx-1 DTC=0xf, idx+1 DTC=0x10; 0x115D9+0x4e=0x11627 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALATV",
+      "addr": "0x11628",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x4f",
+      "dtc_ort": "0x10",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x857128",
+        "raw_hex": "e6fc4f00da82e296",
+        "decoded": "MOV R12,#0x004F; CALLS 0x82,0x96E2",
+        "phys": "0x811628",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "857128 E6FC4F00   MOV      R12,#0x004F",
+          "85712C DA82E296   CALLS    0x82,0x96E2",
+          "857130 0802       ADD      R0,#2",
+          "857132 840086B9   MOV      [R0],0xB986",
+          "857136 F2F4789F   MOV      R4,0x9F78",
+          "85713A D7400602   EXTP     #0x206,#1",
+          "85713E 42F4F632   CMP      R4,0x32F6 ; EXTP physical=0x81B2F6",
+          "857142 FD02       JMPR     CC_ULE,0x00857148",
+          "857144 DF3F       BSET     0xFD7E.13",
+          "857146 0D01       JMPR     CC_UC,0x0085714A"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALATV: [640, 949]",
+          "DFPM class table 0x115D9+0x4f=0x11628",
+          "DTC table 0x153F2: idx 0x4f → Ort 0x10",
+          "Fault site MOV R12,#0x004F; CALLS 0x82,0x96E2 @ 0x857128"
+        ],
+        "summary": "Класс DFPM idx 0x4f: DTC 0x10. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x10 / адрес класса не 0x11628",
+        "check": "idx-1 DTC=0x15, idx+1 DTC=0x16; 0x115D9+0x4f=0x11628 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALATV2",
+      "addr": "0x11629",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x50",
+      "dtc_ort": "0x16",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x8571ee",
+        "raw_hex": "e6fc5000da82e296",
+        "decoded": "MOV R12,#0x0050; CALLS 0x82,0x96E2",
+        "phys": "0x811629",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8571EE E6FC5000   MOV      R12,#0x0050",
+          "8571F2 DA82E296   CALLS    0x82,0x96E2",
+          "8571F6 0802       ADD      R0,#2",
+          "8571F8 E6FC6A1A   MOV      R12,#0x1A6A",
+          "8571FC E6FD0602   MOV      R13,#0x0206",
+          "857200 C2FE44F8   MOVBZ    R14,0xF844",
+          "857204 C2FF53F8   MOVBZ    R15,0xF853",
+          "857208 DA0104B7   CALLS    0x01,0xB704",
+          "85720C F7F8268A   MOVB     0x8A26,RL4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALATV2: [640, 949]",
+          "DFPM class table 0x115D9+0x50=0x11629",
+          "DTC table 0x153F2: idx 0x50 → Ort 0x16",
+          "Fault site MOV R12,#0x0050; CALLS 0x82,0x96E2 @ 0x8571ee"
+        ],
+        "summary": "Класс DFPM idx 0x50: DTC 0x16. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x16 / адрес класса не 0x11629",
+        "check": "idx-1 DTC=0x10, idx+1 DTC=0xff; 0x115D9+0x50=0x11629 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALDPE",
+      "addr": "0x1162c",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x53",
+      "dtc_ort": "0x1",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x85b4a2",
+        "raw_hex": "e6fc5300da82e296",
+        "decoded": "MOV R12,#0x0053; CALLS 0x82,0x96E2",
+        "phys": "0x81162c",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85B4A2 E6FC5300   MOV      R12,#0x0053",
+          "85B4A6 DA82E296   CALLS    0x82,0x96E2",
+          "85B4AA 0802       ADD      R0,#2",
+          "85B4AC 0D02       JMPR     CC_UC,0x0085B4B2",
+          "85B4AE F78E30A1   MOVB     0xA130,ZEROS",
+          "85B4B2 0802       ADD      R0,#2",
+          "85B4B4 DB00       RETS",
+          "85B4B6 F2F48CB9   MOV      R4,0xB98C",
+          "85B4BA 9AF40A70   JNB      R4.7,0x0085B4D2",
+          "85B4BE E6F5FEFF   MOV      R5,#0xFFFE"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALDPE: [409, 949]",
+          "DFPM class table 0x115D9+0x53=0x1162c",
+          "DTC table 0x153F2: idx 0x53 → Ort 0x1",
+          "Fault site MOV R12,#0x0053; CALLS 0x82,0x96E2 @ 0x85b4a2"
+        ],
+        "summary": "Класс DFPM idx 0x53: DTC 0x1. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x1 / адрес класса не 0x1162c",
+        "check": "idx-1 DTC=0xb9, idx+1 DTC=0x20; 0x115D9+0x53=0x1162c exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALM",
+      "addr": "0x1162e",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x55",
+      "dtc_ort": "0x73",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x85e12e",
+        "raw_hex": "e6fc5500da82e296",
+        "decoded": "MOV R12,#0x0055; CALLS 0x82,0x96E2",
+        "phys": "0x81162e",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85E12E E6FC5500   MOV      R12,#0x0055",
+          "85E132 DA82E296   CALLS    0x82,0x96E2",
+          "85E136 0802       ADD      R0,#2",
+          "85E138 0806       ADD      R0,#6",
+          "85E13A 9860       MOV      R6,[R0+]",
+          "85E13C 9880       MOV      R8,[R0+]",
+          "85E13E 9890       MOV      R9,[R0+]",
+          "85E140 DB00       RETS",
+          "85E142 6E13       BCLR     0xFD26.6",
+          "85E144 DB00       RETS",
+          "85E146 F2F41CB9   MOV      R4,0xB91C",
+          "85E14A 9AF40970   JNB      R4.7,0x0085E160"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALM: [108]",
+          "DFPM class table 0x115D9+0x55=0x1162e",
+          "DTC table 0x153F2: idx 0x55 → Ort 0x73",
+          "Fault site MOV R12,#0x0055; CALLS 0x82,0x96E2 @ 0x85e12e"
+        ],
+        "summary": "Класс DFPM idx 0x55: DTC 0x73. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x73 / адрес класса не 0x1162e",
+        "check": "idx-1 DTC=0x20, idx+1 DTC=0xc; 0x115D9+0x55=0x1162e exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALSV2",
+      "addr": "0x11632",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x59",
+      "dtc_ort": "0x12",
+      "stock_hex": "21",
+      "consumer": {
+        "ea": "0x82d9c2",
+        "raw_hex": "e6fc5900da82e296",
+        "decoded": "MOV R12,#0x0059; CALLS 0x82,0x96E2",
+        "phys": "0x811632",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "82D9C2 E6FC5900   MOV      R12,#0x0059",
+          "82D9C6 DA82E296   CALLS    0x82,0x96E2",
+          "82D9CA 0806       ADD      R0,#6",
+          "82D9CC 9860       MOV      R6,[R0+]",
+          "82D9CE DB00       RETS",
+          "82D9D0 F2F436A0   MOV      R4,0xA036",
+          "82D9D4 3D06       JMPR     CC_NZ,0x0082D9E2",
+          "82D9D6 7F44       BSET     0xFD88.7",
+          "82D9D8 F2F58C57   MOV      R5,0x578C",
+          "82D9DC F6F536A0   MOV      0xA036,R5",
+          "82D9E0 0D03       JMPR     CC_UC,0x0082D9E8"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALSV2: [620, 949]",
+          "DFPM class table 0x115D9+0x59=0x11632",
+          "DTC table 0x153F2: idx 0x59 → Ort 0x12",
+          "Fault site MOV R12,#0x0059; CALLS 0x82,0x96E2 @ 0x82d9c2"
+        ],
+        "summary": "Класс DFPM idx 0x59: DTC 0x12. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x12 / адрес класса не 0x11632",
+        "check": "idx-1 DTC=0xa, idx+1 DTC=0x3; 0x115D9+0x59=0x11632 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLALSVV",
+      "addr": "0x11633",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x5a",
+      "dtc_ort": "0x3",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x874c7a",
+        "raw_hex": "e6fc5a00da82e296",
+        "decoded": "MOV R12,#0x005A; CALLS 0x82,0x96E2",
+        "phys": "0x811633",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "874C7A E6FC5A00   MOV      R12,#0x005A",
+          "874C7E DA82E296   CALLS    0x82,0x96E2",
+          "874C82 0802       ADD      R0,#2",
+          "874C84 0D17       JMPR     CC_UC,0x00874CB4",
+          "874C86 6E6C       BCLR     0xFDD8.6",
+          "874C88 A840       MOV      R4,[R0]",
+          "874C8A 0AF40202   BFLDL    R4,#0x02,#0x02",
+          "874C8E B840       MOV      [R0],R4",
+          "874C90 A850       MOV      R5,[R0]",
+          "874C92 1AF52020   BFLDH    R5,#0x20,#0x20",
+          "874C96 B850       MOV      [R0],R5",
+          "874C98 A840       MOV      R4,[R0]"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLALSVV: [626]",
+          "DFPM class table 0x115D9+0x5a=0x11633",
+          "DTC table 0x153F2: idx 0x5a → Ort 0x3",
+          "Fault site MOV R12,#0x005A; CALLS 0x82,0x96E2 @ 0x874c7a"
+        ],
+        "summary": "Класс DFPM idx 0x5a: DTC 0x3. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x3 / адрес класса не 0x11633",
+        "check": "idx-1 DTC=0x12, idx+1 DTC=0x8d; 0x115D9+0x5a=0x11633 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAMILE",
+      "addr": "0x11640",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x67",
+      "dtc_ort": "0xa8",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x859f02",
+        "raw_hex": "e6fc6700da82e296",
+        "decoded": "MOV R12,#0x0067; CALLS 0x82,0x96E2",
+        "phys": "0x811640",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "859F02 E6FC6700   MOV      R12,#0x0067",
+          "859F06 DA82E296   CALLS    0x82,0x96E2",
+          "859F0A 0802       ADD      R0,#2",
+          "859F0C 0802       ADD      R0,#2",
+          "859F0E DB00       RETS",
+          "859F10 F2F4B4B9   MOV      R4,0xB9B4",
+          "859F14 9AF40A70   JNB      R4.7,0x00859F2C",
+          "859F18 E6F5FEFF   MOV      R5,#0xFFFE",
+          "859F1C 64F5C6A0   AND      0xA0C6,R5",
+          "859F20 E6F2FDFF   MOV      R2,#0xFFFD"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAMILE: [838, 949]",
+          "DFPM class table 0x115D9+0x67=0x11640",
+          "DTC table 0x153F2: idx 0x67 → Ort 0xa8",
+          "Fault site MOV R12,#0x0067; CALLS 0x82,0x96E2 @ 0x859f02"
+        ],
+        "summary": "Класс DFPM idx 0x67: DTC 0xa8. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xa8 / адрес класса не 0x11640",
+        "check": "idx-1 DTC=0x66, idx+1 DTC=0x6f; 0x115D9+0x67=0x11640 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAN",
+      "addr": "0x11641",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x68",
+      "dtc_ort": "0x6f",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x8532c0",
+        "raw_hex": "e6fc6800da82e296",
+        "decoded": "MOV R12,#0x0068; CALLS 0x82,0x96E2",
+        "phys": "0x811641",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8532C0 E6FC6800   MOV      R12,#0x0068",
+          "8532C4 DA82E296   CALLS    0x82,0x96E2",
+          "8532C8 D4400400   MOV      R4,[R0+#0x0004]",
+          "8532CC B840       MOV      [R0],R4",
+          "8532CE E07C       MOV      R12,#7",
+          "8532D0 DA82E296   CALLS    0x82,0x96E2",
+          "8532D4 0806       ADD      R0,#6",
+          "8532D6 DB00       RETS",
+          "8532D8 9A251170   JNB      0xFD4A.7,0x008532FE",
+          "8532DC F2F45057   MOV      R4,0x5750"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAN: [569, 570]",
+          "DFPM class table 0x115D9+0x68=0x11641",
+          "DTC table 0x153F2: idx 0x68 → Ort 0x6f",
+          "Fault site MOV R12,#0x0068; CALLS 0x82,0x96E2 @ 0x8532c0"
+        ],
+        "summary": "Класс DFPM idx 0x68: DTC 0x6f. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x6f / адрес класса не 0x11641",
+        "check": "idx-1 DTC=0xa8, idx+1 DTC=0x21; 0x115D9+0x68=0x11641 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLANWSE",
+      "addr": "0x11644",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x6b",
+      "dtc_ort": "0xa5",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x85b7c6",
+        "raw_hex": "e6fc6b00da82e296",
+        "decoded": "MOV R12,#0x006B; CALLS 0x82,0x96E2",
+        "phys": "0x811644",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85B7C6 E6FC6B00   MOV      R12,#0x006B",
+          "85B7CA DA82E296   CALLS    0x82,0x96E2",
+          "85B7CE 0802       ADD      R0,#2",
+          "85B7D0 F2F4BEB9   MOV      R4,0xB9BE",
+          "85B7D4 8AF42710   JB       R4.1,0x0085B826",
+          "85B7D8 8400BEB9   MOV      [R0],0xB9BE",
+          "85B7DC 9A471AB0   JNB      0xFD8E.11,0x0085B814",
+          "85B7E0 C2F507E5   MOVBZ    R5,0xE507",
+          "85B7E4 4850       CMP      R5,#0"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLANWSE: [819, 820, 949]",
+          "DFPM class table 0x115D9+0x6b=0x11644",
+          "DTC table 0x153F2: idx 0x6b → Ort 0xa5",
+          "Fault site MOV R12,#0x006B; CALLS 0x82,0x96E2 @ 0x85b7c6"
+        ],
+        "summary": "Класс DFPM idx 0x6b: DTC 0xa5. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xa5 / адрес класса не 0x11644",
+        "check": "idx-1 DTC=0x22, idx+1 DTC=0xa6; 0x115D9+0x6b=0x11644 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAPH",
+      "addr": "0x11646",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x6d",
+      "dtc_ort": "0x71",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x8535da",
+        "raw_hex": "e6fc6d00da82e296",
+        "decoded": "MOV R12,#0x006D; CALLS 0x82,0x96E2",
+        "phys": "0x811646",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "8535DA E6FC6D00   MOV      R12,#0x006D",
+          "8535DE DA82E296   CALLS    0x82,0x96E2",
+          "8535E2 0802       ADD      R0,#2",
+          "8535E4 8400C2B9   MOV      [R0],0xB9C2",
+          "8535E8 F3F8258C   MOVB     RL4,0x8C25",
+          "8535EC 47F85500   CMPB     RL4,#0x0055",
+          "8535F0 2D04       JMPR     CC_Z,0x008535FA",
+          "8535F2 C084       MOVBZ    R4,RL4",
+          "8535F4 46F4AA00   CMP      R4,#0x00AA",
+          "8535F8 3D12       JMPR     CC_NZ,0x0085361E"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAPH: [572, 949]",
+          "DFPM class table 0x115D9+0x6d=0x11646",
+          "DTC table 0x153F2: idx 0x6d → Ort 0x71",
+          "Fault site MOV R12,#0x006D; CALLS 0x82,0x96E2 @ 0x8535da"
+        ],
+        "summary": "Класс DFPM idx 0x6d: DTC 0x71. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x71 / адрес класса не 0x11646",
+        "check": "idx-1 DTC=0xa6, idx+1 DTC=0x72; 0x115D9+0x6d=0x11646 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLAPH2",
+      "addr": "0x11647",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x6e",
+      "dtc_ort": "0x72",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x85369c",
+        "raw_hex": "e6fc6e00da82e296",
+        "decoded": "MOV R12,#0x006E; CALLS 0x82,0x96E2",
+        "phys": "0x811647",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85369C E6FC6E00   MOV      R12,#0x006E",
+          "8536A0 DA82E296   CALLS    0x82,0x96E2",
+          "8536A4 0804       ADD      R0,#4",
+          "8536A6 DB00       RETS",
+          "8536A8 4AE01088   BMOV     0xFD20.8,0xFFC0.8",
+          "8536AC DB00       RETS",
+          "8536AE 4AE01097   BMOV     0xFD20.7,0xFFC0.9",
+          "8536B2 DB00       RETS",
+          "8536B4 D110       ATOMIC   #1",
+          "8536B6 248F48F8   SUB      0xF848,ONES",
+          "8536BA 9F10       BSET     0xFD20.9"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLAPH2: [572, 949]",
+          "DFPM class table 0x115D9+0x6e=0x11647",
+          "DTC table 0x153F2: idx 0x6e → Ort 0x72",
+          "Fault site MOV R12,#0x006E; CALLS 0x82,0x96E2 @ 0x85369c"
+        ],
+        "summary": "Класс DFPM idx 0x6e: DTC 0x72. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x72 / адрес класса не 0x11647",
+        "check": "idx-1 DTC=0x71, idx+1 DTC=0x1c; 0x115D9+0x6e=0x11647 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASLS",
+      "addr": "0x1164d",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x74",
+      "dtc_ort": "0x50",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x84be0a",
+        "raw_hex": "e6fc7400da82e296",
+        "decoded": "MOV R12,#0x0074; CALLS 0x82,0x96E2",
+        "phys": "0x81164d",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "84BE0A E6FC7400   MOV      R12,#0x0074",
+          "84BE0E DA82E296   CALLS    0x82,0x96E2",
+          "84BE12 0802       ADD      R0,#2",
+          "84BE14 A840       MOV      R4,[R0]",
+          "84BE16 8840       MOV      [-R0],R4",
+          "84BE18 E6FC7600   MOV      R12,#0x0076",
+          "84BE1C DA82E296   CALLS    0x82,0x96E2",
+          "84BE20 D4400800   MOV      R4,[R0+#0x0008]",
+          "84BE24 B840       MOV      [R0],R4",
+          "84BE26 E6FC7500   MOV      R12,#0x0075"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASLS: [298, 949]",
+          "DFPM class table 0x115D9+0x74=0x1164d",
+          "DTC table 0x153F2: idx 0x74 → Ort 0x50",
+          "Fault site MOV R12,#0x0074; CALLS 0x82,0x96E2 @ 0x84be0a"
+        ],
+        "summary": "Класс DFPM idx 0x74: DTC 0x50. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x50 / адрес класса не 0x1164d",
+        "check": "idx-1 DTC=0x54, idx+1 DTC=0x51; 0x115D9+0x74=0x1164d exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASLS2",
+      "addr": "0x1164e",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x75",
+      "dtc_ort": "0x51",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x84be26",
+        "raw_hex": "e6fc7500da82e296",
+        "decoded": "MOV R12,#0x0075; CALLS 0x82,0x96E2",
+        "phys": "0x81164e",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "84BE26 E6FC7500   MOV      R12,#0x0075",
+          "84BE2A DA82E296   CALLS    0x82,0x96E2",
+          "84BE2E D4400400   MOV      R4,[R0+#0x0004]",
+          "84BE32 B840       MOV      [R0],R4",
+          "84BE34 E6FC7700   MOV      R12,#0x0077",
+          "84BE38 DA82E296   CALLS    0x82,0x96E2",
+          "84BE3C 0802       ADD      R0,#2",
+          "84BE3E F2F4AE8E   MOV      R4,0x8EAE",
+          "84BE42 66F40020   AND      R4,#0x2000"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASLS2: [298, 949]",
+          "DFPM class table 0x115D9+0x75=0x1164e",
+          "DTC table 0x153F2: idx 0x75 → Ort 0x51",
+          "Fault site MOV R12,#0x0075; CALLS 0x82,0x96E2 @ 0x84be26"
+        ],
+        "summary": "Класс DFPM idx 0x75: DTC 0x51. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x51 / адрес класса не 0x1164e",
+        "check": "idx-1 DTC=0x50, idx+1 DTC=0x52; 0x115D9+0x75=0x1164e exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASLV",
+      "addr": "0x1164f",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x76",
+      "dtc_ort": "0x52",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x84be18",
+        "raw_hex": "e6fc7600da82e296",
+        "decoded": "MOV R12,#0x0076; CALLS 0x82,0x96E2",
+        "phys": "0x81164f",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "84BE18 E6FC7600   MOV      R12,#0x0076",
+          "84BE1C DA82E296   CALLS    0x82,0x96E2",
+          "84BE20 D4400800   MOV      R4,[R0+#0x0008]",
+          "84BE24 B840       MOV      [R0],R4",
+          "84BE26 E6FC7500   MOV      R12,#0x0075",
+          "84BE2A DA82E296   CALLS    0x82,0x96E2",
+          "84BE2E D4400400   MOV      R4,[R0+#0x0004]",
+          "84BE32 B840       MOV      [R0],R4",
+          "84BE34 E6FC7700   MOV      R12,#0x0077"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASLV: [298, 949]",
+          "DFPM class table 0x115D9+0x76=0x1164f",
+          "DTC table 0x153F2: idx 0x76 → Ort 0x52",
+          "Fault site MOV R12,#0x0076; CALLS 0x82,0x96E2 @ 0x84be18"
+        ],
+        "summary": "Класс DFPM idx 0x76: DTC 0x52. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x52 / адрес класса не 0x1164f",
+        "check": "idx-1 DTC=0x51, idx+1 DTC=0xff; 0x115D9+0x76=0x1164f exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASLV2",
+      "addr": "0x11650",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x77",
+      "dtc_ort": "0xff",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x84be34",
+        "raw_hex": "e6fc7700da82e296",
+        "decoded": "MOV R12,#0x0077; CALLS 0x82,0x96E2",
+        "phys": "0x811650",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "84BE34 E6FC7700   MOV      R12,#0x0077",
+          "84BE38 DA82E296   CALLS    0x82,0x96E2",
+          "84BE3C 0802       ADD      R0,#2",
+          "84BE3E F2F4AE8E   MOV      R4,0x8EAE",
+          "84BE42 66F40020   AND      R4,#0x2000",
+          "84BE46 2D04       JMPR     CC_Z,0x0084BE50",
+          "84BE48 E168       MOVB     RL4,#6",
+          "84BE4A F7F89D8A   MOVB     0x8A9D,RL4",
+          "84BE4E 0D16       JMPR     CC_UC,0x0084BE7C",
+          "84BE50 9A320370   JNB      0xFD64.7,0x0084BE5A"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASLV2: [298, 949]",
+          "DFPM class table 0x115D9+0x77=0x11650",
+          "DTC table 0x153F2: idx 0x77 → Ort 0xff",
+          "Fault site MOV R12,#0x0077; CALLS 0x82,0x96E2 @ 0x84be34"
+        ],
+        "summary": "Класс DFPM idx 0x77: DTC 0xff. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xff / адрес класса не 0x11650",
+        "check": "idx-1 DTC=0x52, idx+1 DTC=0x55; 0x115D9+0x77=0x11650 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASTA",
+      "addr": "0x11652",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x79",
+      "dtc_ort": "0xed",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x87023c",
+        "raw_hex": "e6fc7900da82e296",
+        "decoded": "MOV R12,#0x0079; CALLS 0x82,0x96E2",
+        "phys": "0x811652",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "87023C E6FC7900   MOV      R12,#0x0079",
+          "870240 DA82E296   CALLS    0x82,0x96E2",
+          "870244 0804       ADD      R0,#4",
+          "870246 DB00       RETS",
+          "870248 F3F81C24   MOVB     RL4,0x241C",
+          "87024C 3D08       JMPR     CC_NZ,0x0087025E",
+          "87024E E118       MOVB     RL4,#1",
+          "870250 75F854B1   ORB      0xB154,RL4",
+          "870254 E044       MOV      R4,#4",
+          "870256 74F43EA6   OR       0xA63E,R4",
+          "87025A EA00D202   JMPA     CC_UC,0x02D2"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASTA: [709, 710, 949]",
+          "DFPM class table 0x115D9+0x79=0x11652",
+          "DTC table 0x153F2: idx 0x79 → Ort 0xed",
+          "Fault site MOV R12,#0x0079; CALLS 0x82,0x96E2 @ 0x87023c"
+        ],
+        "summary": "Класс DFPM idx 0x79: DTC 0xed. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xed / адрес класса не 0x11652",
+        "check": "idx-1 DTC=0x55, idx+1 DTC=0xe9; 0x115D9+0x79=0x11652 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASTAE",
+      "addr": "0x11653",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x7a",
+      "dtc_ort": "0xe9",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x85b6aa",
+        "raw_hex": "e6fc7a00da82e296",
+        "decoded": "MOV R12,#0x007A; CALLS 0x82,0x96E2",
+        "phys": "0x811653",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "85B6AA E6FC7A00   MOV      R12,#0x007A",
+          "85B6AE DA82E296   CALLS    0x82,0x96E2",
+          "85B6B2 0802       ADD      R0,#2",
+          "85B6B4 0802       ADD      R0,#2",
+          "85B6B6 DB00       RETS",
+          "85B6B8 F2F4DAB9   MOV      R4,0xB9DA",
+          "85B6BC 9AF40A70   JNB      R4.7,0x0085B6D4",
+          "85B6C0 E6F5FEFF   MOV      R5,#0xFFFE",
+          "85B6C4 64F540A1   AND      0xA140,R5",
+          "85B6C8 E6F2FDFF   MOV      R2,#0xFFFD"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASTAE: [832, 949]",
+          "DFPM class table 0x115D9+0x7a=0x11653",
+          "DTC table 0x153F2: idx 0x7a → Ort 0xe9",
+          "Fault site MOV R12,#0x007A; CALLS 0x82,0x96E2 @ 0x85b6aa"
+        ],
+        "summary": "Класс DFPM idx 0x7a: DTC 0xe9. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xe9 / адрес класса не 0x11653",
+        "check": "idx-1 DTC=0xed, idx+1 DTC=0xea; 0x115D9+0x7a=0x11653 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLASTS",
+      "addr": "0x11654",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x7b",
+      "dtc_ort": "0xea",
+      "stock_hex": "24",
+      "consumer": {
+        "ea": "0x86ff08",
+        "raw_hex": "e6fc7b00da82e296",
+        "decoded": "MOV R12,#0x007B; CALLS 0x82,0x96E2",
+        "phys": "0x811654",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "86FF08 E6FC7B00   MOV      R12,#0x007B",
+          "86FF0C DA82E296   CALLS    0x82,0x96E2",
+          "86FF10 0804       ADD      R0,#4",
+          "86FF12 DB00       RETS",
+          "86FF14 2802       SUB      R0,#2",
+          "86FF16 8400DCB9   MOV      [R0],0xB9DC",
+          "86FF1A F2F446F8   MOV      R4,0xF846",
+          "86FF1E 42F4F25F   CMP      R4,0x5FF2",
+          "86FF22 FD18       JMPR     CC_ULE,0x0086FF54",
+          "86FF24 F2F5DC93   MOV      R5,0x93DC"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLASTS: [708, 949]",
+          "DFPM class table 0x115D9+0x7b=0x11654",
+          "DTC table 0x153F2: idx 0x7b → Ort 0xea",
+          "Fault site MOV R12,#0x007B; CALLS 0x82,0x96E2 @ 0x86ff08"
+        ],
+        "summary": "Класс DFPM idx 0x7b: DTC 0xea. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0xea / адрес класса не 0x11654",
+        "check": "idx-1 DTC=0xe9, idx+1 DTC=0x79; 0x115D9+0x7b=0x11654 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CLATA",
+      "addr": "0x11656",
+      "verdict": "PROVEN",
+      "kind": "cla_dfpm",
+      "dfpm_index": "0x7d",
+      "dtc_ort": "0x7c",
+      "stock_hex": "25",
+      "consumer": {
+        "ea": "0x861b66",
+        "raw_hex": "e6fc7d00da82e296",
+        "decoded": "MOV R12,#0x007D; CALLS 0x82,0x96E2",
+        "phys": "0x811656",
+        "page": "class via DPP0 on [idx+0x15D9]; index immediate",
+        "listing": [
+          "861B66 E6FC7D00   MOV      R12,#0x007D",
+          "861B6A DA82E296   CALLS    0x82,0x96E2",
+          "861B6E 0804       ADD      R0,#4",
+          "861B70 DB00       RETS",
+          "861B72 9A240F10   JNB      0xFD48.1,0x00861B94",
+          "861B76 F3F8108A   MOVB     RL4,0x8A10",
+          "861B7A F7F844B1   MOVB     0xB144,RL4",
+          "861B7E F3FAF6A2   MOVB     RL5,0xA2F6",
+          "861B82 2D04       JMPR     CC_Z,0x00861B8C",
+          "861B84 29A1       SUBB     RL5,#1"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CLATA: [681, 949]",
+          "DFPM class table 0x115D9+0x7d=0x11656",
+          "DTC table 0x153F2: idx 0x7d → Ort 0x7c",
+          "Fault site MOV R12,#0x007D; CALLS 0x82,0x96E2 @ 0x861b66"
+        ],
+        "summary": "Класс DFPM idx 0x7d: DTC 0x7c. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x7c / адрес класса не 0x11656",
+        "check": "idx-1 DTC=0x79, idx+1 DTC=0x5d; 0x115D9+0x7d=0x11656 exact",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWDDMTL",
+      "addr": "0x1a603",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "0A",
+      "consumer": {
+        "ea": "0x830fc2",
+        "raw_hex": "d7400602c2f20326",
+        "decoded": "EXTP #0x206 … mem → 0x81a603",
+        "phys": "0x81a603",
+        "page": "EXTP #0x206",
+        "listing": [
+          "830FC2 D7400602   EXTP     #0x206,#1",
+          "830FC6 C2F20326   MOVBZ    R2,0x2603 ; EXTP physical=0x81A603",
+          "830FCA 1B52       MULU     R5,R2",
+          "830FCC 4D03       JMPR     CC_V,0x00830FD4",
+          "830FCE F2F30EFE   MOV      R3,0xFE0E",
+          "830FD2 0D02       JMPR     CC_UC,0x00830FD8",
+          "830FD4 E6F3FFFF   MOV      R3,#0xFFFF",
+          "830FD8 F6F3CCA6   MOV      0xA6CC,R3",
+          "830FDC F6F3CEA6   MOV      0xA6CE,R3",
+          "830FE0 D7400602   EXTP     #0x206,#1",
+          "830FE4 C2F40226   MOVBZ    R4,0x2602 ; EXTP physical=0x81A602",
+          "830FE8 6841       AND      R4,#1",
+          "830FEA 2D1B       JMPR     CC_Z,0x00831022",
+          "830FEC C2F4828D   MOVBZ    R4,0x8D82",
+          "830FF0 F6F4C8A6   MOV      0xA6C8,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWDDMTL: [416, 417, 418, 419, 420, 432, 436, 437]",
+          "EXTP#206 consumer @ 0x830fc2 → file 0x1a603"
+        ],
+        "summary": "Codewort CWDDMTL @ 0x1a603 читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x16603 ≠ 0x1a603",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWDDMTL2",
+      "addr": "0x1a604",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x831aac",
+        "raw_hex": "d7400602c2f40426",
+        "decoded": "EXTP #0x206 … mem → 0x81a604",
+        "phys": "0x81a604",
+        "page": "EXTP #0x206",
+        "listing": [
+          "831AAC D7400602   EXTP     #0x206,#1",
+          "831AB0 C2F40426   MOVBZ    R4,0x2604 ; EXTP physical=0x81A604",
+          "831AB4 66F41000   AND      R4,#0x0010",
+          "831AB8 3D05       JMPR     CC_NZ,0x00831AC4",
+          "831ABA C2F4948D   MOVBZ    R4,0x8D94",
+          "831ABE 66F40800   AND      R4,#0x0008",
+          "831AC2 3D08       JMPR     CC_NZ,0x00831AD4",
+          "831AC4 8A6E06D0   JB       0xFDDC.13,0x00831AD4",
+          "831AC8 8A6204F0   JB       0xFDC4.15,0x00831AD4",
+          "831ACC E128       MOVB     RL4,#2",
+          "831ACE 75F8958D   ORB      0x8D95,RL4",
+          "831AD2 0D04       JMPR     CC_UC,0x00831ADC",
+          "831AD4 E7F8FD00   MOVB     RL4,#0x00FD",
+          "831AD8 65F8958D   ANDB     0x8D95,RL4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWDDMTL2: [417, 418, 420, 421, 422, 432, 437, 949]",
+          "EXTP#206 consumer @ 0x831aac → file 0x1a604"
+        ],
+        "summary": "Codewort CWDDMTL2 @ 0x1a604 читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x16604 ≠ 0x1a604",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWDEGFE",
+      "addr": "0x19cb6",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "32",
+      "consumer": {
+        "ea": "0x8523d6",
+        "raw_hex": "d7400602f3f8b51ce4880400d7400602f3f8b61c",
+        "decoded": "EXTP #0x206 … mem → 0x819cb6",
+        "phys": "0x819cb6",
+        "page": "EXTP #0x206",
+        "listing": [
+          "8523D6 D7400602   EXTP     #0x206,#1",
+          "8523DA F3F8B51C   MOVB     RL4,0x1CB5 ; EXTP physical=0x819CB5",
+          "8523DE E4880400   MOVB     [R8+#0x0004],RL4",
+          "8523E2 D7400602   EXTP     #0x206,#1",
+          "8523E6 F3F8B61C   MOVB     RL4,0x1CB6 ; EXTP physical=0x819CB6",
+          "8523EA E4880500   MOVB     [R8+#0x0005],RL4",
+          "8523EE E168       MOVB     RL4,#6",
+          "8523F0 EA007A25   JMPA     CC_UC,0x257A",
+          "8523F4 E108       MOVB     RL4,#0",
+          "8523F6 E4880300   MOVB     [R8+#0x0003],RL4",
+          "8523FA E118       MOVB     RL4,#1",
+          "8523FC E4880400   MOVB     [R8+#0x0004],RL4",
+          "852400 E7F8C000   MOVB     RL4,#0x00C0",
+          "852404 E4880500   MOVB     [R8+#0x0005],RL4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWDEGFE: [116, 117, 949]",
+          "EXTP#206 consumer @ 0x8523d6 → file 0x19cb6"
+        ],
+        "summary": "Codewort CWDEGFE @ 0x19cb6 читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x15cb6 ≠ 0x19cb6",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWDSLSY",
+      "addr": "0x1960e",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x849ddc",
+        "raw_hex": "d7400602c2f40e16",
+        "decoded": "EXTP #0x206 … mem → 0x81960e",
+        "phys": "0x81960e",
+        "page": "EXTP #0x206",
+        "listing": [
+          "849DDC D7400602   EXTP     #0x206,#1",
+          "849DE0 C2F40E16   MOVBZ    R4,0x160E ; EXTP physical=0x81960E",
+          "849DE4 6841       AND      R4,#1",
+          "849DE6 2D04       JMPR     CC_Z,0x00849DF0",
+          "849DE8 E014       MOV      R4,#1",
+          "849DEA 74F4AE8E   OR       0x8EAE,R4",
+          "849DEE 0D04       JMPR     CC_UC,0x00849DF8",
+          "849DF0 E6F4FEFF   MOV      R4,#0xFFFE",
+          "849DF4 64F4AE8E   AND      0x8EAE,R4",
+          "849DF8 D7400602   EXTP     #0x206,#1",
+          "849DFC C2F40E16   MOVBZ    R4,0x160E ; EXTP physical=0x81960E",
+          "849E00 6842       AND      R4,#2",
+          "849E02 2D05       JMPR     CC_Z,0x00849E0E",
+          "849E04 E6F40080   MOV      R4,#0x8000",
+          "849E08 74F4B08E   OR       0x8EB0,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWDSLSY: [289, 293, 298, 949]",
+          "EXTP#206 consumer @ 0x849ddc → file 0x1960e"
+        ],
+        "summary": "Codewort CWDSLSY @ 0x1960e читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x1560e ≠ 0x1960e",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWFASL",
+      "addr": "0x1963d",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x84c074",
+        "raw_hex": "d740060243f8c0168d02ff320d01fe328a3204f0f2f4228f8af42350d7400602f3f83d16",
+        "decoded": "EXTP #0x206 … mem → 0x81963d",
+        "phys": "0x81963d",
+        "page": "EXTP #0x206",
+        "listing": [
+          "84C074 D7400602   EXTP     #0x206,#1",
+          "84C078 43F8C016   CMPB     RL4,0x16C0 ; EXTP physical=0x8196C0",
+          "84C07C 8D02       JMPR     CC_C,0x0084C082",
+          "84C07E FF32       BSET     0xFD64.15",
+          "84C080 0D01       JMPR     CC_UC,0x0084C084",
+          "84C082 FE32       BCLR     0xFD64.15",
+          "84C084 8A3204F0   JB       0xFD64.15,0x0084C090",
+          "84C088 F2F4228F   MOV      R4,0x8F22",
+          "84C08C 8AF42350   JB       R4.5,0x0084C0D6",
+          "84C090 D7400602   EXTP     #0x206,#1",
+          "84C094 F3F83D16   MOVB     RL4,0x163D ; EXTP physical=0x81963D",
+          "84C098 6981       ANDB     RL4,#1",
+          "84C09A 3D19       JMPR     CC_NZ,0x0084C0CE",
+          "84C09C D7400602   EXTP     #0x206,#1",
+          "84C0A0 F3F83D16   MOVB     RL4,0x163D ; EXTP physical=0x81963D"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWFASL: [278, 280, 281, 949]",
+          "EXTP#206 consumer @ 0x84c074 → file 0x1963d"
+        ],
+        "summary": "Codewort CWFASL @ 0x1963d читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x1563d ≠ 0x1963d",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWGGFST",
+      "addr": "0x1a601",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "32",
+      "consumer": {
+        "ea": "0x804746",
+        "raw_hex": "d7400602f3f80126",
+        "decoded": "EXTP #0x206 … mem → 0x81a601",
+        "phys": "0x81a601",
+        "page": "EXTP #0x206",
+        "listing": [
+          "804746 D7400602   EXTP     #0x206,#1",
+          "80474A F3F80126   MOVB     RL4,0x2601 ; EXTP physical=0x81A601",
+          "80474E F7F8D6A6   MOVB     0xA6D6,RL4",
+          "804752 D7400602   EXTP     #0x206,#1",
+          "804756 F3FA0126   MOVB     RL5,0x2601 ; EXTP physical=0x81A601",
+          "80475A F7FAD7A6   MOVB     0xA6D7,RL5",
+          "80475E D7400602   EXTP     #0x206,#1",
+          "804762 F3F60126   MOVB     RL3,0x2601 ; EXTP physical=0x81A601",
+          "804766 F7F6D8A6   MOVB     0xA6D8,RL3",
+          "80476A D7400602   EXTP     #0x206,#1",
+          "80476E F3F40126   MOVB     RL2,0x2601 ; EXTP physical=0x81A601",
+          "804772 F7F4D9A6   MOVB     0xA6D9,RL2"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWGGFST: [444, 445, 446, 447, 448, 949]",
+          "EXTP#206 consumer @ 0x804746 → file 0x1a601"
+        ],
+        "summary": "Codewort CWGGFST @ 0x1a601 читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x16601 ≠ 0x1a601",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWGGLSH",
+      "addr": "0x193e9",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x82199e",
+        "raw_hex": "d7400602f3fae913",
+        "decoded": "EXTP #0x206 … mem → 0x8193e9",
+        "phys": "0x8193e9",
+        "page": "EXTP #0x206",
+        "listing": [
+          "82199E D7400602   EXTP     #0x206,#1",
+          "8219A2 F3FAE913   MOVB     RL5,0x13E9 ; EXTP physical=0x8193E9",
+          "8219A6 49A0       CMPB     RL5,#0",
+          "8219A8 FD0C       JMPR     CC_ULE,0x008219C2",
+          "8219AA F2F4668E   MOV      R4,0x8E66",
+          "8219AE 4840       CMP      R4,#0",
+          "8219B0 FD04       JMPR     CC_ULE,0x008219BA",
+          "8219B2 2841       SUB      R4,#1",
+          "8219B4 F6F4668E   MOV      0x8E66,R4",
+          "8219B8 0D0E       JMPR     CC_UC,0x008219D6",
+          "8219BA E188       MOVB     RL4,#8",
+          "8219BC 75F87B8A   ORB      0x8A7B,RL4",
+          "8219C0 0D0A       JMPR     CC_UC,0x008219D6",
+          "8219C2 D7400602   EXTP     #0x206,#1",
+          "8219C6 F2F4FE2A   MOV      R4,0x2AFE ; EXTP physical=0x81AAFE",
+          "8219CA F6F4668E   MOV      0x8E66,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWGGLSH: [604, 605, 606, 608, 949]",
+          "EXTP#206 consumer @ 0x82199e → file 0x193e9"
+        ],
+        "summary": "Codewort CWGGLSH @ 0x193e9 читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x153e9 ≠ 0x193e9",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWKHZ",
+      "addr": "0x1a2a9",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "85",
+      "consumer": {
+        "ea": "0x86396e",
+        "raw_hex": "d7400602c2f5a922",
+        "decoded": "EXTP #0x206 … mem → 0x81a2a9",
+        "phys": "0x81a2a9",
+        "page": "EXTP #0x206",
+        "listing": [
+          "86396E D7400602   EXTP     #0x206,#1",
+          "863972 C2F5A922   MOVBZ    R5,0x22A9 ; EXTP physical=0x81A2A9",
+          "863976 4045       CMP      R4,R5",
+          "863978 AD02       JMPR     CC_SGT,0x0086397E",
+          "86397A E118       MOVB     RL4,#1",
+          "86397C 0D01       JMPR     CC_UC,0x00863980",
+          "86397E E108       MOVB     RL4,#0",
+          "863980 0D0E       JMPR     CC_UC,0x0086399E",
+          "863982 C2F41B8A   MOVBZ    R4,0x8A1B",
+          "863986 C2F5108A   MOVBZ    R5,0x8A10",
+          "86398A 2045       SUB      R4,R5",
+          "86398C D7400602   EXTP     #0x206,#1",
+          "863990 C2F5A922   MOVBZ    R5,0x22A9 ; EXTP physical=0x81A2A9",
+          "863994 4045       CMP      R4,R5",
+          "863996 AD02       JMPR     CC_SGT,0x0086399C",
+          "863998 E118       MOVB     RL4,#1"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWKHZ: [283, 285, 286, 949]",
+          "EXTP#206 consumer @ 0x86396e → file 0x1a2a9"
+        ],
+        "summary": "Codewort CWKHZ @ 0x1a2a9 читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x162a9 ≠ 0x1a2a9",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWNOCINS",
+      "addr": "0x1a5eb",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x86b5fa",
+        "raw_hex": "d7400602f3faeb25",
+        "decoded": "EXTP #0x206 … mem → 0x81a5eb",
+        "phys": "0x81a5eb",
+        "page": "EXTP #0x206",
+        "listing": [
+          "86B5FA D7400602   EXTP     #0x206,#1",
+          "86B5FE F3FAEB25   MOVB     RL5,0x25EB ; EXTP physical=0x81A5EB",
+          "86B602 69A1       ANDB     RL5,#1",
+          "86B604 3A888836   BMOVN    0xFF10.6,0xFF10.3",
+          "86B608 4A88606C   BMOV     0xFDC0.12,0xFF10.6",
+          "86B60C D7400602   EXTP     #0x206,#1",
+          "86B610 F3FAED25   MOVB     RL5,0x25ED ; EXTP physical=0x81A5ED",
+          "86B614 69A1       ANDB     RL5,#1",
+          "86B616 3A888836   BMOVN    0xFF10.6,0xFF10.3",
+          "86B61A 4A886069   BMOV     0xFDC0.9,0xFF10.6",
+          "86B61E D7400602   EXTP     #0x206,#1",
+          "86B622 F3FAED25   MOVB     RL5,0x25ED ; EXTP physical=0x81A5ED",
+          "86B626 69A2       ANDB     RL5,#2",
+          "86B628 3A888836   BMOVN    0xFF10.6,0xFF10.3"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWNOCINS: [886, 887, 950]",
+          "EXTP#206 consumer @ 0x86b5fa → file 0x1a5eb"
+        ],
+        "summary": "Codewort CWNOCINS @ 0x1a5eb читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x165eb ≠ 0x1a5eb",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "CWSLSOF",
+      "addr": "0x1963e",
+      "verdict": "PROVEN",
+      "kind": "cw_extp206",
+      "stock_hex": "00",
+      "consumer": {
+        "ea": "0x84c2aa",
+        "raw_hex": "d7400602f3f83e16",
+        "decoded": "EXTP #0x206 … mem → 0x81963e",
+        "phys": "0x81963e",
+        "page": "EXTP #0x206",
+        "listing": [
+          "84C2AA D7400602   EXTP     #0x206,#1",
+          "84C2AE F3F83E16   MOVB     RL4,0x163E ; EXTP physical=0x81963E",
+          "84C2B2 6981       ANDB     RL4,#1",
+          "84C2B4 3D05       JMPR     CC_NZ,0x0084C2C0",
+          "84C2B6 E6F48000   MOV      R4,#0x0080",
+          "84C2BA 74F4008F   OR       0x8F00,R4",
+          "84C2BE 0D04       JMPR     CC_UC,0x0084C2C8",
+          "84C2C0 E6F47FFF   MOV      R4,#0xFF7F",
+          "84C2C4 64F4008F   AND      0x8F00,R4",
+          "84C2C8 F2F456F8   MOV      R4,0xF856",
+          "84C2CC 7C74       SHR      R4,#7",
+          "84C2CE F1C8       MOVB     RL6,RL4",
+          "84C2D0 43FCC78C   CMPB     RL6,0x8CC7",
+          "84C2D4 9D04       JMPR     CC_NC,0x0084C2DE",
+          "84C2D6 F3F8C78C   MOVB     RL4,0x8CC7"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages for CWSLSOF: [275, 278, 950]",
+          "EXTP#206 consumer @ 0x84c2aa → file 0x1963e"
+        ],
+        "summary": "Codewort CWSLSOF @ 0x1963e читается через EXTP#206."
+      },
+      "falsifier": {
+        "claim": "Если page не 0x206, phys не указывает на этот file offset",
+        "check": "page 0x205 → file 0x1563e ≠ 0x1963e",
+        "result": "DID_NOT_FIRE"
+      }
+    }
+  ],
+  "not_promoted_struct_sample": [
+    "TLRHS",
+    "KFZWOP",
+    "KFZWOP2",
+    "KFZW1",
+    "KFZW2",
+    "Speed-limiter-related word 1",
+    "Speed-limiter-related word 2",
+    "Speed-limiter-related word 3",
+    "Speed-limiter-related word 4",
+    "CLAACC",
+    "CLABM",
+    "CLACACC",
+    "CLACAS",
+    "CLACGE",
+    "CLACINS",
+    "CLAKPE",
+    "CLAMD",
+    "CLATHM",
+    "CLATKA",
+    "CLATM",
+    "CLATUM",
+    "CLAU5REF",
+    "CLAUB",
+    "CLAUFMV",
+    "CLAUFSKA",
+    "CLAURRAM",
+    "CLAURROM",
+    "CLAURRST",
+    "CWDLSAHK",
+    "CWFSTD",
+    "CWGGEGAS",
+    "DTANSETR",
+    "DTDTHM",
+    "DTEBLEIN",
+    "DTHMDTKA",
+    "DTKATMN",
+    "DTKH",
+    "DTMABMS",
+    "DTMDMA",
+    "DTMDNPO"
+  ]
+}

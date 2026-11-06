@@ -1,0 +1,62 @@
+[
+  {
+    "cpu": "0x85a058",
+    "instruction": "MOVB     RL5,[R4+#0x8CB1]",
+    "context": "85A050 2802       SUB      R0,#2\n85A052 F08C       MOV      R8,R12\n85A054 F2F4D8A0   MOV      R4,0xA0D8\n85A058 F4A4B18C   MOVB     RL5,[R4+#0x8CB1]\n85A05C C0A5       MOVBZ    R5,RL5\n85A05E F2F2DAA0   MOV      R2,0xA0DA\n85A062 5C12       SHL      R2,#1\n85A064 C0A5       MOVBZ    R5,RL5\n85A066 6C52       SHR      R5,R2\n"
+  },
+  {
+    "cpu": "0x85a18c",
+    "instruction": "MOVB     RL5,[R4+#0x8CB1]",
+    "context": "85A184 DB00       RETS\n85A186 8860       MOV      [-R0],R6\n85A188 F2F4D8A0   MOV      R4,0xA0D8\n85A18C F4A4B18C   MOVB     RL5,[R4+#0x8CB1]\n85A190 47FA5500   CMPB     RL5,#0x0055\n85A194 3D03       JMPR     CC_NZ,0x0085A19C\n85A196 E7FCFF00   MOVB     RL6,#0x00FF\n85A19A 0D1D       JMPR     CC_UC,0x0085A1D6\n"
+  },
+  {
+    "cpu": "0x85a600",
+    "instruction": "MOVB     RL5,[R4+#0x8CB1]",
+    "context": "85A5F8 E485FCA0   MOVB     [R5+#0xA0FC],RL4\n85A5FC F2F4D8A0   MOV      R4,0xA0D8\n85A600 F4A4B18C   MOVB     RL5,[R4+#0x8CB1]\n85A604 F085       MOV      R8,R5\n85A606 47FA5500   CMPB     RL5,#0x0055\n85A60A 3D02       JMPR     CC_NZ,0x0085A610\n85A60C E6F8FF00   MOV      R8,#0x00FF\n"
+  },
+  {
+    "cpu": "0x85a8ee",
+    "instruction": "MOVB     RL7,[R4+#0x8CB1]",
+    "context": "85A8E6 FF00       BSET     0xFD00.15\n85A8E8 2D2E       JMPR     CC_Z,0x0085A946\n85A8EA F2F4D8A0   MOV      R4,0xA0D8\n85A8EE F4E4B18C   MOVB     RL7,[R4+#0x8CB1]\n85A8F2 F68EDAA0   MOV      0xA0DA,ZEROS\n85A8F6 F2F3DAA0   MOV      R3,0xA0DA\n85A8FA 5C13       SHL      R3,#1\n85A8FC C0C4       MOVBZ    R4,RL6\n"
+  },
+  {
+    "cpu": "0x85aa90",
+    "instruction": "MOVB     [R12+#0x8CB1],RL4",
+    "context": "85AA88 DB00       RETS\n85AA8A E00C       MOV      R12,#0\n85AA8C F48C2C1B   MOVB     RL4,[R12+#0x1B2C]\n85AA90 E48CB18C   MOVB     [R12+#0x8CB1],RL4\n85AA94 08C1       ADD      R12,#1\n85AA96 46FC0800   CMP      R12,#0x0008\n85AA9A 8DF8       JMPR     CC_C,0x0085AA8C\n85AA9C F3F87BB1   MOVB     RL4,0xB17B\n"
+  },
+  {
+    "cpu": "0x85aaae",
+    "instruction": "MOV      R4,#0x8CB1",
+    "context": "85AAA6 E03C       MOV      R12,#3\n85AAA8 E01D       MOV      R13,#1\n85AAAA F4AD2458   MOVB     RL5,[R13+#0x5824]\n85AAAE E6F4B18C   MOV      R4,#0x8CB1\n85AAB2 004C       ADD      R4,R12\n85AAB4 A964       MOVB     RL3,[R4]\n85AAB6 716A       ORB      RL3,RL5\n85AAB8 B964       MOVB     [R4],RL3\n85AABA E05C       MOV      R12,#5\n85AABC E00D       MOV      R13,#0\n"
+  },
+  {
+    "cpu": "0x85aac2",
+    "instruction": "MOV      R5,#0x8CB1",
+    "context": "85AABA E05C       MOV      R12,#5\n85AABC E00D       MOV      R13,#0\n85AABE F48D2458   MOVB     RL4,[R13+#0x5824]\n85AAC2 E6F5B18C   MOV      R5,#0x8CB1\n85AAC6 005C       ADD      R5,R12\n85AAC8 A965       MOVB     RL3,[R5]\n85AACA 7168       ORB      RL3,RL4\n85AACC B965       MOVB     [R5],RL3\n85AACE E04C       MOV      R12,#4\n85AAD0 E02D       MOV      R13,#2\n"
+  },
+  {
+    "cpu": "0x85aae2",
+    "instruction": "MOV      R5,#0x8CB1",
+    "context": "85AADA 3D09       JMPR     CC_NZ,0x0085AAEE\n85AADC F48D2458   MOVB     RL4,[R13+#0x5824]\n85AAE0 B180       CPL      RL4\n85AAE2 E6F5B18C   MOV      R5,#0x8CB1\n85AAE6 005C       ADD      R5,R12\n85AAE8 A965       MOVB     RL3,[R5]\n85AAEA 6168       ANDB     RL3,RL4\n85AAEC B965       MOVB     [R5],RL3\n85AAEE DB00       RETS\n85AAF0 E00C       MOV      R12,#0\n"
+  },
+  {
+    "cpu": "0x85aaf6",
+    "instruction": "MOVB     [R12+#0x8CB1],RL4",
+    "context": "85AAEE DB00       RETS\n85AAF0 E00C       MOV      R12,#0\n85AAF2 F48C2C1B   MOVB     RL4,[R12+#0x1B2C]\n85AAF6 E48CB18C   MOVB     [R12+#0x8CB1],RL4\n85AAFA 08C1       ADD      R12,#1\n85AAFC 46FC0800   CMP      R12,#0x0008\n85AB00 8DF8       JMPR     CC_C,0x0085AAF2\n85AB02 F3F87BB1   MOVB     RL4,0xB17B\n"
+  },
+  {
+    "cpu": "0x85ab14",
+    "instruction": "MOV      R4,#0x8CB1",
+    "context": "85AB0C E03C       MOV      R12,#3\n85AB0E E01D       MOV      R13,#1\n85AB10 F4AD2458   MOVB     RL5,[R13+#0x5824]\n85AB14 E6F4B18C   MOV      R4,#0x8CB1\n85AB18 004C       ADD      R4,R12\n85AB1A A964       MOVB     RL3,[R4]\n85AB1C 716A       ORB      RL3,RL5\n85AB1E B964       MOVB     [R4],RL3\n85AB20 E05C       MOV      R12,#5\n85AB22 E00D       MOV      R13,#0\n"
+  },
+  {
+    "cpu": "0x85ab28",
+    "instruction": "MOV      R5,#0x8CB1",
+    "context": "85AB20 E05C       MOV      R12,#5\n85AB22 E00D       MOV      R13,#0\n85AB24 F48D2458   MOVB     RL4,[R13+#0x5824]\n85AB28 E6F5B18C   MOV      R5,#0x8CB1\n85AB2C 005C       ADD      R5,R12\n85AB2E A965       MOVB     RL3,[R5]\n85AB30 7168       ORB      RL3,RL4\n85AB32 B965       MOVB     [R5],RL3\n85AB34 E04C       MOV      R12,#4\n85AB36 E02D       MOV      R13,#2\n"
+  },
+  {
+    "cpu": "0x85ab48",
+    "instruction": "MOV      R5,#0x8CB1",
+    "context": "85AB40 3D09       JMPR     CC_NZ,0x0085AB54\n85AB42 F48D2458   MOVB     RL4,[R13+#0x5824]\n85AB46 B180       CPL      RL4\n85AB48 E6F5B18C   MOV      R5,#0x8CB1\n85AB4C 005C       ADD      R5,R12\n85AB4E A965       MOVB     RL3,[R5]\n85AB50 6168       ANDB     RL3,RL4\n85AB52 B965       MOVB     [R5],RL3\n85AB54 DB00       RETS\n85AB56 E118       MOVB     RL4,#1\n"
+  }
+]

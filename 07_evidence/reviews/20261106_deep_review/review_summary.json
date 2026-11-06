@@ -1,0 +1,26 @@
+{
+  "verdict": "REJECT_CANDIDATE_FOR_FLASHING",
+  "sha256": "ad06db2cd348bf67ef6a5043565c68c756a33c19556839900165778fa9c77d3a",
+  "integrity": "PASS",
+  "functional_review": "FAIL",
+  "must_revert_unrelated_offsets": [
+    "0x1a623",
+    "0x1a5fe",
+    "0x1a5ff",
+    "0x1a624",
+    "0x1a62d",
+    "0x1161a",
+    "0x11b30"
+  ],
+  "incomplete_config_offsets": [
+    "0x11B2F",
+    "0x11B31"
+  ],
+  "no_vehicle_io": true,
+  "no_firmware_modified": true,
+  "limits": [
+    "Static code/data audit and pre-patch saved logs only.",
+    "No full CPU emulation, vehicle validation, or proof of fuel consumption improvement.",
+    "Not all pre-existing modifications in original firmware are authenticated against factory image."
+  ]
+}

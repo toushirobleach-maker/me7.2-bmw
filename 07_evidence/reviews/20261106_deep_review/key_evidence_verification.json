@@ -1,0 +1,439 @@
+{
+  "passed": 108,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "original SHA-256",
+      "ok": true
+    },
+    {
+      "name": "patched SHA-256",
+      "ok": true
+    },
+    {
+      "name": "DPP0/DPP1/DPP2/DPP3 initialization",
+      "ok": true
+    },
+    {
+      "name": "DPP0/DPP1/DPP2/DPP3 initialization code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual B_lr setter",
+      "ok": true
+    },
+    {
+      "name": "actual B_lr setter code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual B_lr clearer",
+      "ok": true
+    },
+    {
+      "name": "actual B_lr clearer code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual B_lr2 setter",
+      "ok": true
+    },
+    {
+      "name": "actual B_lr2 setter code unchanged",
+      "ok": true
+    },
+    {
+      "name": "wrong old B_lr claim",
+      "ok": true
+    },
+    {
+      "name": "wrong old B_lr claim code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual TARAU page and compare",
+      "ok": true
+    },
+    {
+      "name": "actual TARAU page and compare code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual TLRHS page and read",
+      "ok": true
+    },
+    {
+      "name": "actual TLRHS page and read code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual DTMR page and add",
+      "ok": true
+    },
+    {
+      "name": "actual DTMR page and add code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual DTMTMRW page and read",
+      "ok": true
+    },
+    {
+      "name": "actual DTMTMRW page and read code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual FFRITMS pointer/page/input/call",
+      "ok": true
+    },
+    {
+      "name": "actual FFRITMS pointer/page/input/call code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual KFRI pointer/page",
+      "ok": true
+    },
+    {
+      "name": "actual KFRI pointer/page code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual KFRI lookup",
+      "ok": true
+    },
+    {
+      "name": "actual KFRI lookup code unchanged",
+      "ok": true
+    },
+    {
+      "name": "actual KFRI2 pointer/page",
+      "ok": true
+    },
+    {
+      "name": "actual KFRI2 pointer/page code unchanged",
+      "ok": true
+    },
+    {
+      "name": "fuel-level threshold reference",
+      "ok": true
+    },
+    {
+      "name": "fuel-level threshold reference code unchanged",
+      "ok": true
+    },
+    {
+      "name": "fuel-level debounce reference",
+      "ok": true
+    },
+    {
+      "name": "fuel-level debounce reference code unchanged",
+      "ok": true
+    },
+    {
+      "name": "fuel-level DFPM dispatch",
+      "ok": true
+    },
+    {
+      "name": "fuel-level DFPM dispatch code unchanged",
+      "ok": true
+    },
+    {
+      "name": "CWKONLS page/read",
+      "ok": true
+    },
+    {
+      "name": "CWKONLS page/read code unchanged",
+      "ok": true
+    },
+    {
+      "name": "SAP presence page/read",
+      "ok": true
+    },
+    {
+      "name": "SAP presence page/read code unchanged",
+      "ok": true
+    },
+    {
+      "name": "SAP presence bit destination",
+      "ok": true
+    },
+    {
+      "name": "SAP presence bit destination code unchanged",
+      "ok": true
+    },
+    {
+      "name": "ESKONF indexed flash read",
+      "ok": true
+    },
+    {
+      "name": "ESKONF indexed flash read code unchanged",
+      "ok": true
+    },
+    {
+      "name": "class table indexed read, registration",
+      "ok": true
+    },
+    {
+      "name": "class table indexed read, registration code unchanged",
+      "ok": true
+    },
+    {
+      "name": "class table indexed read, healing",
+      "ok": true
+    },
+    {
+      "name": "class table indexed read, healing code unchanged",
+      "ok": true
+    },
+    {
+      "name": "compressor enable command bit",
+      "ok": true
+    },
+    {
+      "name": "compressor enable command bit code unchanged",
+      "ok": true
+    },
+    {
+      "name": "compressor fault path 41",
+      "ok": true
+    },
+    {
+      "name": "compressor fault path 41 code unchanged",
+      "ok": true
+    },
+    {
+      "name": "catalyst bank1 path 3E",
+      "ok": true
+    },
+    {
+      "name": "catalyst bank1 path 3E code unchanged",
+      "ok": true
+    },
+    {
+      "name": "catalyst bank2 path 3F",
+      "ok": true
+    },
+    {
+      "name": "catalyst bank2 path 3F code unchanged",
+      "ok": true
+    },
+    {
+      "name": "SAP pump fault path 73",
+      "ok": true
+    },
+    {
+      "name": "SAP pump fault path 73 code unchanged",
+      "ok": true
+    },
+    {
+      "name": "SAP valve fault path 78",
+      "ok": true
+    },
+    {
+      "name": "SAP valve fault path 78 code unchanged",
+      "ok": true
+    },
+    {
+      "name": "LR reads SAP pump state",
+      "ok": true
+    },
+    {
+      "name": "LR reads SAP pump state code unchanged",
+      "ok": true
+    },
+    {
+      "name": "LR reads SAP valve state",
+      "ok": true
+    },
+    {
+      "name": "LR reads SAP valve state code unchanged",
+      "ok": true
+    },
+    {
+      "name": "LR OBD summary setter",
+      "ok": true
+    },
+    {
+      "name": "LR OBD summary setter code unchanged",
+      "ok": true
+    },
+    {
+      "name": "LR bank1 summary gate",
+      "ok": true
+    },
+    {
+      "name": "LR bank1 summary gate code unchanged",
+      "ok": true
+    },
+    {
+      "name": "LR summary copy bank2",
+      "ok": true
+    },
+    {
+      "name": "LR summary copy bank2 code unchanged",
+      "ok": true
+    },
+    {
+      "name": "DFPM final state write",
+      "ok": true
+    },
+    {
+      "name": "DFPM final state write code unchanged",
+      "ok": true
+    },
+    {
+      "name": "BSET bitoff 17 maps FD2E",
+      "ok": true
+    },
+    {
+      "name": "BSET bitoff 2E maps FD5C",
+      "ok": true
+    },
+    {
+      "name": "EXTP206 operand1630 maps819630",
+      "ok": true
+    },
+    {
+      "name": "ordinary DPP0 operand1630 maps811630",
+      "ok": true
+    },
+    {
+      "name": "FFRITMS original 3-point curve",
+      "ok": true
+    },
+    {
+      "name": "FFRITMS patched values and unchanged axis",
+      "ok": true
+    },
+    {
+      "name": "KFRI changed cell value",
+      "ok": true
+    },
+    {
+      "name": "KFRI bank1 only one altered byte",
+      "ok": true
+    },
+    {
+      "name": "KFRI bank2 unchanged",
+      "ok": true
+    },
+    {
+      "name": "TFSTNP raw127 to67",
+      "ok": true
+    },
+    {
+      "name": "TVFSTD raw5 to35",
+      "ok": true
+    },
+    {
+      "name": "SLP diagnostic pair00 to01",
+      "ok": true
+    },
+    {
+      "name": "EV4 diagnostic pair00 to01",
+      "ok": true
+    },
+    {
+      "name": "SLV diagnostic pair00 to01",
+      "ok": true
+    },
+    {
+      "name": "CLAKOS indexed address",
+      "ok": true
+    },
+    {
+      "name": "CLAKAT2 indexed address",
+      "ok": true
+    },
+    {
+      "name": "CLASLPE indexed address",
+      "ok": true
+    },
+    {
+      "name": "CLASLVE indexed address",
+      "ok": true
+    },
+    {
+      "name": "MSLUB header/axis preserved",
+      "ok": true
+    },
+    {
+      "name": "MSLUB only eight data values zeroed",
+      "ok": true
+    },
+    {
+      "name": "CLRZWTMS actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "DTMR actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "DTMTMRW actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TARAU actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TASHS actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TLRHS actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TMRA1 actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TMRA2 actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TMRAK actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "TMSHS actual calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "saved FDD8 actual word",
+      "ok": true
+    },
+    {
+      "name": "saved bank1 OBD inhibit set",
+      "ok": true
+    },
+    {
+      "name": "saved bank2 OBD inhibit set",
+      "ok": true
+    },
+    {
+      "name": "saved warmup prerequisite set",
+      "ok": true
+    },
+    {
+      "name": "independent original integrity all OK",
+      "ok": true
+    },
+    {
+      "name": "independent patched integrity all OK",
+      "ok": true
+    },
+    {
+      "name": "diff totals39/27/12",
+      "ok": true
+    },
+    {
+      "name": "27 REPORT records reviewed",
+      "ok": true
+    }
+  ],
+  "scope": "Pinned bytes, decoded addressing, static dataflow anchors and saved log words; no ECU execution."
+}

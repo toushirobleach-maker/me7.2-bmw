@@ -1,0 +1,253 @@
+{
+  "generated": "2026-11-06T10:21:35.263477+00:00",
+  "policy": "triple evidence; review_decode only; no KFZW promotion",
+  "promoted": [
+    {
+      "name": "KFATMZW",
+      "addr": "0x19964",
+      "header_off": "0x19952",
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 8,
+        "rows": 8,
+        "x_off": "0x19954",
+        "y_off": "0x1995c",
+        "z_off": "0x19964",
+        "header_off": "0x19952",
+        "z_len": 64
+      },
+      "axis_mode": "STD_AXIS",
+      "consumer": {
+        "ea": "0x85380e",
+        "raw_hex": "e6fc5219e6fd0602",
+        "decoded": "FC5219   MOV      R12,#0x1952; FD0602   MOV      R13,#0x0206; FE44F8   MOVBZ    R14,0xF844",
+        "phys": "0x819952",
+        "page": "0x206",
+        "listing": [
+          "85380E E6FC5219   MOV      R12,#0x1952",
+          "853812 E6FD0602   MOV      R13,#0x0206",
+          "853816 C2FE44F8   MOVBZ    R14,0xF844",
+          "85381A C2FF53F8   MOVBZ    R15,0xF853",
+          "85381E DA0104B7   CALLS    0x01,0xB704",
+          "853822 F7F82C8C   MOVB     0x8C2C,RL4",
+          "853826 E6FCA419   MOV      R12,#0x19A4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFATMZW: [303, 305, 307, 309, 957]",
+          "Far-ptr consumer → file 0x19952 page 0x206",
+          "Header/shape: {'kind': 'map', 'cols': 8, 'rows': 8, 'x_off': '0x19954', 'y_off': '0x1995c', 'z_off': '0x19964', 'header_off': '0x19952', 'z_len': 64}",
+          "E5A0 was COM 6x6; on 6901 local STD 8x8 header+B704 (layout change, consumer-native)"
+        ],
+        "summary": "KFATMZW: consumed via far-ptr #206 @ 0x85380e"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15952 ≠ 0x19952",
+        "result": "DID_NOT_FIRE"
+      },
+      "damos_updated": 1
+    },
+    {
+      "name": "KFRINH",
+      "addr": "0x19aea",
+      "header_off": "0x19ae4",
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 2,
+        "x_off": "0x19ae6",
+        "y_off": "0x19ae8",
+        "z_off": "0x19aea",
+        "header_off": "0x19ae4",
+        "z_len": 4
+      },
+      "axis_mode": "STD_AXIS",
+      "consumer": {
+        "ea": "0x803486",
+        "raw_hex": "e6fce41ae6fd0602",
+        "decoded": "FCE41A   MOV      R12,#0x1AE4; FD0602   MOV      R13,#0x0206; FE2BB1   MOVBZ    R14,0xB12B",
+        "phys": "0x819ae4",
+        "page": "0x206",
+        "listing": [
+          "803486 E6FCE41A   MOV      R12,#0x1AE4",
+          "80348A E6FD0602   MOV      R13,#0x0206",
+          "80348E C2FE2BB1   MOVBZ    R14,0xB12B",
+          "803492 C2FF998C   MOVBZ    R15,0x8C99",
+          "803496 DA0104B7   CALLS    0x01,0xB704",
+          "80349A F094       MOV      R9,R4",
+          "80349C C2F41A8A   MOVBZ    R4,0x8A1A",
+          "8034A0 0094       ADD      R9,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRINH: [667, 668, 958]",
+          "Far-ptr consumer → file 0x19ae4 page 0x206",
+          "Header/shape: {'kind': 'map', 'cols': 2, 'rows': 2, 'x_off': '0x19ae6', 'y_off': '0x19ae8', 'z_off': '0x19aea', 'header_off': '0x19ae4', 'z_len': 4}",
+          "E5A0 5x5; 6901 local 2x2 STD at same family site with B704"
+        ],
+        "summary": "KFRINH: consumed via far-ptr #206 @ 0x803486"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15ae4 ≠ 0x19ae4",
+        "result": "DID_NOT_FIRE"
+      },
+      "damos_updated": 1
+    },
+    {
+      "name": "KFRINH2",
+      "addr": "0x19b1c",
+      "header_off": "0x19b16",
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 2,
+        "x_off": "0x19b18",
+        "y_off": "0x19b1a",
+        "z_off": "0x19b1c",
+        "header_off": "0x19b16",
+        "z_len": 4
+      },
+      "axis_mode": "STD_AXIS",
+      "consumer": {
+        "ea": "0x82ea9a",
+        "raw_hex": "e6fc161be6fd0602",
+        "decoded": "FC161B   MOV      R12,#0x1B16; FD0602   MOV      R13,#0x0206; FE44F8   MOVBZ    R14,0xF844",
+        "phys": "0x819b16",
+        "page": "0x206",
+        "listing": [
+          "82EA9A E6FC161B   MOV      R12,#0x1B16",
+          "82EA9E E6FD0602   MOV      R13,#0x0206",
+          "82EAA2 C2FE44F8   MOVBZ    R14,0xF844",
+          "82EAA6 C2FF53F8   MOVBZ    R15,0xF853",
+          "82EAAA DA0104B7   CALLS    0x01,0xB704",
+          "82EAAE F7F89A8C   MOVB     0x8C9A,RL4",
+          "82EAB2 D7400602   EXTP     #0x206,#1"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRINH2: [668, 958]",
+          "Far-ptr consumer → file 0x19b16 page 0x206",
+          "Header/shape: {'kind': 'map', 'cols': 2, 'rows': 2, 'x_off': '0x19b18', 'y_off': '0x19b1a', 'z_off': '0x19b1c', 'header_off': '0x19b16', 'z_len': 4}",
+          "Bank2 twin of KFRINH"
+        ],
+        "summary": "KFRINH2: consumed via far-ptr #206 @ 0x82ea9a"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15b16 ≠ 0x19b16",
+        "result": "DID_NOT_FIRE"
+      },
+      "damos_updated": 1
+    },
+    {
+      "name": "KFATMZWE",
+      "addr": "0x198c2",
+      "verdict": "PROVEN",
+      "shape": {
+        "kind": "map",
+        "axis_mode": "COM_AXIS",
+        "z_off": "0x198c2",
+        "z_len": 36,
+        "note": "E5A0 6x6 COM blob 0x24; axes external; consumer BB94 R12=#18C2 R13=#206 R14=#30CA R15=#206"
+      },
+      "consumer": {
+        "ea": "0x85401e",
+        "listing": [
+          "85401E E6FCC218   MOV      R12,#0x18C2",
+          "854022 E6FD0602   MOV      R13,#0x0206",
+          "854026 E6FECA30   MOV      R14,#0x30CA",
+          "85402A E6FF0602   MOV      R15,#0x0206",
+          "85402E DA0194BB   CALLS    0x01,0xBB94",
+          "854032 0804       ADD      R0,#4",
+          "854034 F1C8       MOVB     RL6,RL4"
+        ]
+      },
+      "falsifier": {
+        "claim": "If R13 page 0x205, phys file would be 0x158C2",
+        "check": "0x158C2 ≠ 0x198C2",
+        "result": "DID_NOT_FIRE"
+      },
+      "damos_updated": 1
+    },
+    {
+      "name": "DZWSPM",
+      "addr": "0x19628",
+      "header_off": "0x19608",
+      "verdict": "PROVEN",
+      "kind": "farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 16,
+        "rows": 14,
+        "x_off": "0x1960a",
+        "y_off": "0x1961a",
+        "z_off": "0x19628",
+        "header_off": "0x19608",
+        "z_len": 224
+      },
+      "axis_mode": "STD_AXIS",
+      "consumer": {
+        "ea": "0x849b4c",
+        "raw_hex": "e6fc0816e6fd0602",
+        "decoded": "FC0816   MOV      R12,#0x1608; FD0602   MOV      R13,#0x0206; FE689E   MOV      R14,0x9E68",
+        "phys": "0x819608",
+        "page": "0x206",
+        "listing": [
+          "849B4C E6FC0816   MOV      R12,#0x1608",
+          "849B50 E6FD0602   MOV      R13,#0x0206",
+          "849B54 F2FE689E   MOV      R14,0x9E68",
+          "849B58 DA0196BA   CALLS    0x01,0xBA96",
+          "849B5C F7F82789   MOVB     0x8927,RL4",
+          "849B60 9A240300   JNB      0xFD48.0,0x00849B6A",
+          "849B64 F68FAC8E   MOV      0x8EAC,ONES"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages DZWSPM: [213, 953]",
+          "Far-ptr consumer → file 0x19608 page 0x206",
+          "Header/shape: {'kind': 'map', 'cols': 16, 'rows': 14, 'x_off': '0x1960a', 'y_off': '0x1961a', 'z_off': '0x19628', 'header_off': '0x19608', 'z_len': 224}",
+          "ZW family; CALLS BA96 interpolator"
+        ],
+        "summary": "DZWSPM: consumed via far-ptr #206 @ 0x849b4c"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15608 ≠ 0x19608",
+        "result": "DID_NOT_FIRE"
+      },
+      "damos_updated": 1
+    }
+  ],
+  "blocked_kfzw": {
+    "verdict": "OFFLINE_BLOCKED",
+    "symbols": [
+      "KFZWOP",
+      "KFZWOP2",
+      "KFZW1",
+      "KFZW2",
+      "KFZWVL",
+      "KFZWMN",
+      "KFZWMNST"
+    ],
+    "reason": "page 0x204 Z without far-ptr #204/#205; descriptor slots 0x17946/0x179AC unread; CALLS 0x791A body FFFF (internal ROM)",
+    "pass3_checks": {
+      "MOV_R13_imm_204_205": 0,
+      "farptr_R13_204_205_before_interpolator": 0,
+      "R12_imm_in_KFZW_offsets_before_BB_B704": 0,
+      "EXTP_imm_204_205": 0,
+      "descriptor_slot_7946_79AC_loads": 0
+    }
+  }
+}

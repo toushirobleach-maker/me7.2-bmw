@@ -1,0 +1,26 @@
+{
+  "generated": "2026-11-06T10:22:00.285454+00:00",
+  "promoted_count": 1,
+  "promoted": [
+    {
+      "name": "DTVKAML2",
+      "addr": "0x1a827",
+      "header": "0x1a81a",
+      "ea": "0x87665e",
+      "shape": {
+        "kind": "curve",
+        "cols": 12,
+        "rows": 1,
+        "x_off": "0x1a81b",
+        "z_off": "0x1a827",
+        "header_off": "0x1a81a"
+      },
+      "fr": [
+        354,
+        361,
+        952
+      ]
+    }
+  ],
+  "policy": "addr==z_off unique + FR pages + far-ptr #206 + falsifier page205"
+}

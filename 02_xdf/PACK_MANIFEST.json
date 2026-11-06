@@ -1,0 +1,17 @@
+{
+  "epk": "6901I41D",
+  "damos_status_counts": {
+    "PROVEN": 155,
+    "STRUCT": 99,
+    "UNLINKED": 80,
+    "HYP": 298
+  },
+  "proven_count": 155,
+  "xdf": "02_xdf/ME72_7532675_6901I41D_from_damos.xdf",
+  "stock_sha256": "5ec2443311b6173e4f0bb770eb1f84c0a15a270d3bd6ac52648a77d450db5dd9",
+  "krkte": {
+    "status": "PROVEN",
+    "addr": "0x19cc4",
+    "note": "KRKTE: rk→te conversion constant; stock raw 0x56"
+  }
+}

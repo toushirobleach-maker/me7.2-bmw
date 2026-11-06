@@ -1,0 +1,31 @@
+{
+  "sha256": "5f7fb754d61ef929922802a54241c23c4f9e62b6bb7ef9b1d353d0b6f9edcf7a",
+  "binary_integrity": "PASS",
+  "v1_regressions": "ALL_SEVEN_FIXED",
+  "unrelated_v2_changes": false,
+  "overall": "INCOMPLETE_REAR_HEATER_DIAGNOSTIC_COVERAGE",
+  "findings": [
+    {
+      "priority": "P2",
+      "kind": "functional_coverage",
+      "description": "Rear heater diagnosis remains enabled for normal-cat variant while CLAHSH/2 stay25; actual v2 DTC recurrence requires new logs."
+    },
+    {
+      "priority": "P2",
+      "kind": "documentation",
+      "description": "Validation plan line130 swaps front/rear bits. Correct FD50&3C00=3000."
+    },
+    {
+      "priority": "P3",
+      "kind": "documentation",
+      "description": "TLRHS is hot-start time delay, not temperature or unconditional LR-on criterion."
+    },
+    {
+      "priority": "P3",
+      "kind": "reproducibility",
+      "description": "Renaming v1 broke paths in previous v1 audit tools."
+    }
+  ],
+  "vehicle_tested": false,
+  "firmware_modified": false
+}

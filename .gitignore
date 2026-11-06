@@ -1,0 +1,30 @@
+# Local/private inputs and generated results
+/local/
+/private/
+/runs/
+/workspace/
+/06_firmware/
+/.venv/
+.DS_Store
+*.tmp
+*.partial
+*.pending
+*.pyc
+__pycache__/
+.env
+.env.*
+.idea/
+.vscode/
+.coverage
+# Raw images/assets are private unless explicitly allowlisted.
+*.bin
+*.BIN
+*.pdf
+*.PDF
+*.0PA
+*.0DA
+*.prg
+*.ipo
+*.a2l
+*.jsonl
+!00_stock/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin

@@ -1,0 +1,439 @@
+{
+  "passed": 108,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "original SHA-256",
+      "ok": true
+    },
+    {
+      "name": "original length",
+      "ok": true
+    },
+    {
+      "name": "v1 SHA-256",
+      "ok": true
+    },
+    {
+      "name": "v1 length",
+      "ok": true
+    },
+    {
+      "name": "v2 SHA-256",
+      "ok": true
+    },
+    {
+      "name": "v2 length",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x11624",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x1162f",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x1164c",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x11651",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x11b2f",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x11b31",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x11fd3",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x19612",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x196b2",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x1a5ea",
+      "ok": true
+    },
+    {
+      "name": "functional value 0x1a5ec",
+      "ok": true
+    },
+    {
+      "name": "exact functional allowlist",
+      "ok": true
+    },
+    {
+      "name": "only expected two multipoint entries and CRC changed",
+      "ok": true
+    },
+    {
+      "name": "all code and other memory outside calibration unchanged",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x1a623",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x1a624",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x1a62d",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x1a5fe",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x1a5ff",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x11b30",
+      "ok": true
+    },
+    {
+      "name": "rejected v1 byte restored 0x1161a",
+      "ok": true
+    },
+    {
+      "name": "FFRITMS and complete I/P/TV map block unchanged",
+      "ok": true
+    },
+    {
+      "name": "real LREB cluster unchanged",
+      "ok": true
+    },
+    {
+      "name": "fuel-level diagnosis cluster unchanged",
+      "ok": true
+    },
+    {
+      "name": "REPORT source SHA",
+      "ok": true
+    },
+    {
+      "name": "REPORT candidate SHA",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CWKONLS 33→11 (front λ only)",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CWKONLS 33→11 (front λ only)",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CWDKAT 01→00",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CWDKAT 01→00",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CLALSH",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CLALSH",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CLALSH2",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CLALSH2",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CLALASH",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CLALASH",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CLALASH2",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CLALASH2",
+      "ok": true
+    },
+    {
+      "name": "REPORT old SAP passport (B_slsfz) 01→00",
+      "ok": true
+    },
+    {
+      "name": "REPORT new SAP passport (B_slsfz) 01→00",
+      "ok": true
+    },
+    {
+      "name": "REPORT old ESKONF[3] F3→FF: SLP bits3:2 = 11 inactive",
+      "ok": true
+    },
+    {
+      "name": "REPORT new ESKONF[3] F3→FF: SLP bits3:2 = 11 inactive",
+      "ok": true
+    },
+    {
+      "name": "REPORT old ESKONF[5] F0→F3: SLV bits1:0 = 11 inactive",
+      "ok": true
+    },
+    {
+      "name": "REPORT new ESKONF[5] F0→F3: SLV bits1:0 = 11 inactive",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CLASLPE",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CLASLPE",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CLASLVE",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CLASLVE",
+      "ok": true
+    },
+    {
+      "name": "REPORT old MSLUB values → 0",
+      "ok": true
+    },
+    {
+      "name": "REPORT new MSLUB values → 0",
+      "ok": true
+    },
+    {
+      "name": "REPORT old MSLBAS 1D→00",
+      "ok": true
+    },
+    {
+      "name": "REPORT new MSLBAS 1D→00",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CDSLS",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CDSLS",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CWSLS",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CWSLS",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CWKONABG",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CWKONABG",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CDLSH",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CDLSH",
+      "ok": true
+    },
+    {
+      "name": "REPORT old CDHSH",
+      "ok": true
+    },
+    {
+      "name": "REPORT new CDHSH",
+      "ok": true
+    },
+    {
+      "name": "REPORT covers exactly all functional changes",
+      "ok": true
+    },
+    {
+      "name": "original all checksums OK",
+      "ok": true
+    },
+    {
+      "name": "v2 all checksums OK",
+      "ok": true
+    },
+    {
+      "name": "CRC32 value DAFAFED1",
+      "ok": true
+    },
+    {
+      "name": "MP 1EAE6 value09A7325A",
+      "ok": true
+    },
+    {
+      "name": "MP 1EB06 value0D77F913",
+      "ok": true
+    },
+    {
+      "name": "34 total changed bytes",
+      "ok": true
+    },
+    {
+      "name": "20 functional changed bytes",
+      "ok": true
+    },
+    {
+      "name": "14 checksum changed bytes",
+      "ok": true
+    },
+    {
+      "name": "SLP table callback",
+      "ok": true
+    },
+    {
+      "name": "SLV table callback",
+      "ok": true
+    },
+    {
+      "name": "SLP callback returns fault index73",
+      "ok": true
+    },
+    {
+      "name": "SLV callback returns fault index78",
+      "ok": true
+    },
+    {
+      "name": "config pair3 test",
+      "ok": true
+    },
+    {
+      "name": "mode3 clears fault bit0",
+      "ok": true
+    },
+    {
+      "name": "mode3 calls DFPM with callback index",
+      "ok": true
+    },
+    {
+      "name": "mask table SLV/SLP",
+      "ok": true
+    },
+    {
+      "name": "CWKONLS bit0 toFD50.12",
+      "ok": true
+    },
+    {
+      "name": "CWKONLS bit1 toFD50.10",
+      "ok": true
+    },
+    {
+      "name": "CWKONLS bit4 toFD50.13",
+      "ok": true
+    },
+    {
+      "name": "CWKONLS bit5 toFD50.11",
+      "ok": true
+    },
+    {
+      "name": "rear heater diagnosis configuration",
+      "ok": true
+    },
+    {
+      "name": "rear heater bank1 DFPM gate",
+      "ok": true
+    },
+    {
+      "name": "rear heater bank2 DFPM gate",
+      "ok": true
+    },
+    {
+      "name": "rear heater bank1 class index3A",
+      "ok": true
+    },
+    {
+      "name": "rear heater bank2 class index3B",
+      "ok": true
+    },
+    {
+      "name": "KATV variant flag generation",
+      "ok": true
+    },
+    {
+      "name": "SLP inactive pair3",
+      "ok": true
+    },
+    {
+      "name": "SLV inactive pair3",
+      "ok": true
+    },
+    {
+      "name": "EV4 full diagnostic pair0 preserved",
+      "ok": true
+    },
+    {
+      "name": "SLP only selected two bits changed",
+      "ok": true
+    },
+    {
+      "name": "SLV only selected two bits changed",
+      "ok": true
+    },
+    {
+      "name": "mode3 update clears bit0 for all65536 source states",
+      "ok": true
+    },
+    {
+      "name": "CDHSH remains zero",
+      "ok": true
+    },
+    {
+      "name": "rear heater classes both remain active25",
+      "ok": true
+    },
+    {
+      "name": "saved original KATV no-cat bit is false",
+      "ok": true
+    },
+    {
+      "name": "DHLS permission CDHSH0 no_cat0",
+      "ok": true
+    },
+    {
+      "name": "DHLS permission CDHSH0 no_cat1",
+      "ok": true
+    },
+    {
+      "name": "DHLS permission CDHSH1 no_cat0",
+      "ok": true
+    },
+    {
+      "name": "DHLS permission CDHSH1 no_cat1",
+      "ok": true
+    }
+  ],
+  "scope": "Static pinned binaries, exact allowlist and cited code/data anchors. Not vehicle execution."
+}

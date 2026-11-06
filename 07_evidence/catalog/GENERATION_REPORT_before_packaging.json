@@ -1,0 +1,33 @@
+{
+  "generated_xdf": "research/02_definitions/6901I41D_proven/ME72_7532675_6901I41D_from_damos.xdf",
+  "emitted": {
+    "constant": 331,
+    "table": 211,
+    "patch": 10
+  },
+  "emitted_total": 552,
+  "manifest_kind_counts": {
+    "constant": 35,
+    "table": 11,
+    "patch": 10
+  },
+  "seed_kind_counts": {
+    "constant": 35,
+    "map": 11,
+    "patch": 10
+  },
+  "parity_ok_seed_subset": {
+    "constant": true,
+    "map": true,
+    "patch": true
+  },
+  "parity_note": "Full XDF includes linked STRUCT/HYP; seed subset must match manifest kinds",
+  "damos_status_counts": {
+    "PROVEN": 149,
+    "STRUCT": 98,
+    "UNLINKED": 80,
+    "HYP": 305
+  },
+  "damos_symbols": 632,
+  "manifest_items": 56
+}

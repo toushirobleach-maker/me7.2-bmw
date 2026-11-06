@@ -1,0 +1,8 @@
+{
+  "source_pdf": "01_documentation/BMW-XDFs/Me7.2/Funktionsramen_full/BMW Me7_2_English_Funktionsramen.pdf",
+  "pdf_pages": 1043,
+  "empty_pages": 0,
+  "extract_seconds": 21.35,
+  "extractor": "pypdf 6.x",
+  "note": "pdf_page is 1-based pypdf index; printed FR page numbers may differ (Vivace headers)."
+}

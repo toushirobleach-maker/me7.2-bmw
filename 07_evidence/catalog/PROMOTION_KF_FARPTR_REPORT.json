@@ -1,0 +1,2415 @@
+{
+  "epk": "6901I41D",
+  "decoder": "review_decode.py",
+  "consumer_form": "MOV R12,#off; MOV R13,#0x206; CALLS interpolator",
+  "promoted_count": 49,
+  "blocked_kfzw": [
+    {
+      "name": "KFZWOP",
+      "addr": "0x10220",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    },
+    {
+      "name": "KFZWOP2",
+      "addr": "0x10320",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    },
+    {
+      "name": "KFZW1",
+      "addr": "0x10bc2",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    },
+    {
+      "name": "KFZW2",
+      "addr": "0x10d42",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    },
+    {
+      "name": "KFZWVL",
+      "addr": "0x10ec2",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    },
+    {
+      "name": "KFZWMN",
+      "addr": "0x10f0a",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    },
+    {
+      "name": "KFZWMNST",
+      "addr": "0x10fca",
+      "verdict": "STILL_STRUCT",
+      "reason": "no MOV R12,#off; MOV R13,#0x206 far-ptr into 0x810xxx (page 0x204) cal",
+      "near_farptr206": []
+    }
+  ],
+  "status_counts": {
+    "PROVEN": 149,
+    "STRUCT": 98,
+    "UNLINKED": 80,
+    "HYP": 305
+  },
+  "items": [
+    {
+      "name": "KFANS",
+      "addr": "0x19df5",
+      "header_off": "0x19de7",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 7,
+        "rows": 5,
+        "x_off": "0x19de9",
+        "y_off": "0x19df0",
+        "z_off": "0x19df5",
+        "header_off": "0x19de7",
+        "z_len": 35
+      },
+      "consumer": {
+        "ea": "0x85f608",
+        "raw_hex": "e6fce71de6fd0602",
+        "decoded": "MOV R12,#0x1de7; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819de7",
+        "page": "0x206",
+        "listing": [
+          "85F608 E6FCE71D   MOV      R12,#0x1DE7",
+          "85F60C E6FD0602   MOV      R13,#0x0206",
+          "85F610 C2FE52F8   MOVBZ    R14,0xF852",
+          "85F614 C2FF108A   MOVBZ    R15,0x8A10",
+          "85F618 DA0104B7   CALLS    0x01,0xB704",
+          "85F61C 9850       MOV      R5,[R0+]",
+          "85F61E 1B54       MULU     R5,R4",
+          "85F620 F2F50EFE   MOV      R5,0xFE0E",
+          "85F624 9840       MOV      R4,[R0+]",
+          "85F626 1B54       MULU     R5,R4",
+          "85F628 F2F90CFE   MOV      R9,0xFE0C",
+          "85F62C 46F9FF1F   CMP      R9,#0x1FFF"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFANS: [161, 957]",
+          "Far-ptr consumer → file 0x19de7 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 7, 'rows': 5, 'x_off': '0x19de9', 'y_off': '0x19df0', 'z_off': '0x19df5', 'header_off': '0x19de7', 'z_len': 35}"
+        ],
+        "summary": "KFANS: consumed via R12/R13 far-ptr #206 @ 0x85f608"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15de7 ≠ 0x19de7",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFATMZW2",
+      "addr": "0x199b6",
+      "header_off": "0x199a4",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 8,
+        "rows": 8,
+        "x_off": "0x199a6",
+        "y_off": "0x199ae",
+        "z_off": "0x199b6",
+        "header_off": "0x199a4",
+        "z_len": 64
+      },
+      "consumer": {
+        "ea": "0x853826",
+        "raw_hex": "e6fca419e6fd0602",
+        "decoded": "MOV R12,#0x19a4; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x8199a4",
+        "page": "0x206",
+        "listing": [
+          "853826 E6FCA419   MOV      R12,#0x19A4",
+          "85382A E6FD0602   MOV      R13,#0x0206",
+          "85382E C2FE44F8   MOVBZ    R14,0xF844",
+          "853832 C2FF53F8   MOVBZ    R15,0xF853",
+          "853836 DA0104B7   CALLS    0x01,0xB704",
+          "85383A F7F82D8C   MOVB     0x8C2D,RL4",
+          "85383E C2F4FC9E   MOVBZ    R4,0x9EFC",
+          "853842 F2F5FA9E   MOV      R5,0x9EFA",
+          "853846 F6F50EFE   MOV      0xFE0E,R5",
+          "85384A 5B44       DIVU     R4",
+          "85384C 4D03       JMPR     CC_V,0x00853854"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFATMZW2: [305, 957]",
+          "Far-ptr consumer → file 0x199a4 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 8, 'rows': 8, 'x_off': '0x199a6', 'y_off': '0x199ae', 'z_off': '0x199b6', 'header_off': '0x199a4', 'z_len': 64}"
+        ],
+        "summary": "KFATMZW2: consumed via R12/R13 far-ptr #206 @ 0x853826"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x159a4 ≠ 0x199a4",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFMSML",
+      "addr": "0x19666",
+      "header_off": "0x19656",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 8,
+        "rows": 6,
+        "x_off": "0x19658",
+        "y_off": "0x19660",
+        "z_off": "0x19666",
+        "header_off": "0x19656",
+        "z_len": 48
+      },
+      "consumer": {
+        "ea": "0x84c7bc",
+        "raw_hex": "e6fc5616e6fd0602",
+        "decoded": "MOV R12,#0x1656; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819656",
+        "page": "0x206",
+        "listing": [
+          "84C7BC E6FC5616   MOV      R12,#0x1656",
+          "84C7C0 E6FD0602   MOV      R13,#0x0206",
+          "84C7C4 C2FE44F8   MOVBZ    R14,0xF844",
+          "84C7C8 C2FF53F8   MOVBZ    R15,0xF853",
+          "84C7CC DA0104B7   CALLS    0x01,0xB704",
+          "84C7D0 F7F89F8A   MOVB     0x8A9F,RL4",
+          "84C7D4 E6FC0A2C   MOV      R12,#0x2C0A",
+          "84C7D8 E6FD0602   MOV      R13,#0x0206",
+          "84C7DC F2FE00A2   MOV      R14,0xA200",
+          "84C7E0 DA0198B5   CALLS    0x01,0xB598"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFMSML: [276, 278, 280, 281, 957]",
+          "Far-ptr consumer → file 0x19656 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 8, 'rows': 6, 'x_off': '0x19658', 'y_off': '0x19660', 'z_off': '0x19666', 'header_off': '0x19656', 'z_len': 48}"
+        ],
+        "summary": "KFFMSML: consumed via R12/R13 far-ptr #206 @ 0x84c7bc"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15656 ≠ 0x19656",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFTEAX",
+      "addr": "0x19543",
+      "header_off": "0x1953a",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 5,
+        "rows": 2,
+        "x_off": "0x1953c",
+        "y_off": "0x19541",
+        "z_off": "0x19543",
+        "header_off": "0x1953a",
+        "z_len": 10
+      },
+      "consumer": {
+        "ea": "0x848066",
+        "raw_hex": "e6fc3a15e6fd0602",
+        "decoded": "MOV R12,#0x153a; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81953a",
+        "page": "0x206",
+        "listing": [
+          "848066 E6FC3A15   MOV      R12,#0x153A",
+          "84806A E6FD0602   MOV      R13,#0x0206",
+          "84806E C2FE52F8   MOVBZ    R14,0xF852",
+          "848072 C2FF108A   MOVBZ    R15,0x8A10",
+          "848076 DA0104B7   CALLS    0x01,0xB704",
+          "84807A F7F8048A   MOVB     0x8A04,RL4",
+          "84807E C2F4C78C   MOVBZ    R4,0x8CC7",
+          "848082 F2F556F8   MOV      R5,0xF856",
+          "848086 F6F50EFE   MOV      0xFE0E,R5",
+          "84808A 5B44       DIVU     R4",
+          "84808C 4D03       JMPR     CC_V,0x00848094"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFTEAX: [381, 384, 394, 398, 957]",
+          "Far-ptr consumer → file 0x1953a page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 5, 'rows': 2, 'x_off': '0x1953c', 'y_off': '0x19541', 'z_off': '0x19543', 'header_off': '0x1953a', 'z_len': 10}"
+        ],
+        "summary": "KFFTEAX: consumed via R12/R13 far-ptr #206 @ 0x848066"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1553a ≠ 0x1953a",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFWTBR",
+      "addr": "0x19c3d",
+      "header_off": "0x19c29",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 10,
+        "rows": 8,
+        "x_off": "0x19c2b",
+        "y_off": "0x19c35",
+        "z_off": "0x19c3d",
+        "header_off": "0x19c29",
+        "z_len": 80
+      },
+      "consumer": {
+        "ea": "0x85dc58",
+        "raw_hex": "e6fc291ce6fd0602",
+        "decoded": "MOV R12,#0x1c29; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819c29",
+        "page": "0x206",
+        "listing": [
+          "85DC58 E6FC291C   MOV      R12,#0x1C29",
+          "85DC5C E6FD0602   MOV      R13,#0x0206",
+          "85DC60 C2FE53F8   MOVBZ    R14,0xF853",
+          "85DC64 C2FF44F8   MOVBZ    R15,0xF844",
+          "85DC68 DA0104B7   CALLS    0x01,0xB704",
+          "85DC6C F7F8C58C   MOVB     0x8CC5,RL4",
+          "85DC70 C2F6108A   MOVBZ    R6,0x8A10",
+          "85DC74 F046       MOV      R4,R6",
+          "85DC76 26F44000   SUB      R4,#0x0040",
+          "85DC7A F6F4E4A1   MOV      0xA1E4,R4",
+          "85DC7E C2F5C58C   MOVBZ    R5,0x8CC5"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFWTBR: [123, 124, 957]",
+          "Far-ptr consumer → file 0x19c29 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 10, 'rows': 8, 'x_off': '0x19c2b', 'y_off': '0x19c35', 'z_off': '0x19c3d', 'header_off': '0x19c29', 'z_len': 80}"
+        ],
+        "summary": "KFFWTBR: consumed via R12/R13 far-ptr #206 @ 0x85dc58"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15c29 ≠ 0x19c29",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFKRMX",
+      "addr": "0x191f9",
+      "header_off": "0x191e4",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 16,
+        "rows": 3,
+        "x_off": "0x191e6",
+        "y_off": "0x191f6",
+        "z_off": "0x191f9",
+        "header_off": "0x191e4",
+        "z_len": 48
+      },
+      "consumer": {
+        "ea": "0x846168",
+        "raw_hex": "e6fce411e6fd0602",
+        "decoded": "MOV R12,#0x11e4; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x8191e4",
+        "page": "0x206",
+        "listing": [
+          "846168 E6FCE411   MOV      R12,#0x11E4",
+          "84616C E6FD0602   MOV      R13,#0x0206",
+          "846170 C2FE44F8   MOVBZ    R14,0xF844",
+          "846174 C2FF53F8   MOVBZ    R15,0xF853",
+          "846178 DA0104B7   CALLS    0x01,0xB704",
+          "84617C F7F8148B   MOVB     0x8B14,RL4",
+          "846180 E6FC6912   MOV      R12,#0x1269",
+          "846184 E6FD0602   MOV      R13,#0x0206",
+          "846188 F2FEA4E4   MOV      R14,0xE4A4",
+          "84618C DA0134BA   CALLS    0x01,0xBA34"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFKRMX: [229, 231, 232, 235, 957]",
+          "Far-ptr consumer → file 0x191e4 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 16, 'rows': 3, 'x_off': '0x191e6', 'y_off': '0x191f6', 'z_off': '0x191f9', 'header_off': '0x191e4', 'z_len': 48}"
+        ],
+        "summary": "KFKRMX: consumed via R12/R13 far-ptr #206 @ 0x846168"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x151e4 ≠ 0x191e4",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFLAMFA",
+      "addr": "0x1a08b",
+      "header_off": "0x1a073",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 11,
+        "rows": 11,
+        "x_off": "0x1a075",
+        "y_off": "0x1a080",
+        "z_off": "0x1a08b",
+        "header_off": "0x1a073",
+        "z_len": 121
+      },
+      "consumer": {
+        "ea": "0x85feec",
+        "raw_hex": "e6fc7320e6fd0602",
+        "decoded": "MOV R12,#0x2073; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81a073",
+        "page": "0x206",
+        "listing": [
+          "85FEEC E6FC7320   MOV      R12,#0x2073",
+          "85FEF0 E6FD0602   MOV      R13,#0x0206",
+          "85FEF4 C2FE44F8   MOVBZ    R14,0xF844",
+          "85FEF8 C2FF53F8   MOVBZ    R15,0xF853",
+          "85FEFC DA0104B7   CALLS    0x01,0xB704",
+          "85FF00 F1E8       MOVB     RL7,RL4",
+          "85FF02 41CE       CMPB     RL6,RL7",
+          "85FF04 9D01       JMPR     CC_NC,0x0085FF08",
+          "85FF06 F1EC       MOVB     RL7,RL6",
+          "85FF08 47FE8000   CMPB     RL7,#0x0080",
+          "85FF0C 9D10       JMPR     CC_NC,0x0085FF2E",
+          "85FF0E F3F8D4A2   MOVB     RL4,0xA2D4",
+          "85FF12 2D08       JMPR     CC_Z,0x0085FF24"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFLAMFA: [271, 272, 957]",
+          "Far-ptr consumer → file 0x1a073 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 11, 'rows': 11, 'x_off': '0x1a075', 'y_off': '0x1a080', 'z_off': '0x1a08b', 'header_off': '0x1a073', 'z_len': 121}"
+        ],
+        "summary": "KFLAMFA: consumed via R12/R13 far-ptr #206 @ 0x85feec"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16073 ≠ 0x1a073",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFLF",
+      "addr": "0x19e44",
+      "header_off": "0x19e27",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 12,
+        "rows": 15,
+        "x_off": "0x19e29",
+        "y_off": "0x19e35",
+        "z_off": "0x19e44",
+        "header_off": "0x19e27",
+        "z_len": 180
+      },
+      "consumer": {
+        "ea": "0x85f5f2",
+        "raw_hex": "e6fc271ee6fd0602",
+        "decoded": "MOV R12,#0x1e27; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819e27",
+        "page": "0x206",
+        "listing": [
+          "85F5F2 E6FC271E   MOV      R12,#0x1E27",
+          "85F5F6 E6FD0602   MOV      R13,#0x0206",
+          "85F5FA C2FE44F8   MOVBZ    R14,0xF844",
+          "85F5FE C2FF53F8   MOVBZ    R15,0xF853",
+          "85F602 DA0104B7   CALLS    0x01,0xB704",
+          "85F606 8840       MOV      [-R0],R4",
+          "85F608 E6FCE71D   MOV      R12,#0x1DE7",
+          "85F60C E6FD0602   MOV      R13,#0x0206",
+          "85F610 C2FE52F8   MOVBZ    R14,0xF852",
+          "85F614 C2FF108A   MOVBZ    R15,0x8A10",
+          "85F618 DA0104B7   CALLS    0x01,0xB704"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFLF: [107, 161, 957]",
+          "Far-ptr consumer → file 0x19e27 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 12, 'rows': 15, 'x_off': '0x19e29', 'y_off': '0x19e35', 'z_off': '0x19e44', 'header_off': '0x19e27', 'z_len': 180}"
+        ],
+        "summary": "KFLF: consumed via R12/R13 far-ptr #206 @ 0x85f5f2"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15e27 ≠ 0x19e27",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFLMSKH",
+      "addr": "0x1a385",
+      "header_off": "0x1a377",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 7,
+        "rows": 5,
+        "x_off": "0x1a379",
+        "y_off": "0x1a380",
+        "z_off": "0x1a385",
+        "header_off": "0x1a377",
+        "z_len": 35
+      },
+      "consumer": {
+        "ea": "0x864390",
+        "raw_hex": "e6fc7723e6fd0602",
+        "decoded": "MOV R12,#0x2377; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81a377",
+        "page": "0x206",
+        "listing": [
+          "864390 E6FC7723   MOV      R12,#0x2377",
+          "864394 E6FD0602   MOV      R13,#0x0206",
+          "864398 C2FE44F8   MOVBZ    R14,0xF844",
+          "86439C C2FF53F8   MOVBZ    R15,0xF853",
+          "8643A0 DA0104B7   CALLS    0x01,0xB704",
+          "8643A4 8840       MOV      [-R0],R4",
+          "8643A6 E6FC2D24   MOV      R12,#0x242D",
+          "8643AA E6FD0602   MOV      R13,#0x0206",
+          "8643AE C2FE1A8A   MOVBZ    R14,0x8A1A",
+          "8643B2 DA0124B5   CALLS    0x01,0xB524",
+          "8643B6 9850       MOV      R5,[R0+]"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFLMSKH: [272, 274, 275, 280]",
+          "Far-ptr consumer → file 0x1a377 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 7, 'rows': 5, 'x_off': '0x1a379', 'y_off': '0x1a380', 'z_off': '0x1a385', 'header_off': '0x1a377', 'z_len': 35}"
+        ],
+        "summary": "KFLMSKH: consumed via R12/R13 far-ptr #206 @ 0x864390"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16377 ≠ 0x1a377",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFLMSKH2",
+      "addr": "0x1a3cf",
+      "header_off": "0x1a3c9",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 2,
+        "x_off": "0x1a3cb",
+        "y_off": "0x1a3cd",
+        "z_off": "0x1a3cf",
+        "header_off": "0x1a3c9",
+        "z_len": 4
+      },
+      "consumer": {
+        "ea": "0x86435c",
+        "raw_hex": "e6fcc923e6fd0602",
+        "decoded": "MOV R12,#0x23c9; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81a3c9",
+        "page": "0x206",
+        "listing": [
+          "86435C E6FCC923   MOV      R12,#0x23C9",
+          "864360 E6FD0602   MOV      R13,#0x0206",
+          "864364 C2FE44F8   MOVBZ    R14,0xF844",
+          "864368 C2FF53F8   MOVBZ    R15,0xF853",
+          "86436C DA0104B7   CALLS    0x01,0xB704",
+          "864370 8840       MOV      [-R0],R4",
+          "864372 E6FC3624   MOV      R12,#0x2436",
+          "864376 E6FD0602   MOV      R13,#0x0206",
+          "86437A C2FE1A8A   MOVBZ    R14,0x8A1A",
+          "86437E DA0124B5   CALLS    0x01,0xB524",
+          "864382 9850       MOV      R5,[R0+]"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFLMSKH2: [272]",
+          "Far-ptr consumer → file 0x1a3c9 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 2, 'rows': 2, 'x_off': '0x1a3cb', 'y_off': '0x1a3cd', 'z_off': '0x1a3cf', 'header_off': '0x1a3c9', 'z_len': 4}"
+        ],
+        "summary": "KFLMSKH2: consumed via R12/R13 far-ptr #206 @ 0x86435c"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x163c9 ≠ 0x1a3c9",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFMDKO",
+      "addr": "0x1a4d4",
+      "header_off": "0x1a4cc",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 4,
+        "rows": 2,
+        "x_off": "0x1a4ce",
+        "y_off": "0x1a4d2",
+        "z_off": "0x1a4d4",
+        "header_off": "0x1a4cc",
+        "z_len": 8
+      },
+      "consumer": {
+        "ea": "0x866c68",
+        "raw_hex": "e6fccc24e6fd0602",
+        "decoded": "MOV R12,#0x24cc; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81a4cc",
+        "page": "0x206",
+        "listing": [
+          "866C68 E6FCCC24   MOV      R12,#0x24CC",
+          "866C6C E6FD0602   MOV      R13,#0x0206",
+          "866C70 C2FE44F8   MOVBZ    R14,0xF844",
+          "866C74 C2FF7E8D   MOVBZ    R15,0x8D7E",
+          "866C78 DA0104B7   CALLS    0x01,0xB704",
+          "866C7C F7F828A4   MOVB     0xA428,RL4",
+          "866C80 E6FCBE24   MOV      R12,#0x24BE",
+          "866C84 E6FD0602   MOV      R13,#0x0206",
+          "866C88 C2FE44F8   MOVBZ    R14,0xF844",
+          "866C8C DA0124B5   CALLS    0x01,0xB524"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFMDKO: [52, 53, 958]",
+          "Far-ptr consumer → file 0x1a4cc page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 4, 'rows': 2, 'x_off': '0x1a4ce', 'y_off': '0x1a4d2', 'z_off': '0x1a4d4', 'header_off': '0x1a4cc', 'z_len': 8}"
+        ],
+        "summary": "KFMDKO: consumed via R12/R13 far-ptr #206 @ 0x866c68"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x164cc ≠ 0x1a4cc",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFMDKOG",
+      "addr": "0x1a50b",
+      "header_off": "0x1a4fe",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 5,
+        "rows": 6,
+        "x_off": "0x1a500",
+        "y_off": "0x1a505",
+        "z_off": "0x1a50b",
+        "header_off": "0x1a4fe",
+        "z_len": 30
+      },
+      "consumer": {
+        "ea": "0x866c52",
+        "raw_hex": "e6fcfe24e6fd0602",
+        "decoded": "MOV R12,#0x24fe; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81a4fe",
+        "page": "0x206",
+        "listing": [
+          "866C52 E6FCFE24   MOV      R12,#0x24FE",
+          "866C56 E6FD0602   MOV      R13,#0x0206",
+          "866C5A C2FE44F8   MOVBZ    R14,0xF844",
+          "866C5E C2FFD08A   MOVBZ    R15,0x8AD0",
+          "866C62 DA0104B7   CALLS    0x01,0xB704",
+          "866C66 0D0A       JMPR     CC_UC,0x00866C7C",
+          "866C68 E6FCCC24   MOV      R12,#0x24CC",
+          "866C6C E6FD0602   MOV      R13,#0x0206",
+          "866C70 C2FE44F8   MOVBZ    R14,0xF844",
+          "866C74 C2FF7E8D   MOVBZ    R15,0x8D7E",
+          "866C78 DA0104B7   CALLS    0x01,0xB704"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFMDKOG: [52, 53, 958]",
+          "Far-ptr consumer → file 0x1a4fe page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 5, 'rows': 6, 'x_off': '0x1a500', 'y_off': '0x1a505', 'z_off': '0x1a50b', 'header_off': '0x1a4fe', 'z_len': 30}"
+        ],
+        "summary": "KFMDKOG: consumed via R12/R13 far-ptr #206 @ 0x866c52"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x164fe ≠ 0x1a4fe",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRINH2",
+      "addr": "0x19aea",
+      "header_off": "0x19ae4",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 2,
+        "x_off": "0x19ae6",
+        "y_off": "0x19ae8",
+        "z_off": "0x19aea",
+        "header_off": "0x19ae4",
+        "z_len": 4
+      },
+      "consumer": {
+        "ea": "0x803486",
+        "raw_hex": "e6fce41ae6fd0602",
+        "decoded": "MOV R12,#0x1ae4; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819ae4",
+        "page": "0x206",
+        "listing": [
+          "803486 E6FCE41A   MOV      R12,#0x1AE4",
+          "80348A E6FD0602   MOV      R13,#0x0206",
+          "80348E C2FE2BB1   MOVBZ    R14,0xB12B",
+          "803492 C2FF998C   MOVBZ    R15,0x8C99",
+          "803496 DA0104B7   CALLS    0x01,0xB704",
+          "80349A F094       MOV      R9,R4",
+          "80349C C2F41A8A   MOVBZ    R4,0x8A1A",
+          "8034A0 0094       ADD      R9,R4",
+          "8034A2 26F94000   SUB      R9,#0x0040",
+          "8034A6 46F9FF00   CMP      R9,#0x00FF",
+          "8034AA FD02       JMPR     CC_ULE,0x008034B0",
+          "8034AC E6F9FF00   MOV      R9,#0x00FF"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRINH2: [668, 958]",
+          "Far-ptr consumer → file 0x19ae4 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 2, 'rows': 2, 'x_off': '0x19ae6', 'y_off': '0x19ae8', 'z_off': '0x19aea', 'header_off': '0x19ae4', 'z_len': 4}"
+        ],
+        "summary": "KFRINH2: consumed via R12/R13 far-ptr #206 @ 0x803486"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15ae4 ≠ 0x19ae4",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFTATM2",
+      "addr": "0x19a55",
+      "header_off": "0x19a4b",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 5,
+        "rows": 3,
+        "x_off": "0x19a4d",
+        "y_off": "0x19a52",
+        "z_off": "0x19a55",
+        "header_off": "0x19a4b",
+        "z_len": 15
+      },
+      "consumer": {
+        "ea": "0x82b2b6",
+        "raw_hex": "e6fc4b1ae6fd0602",
+        "decoded": "MOV R12,#0x1a4b; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819a4b",
+        "page": "0x206",
+        "listing": [
+          "82B2B6 E6FC4B1A   MOV      R12,#0x1A4B",
+          "82B2BA E6FD0602   MOV      R13,#0x0206",
+          "82B2BE C2FE3E8C   MOVBZ    R14,0x8C3E",
+          "82B2C2 C08F       MOVBZ    R15,RL4",
+          "82B2C4 DA0104B7   CALLS    0x01,0xB704",
+          "82B2C8 F7F8388C   MOVB     0x8C38,RL4",
+          "82B2CC C084       MOVBZ    R4,RL4",
+          "82B2CE 8840       MOV      [-R0],R4",
+          "82B2D0 E6FC111A   MOV      R12,#0x1A11",
+          "82B2D4 E6FD0602   MOV      R13,#0x0206",
+          "82B2D8 C2FE3E8C   MOVBZ    R14,0x8C3E",
+          "82B2DC DA0124B5   CALLS    0x01,0xB524"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFTATM2: [305, 958]",
+          "Far-ptr consumer → file 0x19a4b page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 5, 'rows': 3, 'x_off': '0x19a4d', 'y_off': '0x19a52', 'z_off': '0x19a55', 'header_off': '0x19a4b', 'z_len': 15}"
+        ],
+        "summary": "KFTATM2: consumed via R12/R13 far-ptr #206 @ 0x82b2b6"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15a4b ≠ 0x19a4b",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFTATX",
+      "addr": "0x1957d",
+      "header_off": "0x19577",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 2,
+        "x_off": "0x19579",
+        "y_off": "0x1957b",
+        "z_off": "0x1957d",
+        "header_off": "0x19577",
+        "z_len": 4
+      },
+      "consumer": {
+        "ea": "0x8480aa",
+        "raw_hex": "e6fc7715e6fd0602",
+        "decoded": "MOV R12,#0x1577; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819577",
+        "page": "0x206",
+        "listing": [
+          "8480AA E6FC7715   MOV      R12,#0x1577",
+          "8480AE E6FD0602   MOV      R13,#0x0206",
+          "8480B2 C2FE44F8   MOVBZ    R14,0xF844",
+          "8480B6 C2FF6F89   MOVBZ    R15,0x896F",
+          "8480BA DA0104B7   CALLS    0x01,0xB704",
+          "8480BE F7F8058A   MOVB     0x8A05,RL4",
+          "8480C2 F2F43AFA   MOV      R4,0xFA3A",
+          "8480C6 3D0E       JMPR     CC_NZ,0x008480E4",
+          "8480C8 F2F5EE92   MOV      R5,0x92EE",
+          "8480CC 42F52A3E   CMP      R5,0x3E2A",
+          "8480D0 9D04       JMPR     CC_NC,0x008480DA"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFTATX: [381, 384, 394, 397, 399, 958]",
+          "Far-ptr consumer → file 0x19577 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 2, 'rows': 2, 'x_off': '0x19579', 'y_off': '0x1957b', 'z_off': '0x1957d', 'header_off': '0x19577', 'z_len': 4}"
+        ],
+        "summary": "KFTATX: consumed via R12/R13 far-ptr #206 @ 0x8480aa"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15577 ≠ 0x19577",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFTEVP",
+      "addr": "0x19458",
+      "header_off": "0x19448",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 5,
+        "rows": 9,
+        "x_off": "0x1944a",
+        "y_off": "0x1944f",
+        "z_off": "0x19458",
+        "header_off": "0x19448",
+        "z_len": 45
+      },
+      "consumer": {
+        "ea": "0x847e6c",
+        "raw_hex": "e6fc4814e6fd0602",
+        "decoded": "MOV R12,#0x1448; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819448",
+        "page": "0x206",
+        "listing": [
+          "847E6C E6FC4814   MOV      R12,#0x1448",
+          "847E70 E6FD0602   MOV      R13,#0x0206",
+          "847E74 C2FE44F8   MOVBZ    R14,0xF844",
+          "847E78 C2FF39FA   MOVBZ    R15,0xFA39",
+          "847E7C DA0104B7   CALLS    0x01,0xB704",
+          "847E80 F7F82E8B   MOVB     0x8B2E,RL4",
+          "847E84 C084       MOVBZ    R4,RL4",
+          "847E86 8840       MOV      [-R0],R4",
+          "847E88 E6FC8514   MOV      R12,#0x1485",
+          "847E8C E6FD0602   MOV      R13,#0x0206",
+          "847E90 C2FE0B8A   MOVBZ    R14,0x8A0B"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFTEVP: [402, 403, 958]",
+          "Far-ptr consumer → file 0x19448 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 5, 'rows': 9, 'x_off': '0x1944a', 'y_off': '0x1944f', 'z_off': '0x19458', 'header_off': '0x19448', 'z_len': 45}"
+        ],
+        "summary": "KFTEVP: consumed via R12/R13 far-ptr #206 @ 0x847e6c"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15448 ≠ 0x19448",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFTPKOR",
+      "addr": "0x19b1c",
+      "header_off": "0x19b16",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 2,
+        "x_off": "0x19b18",
+        "y_off": "0x19b1a",
+        "z_off": "0x19b1c",
+        "header_off": "0x19b16",
+        "z_len": 4
+      },
+      "consumer": {
+        "ea": "0x82ea9a",
+        "raw_hex": "e6fc161be6fd0602",
+        "decoded": "MOV R12,#0x1b16; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819b16",
+        "page": "0x206",
+        "listing": [
+          "82EA9A E6FC161B   MOV      R12,#0x1B16",
+          "82EA9E E6FD0602   MOV      R13,#0x0206",
+          "82EAA2 C2FE44F8   MOVBZ    R14,0xF844",
+          "82EAA6 C2FF53F8   MOVBZ    R15,0xF853",
+          "82EAAA DA0104B7   CALLS    0x01,0xB704",
+          "82EAAE F7F89A8C   MOVB     0x8C9A,RL4",
+          "82EAB2 D7400602   EXTP     #0x206,#1",
+          "82EAB6 F2FC9833   MOV      R12,0x3398 ; EXTP physical=0x81B398",
+          "82EABA C08D       MOVBZ    R13,RL4",
+          "82EABC F2FE98A0   MOV      R14,0xA098",
+          "82EAC0 DA007A6D   CALLS    0x00,0x6D7A"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFTPKOR: [638, 640, 643, 958]",
+          "Far-ptr consumer → file 0x19b16 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 2, 'rows': 2, 'x_off': '0x19b18', 'y_off': '0x19b1a', 'z_off': '0x19b1c', 'header_off': '0x19b16', 'z_len': 4}"
+        ],
+        "summary": "KFTPKOR: consumed via R12/R13 far-ptr #206 @ 0x82ea9a"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15b16 ≠ 0x19b16",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFWEE",
+      "addr": "0x19cfa",
+      "header_off": "0x19ce8",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 8,
+        "rows": 8,
+        "x_off": "0x19cea",
+        "y_off": "0x19cf2",
+        "z_off": "0x19cfa",
+        "header_off": "0x19ce8",
+        "z_len": 64
+      },
+      "consumer": {
+        "ea": "0x85f4c6",
+        "raw_hex": "e6fce81ce6fd0602",
+        "decoded": "MOV R12,#0x1ce8; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819ce8",
+        "page": "0x206",
+        "listing": [
+          "85F4C6 E6FCE81C   MOV      R12,#0x1CE8",
+          "85F4CA E6FD0602   MOV      R13,#0x0206",
+          "85F4CE C2FE44F8   MOVBZ    R14,0xF844",
+          "85F4D2 C2FF53F8   MOVBZ    R15,0xF853",
+          "85F4D6 DA0104B7   CALLS    0x01,0xB704",
+          "85F4DA F1C8       MOVB     RL6,RL4",
+          "85F4DC 9840       MOV      R4,[R0+]",
+          "85F4DE 01C8       ADDB     RL6,RL4",
+          "85F4E0 9D02       JMPR     CC_NC,0x0085F4E6",
+          "85F4E2 E7FCFF00   MOVB     RL6,#0x00FF",
+          "85F4E6 D2F44689   MOVBS    RL2,0x8946",
+          "85F4EA E0C5       MOV      R5,#12",
+          "85F4EC F6F40EFE   MOV      0xFE0E,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFWEE: [185, 187, 958]",
+          "Far-ptr consumer → file 0x19ce8 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 8, 'rows': 8, 'x_off': '0x19cea', 'y_off': '0x19cf2', 'z_off': '0x19cfa', 'header_off': '0x19ce8', 'z_len': 64}"
+        ],
+        "summary": "KFWEE: consumed via R12/R13 far-ptr #206 @ 0x85f4c6"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15ce8 ≠ 0x19ce8",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFWEEK",
+      "addr": "0x19d45",
+      "header_off": "0x19d3a",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 4,
+        "rows": 5,
+        "x_off": "0x19d3c",
+        "y_off": "0x19d40",
+        "z_off": "0x19d45",
+        "header_off": "0x19d3a",
+        "z_len": 20
+      },
+      "consumer": {
+        "ea": "0x85f492",
+        "raw_hex": "e6fc3a1de6fd0602",
+        "decoded": "MOV R12,#0x1d3a; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x819d3a",
+        "page": "0x206",
+        "listing": [
+          "85F492 E6FC3A1D   MOV      R12,#0x1D3A",
+          "85F496 E6FD0602   MOV      R13,#0x0206",
+          "85F49A C2FE44F8   MOVBZ    R14,0xF844",
+          "85F49E C2FF53F8   MOVBZ    R15,0xF853",
+          "85F4A2 DA0104B7   CALLS    0x01,0xB704",
+          "85F4A6 F1C8       MOVB     RL6,RL4",
+          "85F4A8 9840       MOV      R4,[R0+]",
+          "85F4AA 01C8       ADDB     RL6,RL4",
+          "85F4AC 9D02       JMPR     CC_NC,0x0085F4B2",
+          "85F4AE E7FCFF00   MOVB     RL6,#0x00FF",
+          "85F4B2 0D19       JMPR     CC_UC,0x0085F4E6",
+          "85F4B4 E6FC991D   MOV      R12,#0x1D99",
+          "85F4B8 E6FD0602   MOV      R13,#0x0206"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFWEEK: [185, 187, 188, 958]",
+          "Far-ptr consumer → file 0x19d3a page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 4, 'rows': 5, 'x_off': '0x19d3c', 'y_off': '0x19d40', 'z_off': '0x19d45', 'header_off': '0x19d3a', 'z_len': 20}"
+        ],
+        "summary": "KFWEEK: consumed via R12/R13 far-ptr #206 @ 0x85f492"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15d3a ≠ 0x19d3a",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFABAK",
+      "addr": "0x192e6",
+      "header_off": "0x192cd",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "curve",
+        "cols": 24,
+        "rows": 1,
+        "x_off": "0x192ce",
+        "z_off": "0x192e6",
+        "header_off": "0x192cd"
+      },
+      "consumer": {
+        "ea": "0x8465ea",
+        "raw_hex": "e6fccd12e6fd0602",
+        "decoded": "MOV R12,#0x12cd; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x8192cd",
+        "page": "0x206",
+        "listing": [
+          "8465EA E6FCCD12   MOV      R12,#0x12CD",
+          "8465EE E6FD0602   MOV      R13,#0x0206",
+          "8465F2 E6FE4217   MOV      R14,#0x1742",
+          "8465F6 E6FF0602   MOV      R15,#0x0206",
+          "8465FA DA0120BB   CALLS    0x01,0xBB20",
+          "8465FE 0804       ADD      R0,#4",
+          "846600 F7F8338B   MOVB     0x8B33,RL4",
+          "846604 F2F48CE4   MOV      R4,0xE48C",
+          "846608 8840       MOV      [-R0],R4",
+          "84660A F2F5BAE4   MOV      R5,0xE4BA",
+          "84660E 8850       MOV      [-R0],R5",
+          "846610 E6FC0C13   MOV      R12,#0x130C"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFABAK: [176, 178, 180, 181, 183, 957]",
+          "Far-ptr consumer → file 0x192cd page 0x206",
+          "Header parse: {'kind': 'curve', 'cols': 24, 'rows': 1, 'x_off': '0x192ce', 'z_off': '0x192e6', 'header_off': '0x192cd'}"
+        ],
+        "summary": "KFABAK: consumed via R12/R13 far-ptr #206 @ 0x8465ea"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x152cd ≠ 0x192cd",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFATMLA",
+      "addr": "0x19837",
+      "header_off": "0x19837",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x853cb0",
+        "raw_hex": "e6fc3718e6fd0602",
+        "decoded": "MOV R12,#0x1837; MOV R13,#0x0206; CALLS 0x01,0xBA34",
+        "phys": "0x819837",
+        "page": "0x206",
+        "listing": [
+          "853CB0 E6FC3718   MOV      R12,#0x1837",
+          "853CB4 E6FD0602   MOV      R13,#0x0206",
+          "853CB8 F2FE469E   MOV      R14,0x9E46",
+          "853CBC DA0134BA   CALLS    0x01,0xBA34",
+          "853CC0 E7FAFF00   MOVB     RL5,#0x00FF",
+          "853CC4 21A8       SUBB     RL5,RL4",
+          "853CC6 E4A00D00   MOVB     [R0+#0x000D],RL5",
+          "853CCA F2F4DC9E   MOV      R4,0x9EDC",
+          "853CCE 26F4000A   SUB      R4,#0x0A00",
+          "853CD2 9D01       JMPR     CC_NC,0x00853CD6",
+          "853CD4 E004       MOV      R4,#0",
+          "853CD6 C4400200   MOV      [R0+#0x0002],R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFATMLA: [303, 305, 307, 309, 957]",
+          "Far-ptr consumer → file 0x19837 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFATMLA: consumed via R12/R13 far-ptr #206 @ 0x853cb0"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15837 ≠ 0x19837",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFATMLA2",
+      "addr": "0x19866",
+      "header_off": "0x19856",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 8,
+        "rows": 6,
+        "x_off": "0x19858",
+        "y_off": "0x19860",
+        "z_off": "0x19866",
+        "header_off": "0x19856",
+        "z_len": 48
+      },
+      "consumer": {
+        "ea": "0x853a34",
+        "raw_hex": "e6fc5618e6fd0602",
+        "decoded": "MOV R12,#0x1856; MOV R13,#0x0206; CALLS 0x01,0xBB94",
+        "phys": "0x819856",
+        "page": "0x206",
+        "listing": [
+          "853A34 E6FC5618   MOV      R12,#0x1856",
+          "853A38 E6FD0602   MOV      R13,#0x0206",
+          "853A3C E6FEBC30   MOV      R14,#0x30BC",
+          "853A40 E6FF0602   MOV      R15,#0x0206",
+          "853A44 DA0194BB   CALLS    0x01,0xBB94",
+          "853A48 0804       ADD      R0,#4",
+          "853A4A A850       MOV      R5,[R0]",
+          "853A4C 2054       SUB      R5,R4",
+          "853A4E B850       MOV      [R0],R5",
+          "853A50 D4400E00   MOV      R4,[R0+#0x000E]",
+          "853A54 0054       ADD      R5,R4",
+          "853A56 06F50A00   ADD      R5,#0x000A",
+          "853A5A B850       MOV      [R0],R5"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFATMLA2: [305, 957]",
+          "Far-ptr consumer → file 0x19856 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 8, 'rows': 6, 'x_off': '0x19858', 'y_off': '0x19860', 'z_off': '0x19866', 'header_off': '0x19856', 'z_len': 48}"
+        ],
+        "summary": "KFATMLA2: consumed via R12/R13 far-ptr #206 @ 0x853a34"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15856 ≠ 0x19856",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFATMLAE",
+      "addr": "0x1988a",
+      "header_off": "0x1987a",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 8,
+        "rows": 6,
+        "x_off": "0x1987c",
+        "y_off": "0x19884",
+        "z_off": "0x1988a",
+        "header_off": "0x1987a",
+        "z_len": 48
+      },
+      "consumer": {
+        "ea": "0x853b28",
+        "raw_hex": "e6fc7a18e6fd0602",
+        "decoded": "MOV R12,#0x187a; MOV R13,#0x0206; CALLS 0x01,0xBB94",
+        "phys": "0x81987a",
+        "page": "0x206",
+        "listing": [
+          "853B28 E6FC7A18   MOV      R12,#0x187A",
+          "853B2C E6FD0602   MOV      R13,#0x0206",
+          "853B30 E6FECA30   MOV      R14,#0x30CA",
+          "853B34 E6FF0602   MOV      R15,#0x0206",
+          "853B38 DA0194BB   CALLS    0x01,0xBB94",
+          "853B3C 0804       ADD      R0,#4",
+          "853B3E A850       MOV      R5,[R0]",
+          "853B40 2054       SUB      R5,R4",
+          "853B42 B850       MOV      [R0],R5",
+          "853B44 D4400E00   MOV      R4,[R0+#0x000E]",
+          "853B48 0054       ADD      R5,R4",
+          "853B4A 06F50A00   ADD      R5,#0x000A",
+          "853B4E B850       MOV      [R0],R5"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFATMLAE: [303, 305, 957]",
+          "Far-ptr consumer → file 0x1987a page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 8, 'rows': 6, 'x_off': '0x1987c', 'y_off': '0x19884', 'z_off': '0x1988a', 'header_off': '0x1987a', 'z_len': 48}"
+        ],
+        "summary": "KFATMLAE: consumed via R12/R13 far-ptr #206 @ 0x853b28"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1587a ≠ 0x1987a",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFATMLAE2",
+      "addr": "0x1989e",
+      "header_off": "0x1989e",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x853df6",
+        "raw_hex": "e6fc9e18e6fd0602",
+        "decoded": "MOV R12,#0x189e; MOV R13,#0x0206; CALLS 0x01,0xBB94",
+        "phys": "0x81989e",
+        "page": "0x206",
+        "listing": [
+          "853DF6 E6FC9E18   MOV      R12,#0x189E",
+          "853DFA E6FD0602   MOV      R13,#0x0206",
+          "853DFE E6FEBC30   MOV      R14,#0x30BC",
+          "853E02 E6FF0602   MOV      R15,#0x0206",
+          "853E06 DA0194BB   CALLS    0x01,0xBB94",
+          "853E0A 0804       ADD      R0,#4",
+          "853E0C F084       MOV      R8,R4",
+          "853E0E F049       MOV      R4,R9",
+          "853E10 F058       MOV      R5,R8",
+          "853E12 418A       CMPB     RL4,RL5",
+          "853E14 DD02       JMPR     CC_SGE,0x00853E1A",
+          "853E16 F049       MOV      R4,R9",
+          "853E18 0D01       JMPR     CC_UC,0x00853E1C",
+          "853E1A F048       MOV      R4,R8"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFATMLAE2: [305, 957]",
+          "Far-ptr consumer → file 0x1989e page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFATMLAE2: consumed via R12/R13 far-ptr #206 @ 0x853df6"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1589e ≠ 0x1989e",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFAVAK",
+      "addr": "0x1930c",
+      "header_off": "0x1930c",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x846610",
+        "raw_hex": "e6fc0c13e6fd0602",
+        "decoded": "MOV R12,#0x130c; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81930c",
+        "page": "0x206",
+        "listing": [
+          "846610 E6FC0C13   MOV      R12,#0x130C",
+          "846614 E6FD0602   MOV      R13,#0x0206",
+          "846618 E6FE4217   MOV      R14,#0x1742",
+          "84661C E6FF0602   MOV      R15,#0x0206",
+          "846620 DA0120BB   CALLS    0x01,0xBB20",
+          "846624 0804       ADD      R0,#4",
+          "846626 F7F8358B   MOVB     0x8B35,RL4",
+          "84662A E6FCD813   MOV      R12,#0x13D8",
+          "84662E E6FD0602   MOV      R13,#0x0206",
+          "846632 C2FE1A8A   MOVBZ    R14,0x8A1A",
+          "846636 DA0124B5   CALLS    0x01,0xB524"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFAVAK: [176, 178, 180, 183, 957]",
+          "Far-ptr consumer → file 0x1930c page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFAVAK: consumed via R12/R13 far-ptr #206 @ 0x846610"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1530c ≠ 0x1930c",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFBAKL",
+      "addr": "0x1934b",
+      "header_off": "0x1934b",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x846720",
+        "raw_hex": "e6fc4b13e6fd0602",
+        "decoded": "MOV R12,#0x134b; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81934b",
+        "page": "0x206",
+        "listing": [
+          "846720 E6FC4B13   MOV      R12,#0x134B",
+          "846724 E6FD0602   MOV      R13,#0x0206",
+          "846728 E6FE4217   MOV      R14,#0x1742",
+          "84672C E6FF0602   MOV      R15,#0x0206",
+          "846730 DA0120BB   CALLS    0x01,0xBB20",
+          "846734 0804       ADD      R0,#4",
+          "846736 C2F57D8D   MOVBZ    R5,0x8D7D",
+          "84673A 1B45       MULU     R4,R5",
+          "84673C F2F40EFE   MOV      R4,0xFE0E",
+          "846740 9850       MOV      R5,[R0+]",
+          "846742 1B45       MULU     R4,R5",
+          "846744 F2F90CFE   MOV      R9,0xFE0C"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFBAKL: [177, 178, 179, 180, 183, 184, 957]",
+          "Far-ptr consumer → file 0x1934b page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFBAKL: consumed via R12/R13 far-ptr #206 @ 0x846720"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1534b ≠ 0x1934b",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFDYES",
+      "addr": "0x1a8d3",
+      "header_off": "0x1a8ca",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "curve",
+        "cols": 8,
+        "rows": 1,
+        "x_off": "0x1a8cb",
+        "z_off": "0x1a8d3",
+        "header_off": "0x1a8ca"
+      },
+      "consumer": {
+        "ea": "0x8447e8",
+        "raw_hex": "e6fcca28e6fd0602",
+        "decoded": "MOV R12,#0x28ca; MOV R13,#0x0206; CALLS 0x01,0xB598",
+        "phys": "0x81a8ca",
+        "page": "0x206",
+        "listing": [
+          "8447E8 E6FCCA28   MOV      R12,#0x28CA",
+          "8447EC E6FD0602   MOV      R13,#0x0206",
+          "8447F0 F2FE46F8   MOV      R14,0xF846",
+          "8447F4 DA0198B5   CALLS    0x01,0xB598",
+          "8447F8 F6F48290   MOV      0x9082,R4",
+          "8447FC DB00       RETS",
+          "8447FE F3F81600   MOVB     RL4,0x0016",
+          "844802 F7F88590   MOVB     0x9085,RL4",
+          "844806 F78E8490   MOVB     0x9084,ZEROS",
+          "84480A DB00       RETS",
+          "84480C 9A240810   JNB      0xFD48.1,0x00844820"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFDYES: [237, 238, 239, 240, 241, 242, 957]",
+          "Far-ptr consumer → file 0x1a8ca page 0x206",
+          "Header parse: {'kind': 'curve', 'cols': 8, 'rows': 1, 'x_off': '0x1a8cb', 'z_off': '0x1a8d3', 'header_off': '0x1a8ca'}"
+        ],
+        "summary": "KFDYES: consumed via R12/R13 far-ptr #206 @ 0x8447e8"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x168ca ≠ 0x1a8ca",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFDYESOF",
+      "addr": "0x1a936",
+      "header_off": "0x1a936",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x8462a2",
+        "raw_hex": "e6fc3629e6fd0602",
+        "decoded": "MOV R12,#0x2936; MOV R13,#0x0206; CALLS 0x01,0xBC08",
+        "phys": "0x81a936",
+        "page": "0x206",
+        "listing": [
+          "8462A2 E6FC3629   MOV      R12,#0x2936",
+          "8462A6 E6FD0602   MOV      R13,#0x0206",
+          "8462AA E6FE2E31   MOV      R14,#0x312E",
+          "8462AE E6FF0602   MOV      R15,#0x0206",
+          "8462B2 DA0108BC   CALLS    0x01,0xBC08",
+          "8462B6 0804       ADD      R0,#4",
+          "8462B8 F6F49C91   MOV      0x919C,R4",
+          "8462BC F2F5BEE4   MOV      R5,0xE4BE",
+          "8462C0 8850       MOV      [-R0],R5",
+          "8462C2 F2F294E4   MOV      R2,0xE494",
+          "8462C6 8820       MOV      [-R0],R2",
+          "8462C8 E6FC9629   MOV      R12,#0x2996"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFDYESOF: [237, 238, 239, 240, 241, 242, 957]",
+          "Far-ptr consumer → file 0x1a936 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFDYESOF: consumed via R12/R13 far-ptr #206 @ 0x8462a2"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16936 ≠ 0x1a936",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFTEAN",
+      "addr": "0x194bf",
+      "header_off": "0x194b8",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "curve",
+        "cols": 6,
+        "rows": 1,
+        "x_off": "0x194b9",
+        "z_off": "0x194bf",
+        "header_off": "0x194b8"
+      },
+      "consumer": {
+        "ea": "0x847f7c",
+        "raw_hex": "e6fcb814e6fd0602",
+        "decoded": "MOV R12,#0x14b8; MOV R13,#0x0206; CALLS 0x01,0xB524",
+        "phys": "0x8194b8",
+        "page": "0x206",
+        "listing": [
+          "847F7C E6FCB814   MOV      R12,#0x14B8",
+          "847F80 E6FD0602   MOV      R13,#0x0206",
+          "847F84 C2FEFC89   MOVBZ    R14,0x89FC",
+          "847F88 DA0124B5   CALLS    0x01,0xB524",
+          "847F8C F7F8008A   MOVB     0x8A00,RL4",
+          "847F90 E6FC3C2B   MOV      R12,#0x2B3C",
+          "847F94 E6FD0602   MOV      R13,#0x0206",
+          "847F98 C2FE818D   MOVBZ    R14,0x8D81",
+          "847F9C DA0112B6   CALLS    0x01,0xB612",
+          "847FA0 F7F8018A   MOVB     0x8A01,RL4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFTEAN: [381, 384, 394, 398, 957]",
+          "Far-ptr consumer → file 0x194b8 page 0x206",
+          "Header parse: {'kind': 'curve', 'cols': 6, 'rows': 1, 'x_off': '0x194b9', 'z_off': '0x194bf', 'header_off': '0x194b8'}"
+        ],
+        "summary": "KFFTEAN: consumed via R12/R13 far-ptr #206 @ 0x847f7c"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x154b8 ≠ 0x194b8",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFTV",
+      "addr": "0x1a754",
+      "header_off": "0x1a754",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x8752f4",
+        "raw_hex": "e6fc5427e6fd0602",
+        "decoded": "MOV R12,#0x2754; MOV R13,#0x0206; CALLS 0x01,0xBA34",
+        "phys": "0x81a754",
+        "page": "0x206",
+        "listing": [
+          "8752F4 E6FC5427   MOV      R12,#0x2754",
+          "8752F8 E6FD0602   MOV      R13,#0x0206",
+          "8752FC F2FEB8E4   MOV      R14,0xE4B8",
+          "875300 DA0134BA   CALLS    0x01,0xBA34",
+          "875304 F7F8EDA7   MOVB     0xA7ED,RL4",
+          "875308 0D0A       JMPR     CC_UC,0x0087531E",
+          "87530A F3F8EDA7   MOVB     RL4,0xA7ED",
+          "87530E 3D05       JMPR     CC_NZ,0x0087531A",
+          "875310 E6F4BFFF   MOV      R4,#0xFFBF",
+          "875314 64F4E8A7   AND      0xA7E8,R4",
+          "875318 0D02       JMPR     CC_UC,0x0087531E",
+          "87531A 058FEDA7   ADDB     0xA7ED,ONES"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFTV: [366, 367, 369, 370, 642, 643, 957]",
+          "Far-ptr consumer → file 0x1a754 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFFTV: consumed via R12/R13 far-ptr #206 @ 0x8752f4"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16754 ≠ 0x1a754",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFTV2",
+      "addr": "0x1a786",
+      "header_off": "0x1a786",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x87667e",
+        "raw_hex": "e6fc8627e6fd0602",
+        "decoded": "MOV R12,#0x2786; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a786",
+        "page": "0x206",
+        "listing": [
+          "87667E E6FC8627   MOV      R12,#0x2786",
+          "876682 E6FD0602   MOV      R13,#0x0206",
+          "876686 E6FE3C1A   MOV      R14,#0x1A3C",
+          "87668A E6FF0402   MOV      R15,#0x0204",
+          "87668E DA0120BB   CALLS    0x01,0xBB20",
+          "876692 0804       ADD      R0,#4",
+          "876694 F7F8C18D   MOVB     0x8DC1,RL4",
+          "876698 C2F45428   MOVBZ    R4,0x2854",
+          "87669C 66F40800   AND      R4,#0x0008",
+          "8766A0 2D05       JMPR     CC_Z,0x008766AC",
+          "8766A2 F3F85128   MOVB     RL4,0x2851"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFTV2: [367, 957]",
+          "Far-ptr consumer → file 0x1a786 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFFTV2: consumed via R12/R13 far-ptr #206 @ 0x87667e"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16786 ≠ 0x1a786",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFFWL",
+      "addr": "0x19f47",
+      "header_off": "0x19f1d",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 20,
+        "rows": 20,
+        "x_off": "0x19f1f",
+        "y_off": "0x19f33",
+        "z_off": "0x19f47",
+        "header_off": "0x19f1d",
+        "z_len": 400
+      },
+      "consumer": {
+        "ea": "0x85f960",
+        "raw_hex": "e6fc1d1fe6fd0602",
+        "decoded": "MOV R12,#0x1f1d; MOV R13,#0x0206; CALLS 0x01,0xBA34",
+        "phys": "0x819f1d",
+        "page": "0x206",
+        "listing": [
+          "85F960 E6FC1D1F   MOV      R12,#0x1F1D",
+          "85F964 E6FD0602   MOV      R13,#0x0206",
+          "85F968 F2FE5C9E   MOV      R14,0x9E5C",
+          "85F96C DA0134BA   CALLS    0x01,0xBA34",
+          "85F970 F7F8B9A2   MOVB     0xA2B9,RL4",
+          "85F974 DB00       RETS",
+          "85F976 8890       MOV      [-R0],R9",
+          "85F978 8860       MOV      [-R0],R6",
+          "85F97A 8A241210   JB       0xFD48.1,0x0085F9A2",
+          "85F97E E7F84000   MOVB     RL4,#0x0040",
+          "85F982 F7F8038B   MOVB     0x8B03,RL4",
+          "85F986 E7FA8000   MOVB     RL5,#0x0080"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFFWL: [171, 172, 957]",
+          "Far-ptr consumer → file 0x19f1d page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 20, 'rows': 20, 'x_off': '0x19f1f', 'y_off': '0x19f33', 'z_off': '0x19f47', 'header_off': '0x19f1d', 'z_len': 400}"
+        ],
+        "summary": "KFFWL: consumed via R12/R13 far-ptr #206 @ 0x85f960"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15f1d ≠ 0x19f1d",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFLASKH",
+      "addr": "0x1a326",
+      "header_off": "0x1a313",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 15,
+        "x_off": "0x1a315",
+        "y_off": "0x1a317",
+        "z_off": "0x1a326",
+        "header_off": "0x1a313",
+        "z_len": 30
+      },
+      "consumer": {
+        "ea": "0x8640fc",
+        "raw_hex": "e6fc1323e6fd0602",
+        "decoded": "MOV R12,#0x2313; MOV R13,#0x0206; CALLS 0x01,0xB524",
+        "phys": "0x81a313",
+        "page": "0x206",
+        "listing": [
+          "8640FC E6FC1323   MOV      R12,#0x2313",
+          "864100 E6FD0602   MOV      R13,#0x0206",
+          "864104 C2FE1A8A   MOVBZ    R14,0x8A1A",
+          "864108 DA0124B5   CALLS    0x01,0xB524",
+          "86410C F7F8018D   MOVB     0x8D01,RL4",
+          "864110 0D14       JMPR     CC_UC,0x0086413A",
+          "864112 E6FCC038   MOV      R12,#0x38C0",
+          "864116 E6FD0602   MOV      R13,#0x0206",
+          "86411A F2FE8E94   MOV      R14,0x948E",
+          "86411E DA0198B5   CALLS    0x01,0xB598",
+          "864122 F6F46EA3   MOV      0xA36E,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFLASKH: [272, 275, 280, 281]",
+          "Far-ptr consumer → file 0x1a313 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 2, 'rows': 15, 'x_off': '0x1a315', 'y_off': '0x1a317', 'z_off': '0x1a326', 'header_off': '0x1a313', 'z_len': 30}"
+        ],
+        "summary": "KFLASKH: consumed via R12/R13 far-ptr #206 @ 0x8640fc"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16313 ≠ 0x1a313",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFLASWLR",
+      "addr": "0x19fd7",
+      "header_off": "0x19fd7",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x86131e",
+        "raw_hex": "e6fcd71fe6fd0602",
+        "decoded": "MOV R12,#0x1fd7; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x819fd7",
+        "page": "0x206",
+        "listing": [
+          "86131E E6FCD71F   MOV      R12,#0x1FD7",
+          "861322 E6FD0602   MOV      R13,#0x0206",
+          "861326 E6FE8C1A   MOV      R14,#0x1A8C",
+          "86132A E6FF0402   MOV      R15,#0x0204",
+          "86132E DA0120BB   CALLS    0x01,0xBB20",
+          "861332 0804       ADD      R0,#4",
+          "861334 5C54       SHL      R4,#5",
+          "861336 F6F4CAA2   MOV      0xA2CA,R4",
+          "86133A DB00       RETS",
+          "86133C E6FC6720   MOV      R12,#0x2067",
+          "861340 E6FD0602   MOV      R13,#0x0206",
+          "861344 F2FE6C9E   MOV      R14,0x9E6C"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFLASWLR: [171, 172, 957]",
+          "Far-ptr consumer → file 0x19fd7 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFLASWLR: consumed via R12/R13 far-ptr #206 @ 0x86131e"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15fd7 ≠ 0x19fd7",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFMIRED",
+      "addr": "0x1a59f",
+      "header_off": "0x1a58c",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 2,
+        "rows": 15,
+        "x_off": "0x1a58e",
+        "y_off": "0x1a590",
+        "z_off": "0x1a59f",
+        "header_off": "0x1a58c",
+        "z_len": 30
+      },
+      "consumer": {
+        "ea": "0x867e4c",
+        "raw_hex": "e6fc8c25e6fd0602",
+        "decoded": "MOV R12,#0x258c; MOV R13,#0x0206; CALLS 0x01,0xB524",
+        "phys": "0x81a58c",
+        "page": "0x206",
+        "listing": [
+          "867E4C E6FC8C25   MOV      R12,#0x258C",
+          "867E50 E6FD0602   MOV      R13,#0x0206",
+          "867E54 C2FE44F8   MOVBZ    R14,0xF844",
+          "867E58 DA0124B5   CALLS    0x01,0xB524",
+          "867E5C 1B94       MULU     R9,R4",
+          "867E5E F2F90EFE   MOV      R9,0xFE0E",
+          "867E62 46F9FF7F   CMP      R9,#0x7FFF",
+          "867E66 FD02       JMPR     CC_ULE,0x00867E6C",
+          "867E68 E6F9FF7F   MOV      R9,#0x7FFF",
+          "867E6C F049       MOV      R4,R9",
+          "867E6E 5C14       SHL      R4,#1",
+          "867E70 F6F48EA4   MOV      0xA48E,R4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFMIRED: [78, 79, 958]",
+          "Far-ptr consumer → file 0x1a58c page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 2, 'rows': 15, 'x_off': '0x1a58e', 'y_off': '0x1a590', 'z_off': '0x1a59f', 'header_off': '0x1a58c', 'z_len': 30}"
+        ],
+        "summary": "KFMIRED: consumed via R12/R13 far-ptr #206 @ 0x867e4c"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1658c ≠ 0x1a58c",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFMIRLR",
+      "addr": "0x1a5ae",
+      "header_off": "0x1a5ae",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x8682c2",
+        "raw_hex": "e6fcae25e6fd0602",
+        "decoded": "MOV R12,#0x25ae; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a5ae",
+        "page": "0x206",
+        "listing": [
+          "8682C2 E6FCAE25   MOV      R12,#0x25AE",
+          "8682C6 E6FD0602   MOV      R13,#0x0206",
+          "8682CA E6FEAC3B   MOV      R14,#0x3BAC",
+          "8682CE E6FF0602   MOV      R15,#0x0206",
+          "8682D2 DA0120BB   CALLS    0x01,0xBB20",
+          "8682D6 0804       ADD      R0,#4",
+          "8682D8 F7F8368D   MOVB     0x8D36,RL4",
+          "8682DC 0D25       JMPR     CC_UC,0x00868328",
+          "8682DE E6FCB63B   MOV      R12,#0x3BB6",
+          "8682E2 E6FD0602   MOV      R13,#0x0206",
+          "8682E6 F2FE58F8   MOV      R14,0xF858"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFMIRLR: [78, 958]",
+          "Far-ptr consumer → file 0x1a5ae page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFMIRLR: consumed via R12/R13 far-ptr #206 @ 0x8682c2"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x165ae ≠ 0x1a5ae",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFQTE",
+      "addr": "0x1956c",
+      "header_off": "0x19559",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 13,
+        "rows": 4,
+        "x_off": "0x1955b",
+        "y_off": "0x19568",
+        "z_off": "0x1956c",
+        "header_off": "0x19559",
+        "z_len": 52
+      },
+      "consumer": {
+        "ea": "0x847f62",
+        "raw_hex": "e6fc5915e6fd0602",
+        "decoded": "MOV R12,#0x1559; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x819559",
+        "page": "0x206",
+        "listing": [
+          "847F62 E6FC5915   MOV      R12,#0x1559",
+          "847F66 E6FD0602   MOV      R13,#0x0206",
+          "847F6A E6FE1017   MOV      R14,#0x1710",
+          "847F6E E6FF0602   MOV      R15,#0x0206",
+          "847F72 DA0120BB   CALLS    0x01,0xBB20",
+          "847F76 0804       ADD      R0,#4",
+          "847F78 F7F8FD89   MOVB     0x89FD,RL4",
+          "847F7C E6FCB814   MOV      R12,#0x14B8",
+          "847F80 E6FD0602   MOV      R13,#0x0206",
+          "847F84 C2FEFC89   MOVBZ    R14,0x89FC",
+          "847F88 DA0124B5   CALLS    0x01,0xB524"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFQTE: [381, 384, 394, 397, 400, 958]",
+          "Far-ptr consumer → file 0x19559 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 13, 'rows': 4, 'x_off': '0x1955b', 'y_off': '0x19568', 'z_off': '0x1956c', 'header_off': '0x19559', 'z_len': 52}"
+        ],
+        "summary": "KFQTE: consumed via R12/R13 far-ptr #206 @ 0x847f62"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15559 ≠ 0x19559",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRI",
+      "addr": "0x1a61e",
+      "header_off": "0x1a61e",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x874df2",
+        "raw_hex": "e6fc1e26e6fd0602",
+        "decoded": "MOV R12,#0x261e; MOV R13,#0x0206; CALLS 0x01,0xB524",
+        "phys": "0x81a61e",
+        "page": "0x206",
+        "listing": [
+          "874DF2 E6FC1E26   MOV      R12,#0x261E",
+          "874DF6 E6FD0602   MOV      R13,#0x0206",
+          "874DFA C2FE1B8A   MOVBZ    R14,0x8A1B",
+          "874DFE DA0124B5   CALLS    0x01,0xB524",
+          "874E02 F7F8D989   MOVB     0x89D9,RL4",
+          "874E06 8A170550   JB       0xFD2E.5,0x00874E14",
+          "874E0A C084       MOVBZ    R4,RL4",
+          "874E0C 5C84       SHL      R4,#8",
+          "874E0E F6F48C92   MOV      0x928C,R4",
+          "874E12 0D0C       JMPR     CC_UC,0x00874E2C",
+          "874E14 D7400602   EXTP     #0x206,#1",
+          "874E18 F2FCEA3D   MOV      R12,0x3DEA ; EXTP physical=0x81BDEA"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRI: [338, 340, 346, 348, 349, 352, 370, 958]",
+          "Far-ptr consumer → file 0x1a61e page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFRI: consumed via R12/R13 far-ptr #206 @ 0x874df2"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1661e ≠ 0x1a61e",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRI2",
+      "addr": "0x1a660",
+      "header_off": "0x1a651",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "map",
+        "cols": 5,
+        "rows": 8,
+        "x_off": "0x1a653",
+        "y_off": "0x1a658",
+        "z_off": "0x1a660",
+        "header_off": "0x1a651",
+        "z_len": 40
+      },
+      "consumer": {
+        "ea": "0x874f96",
+        "raw_hex": "e6fc5126e6fd0602",
+        "decoded": "MOV R12,#0x2651; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a651",
+        "page": "0x206",
+        "listing": [
+          "874F96 E6FC5126   MOV      R12,#0x2651",
+          "874F9A E6FD0602   MOV      R13,#0x0206",
+          "874F9E E6FE431A   MOV      R14,#0x1A43",
+          "874FA2 E6FF0402   MOV      R15,#0x0204",
+          "874FA6 DA0120BB   CALLS    0x01,0xBB20",
+          "874FAA 0804       ADD      R0,#4",
+          "874FAC F7F8C789   MOVB     0x89C7,RL4",
+          "874FB0 F2F4AAE4   MOV      R4,0xE4AA",
+          "874FB4 8840       MOV      [-R0],R4",
+          "874FB6 F2F58EE4   MOV      R5,0xE48E",
+          "874FBA 8850       MOV      [-R0],R5",
+          "874FBC E6FCA526   MOV      R12,#0x26A5"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRI2: [340, 347, 958]",
+          "Far-ptr consumer → file 0x1a651 page 0x206",
+          "Header parse: {'kind': 'map', 'cols': 5, 'rows': 8, 'x_off': '0x1a653', 'y_off': '0x1a658', 'z_off': '0x1a660', 'header_off': '0x1a651', 'z_len': 40}"
+        ],
+        "summary": "KFRI2: consumed via R12/R13 far-ptr #206 @ 0x874f96"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16651 ≠ 0x1a651",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRP",
+      "addr": "0x1a67b",
+      "header_off": "0x1a67b",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x874ec2",
+        "raw_hex": "e6fc7b26e6fd0602",
+        "decoded": "MOV R12,#0x267b; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a67b",
+        "page": "0x206",
+        "listing": [
+          "874EC2 E6FC7B26   MOV      R12,#0x267B",
+          "874EC6 E6FD0602   MOV      R13,#0x0206",
+          "874ECA E6FE431A   MOV      R14,#0x1A43",
+          "874ECE E6FF0402   MOV      R15,#0x0204",
+          "874ED2 DA0120BB   CALLS    0x01,0xBB20",
+          "874ED6 0804       ADD      R0,#4",
+          "874ED8 F7F8CA89   MOVB     0x89CA,RL4",
+          "874EDC F2F4AAE4   MOV      R4,0xE4AA",
+          "874EE0 8840       MOV      [-R0],R4",
+          "874EE2 F2F58EE4   MOV      R5,0xE48E",
+          "874EE6 8850       MOV      [-R0],R5",
+          "874EE8 E6FCCF26   MOV      R12,#0x26CF"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRP: [340, 347, 348, 349, 352, 370, 958]",
+          "Far-ptr consumer → file 0x1a67b page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFRP: consumed via R12/R13 far-ptr #206 @ 0x874ec2"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1667b ≠ 0x1a67b",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRP2",
+      "addr": "0x1a6a5",
+      "header_off": "0x1a6a5",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x874fbc",
+        "raw_hex": "e6fca526e6fd0602",
+        "decoded": "MOV R12,#0x26a5; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a6a5",
+        "page": "0x206",
+        "listing": [
+          "874FBC E6FCA526   MOV      R12,#0x26A5",
+          "874FC0 E6FD0602   MOV      R13,#0x0206",
+          "874FC4 E6FE431A   MOV      R14,#0x1A43",
+          "874FC8 E6FF0402   MOV      R15,#0x0204",
+          "874FCC DA0120BB   CALLS    0x01,0xBB20",
+          "874FD0 0804       ADD      R0,#4",
+          "874FD2 F7F8CB89   MOVB     0x89CB,RL4",
+          "874FD6 F2F4AAE4   MOV      R4,0xE4AA",
+          "874FDA 8840       MOV      [-R0],R4",
+          "874FDC F2F58EE4   MOV      R5,0xE48E",
+          "874FE0 8850       MOV      [-R0],R5",
+          "874FE2 E6FCF926   MOV      R12,#0x26F9"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRP2: [340, 347, 958]",
+          "Far-ptr consumer → file 0x1a6a5 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFRP2: consumed via R12/R13 far-ptr #206 @ 0x874fbc"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x166a5 ≠ 0x1a6a5",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRTV",
+      "addr": "0x1a6cf",
+      "header_off": "0x1a6cf",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x874ee8",
+        "raw_hex": "e6fccf26e6fd0602",
+        "decoded": "MOV R12,#0x26cf; MOV R13,#0x0206; CALLS 0x01,0xBB94",
+        "phys": "0x81a6cf",
+        "page": "0x206",
+        "listing": [
+          "874EE8 E6FCCF26   MOV      R12,#0x26CF",
+          "874EEC E6FD0602   MOV      R13,#0x0206",
+          "874EF0 E6FE431A   MOV      R14,#0x1A43",
+          "874EF4 E6FF0402   MOV      R15,#0x0204",
+          "874EF8 DA0194BB   CALLS    0x01,0xBB94",
+          "874EFC 0804       ADD      R0,#4",
+          "874EFE F7F8CC89   MOVB     0x89CC,RL4",
+          "874F02 D7400602   EXTP     #0x206,#1",
+          "874F06 C2F4CC1A   MOVBZ    R4,0x1ACC ; EXTP physical=0x819ACC",
+          "874F0A 66F41000   AND      R4,#0x0010",
+          "874F0E 2D07       JMPR     CC_Z,0x00874F1E"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRTV: [339, 347, 348, 349, 352, 369, 370, 642]",
+          "Far-ptr consumer → file 0x1a6cf page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFRTV: consumed via R12/R13 far-ptr #206 @ 0x874ee8"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x166cf ≠ 0x1a6cf",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFRTV2",
+      "addr": "0x1a6f9",
+      "header_off": "0x1a6f9",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x874fe2",
+        "raw_hex": "e6fcf926e6fd0602",
+        "decoded": "MOV R12,#0x26f9; MOV R13,#0x0206; CALLS 0x01,0xBB94",
+        "phys": "0x81a6f9",
+        "page": "0x206",
+        "listing": [
+          "874FE2 E6FCF926   MOV      R12,#0x26F9",
+          "874FE6 E6FD0602   MOV      R13,#0x0206",
+          "874FEA E6FE431A   MOV      R14,#0x1A43",
+          "874FEE E6FF0402   MOV      R15,#0x0204",
+          "874FF2 DA0194BB   CALLS    0x01,0xBB94",
+          "874FF6 0804       ADD      R0,#4",
+          "874FF8 F7F8CD89   MOVB     0x89CD,RL4",
+          "874FFC D7400602   EXTP     #0x206,#1",
+          "875000 C2F4CC1A   MOVBZ    R4,0x1ACC ; EXTP physical=0x819ACC",
+          "875004 66F41000   AND      R4,#0x0010",
+          "875008 2D08       JMPR     CC_Z,0x0087501A"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFRTV2: [339, 347, 958]",
+          "Far-ptr consumer → file 0x1a6f9 page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFRTV2: consumed via R12/R13 far-ptr #206 @ 0x874fe2"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x166f9 ≠ 0x1a6f9",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFTATM",
+      "addr": "0x19a0c",
+      "header_off": "0x19a06",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": {
+        "kind": "curve",
+        "cols": 5,
+        "rows": 1,
+        "x_off": "0x19a07",
+        "z_off": "0x19a0c",
+        "header_off": "0x19a06"
+      },
+      "consumer": {
+        "ea": "0x82b184",
+        "raw_hex": "e6fc061ae6fd0602",
+        "decoded": "MOV R12,#0x1a06; MOV R13,#0x0206; CALLS 0x01,0xB524",
+        "phys": "0x819a06",
+        "page": "0x206",
+        "listing": [
+          "82B184 E6FC061A   MOV      R12,#0x1A06",
+          "82B188 E6FD0602   MOV      R13,#0x0206",
+          "82B18C C2FE3D8C   MOVBZ    R14,0x8C3D",
+          "82B190 DA0124B5   CALLS    0x01,0xB524",
+          "82B194 9820       MOV      R2,[R0+]",
+          "82B196 1B42       MULU     R4,R2",
+          "82B198 4D03       JMPR     CC_V,0x0082B1A0",
+          "82B19A F2F50EFE   MOV      R5,0xFE0E",
+          "82B19E 0D02       JMPR     CC_UC,0x0082B1A4",
+          "82B1A0 E6F5FFFF   MOV      R5,#0xFFFF",
+          "82B1A4 F6F5009F   MOV      0x9F00,R5",
+          "82B1A8 9A301BA0   JNB      0xFD60.10,0x0082B1E2"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFTATM: [303, 305, 306, 307, 308, 309, 958]",
+          "Far-ptr consumer → file 0x19a06 page 0x206",
+          "Header parse: {'kind': 'curve', 'cols': 5, 'rows': 1, 'x_off': '0x19a07', 'z_off': '0x19a0c', 'header_off': '0x19a06'}"
+        ],
+        "summary": "KFTATM: consumed via R12/R13 far-ptr #206 @ 0x82b184"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x15a06 ≠ 0x19a06",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFTEKA",
+      "addr": "0x1ab3c",
+      "header_off": "0x1ab3c",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x847f90",
+        "raw_hex": "e6fc3c2be6fd0602",
+        "decoded": "MOV R12,#0x2b3c; MOV R13,#0x0206; CALLS 0x01,0xB612",
+        "phys": "0x81ab3c",
+        "page": "0x206",
+        "listing": [
+          "847F90 E6FC3C2B   MOV      R12,#0x2B3C",
+          "847F94 E6FD0602   MOV      R13,#0x0206",
+          "847F98 C2FE818D   MOVBZ    R14,0x8D81",
+          "847F9C DA0112B6   CALLS    0x01,0xB612",
+          "847FA0 F7F8018A   MOVB     0x8A01,RL4",
+          "847FA4 C2F4FB89   MOVBZ    R4,0x89FB",
+          "847FA8 8840       MOV      [-R0],R4",
+          "847FAA E6F4332B   MOV      R4,#0x2B33",
+          "847FAE E6F50602   MOV      R5,#0x0206",
+          "847FB2 8850       MOV      [-R0],R5",
+          "847FB4 8840       MOV      [-R0],R4",
+          "847FB6 D7400602   EXTP     #0x206,#1"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFTEKA: [384, 394, 399, 958]",
+          "Far-ptr consumer → file 0x1ab3c page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFTEKA: consumed via R12/R13 far-ptr #206 @ 0x847f90"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x16b3c ≠ 0x1ab3c",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFUSHK",
+      "addr": "0x1a7aa",
+      "header_off": "0x1a7aa",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x8760e0",
+        "raw_hex": "e6fcaa27e6fd0602",
+        "decoded": "MOV R12,#0x27aa; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a7aa",
+        "page": "0x206",
+        "listing": [
+          "8760E0 E6FCAA27   MOV      R12,#0x27AA",
+          "8760E4 E6FD0602   MOV      R13,#0x0206",
+          "8760E8 E6FE3C1A   MOV      R14,#0x1A3C",
+          "8760EC E6FF0402   MOV      R15,#0x0204",
+          "8760F0 DA0120BB   CALLS    0x01,0xBB20",
+          "8760F4 0804       ADD      R0,#4",
+          "8760F6 F7F8C089   MOVB     0x89C0,RL4",
+          "8760FA C2FC2E78   MOVBZ    R12,0x782E",
+          "8760FE E6FD2F78   MOV      R13,#0x782F",
+          "876102 E6FE3A78   MOV      R14,#0x783A",
+          "876106 C08F       MOVBZ    R15,RL4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFUSHK: [366, 367, 370, 958]",
+          "Far-ptr consumer → file 0x1a7aa page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFUSHK: consumed via R12/R13 far-ptr #206 @ 0x8760e0"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x167aa ≠ 0x1a7aa",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFUSHK2",
+      "addr": "0x1a7ce",
+      "header_off": "0x1a7ce",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x876562",
+        "raw_hex": "e6fcce27e6fd0602",
+        "decoded": "MOV R12,#0x27ce; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81a7ce",
+        "page": "0x206",
+        "listing": [
+          "876562 E6FCCE27   MOV      R12,#0x27CE",
+          "876566 E6FD0602   MOV      R13,#0x0206",
+          "87656A E6FE3C1A   MOV      R14,#0x1A3C",
+          "87656E E6FF0402   MOV      R15,#0x0204",
+          "876572 DA0120BB   CALLS    0x01,0xBB20",
+          "876576 0804       ADD      R0,#4",
+          "876578 F7F8C189   MOVB     0x89C1,RL4",
+          "87657C C2FC4E78   MOVBZ    R12,0x784E",
+          "876580 E6FD4F78   MOV      R13,#0x784F",
+          "876584 E6FE5A78   MOV      R14,#0x785A",
+          "876588 C08F       MOVBZ    R15,RL4"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFUSHK2: [367, 958]",
+          "Far-ptr consumer → file 0x1a7ce page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFUSHK2: consumed via R12/R13 far-ptr #206 @ 0x876562"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x167ce ≠ 0x1a7ce",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFVAKL",
+      "addr": "0x1938a",
+      "header_off": "0x1938a",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x8466d6",
+        "raw_hex": "e6fc8a13e6fd0602",
+        "decoded": "MOV R12,#0x138a; MOV R13,#0x0206; CALLS 0x01,0xBB20",
+        "phys": "0x81938a",
+        "page": "0x206",
+        "listing": [
+          "8466D6 E6FC8A13   MOV      R12,#0x138A",
+          "8466DA E6FD0602   MOV      R13,#0x0206",
+          "8466DE E6FE4217   MOV      R14,#0x1742",
+          "8466E2 E6FF0602   MOV      R15,#0x0206",
+          "8466E6 DA0120BB   CALLS    0x01,0xBB20",
+          "8466EA 0804       ADD      R0,#4",
+          "8466EC C2F57D8D   MOVBZ    R5,0x8D7D",
+          "8466F0 1B45       MULU     R4,R5",
+          "8466F2 F2F40EFE   MOV      R4,0xFE0E",
+          "8466F6 9850       MOV      R5,[R0+]",
+          "8466F8 1B45       MULU     R4,R5",
+          "8466FA F2F90CFE   MOV      R9,0xFE0C"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR symbol_pages KFVAKL: [177, 178, 179, 180, 183, 184, 958]",
+          "Far-ptr consumer → file 0x1938a page 0x206",
+          "Header parse: none"
+        ],
+        "summary": "KFVAKL: consumed via R12/R13 far-ptr #206 @ 0x8466d6"
+      },
+      "falsifier": {
+        "claim": "If page were 0x205, phys would not be this cal offset",
+        "check": "page 0x205 → file 0x1538a ≠ 0x1938a",
+        "result": "DID_NOT_FIRE"
+      }
+    },
+    {
+      "name": "KFMIRED1",
+      "addr": "0x1a83c",
+      "header_off": "0x1a83c",
+      "match_dist": 0,
+      "verdict": "PROVEN",
+      "kind": "kf_farptr206",
+      "shape": null,
+      "consumer": {
+        "ea": "0x8378fc",
+        "raw_hex": "e6fc3c28e6fd0602",
+        "decoded": "MOV R12,#0x283c; MOV R13,#0x0206; CALLS 0x01,0xB704",
+        "phys": "0x81a83c",
+        "page": "0x206",
+        "listing": [
+          "8378FC E6FC3C28   MOV      R12,#0x283C",
+          "837900 E6FD0602   MOV      R13,#0x0206",
+          "837904 C2FE44F8   MOVBZ    R14,0xF844",
+          "837908 C2FF53F8   MOVBZ    R15,0xF853",
+          "83790C DA0104B7   CALLS    0x01,0xB704",
+          "837910 F1C8       MOVB     RL6,RL4",
+          "837912 D7400602   EXTP     #0x206,#1",
+          "837916 F3F83A28   MOVB     RL4,0x283A ; EXTP physical=0x81A83A",
+          "83791A F1EC       MOVB     RL7,RL6",
+          "83791C 21E8       SUBB     RL7,RL4",
+          "83791E 9D01       JMPR     CC_NC,0x00837922",
+          "837920 E10E       MOVB     RL7,#0",
+          "837922 43FE53F8   CMPB     RL7,0xF853"
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR KFMIRED1",
+          "far-ptr 0x1a83c CALLS B704",
+          "Dims: not from local hdr (02 02 rejected); COM_AXIS follow-up"
+        ],
+        "summary": "KFMIRED1 via R12/R13 #206 @ 0x8378fc"
+      },
+      "falsifier": {
+        "claim": "page 0x205 ≠ this file",
+        "check": "DID_NOT_FIRE",
+        "result": "DID_NOT_FIRE"
+      }
+    }
+  ],
+  "policy": "PROVEN=far-ptr+FR+falsifier; KFZW page204 still unproven"
+}

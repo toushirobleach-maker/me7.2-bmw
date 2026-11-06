@@ -1,0 +1,54 @@
+{
+  "source_archives": [
+    "E53.rar",
+    "BASE.rar"
+  ],
+  "extracted_from": "E53/data/EK726",
+  "program": "7532675A.0PA",
+  "data": "G7533626.0DA",
+  "dat_line": "7533625,7500213,7532675,A,7533626DA,0FFFFFFFFFD,134,1 E",
+  "epk": "6901I41D",
+  "vehicle_notes": "E53 / M62B44LEV / ME7.2 / EGS 860.2 5HP24 / Freigabe 08.04.2003",
+  "output": "ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "sha256": "5ec2443311b6173e4f0bb770eb1f84c0a15a270d3bd6ac52648a77d450db5dd9",
+  "coverage_bytes": 489750,
+  "integrity_stock": [
+    {
+      "name": "ROMSYS startup",
+      "ok": true
+    },
+    {
+      "name": "CRC32 cal",
+      "ok": true
+    },
+    {
+      "name": "MP 34",
+      "ok": true
+    }
+  ],
+  "distribution": "Only this analysis BIN is bundled; original SP-Daten files are local inputs, not distributed",
+  "known_checksum_result": "37/38; ROMSYS parameter endpoint mismatch; missing calibration end marker",
+  "identity_chain": {
+    "assembly_zusb": "7533625",
+    "type_number": "7500213",
+    "hardware_number": "7532675",
+    "program_revision": "A",
+    "program_file": "7532675A.0PA",
+    "data_id": "7533626",
+    "data_file": "G7533626.0DA",
+    "epk": "6901I41D",
+    "dat_header": [
+      "ZB-NR",
+      "TYP-NR",
+      "HW-NR",
+      "IX",
+      "SW-NR",
+      "AM",
+      "PIN",
+      "S",
+      "CS"
+    ],
+    "dat_line": "7533625,7500213,7532675,A,7533626DA,0FFFFFFFFFD,134,1 E",
+    "note": "7532675 is the HW field here, not the assembly ZUSB. Select vehicle/software compatibility independently."
+  }
+}

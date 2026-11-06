@@ -1,0 +1,780 @@
+{
+  "source_tree": "ME72_6901I41D_research",
+  "files": [
+    {
+      "source": "10_review/20261106_deep_review/per_patch_review.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/per_patch_review.json",
+      "sha256": "4e83f1fca3f0944eaffb50734aa3c4c73e809b4bbfb0b26f081433dbf98248bf",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/source_inputs_sha256.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+      "sha256": "3ceea0f7fe407e0a3aea0b0ee7191cdcedbfca1d9f855c510c9a3dfc9cf939c2",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "217912d0c5d60353e5098761eae7b38eee6b835129417a1ce3fd3c1d8cc3d5d5",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_deep_review/DKAT_fault_dispatch.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/DKAT_fault_dispatch.asm",
+      "sha256": "f7ca28e7ef1eaf0e6edd597639efe3a1527ef6e390643c73515940cfc4b5bdf8",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/DPP_initialization.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/DPP_initialization.asm",
+      "sha256": "73bc94e3049ce846ac648613fdd49373870df8d17dfa98d75494ad70c2d0cd0e",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/actual_6901_LREB_parameters.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/actual_6901_LREB_parameters.json",
+      "sha256": "0a8cc91982e4e0df277edf8672071ccaae3498af14c13fd024ba361eac4e0ea3",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/actual_LR_parameters.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/actual_LR_parameters.asm",
+      "sha256": "72c1909bf1834147c95bebcb02b10776ac65d4f960e98bd26930060373d5b68b",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/independent_binary_audit.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/independent_binary_audit.json",
+      "sha256": "bbc31de30512b61302b2a1f9096d1709ba158c3be20c0a77401705ce05783c63",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "ac590cfb66aabc0ceed890294d89250f18292ca284135b26c1d9f054725d2ca2",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_deep_review/PROKON_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/PROKON_review_decoder.asm",
+      "sha256": "aaafb31c18a9d1cd5bc0864b32add36c3426881abcb671bb1cf088644990119a",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/DFPM_dispatch.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/DFPM_dispatch.asm",
+      "sha256": "8f090643628ffffff9878d9e68dc159eb9ff4193ccd451168f3fd0ee53971e86",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/ESKONF_init_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/ESKONF_init_review_decoder.asm",
+      "sha256": "81153ce547ced59e7aca4d38a94d283c5e9e8ee4dcc020c7e99b226015393eab",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/CLA_indexed_access.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/CLA_indexed_access.asm",
+      "sha256": "c578905e8fea95c56058a32770d9549af0a7c42b46819892374899529999eee4",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/review_summary.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/review_summary.json",
+      "sha256": "df92aaa660b666514a1446b5b5340aba7cb898a41908d47a16910583059e1c68",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/SAP_mass_calibration_references.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/SAP_mass_calibration_references.asm",
+      "sha256": "70cde9a84c4be6d942c4d1fc75769b1a5ed58a95cf267c5ff50371900efda3f8",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/SAP_output_faults.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/SAP_output_faults.asm",
+      "sha256": "fa06b84a0f145bb4104a1dbc7e089c31808e945fe158a6c21362607a4ac9684b",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/rear_fault_dispatch.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/rear_fault_dispatch.asm",
+      "sha256": "7d3b9f76e92f87e4c04fe0e98e3f2ca4c78f3c419d6092c725075f266ae728b8",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/key_evidence_verification.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/key_evidence_verification.json",
+      "sha256": "6c7d5bb04b5857d13c60e9acd8eadc506dbafe7beec5454c627799e0f56f7df0",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/rear_aging_faults.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/rear_aging_faults.asm",
+      "sha256": "79a364ec58d2e984e627aaac1abb01d660af62d31bff8f14500c42410d08e58d",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/actual_selected_CLA_paths.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/actual_selected_CLA_paths.json",
+      "sha256": "fd9c579991dcd476881cc038f5b8c3131f16d5ff5f176aa189fa322590c404ef",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/runtime_reinterpretation.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/runtime_reinterpretation.json",
+      "sha256": "51ddf0dc9b22872be0a980f7c53053db6abf831ae2383268ff3abda527e8998f",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/DFSTT_full.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/DFSTT_full.asm",
+      "sha256": "6a37cf77e551429dcc29d1405dcbcc3423f7c1190cfe90c9ed34d5546e48c1f3",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/actual_LREB_and_B_lr_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/actual_LREB_and_B_lr_review_decoder.asm",
+      "sha256": "84e09db2b625bf85719d922e2c5e978abfbc3a547dc4ef4e9cd3c17030ed2598",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/REVIEW_RU.md",
+      "destination": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+      "sha256": "b40ff65e5e867ecb9bdb714c3ce822bf2f1d9b266f9a3a5397e11186490d945d",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "28f876ba648ceebd31cc2f468843a577b8583e8cc41eed81ed1734a9cb2cddf5",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_deep_review/heater_CLA_dispatch.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/heater_CLA_dispatch.asm",
+      "sha256": "d7214616e5b32480af5fedbf78cc70f72fdb70d7149bd4601f8bfde04a38868c",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/KOS_fault_dispatch.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/KOS_fault_dispatch.asm",
+      "sha256": "fb94000afbfdd7ff5ffff619d67e41d53bcb306a2265ceb0ed719896d1104cc9",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/actual_B_lr_region_raw_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/actual_B_lr_region_raw_decoder.asm",
+      "sha256": "aba3b2ad393bf27d3c1a02fe639ace58921796c384a32173e526ac0666f05363",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/rear_diag_bank1_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/rear_diag_bank1_review_decoder.asm",
+      "sha256": "b682a53d5cfe6280474e1a831a30f612bfc07827c55252b17122cbf4fdbc9cf0",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/cla_address_candidates.json",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/cla_address_candidates.json",
+      "sha256": "a1d06db4afaaeeb6d9388695fa1eadcb80006ad1960765b54017fad37528e296",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/rear_diag_bank2_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/rear_diag_bank2_review_decoder.asm",
+      "sha256": "676b206f559aeedbbc8ea9a80781e3061f0e6000a7382d9cc63d76bf52c1b449",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/DFPM_8293.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/DFPM_8293.asm",
+      "sha256": "3fda5c9d1c0ef5e11e80d958ddf2f3826dfdca490052c812b0635a0c1aa77d0f",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/README_RU.md",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/README_RU.md",
+      "sha256": "f6d062a5aa23c3229c5a3eb4f16e7c347aad145338e3f6129447d48c1b72b12a",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/SLV_old_claim_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/SLV_old_claim_review_decoder.asm",
+      "sha256": "c293eacd327ad63b293b2c666b13dcc2a718d7f41b8ed419fce32664dad981b0",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/DFPM_828C.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/DFPM_828C.asm",
+      "sha256": "a4d2b6c1dd8b3e910682b573e9abe83126d6939267c001286c47331b68de7380",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/DFPM_828F.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/DFPM_828F.asm",
+      "sha256": "90f7b5c92fd7f2679711c79babd8b5047a99229f0f81cd3b1dae2902a020a73d",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/more_CLA_enum_candidates.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/more_CLA_enum_candidates.asm",
+      "sha256": "d99dbec2cff97412dc7d217139b4cca326ccb4cb233065421bc94d93c60bc7b9",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/DFPM_801E.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/DFPM_801E.asm",
+      "sha256": "6574cb62e5f77ac8c1fb98b88fb9144ee50406767c5d1272b6c75ca862b47753",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/claimed_LR_region_raw_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/claimed_LR_region_raw_decoder.asm",
+      "sha256": "50fd16336113f2ade68e80129026015eb37b407ebce947c9fb4a2a4593093432",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/claimed_LR_function_review_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/claimed_LR_function_review_decoder.asm",
+      "sha256": "b63cf29d2d2b9dc35d7cac5807ce74889863a12fda745c48f319c0badc2e21c0",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/CLA_enum_call_candidates.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/CLA_enum_call_candidates.asm",
+      "sha256": "6ce559440f90cbdf8112af32de6f97eb4ef0377eda6bc3baec7bcb8a7f941bf3",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_deep_review/exploratory/PROKON_region_raw_decoder.asm",
+      "destination": "07_evidence/reviews/20261106_deep_review/exploratory/PROKON_region_raw_decoder.asm",
+      "sha256": "395b2fda70c3e7fde4141aedfbea9aa926c9ee9c2737a9fab505dabcf6122b41",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/per_patch_review.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/per_patch_review.json",
+      "sha256": "de9826a9da31e3a87c6c855323c1a1984a1c2a79fd31eabd2ab84aaaa60d02d8",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/CJ_init_mode11_clear.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/CJ_init_mode11_clear.asm",
+      "sha256": "e857b61e10df4b5f7b4dc25e70fa7e946f64b903dba6271651d20ac40b75796f",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/source_inputs_sha256.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+      "sha256": "a5c6d3a02e88b511b2dc7b8ca428bb761b32bbdb83ddbc41c15f4d3cbca88ad8",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "a4f700c6411da14c99e782fb67e27e4aecf4c6126b603b6456553c39c50a0c7d",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_v2_review/binary_audit.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/binary_audit.json",
+      "sha256": "1df832b2ea0cc1242c498ac3ad2aeb19e4a0898fcaf383543a34b2d035fb110b",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/DHLS_rear_diagnostic_body.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/DHLS_rear_diagnostic_body.asm",
+      "sha256": "0124ddad09d3c00c832be71f485547dc4715ec416b3ae9cef3417b73a32938a9",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/SAP_fault_init.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/SAP_fault_init.asm",
+      "sha256": "9a1315cf797f1c24b48028e9a2a219bb315e1000f4cc998a22322a1f97b96b01",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/ESKONF_status_helpers.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/ESKONF_status_helpers.asm",
+      "sha256": "adb893f469a6d817a194828c5996712e26ea95fad1a47d71052e9ce8cdb0e2ae",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/review_summary.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/review_summary.json",
+      "sha256": "5c600e924347f9a42d4da3cf7382b81c8522ae2c3a3aec746d2277e7bee2f540",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/REVIEW_V2_RU.md",
+      "destination": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+      "sha256": "3f6a5d236bfa47bc35eac10f025af0dce8f86e7aa8a1259532bac23cb10ad8b4",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "ab7be4375e6db1aa1fc87d383163be98bd6320319a4758c604acf3ca60db5d2d",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_v2_review/runtime_override_generation.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/runtime_override_generation.asm",
+      "sha256": "9f079efd5202834fe38a0b88217030f6d40db098f12408d03bc318538da391a6",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/SLP_ESKONF_callback.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/SLP_ESKONF_callback.asm",
+      "sha256": "1cb831a9cd2277601fa9f18892118f9f06be719ccd33bfb3167430506bfe2a11",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/verification.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/verification.json",
+      "sha256": "338fe6e36b5548b988462ad28456d0703e69ab4482cfcc0b105a814567bd0b80",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/PROKON_full.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/PROKON_full.asm",
+      "sha256": "a5ccb6c71dd528d891ec69fc0869552f4ace12777e2f143c17cc3a5e6a5bb83c",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/VALIDATION_PLAN_RU.md",
+      "destination": "07_evidence/reviews/20261106_v2_review/VALIDATION_PLAN_RU.md",
+      "sha256": "7dfe220565dd49b03eec6923f1a2c4309ebebe3e3ee297ebb61da225bdc13ee1",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/ESKONF_init_and_runtime_copy.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/ESKONF_init_and_runtime_copy.asm",
+      "sha256": "86c26e43d844238a52c8f1b804fb87067613a616d2ee2836b8b1d897994166ab",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/heater_CLA_dispatch.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/heater_CLA_dispatch.asm",
+      "sha256": "d7214616e5b32480af5fedbf78cc70f72fdb70d7149bd4601f8bfde04a38868c",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/rear_heater_permission_analysis.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/rear_heater_permission_analysis.json",
+      "sha256": "de7f3ea56763f6f3f16cca56ce4857e77374f00c0cdb618c7435589fc8d19d81",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/SLV_ESKONF_callback.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/SLV_ESKONF_callback.asm",
+      "sha256": "d2537bdb39603bd474cf7de0c9e47be7cf96fa69695589639fe02d721449662a",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/override_inputs_update.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/override_inputs_update.asm",
+      "sha256": "f516cf557d78c562bb2ae2092ec10e91794dc65debcd3ef12795e81a10e42f6a",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/ESKONF_memory_reference_candidates.json",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/ESKONF_memory_reference_candidates.json",
+      "sha256": "3507b2379bc18a1fdbd92d0250d2089004e76791b232729216e88fe5643f5c26",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/README_RU.md",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/README_RU.md",
+      "sha256": "f3cfa759f9641af27327bb04ab8d5db14fa2424c58e59e16203dc4ae3b34c6b9",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/heating_sensor_presence.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/heating_sensor_presence.asm",
+      "sha256": "9f9965c60100bf81eb3d7033f49cc223250ac8c29bde466b30427cbbab24baf0",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/ESKONF_clear_config_85A8EE.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/ESKONF_clear_config_85A8EE.asm",
+      "sha256": "c26ba793f7f3fa3fbb2372356529b4b0e5a8aa135ec04b6a07b7b90ac8d860fd",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/override_input_init.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/override_input_init.asm",
+      "sha256": "ee73b6c34904c1bafa40bae5893a85b82f3de11b0dbb523c7c25b91494ddd2ab",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/ESKONF_healing_85A600.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/ESKONF_healing_85A600.asm",
+      "sha256": "dda033f2a6b48bea75fef19528c6f230e4cb7096e6141330c9c78958166c7d77",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v2_review/exploratory/rear_presence_controls.asm",
+      "destination": "07_evidence/reviews/20261106_v2_review/exploratory/rear_presence_controls.asm",
+      "sha256": "3f79167228271602350b4db5a7b0cbe2f618c3759919067507fa3edc660301fc",
+      "role": "historical_review"
+    },
+    {
+      "source": "10_review/20261106_v3_validation/VALIDATION_RU.md",
+      "destination": "07_evidence/reviews/20261106_v3_validation/VALIDATION_RU.md",
+      "sha256": "b07a7c3a68e435e393b89ffdacf4a82e11161523f4fe30cf43f8364fd9139132",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "0cccb3ef26359c3913990497b8251ff1782b2e826563fb24347eb179f011fea2",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_v3_validation/FILES_SHA256.json",
+      "destination": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+      "sha256": "9d4bdaf19b3737f85fd5742b4687d01d5c600afb7c59a55e41d3471a21197c18",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "39706d0223abb9fc284d5cfb6c317087a9881729d5a2fa5c96199e2f717f0c2d",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "10_review/20261106_v3_validation/independent_verification.json",
+      "destination": "07_evidence/reviews/20261106_v3_validation/independent_verification.json",
+      "sha256": "d404ab485e325ea51bef47ad20a87a6465eea22d3a26b4efd530fcbc17270508",
+      "role": "historical_review",
+      "source_sha256_before_public_redaction": "493cf545c1fd7f656e1423b90d7b1531c46545f17a9203219906a1566b6f9491",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_SEQUENTIAL_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_SEQUENTIAL_RU.md",
+      "sha256": "e0160cf3e63a04d33de15292d8a06029d28a05a4ddf851fba785fea76cbb4bea",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_SUMMARY_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_SUMMARY_RU.md",
+      "sha256": "cd82398b5e1259ce22bfe4439182a517c94603b37505dd976b9fc0bca3ee77c7",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KF_FARPTR_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_KF_FARPTR_RU.md",
+      "sha256": "62be7ed0b63164f1457df9a9d63d1053a141f1a9a0c013272c5b841a603909f5",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_POWER_MAPS_PASS3_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_POWER_MAPS_PASS3_RU.md",
+      "sha256": "e0d83619e0b79a7b81fb6ec11d80eae51223275b9e44f86b8dc9a572590dcf35",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_SUMMARY.json",
+      "destination": "07_evidence/catalog/PROMOTION_SUMMARY.json",
+      "sha256": "b0ce9cdc7601a1b2511f174a3db8e19664a58c744d102e27f512ce0ce1ce91ec",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_MISC_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_MISC_RU.md",
+      "sha256": "7287cb8b9d5373317ec952b9ac38db973631552008b82f133a483f267f7c1beb",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_FR_INDEX_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_FR_INDEX_RU.md",
+      "sha256": "30e4618f6d1cbaf9982eef650ca77e8de56ff0f31934821e3f0bd83485b177d0",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KFZW2_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_KFZW2_REPORT.json",
+      "sha256": "422a144e25ea4a7f57ee97f4037450930317c3bf031d9f04a570251e0d704d0e",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_REMAINING3_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+      "sha256": "eda404319bc7153c2daa816d017e3402d320d86529ffa637cab323e5b84fca38",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_MSLBAS_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+      "sha256": "23a82b8ba4d0dac127bf3dbf412e59a36f11e0214eab6112e39a4be1f5dc0f4a",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_EWS_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_EWS_RU.md",
+      "sha256": "6298999f924beee506c3fff5647735cf8a2ec81223d6378884ea5576fada15a7",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KRKTE_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_KRKTE_REPORT.json",
+      "sha256": "dce89d6101ce376db96ae590f0021cff96f3dbb7138096b93bb333d4518ddd64",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KFZW2_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_KFZW2_RU.md",
+      "sha256": "df2bd18cb5b0daa87b985b6c4dc04fdd18ed89ea652ce18a108d0633c9781c3a",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_POWER_MAPS_PASS3_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_POWER_MAPS_PASS3_REPORT.json",
+      "sha256": "bb0c422c4156eef84403c8e00504f8508d899ef54a26a3d3342435179737b0a9",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_MISC_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_MISC_REPORT.json",
+      "sha256": "30c3f435530de9be9c4b171c9c34407d72088727a5ba68a2a9e7ff30700ad4f4",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KF_FARPTR_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_KF_FARPTR_REPORT.json",
+      "sha256": "e18af4344301a7c81b395f067831c8a363f9ff7efd36a99eb34d8f1febd0b627",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_MSLBAS_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_MSLBAS_RU.md",
+      "sha256": "22e4892fcee1f9693df6f4b271263e641e5b21bb2384be468002cce7c3585096",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_CLA_PROKON_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_CLA_PROKON_RU.md",
+      "sha256": "3e8ec35b470f96581adb4967573b5a99349ce64e674317774be681ce499e62dc",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/KF_SHAPE_RESOLUTION.json",
+      "destination": "07_evidence/catalog/KF_SHAPE_RESOLUTION.json",
+      "sha256": "8233fd59bec3dfa28415ee51b2bc9a4b8396226fff1e8e9f0ca23e019c2eb2e9",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_STRUCT_CLA_CW_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_STRUCT_CLA_CW_REPORT.json",
+      "sha256": "a78ec1051de9d584ed8c84346c6cc4c4dbb4061ecf8e589077d74cdbab21c1de",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KFZW_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_KFZW_REPORT.json",
+      "sha256": "a3ef7001cb705c06afc82c713c2c43205f2cb730a095f497f62561dfce170fd3",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KFZW_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_KFZW_RU.md",
+      "sha256": "da5d4197d941fe53d7a4491d6cbf73ec5d45ad3d863dd059c9ed4d98c81c3d0c",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_FINAL_STRUCT_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_FINAL_STRUCT_RU.md",
+      "sha256": "90b10476f1f06cb2be6efd2fe0887ad7b9db840d0f3382c2ebd4bc11779c99e0",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_EWS_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+      "sha256": "8534103c5718eeabbcceef37b0b872dc9f58602a53f9e98f3875d02e837ef1d1",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_REMAINING3_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_REMAINING3_RU.md",
+      "sha256": "d82c2fc43f7283299682547d3cb297355cdad3a97a3e5d5bbb36fa560371d691",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_STRUCT_CLA_CW_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_STRUCT_CLA_CW_RU.md",
+      "sha256": "ac46094cba860f5f6b322ba7423830452317ae76d26c696839f4786c6e1c55fe",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_KRKTE_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_KRKTE_RU.md",
+      "sha256": "60421235c1c65f2fcc4f6ff20cb816a393db5a7d6c309dbc744e0d5ca1932ca1",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "02_definitions/6901I41D_proven/PROMOTION_CLA_PROKON_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json",
+      "sha256": "e6db371c96c00aa0d7abc3ec6c8177d3f922c456ae4711185015d2caa9d60f8d",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "07_analysis/damos_lite/PROMOTION_ZOFF_EXACT_RU.md",
+      "destination": "07_evidence/catalog/PROMOTION_ZOFF_EXACT_RU.md",
+      "sha256": "49c1b1b5957a07b69a1325dd9426a554d6e3612668cb81985b2097ea9aa8c7a2",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "07_analysis/damos_lite/PROMOTION_ZOFF_EXACT_REPORT.json",
+      "destination": "07_evidence/catalog/PROMOTION_ZOFF_EXACT_REPORT.json",
+      "sha256": "ef46f4b6c74b5d50e9b85630515a6e7cb37fbebf966c63a88a5d4a2acbce039e",
+      "role": "catalog_promotion_evidence"
+    },
+    {
+      "source": "11_flash_development/startup_808000_linear.asm",
+      "destination": "07_evidence/protocol/startup_808000_linear.asm",
+      "sha256": "f5d8d1eea21c1d89ff8197a1fadef678ad4a0e788dc44b934750cd33dd73c292",
+      "role": "factory_protocol_evidence"
+    },
+    {
+      "source": "11_flash_development/STATUS_UBATT_oem.asm",
+      "destination": "07_evidence/protocol/STATUS_UBATT_oem.asm",
+      "sha256": "1c5e59824dad775111512a4563dd7264c2d5f4271c713227f43fa76301e053a3",
+      "role": "factory_protocol_evidence"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/map_header_scan.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/map_header_scan.py",
+      "sha256": "7b2e82fef04f5fddeb1ab02a871b9695cc1fd399d16be5b9fd3068caf74b7c46",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/promote_struct_cla_cw.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/promote_struct_cla_cw.py",
+      "sha256": "ee5ad13aff3a24d08eb2fe0049a735a2e1d2a7af4131fb28318f40654921b6ae",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/fr_symbol_catalog.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/fr_symbol_catalog.py",
+      "sha256": "257b822560daa30d0811622de816415c42f722b39b20fb3d5ce166078c7ccb88",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/auto_judge.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/auto_judge.py",
+      "sha256": "26f3a3b5ac2ede14619f391531844a09e9f17d7213b2b4131d98f7f6921f0402",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/paths.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/paths.py",
+      "sha256": "45ac3680ded5e93a404449b1515533263e61c67d31125be5671f05078c6ab491",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/link_fr_to_cal.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/link_fr_to_cal.py",
+      "sha256": "4a8f1ccd4374e2b0867213b544beea33347f96af094d0542b71b03c1c27c0fbe",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/export_review_pack.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/export_review_pack.py",
+      "sha256": "e244b899e84aee967acb9c04dacf1b8b0b92e88329b6e43d0e4f71cef0c4a9fe",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/promote_kf_farptr.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/promote_kf_farptr.py",
+      "sha256": "d2a3a90d43a560378b3bc97d93517144d02d0e7d97f31cc06a24ff951135fb80",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/seed_from_proven.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/seed_from_proven.py",
+      "sha256": "aa0685a9588f94fa1cef423e9a4aeb7495366f13ccef2d648fba62c95d07cc06",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/generate_xdf_from_damos.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/generate_xdf_from_damos.py",
+      "sha256": "341cb12e766f04c2805a982827c111cd23e9a0f8f45ddbdcbcb0e91ab59f1d08",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/resolve_kf_shapes.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/resolve_kf_shapes.py",
+      "sha256": "1b435a0e9c2ca2988c6e77102db22c08d96950b394499a5d1cc292851e96694c",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "08_analysis_tools/damos_pipeline/auto_xref.py",
+      "destination": "07_evidence/source_snapshots/damos_pipeline/auto_xref.py",
+      "sha256": "3137245fed4467ee9977d1052d512b0474d39cd24bc0feca20edd20e10e07c1b",
+      "role": "historical_pipeline_source_original_paths"
+    },
+    {
+      "source": "07_analysis/fr_full_index/FR_FULL_INDEX.json",
+      "destination": "10_references/fr_index/FR_FULL_INDEX.json",
+      "sha256": "f4a302fb5e24fbc0cd530b652413dc4dd618251ee67905787c67ea14e3343a63",
+      "role": "full_1043_page_fr_index",
+      "source_sha256_before_public_redaction": "2a0a8496233d937b3b6f574ad01620652139031f5aacf64e51ae16582777cf56",
+      "transformation": "Personal-path/image-fingerprint redaction or quotation removal for public edition"
+    },
+    {
+      "source": "07_analysis/fr_full_index/symbol_pages.json",
+      "destination": "10_references/fr_index/symbol_pages.json",
+      "sha256": "12335ce0558fc9acc9b68680faae8c54d4af8234f9258be86cb89bcb84969d52",
+      "role": "full_1043_page_fr_index"
+    },
+    {
+      "source": "07_analysis/fr_full_index/extract_meta.json",
+      "destination": "10_references/fr_index/extract_meta.json",
+      "sha256": "5c40df19d31435c93eaa5e61e95d6cac6a0169cb3de1facf8bddf96fcc1c5dd8",
+      "role": "full_1043_page_fr_index"
+    },
+    {
+      "source": "07_analysis/fr_full_index/README.md",
+      "destination": "10_references/fr_index/README.md",
+      "sha256": "86db1a17296c6b192b5aa74da26200f749f758d52c0dde43f660b6a4c550714f",
+      "role": "full_1043_page_fr_index",
+      "source_sha256_before_public_redaction": "e53243ce6b510f7ebe03d06bfdc254f91e26b1c318a8e7fc37226fb2a31867c8",
+      "transformation": "Public-edition redaction/index-only update; source bytes not claimed identical"
+    },
+    {
+      "source": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md",
+      "destination": "10_references/fr_index/FR_APPLICABILITY_6901I41D_RU.md",
+      "sha256": "d8b509b34a75817b3d144566430c21b77688bba0cebd86a14e625f8d4ae1dacd",
+      "role": "full_1043_page_fr_index"
+    },
+    {
+      "source": "SOFTWARE_AND_SOURCES_RU.md",
+      "destination": "10_references/SOFTWARE_AND_SOURCES_RU.md",
+      "sha256": "4c9854d5ddcac4a225b946344505e9fee1d4eafade1c4eea354dc9eaa5fd3980",
+      "role": "reference_or_upstream_provenance"
+    },
+    {
+      "source": "SOURCE_SNAPSHOTS.md",
+      "destination": "10_references/SOURCE_SNAPSHOTS.md",
+      "sha256": "6a7c124d24d69b9b3594cdfe90af2439eab49ebc63d74777bc1cac0ed73e3598",
+      "role": "reference_or_upstream_provenance"
+    },
+    {
+      "source": "sources_manifest.json",
+      "destination": "10_references/research_sources_manifest.json",
+      "sha256": "69799d320e83c632d9a16245470a665b42d6bd99aedf6bd89d2fd0e320ad0c7a",
+      "role": "reference_or_upstream_provenance",
+      "source_sha256_before_public_redaction": "97c3bd58c0912711dbe1974af48382e9cba6c731de3be6ba8ebfbb6c504d0fc9",
+      "transformation": "Public-edition redaction/index-only update; source bytes not claimed identical"
+    },
+    {
+      "source": "10_review/20261106_deep_review/tools/decoder/c166_disasm.py",
+      "destination": "09_re_tools/decoder/c166_disasm.py",
+      "sha256": "f2922b0725c17d391cfbdf1f2b462f3471d93a4f26ffd35d2448a99428745104",
+      "role": "GPL3_third_party_decoder"
+    },
+    {
+      "source": "10_review/20261106_deep_review/tools/decoder/c166_is.txt",
+      "destination": "09_re_tools/decoder/c166_is.txt",
+      "sha256": "edcac8e20991266a2fc436e40e6171b93dfb6916d595e67b6ae68c353ada77a4",
+      "role": "GPL3_third_party_decoder"
+    },
+    {
+      "source": "10_review/20261106_deep_review/tools/decoder/c166_cc.txt",
+      "destination": "09_re_tools/decoder/c166_cc.txt",
+      "sha256": "2f99cc288c57a0190d720dc64c9b175d6da8fe9a01e46cb7ab4b40e5818697ad",
+      "role": "GPL3_third_party_decoder"
+    },
+    {
+      "source": "10_review/20261106_deep_review/tools/decoder/c166_sfr.txt",
+      "destination": "09_re_tools/decoder/c166_sfr.txt",
+      "sha256": "99224d2d1c73892bea2954f5807c1d264a56967e95e6395dcdcdf5a98bd774f8",
+      "role": "GPL3_third_party_decoder"
+    },
+    {
+      "source": "10_review/20261106_deep_review/tools/decoder/PROVENANCE.md",
+      "destination": "09_re_tools/decoder/PROVENANCE.md",
+      "sha256": "2ceef1782b184f9e49c60a25dad11a196477b1f381ed3ebbf1f72b608c7c8506",
+      "role": "GPL3_third_party_decoder",
+      "source_sha256_before_public_redaction": "c0a3596efa518070bb3d21345d193dfce5502c9bfa1f8a417da13ac66f5e8c9b",
+      "transformation": "Public-edition redaction/index-only update; source bytes not claimed identical"
+    }
+  ],
+  "public_edition_note": "Mappings refer only to retained public files; absent private artifacts are listed separately by the report-reference audit."
+}

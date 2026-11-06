@@ -1,0 +1,2 @@
+# Only hardware access needs this dependency; offline tools use the standard library.
+pyserial==3.5

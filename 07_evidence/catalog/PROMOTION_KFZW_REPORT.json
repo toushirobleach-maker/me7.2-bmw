@@ -1,0 +1,205 @@
+{
+  "title": "KFZWOP / KFZW1 consumer search — 6901I41D",
+  "date_utc": "2026-11-06",
+  "sw": "6901I41D / 7532675",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "decoder_calibration": [
+    {"raw": "9F17", "decoded": "BSET 0xFD2E.9"},
+    {"raw": "D7400602", "decoded": "EXTP #0x206,#1"},
+    {"raw": "C2F43016", "decoded": "MOVBZ R4,0x1630"}
+  ],
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "stock": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "dpp": {"DPP0": "0x204", "DPP1": "0x205", "DPP2": "0x0E0", "source": "0x80BCE4"},
+  "policy": "PROVEN only with (1) consumer+raw+EXTP/DPP phys (2) independent semantic (3) falsifier checked and failed to fire. No promotion on plausibility or foreign A2L alone.",
+  "extp_page_census": {
+    "EXTP_#0x204": 0,
+    "EXTP_#0x205": 0,
+    "EXTP_#0x206": 1716,
+    "note": "On this SW, EXTP-gated cal loads are overwhelmingly page 0x206 (0x818000+). Maps at 0x810xxx would need DPP0=0x204 direct mem16, far R12/R13+#0x204, or an indirect table — not EXTP #204 (absent)."
+  },
+  "counts": {
+    "PROVEN": 0,
+    "STILL_STRUCT": 2,
+    "promoted_to_proven": []
+  },
+  "items": [
+    {
+      "id": "KFZWOP",
+      "name": "KFZWOP",
+      "addr_file": "0x10220",
+      "cpu": "0x810220",
+      "page_mem": {"page": "0x204", "mem": "0x0220"},
+      "sibling": {"name": "KFZWOP2", "addr_file": "0x10320", "cpu": "0x810320", "mem": "0x0320"},
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "claim_tested": "6901 code consumes table base 0x810220 (KFZWOP) with proven dimensions (16×16) and signed 0.75°/LSB",
+      "stock_vs_car": {
+        "span_bytes": 256,
+        "car_vs_stock_diff_count": 143,
+        "typical_delta_LSB": 3,
+        "note": "Exact car-dump advance span; proves bytes are live-tuned, not the Bosch name/dims/scale"
+      },
+      "evidence_1_consumer": {
+        "status": "FAIL",
+        "searched": [
+          "MOV Rn,#0x0220 — zero hits in entire 512 KiB BIN",
+          "MOV R12,#0x0220 ; MOV R13,#0x0204/#0x0205/#0x0206 far-pointer form — zero",
+          "EXTP #0x204/#0x205 then mem16 0x0220 — EXTP #204/#205 census is 0; no windows",
+          "Packed far pointers 20 02 04 02 / 20 02 05 02 / 20 02 06 02 — zero",
+          "Absolute phys LE 3/4-byte 0x810220 — zero outside cal self",
+          "mem16 0x0220 under DPP0 without EXTP — candidate byte matches decode to JNB/[R0+#2]/DIV-adjacent false positives, not map loads",
+          "Axis pts SRL11OPUW@0x812E60 / SNM16OPUW@0x815686 as MOV R12 bases — zero code immediates"
+        ],
+        "false_positives_decoded": [
+          {
+            "cpu": "0x8211A4",
+            "raw": "E6F42003",
+            "text": "MOV R4,#0x0320",
+            "why_not": "Followed by DIVLU R4 — divisor constant for KFZWOP2 offset coincidence, not map base"
+          }
+        ],
+        "indirect_observation": {
+          "status": "NOT_A_CONSUMER",
+          "cpu": "0x817946",
+          "file": "0x17946",
+          "raw_words_le": ["0x0220", "0x0320"],
+          "note": "Cal-region word pair matches KFZWOP/OP2 file offsets; no MOV/EXTP/mem16 xref to 0x7946 (DPP1 form) or 0x3946 found. Cannot treat as code consumer."
+        },
+        "result": "No instruction-level consumer of 0x810220 identified on 6901"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "TRANSFER_ONLY",
+        "sources": [
+          "E5A0 A2L CHARACTERISTIC KFZWOP MAP 0x810220 GkfWSb COM_AXIS 16×16; IF_DATA size 0x100 — foreign SW",
+          "E5A0/E650 XDF same z-address 16×16 signed 0.75 — foreign",
+          "Car dump modifies 143/256 bytes by ~+3 LSB — live object, not identity proof"
+        ],
+        "fr_6901_family": {
+          "KFZWOP_string": "NOT_FOUND in 10_review FR_* pages",
+          "zw_angle_encoding_note": "FR PROKON: SY WMAX=72 → 54°KW and SY WMIN=-32 → -24°KW (factor 0.75) — system angle encoding, not a KFZWOP map xref"
+        },
+        "fail_for_proven": [
+          "No 6901 code path ties 0x810220 to ignition interpolation",
+          "Dimensions 16×16 not recovered from a 6901 header consumer (z-block has no local 10 10 hdr; axes are COM_AXIS elsewhere)"
+        ]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If 6901 used the same far-pointer style as proven KFETRD (MOV R12,#off; MOV R13,#page; CALLS interp) for 0x0220/#0x204, search would hit",
+        "result": "Did not fire for a positive consumer — search empty. Falsifier of 'direct far-ptr exists' succeeded as negative proof of that access style only; does not prove the map is unused."
+      },
+      "dimensions": {
+        "claimed": "16×16",
+        "status": "перенесено из другого SW",
+        "bytes_consistent_with_claim": 256,
+        "proven_by_6901_code": false
+      },
+      "scale_signed_0p75": {
+        "claim": "signed 8-bit, 0.75°KW/LSB (zw_sb_q0p75)",
+        "status": "перенесено из другого SW / FR family hint only",
+        "proven_by_6901_code": false,
+        "stock_value_range": {"min": 0, "max": 80, "count_ge_0x80": 0},
+        "note": "Stock cells never enter sign bit; cannot observe signedness from data alone. FR WMAX/WMIN shows 0.75 for SY angle constants, not map cells."
+      },
+      "missing_piece": "Code site that loads base 0x810220 / mem 0x0220 under DPP0 or via proven indirect table walk into a map interpolator; then axis counts from that call."
+    },
+    {
+      "id": "KFZW1",
+      "name": "KFZW1",
+      "addr_file": "0x10BC2",
+      "cpu": "0x810BC2",
+      "page_mem": {"page": "0x204", "mem": "0x0BC2"},
+      "sibling": {"name": "KFZW2", "addr_file": "0x10D42", "cpu": "0x810D42", "mem": "0x0D42"},
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "claim_tested": "6901 code consumes table base 0x810BC2 (KFZW1) with proven dimensions (16×24) and signed 0.75°/LSB",
+      "stock_vs_car": {
+        "span_bytes": 384,
+        "car_vs_stock_diff_count": 384,
+        "typical_delta_LSB": 4,
+        "note": "Entire span advanced in car dump; proves live tuning span, not name/dims/scale"
+      },
+      "evidence_1_consumer": {
+        "status": "FAIL",
+        "searched": [
+          "MOV Rn,#0x0BC2 — zero hits in entire BIN",
+          "MOV R12,#0x0BC2 with page 0x204/205/206 — zero",
+          "EXTP #0x204/#0x205 mem 0x0BC2 — none (pages unused in EXTP form)",
+          "Packed C2 0B 04 02 / 05 02 / 06 02 — zero",
+          "Absolute phys 0x810BC2 LE — zero",
+          "Axis SNM24ZUUB@0x8119BD / SRL16ZUUB@0x811A14 as map companions"
+        ],
+        "related_axis_hits_not_map": [
+          {
+            "cpu": "0x85276C",
+            "raw": "E6FCBD19 C2FD44F8 DA00DA74",
+            "text": "MOV R12,#0x19BD; MOVBZ R13,0xF844; CALLS 0x00,0x74DA",
+            "phys_axis": "DPP0 → 0x8119BD (E5A0 name SNM24ZUUB)",
+            "why_not_KFZW1": "1D axis/curve helper with RAM input; no R12/R14 load of 0x0BC2 z-base in this function"
+          },
+          {
+            "cpu": "0x868000",
+            "raw": "E6FC361F E6FDBD19 … DA005678",
+            "text": "MOV R12,#0x1F36; MOV R13,#0x19BD; CALLS 0x00,0x7856",
+            "why_not_KFZW1": "Uses axis 0x19BD with map/curve offset 0x1F36 → 0x811F36, not 0x0BC2"
+          }
+        ],
+        "indirect_observation": {
+          "status": "NOT_A_CONSUMER",
+          "cpu": "0x8179AC",
+          "file": "0x179AC",
+          "raw_words_le": ["0x0BC2", "0x0D42", "0x0EC2"],
+          "note": "Cal word run matches KFZW1/2/VL offsets; no code xref to table base 0x79AC/0x39AC found"
+        },
+        "result": "No instruction-level consumer of 0x810BC2 identified on 6901"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "TRANSFER_ONLY",
+        "sources": [
+          "E5A0 A2L KFZW1 MAP 0x810BC2 GkfWSb; nmot COM_AXIS 24 + rl COM_AXIS 16; IF_DATA 0x180 — foreign SW",
+          "Car dump +4 LSB across full 384 B"
+        ],
+        "fr_6901_family": {
+          "KFZW1_string": "NOT_FOUND in 10_review FR_* pages"
+        },
+        "fail_for_proven": [
+          "24×16 not shown by a 6901 interpolator argument list",
+          "SNM24ZUUB code use does not bind z-matrix at 0x810BC2"
+        ]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If 6901 had MOV Rn,#0x0BC2 or far-ptr/EXTP load to 0x810BC2, exhaustive immediate search would hit",
+        "result": "Did not fire — zero immediates. Access, if any, is still unidentified (indirect/runtime)."
+      },
+      "dimensions": {
+        "claimed": "16×24 (rl×nmot) / XDF rowcount 24 colcount 16",
+        "status": "перенесено из другого SW",
+        "bytes_consistent_with_claim": 384,
+        "proven_by_6901_code": false
+      },
+      "scale_signed_0p75": {
+        "claim": "signed 8-bit, 0.75°KW/LSB (zw_sb_q0p75)",
+        "status": "перенесено из другого SW / FR family hint only",
+        "proven_by_6901_code": false,
+        "stock_value_range": {"min": 0, "max": 64, "count_ge_0x80": 0}
+      },
+      "missing_piece": "Same as KFZWOP: proven load of 0x810BC2 into map interpolator; dimensions from that call path."
+    }
+  ],
+  "scale_question": {
+    "question": "Can signed 0.75°/LSB be proven from code/FR on this SW for KFZWOP/KFZW1?",
+    "answer": "NO",
+    "status": "не доказано на 6901",
+    "what_exists": [
+      "E5A0 COMPU_METHOD zw_sb_q0p75 RAT_FUNC COEFFS … 191.25 → 191.25/255=0.75 — foreign A2L",
+      "FR PROKON (in FR_relevant_pages): SY WMAX 72↔54°KW and SY WMIN −32↔−24°KW implies 0.75 for those SY angle constants — not a map-cell consumer"
+    ],
+    "what_missing": [
+      "6901 instruction using KFZWOP/KFZW1 cell as signed byte",
+      "6901 multiply/shift implementing ×0.75 on those cells",
+      "FR page naming KFZWOP/KFZW1 with zw_sb_q0p75"
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "title": "Promotion pass — MSLBAS @ 0x19612 / 0x819612",
+  "date_utc": "2026-11-06",
+  "sw": "6901I41D / 7532675",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "decoder_calibration": [
+    {"raw": "9F17", "decoded": "BSET 0xFD2E.9"},
+    {"raw": "D7400602", "decoded": "EXTP #0x206,#1"},
+    {"raw": "C2F43016", "decoded": "MOVBZ R4,0x1630"}
+  ],
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "stock": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "dpp": {"DPP0": "0x204", "DPP1": "0x205", "DPP2": "0x0E0", "source": "0x80BCE4"},
+  "policy": "PROVEN only with (1) consumer+raw+EXTP/DPP phys (2) independent semantic (3) falsifier checked and DID_NOT_FIRE. Foreign XDF/A2L alone is not evidence_2.",
+  "prior": {
+    "source": "PROMOTION_MISC_REPORT.json item A",
+    "prior_status": "HYPOTHESIS",
+    "prior_verdict": "STILL_HYP"
+  },
+  "claim_tested": "File byte 0x19612 is Bosch MSLBAS (Ini.-Sekundärluftmasse / secondary-air base or init mass); suitable for PROVEN XDF title under that name",
+  "stock_hex": "1D",
+  "dump_hex": "1D",
+  "stock_matches_dump": true,
+  "verdict": "STRUCT_NEW_NAME",
+  "verdict_line": "STRUCT_NEW_NAME — AF2C_AF2D_INIT_SCALAR; MSLBAS name STILL_HYP / not PROVEN",
+  "promoted_name": "AF2C_AF2D_INIT_SCALAR",
+  "xdf_title_if_listed": "[STRUCT] AF2C/AF2D init seed → 8A8D/8A8E (MSLBAS unproven)",
+  "bosch_name_MSLBAS": {
+    "status": "STILL_HYP",
+    "note": "Community/foreign XDF/A2L call 0x19612 MSLBAS; 6901 FR/DAMOS/live do not."
+  },
+  "evidence_1_consumer": {
+    "status": "PASS",
+    "method": "review_decode.py; whole-BIN scan for EXTP#0x206 + mem16 0x1612",
+    "hit_count": 4,
+    "sites": [
+      {
+        "cpu": "0x849C7A",
+        "raw": "D7400602 F3F81216 F7F82CAF",
+        "text": "EXTP #0x206,#1; MOVB RL4,0x1612; MOVB 0xAF2C,RL4",
+        "phys": "0x819612",
+        "gate": {"cpu": "0x849C76", "raw": "9A252E40", "text": "JNB 0xFD4A.4,0x849CD6"}
+      },
+      {
+        "cpu": "0x849CAA",
+        "raw": "D7400602 F3F61216 F7F62DAF",
+        "text": "EXTP #0x206,#1; MOVB RL3,0x1612; MOVB 0xAF2D,RL3",
+        "phys": "0x819612"
+      },
+      {
+        "cpu": "0x84BEE2",
+        "raw": "D7400602 F3F81216 F7F82CAF",
+        "text": "EXTP #0x206,#1; MOVB RL4,0x1612; MOVB 0xAF2C,RL4",
+        "phys": "0x819612",
+        "gate_note": "path after JNB R4.7 on 0xB9CE @0x84BEDE"
+      },
+      {
+        "cpu": "0x84BF8C",
+        "raw": "D7400602 F3F81216 F7F82DAF",
+        "text": "EXTP #0x206,#1; MOVB RL4,0x1612; MOVB 0xAF2D,RL4",
+        "phys": "0x819612",
+        "gate_note": "path after JNB R4.7 on 0xB9D0 @0x84BF88"
+      }
+    ],
+    "role_trace_proven_by_code": [
+      "Seed stores: 0x819612 → AF2C (bank1) and AF2D (bank2)",
+      "Immediate copies: AF2C→8A8D and AF2C<<8→8ECE; AF2D→8A8E and AF2D<<8→8EE2 (e.g. 0x849CD6..0x849D2A, 0x84BF12..0x84BFC6)",
+      "Dynamic update: 8ECE filtered via CALLS 0x006D7A then SHR#8→8A8D (0x84AC28..0x84AC56); AF2C later refreshed from 8A8D (0x84AEC8)",
+      "Use as divisor: MOVBZ R4,8A8D; DIVU with (8A89<<7) → 8A9B (0x84AE30..0x84AE5A); bank2 analogue 8A8E→8A9C (0x84B540..)",
+      "Not compared as threshold at load sites (contrast neighbor 0x1613 CMP paths)"
+    ]
+  },
+  "evidence_2_independent_semantic": {
+    "status": "PARTIAL_FOR_STRUCT_ROLE_ONLY",
+    "pass_for_struct_new_name": true,
+    "fail_for_proven_MSLBAS": true,
+    "tried": [
+      {
+        "source": "FR SLS/BMSL (10_review/20261106_deep_review/FR_relevant_pages.txt/.json)",
+        "result": "MSLUB, MSLSTAT, MSLPUB, FMS*, BMSL formula present; string MSLBAS ABSENT. FR states msl comes from KL MSLUB×corrections — no Ini-/base scalar named."
+      },
+      {
+        "source": "DME code vs MSLUB curve 0x196A9",
+        "result": "MSLUB consumer at 0x84C7EA (R12=#0x16A9,R13=#0x0206,R14←8C96,CALLS 0xB524)→8AA6. No read of 0x1612/AF2C/8A8D/8ECE in 0x84C7EA..0x84CA80. No ADD/MUL of 0x819612 into MSLUB product. Co-located module region only."
+      },
+      {
+        "source": "CLASLPE / DFPM / 0x153F2",
+        "result": "No linkage of 0x19612/0x819612 to class table or DTC path."
+      },
+      {
+        "source": "BIN string table",
+        "result": "No ASCII MSLBAS/MSLUB/mslstat in 512KiB image."
+      },
+      {
+        "source": "Foreign A2L/XDF (E650/E5A0/e18/sostisoft 6901.xdf)",
+        "result": "Name MSLBAS / 'Ini.-Sekundärluftmasse' exists on OTHER addresses (e.g. E650 0x81972A, E5A0 0x8195C2, e18 0x8196E8) or community 6901 map — NOT admissible alone as evidence_2 for PROVEN."
+      }
+    ],
+    "struct_role_summary": "Scalar calibration that seeds bank state AF2C/AF2D (then 8A8D/8A8E / Q8 words 8ECE/8EE2), later used as divisor/filter state. Identity as Bosch MSLBAS / SAP mass / zero=SAP-off remains unproven."
+  },
+  "evidence_3_falsifiers": [
+    {
+      "falsifier": "If 0x19612 were inside the MSLUB curve object (hdr/axis/values at 0x196A9..), consumers would use the 0x16A9 far-pointer form rather than direct EXTP MOVB 0x1612",
+      "result": "DID_NOT_FIRE",
+      "note": "Scalar vs curve separation confirmed; does not prove MSLBAS name."
+    },
+    {
+      "falsifier": "If 0x19612 were an additive/multiplicative base folded into the MSLUB mass product, the MSLUB follow-up (0x84C7EA+) would read 0x1612 or AF2C/8A8D/8ECE together with 8AA6",
+      "result": "FIRED",
+      "note": "No cross-link in that window. Weakens 'MSLUB base mass' / community SAP-off-via-zero story for this byte."
+    },
+    {
+      "falsifier": "If 0x19612 were only a compare threshold (like neighbor 0x1613), load sites would CMPB against it instead of MOVB into AF2C/AF2D",
+      "result": "DID_NOT_FIRE",
+      "note": "Supports STRUCT role as init seed, not threshold."
+    }
+  ],
+  "cross_links": {
+    "MSLUB_curve": {
+      "file": "0x196A9",
+      "cpu": "0x8196A9",
+      "consumer": "0x84C7EA",
+      "link_to_0x19612": "NONE arithmetic; same broad 0x84xxxx area only"
+    },
+    "neighbor_0x19613": {
+      "file": "0x19613",
+      "cpu": "0x819613",
+      "use": "CMP threshold vs R6 under EXTP#206 (e.g. 0x84AD4E) — separate from 0x1612 seed",
+      "foreign_hint_only": "E650/E5A0 place MSLOFMX adjacent to MSLBAS — not used as 6901 proof"
+    },
+    "CLASLPE": "no reference to 0x19612"
+  },
+  "missing_piece_for_PROVEN_MSLBAS": "Independent 6901I41D label that names phys 0x819612 as Bosch MSLBAS (FR page / DAMOS/A2L for this SW / live measurement), OR code+FR proof that RAM 8A8D (fed from this seed) is FR signal msl or mslstat.",
+  "status_tags": {
+    "address_resolution_0x819612": "доказано кодом",
+    "init_seed_AF2C_AF2D_8A8D_8A8E": "доказано кодом",
+    "name_MSLBAS": "гипотеза",
+    "SAP_mass_or_zero_disables_SAP": "гипотеза",
+    "foreign_XDF_A2L_name": "перенесено из другого SW / community"
+  }
+}

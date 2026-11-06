@@ -1,0 +1,110 @@
+[
+  {
+    "cpu": "0x801c1e",
+    "m": "0x15d9",
+    "raw": "f4a4d915",
+    "context": "801C1A C2F4F7AF   MOVBZ    R4,0xAFF7\n801C1E F4A4D915   MOVB     RL5,[R4+#0x15D9]\n801C22 EA20DA1C   JMPA     CC_Z,0x1CDA\n801C26 F3F8FAAF   MOVB     RL4,0xAFFA\n"
+  },
+  {
+    "cpu": "0x801cec",
+    "m": "0x15d9",
+    "raw": "f4a4d915",
+    "context": "801CE8 C2F4F7AF   MOVBZ    R4,0xAFF7\n801CEC F4A4D915   MOVB     RL5,[R4+#0x15D9]\n801CF0 2D2D       JMPR     CC_Z,0x00801D4C\n801CF2 E108       MOVB     RL4,#0\n801CF4 E4803600   MOVB     [R0+#0x0036],RL4\n"
+  },
+  {
+    "cpu": "0x801d66",
+    "m": "0x15d9",
+    "raw": "f4a4d915",
+    "context": "801D62 C2F4F7AF   MOVBZ    R4,0xAFF7\n801D66 F4A4D915   MOVB     RL5,[R4+#0x15D9]\n801D6A 2D25       JMPR     CC_Z,0x00801DB6\n801D6C E108       MOVB     RL4,#0\n801D6E E4803800   MOVB     [R0+#0x0038],RL4\n"
+  },
+  {
+    "cpu": "0x801e56",
+    "m": "0x15d9",
+    "raw": "e6f2d915",
+    "context": "801E52 66F4FF00   AND      R4,#0x00FF\n801E56 E6F2D915   MOV      R2,#0x15D9\n801E5A C0C5       MOVBZ    R5,R12\n801E5C 0025       ADD      R2,R5\n801E5E A9A2       MOVB     RL5,[R2]\n"
+  },
+  {
+    "cpu": "0x801e7a",
+    "m": "0x15d9",
+    "raw": "f462d915",
+    "context": "801E76 0702C0C2   ADDB     DPP2,#0xC2C0\n801E7A F462D915   MOVB     RL3,[R2+#0x15D9]\n801E7E C062       MOVBZ    R2,R6\n801E80 F032       MOV      R3,R2\n801E82 5C33       SHL      R3,#3\n"
+  },
+  {
+    "cpu": "0x828cd6",
+    "m": "0x166d",
+    "raw": "e6fe6d16",
+    "context": "828CD2 EA00628D   JMPA     CC_UC,0x8D62\n828CD6 E6FE6D16   MOV      R14,#0x166D\n828CDA F04D       MOV      R4,R13\n828CDC C084       MOVBZ    R4,R8\n828CDE 5C24       SHL      R4,#2\n"
+  },
+  {
+    "cpu": "0x828fa2",
+    "m": "0x15d9",
+    "raw": "f4a4d915",
+    "context": "828F9E 1200C084   ADDC     DPP0,0x84C0\n828FA2 F4A4D915   MOVB     RL5,[R4+#0x15D9]\n828FA6 E4A00400   MOVB     [R0+#0x0004],RL5\n828FAA 49A0       CMPB     RL5,#0\n"
+  },
+  {
+    "cpu": "0x82938a",
+    "m": "0x15d9",
+    "raw": "f4a4d915",
+    "context": "829386 0C00       ROL      R0,R0\n829388 C084       MOVBZ    R4,R8\n82938A F4A4D915   MOVB     RL5,[R4+#0x15D9]\n82938E E4A00200   MOVB     [R0+#0x0002],RL5\n829392 E6F7421D   MOV      R7,#0x1D42\n"
+  },
+  {
+    "cpu": "0x82953a",
+    "m": "0x15d9",
+    "raw": "f4a4d915",
+    "context": "829536 0C00       ROL      R0,R0\n829538 C084       MOVBZ    R4,R8\n82953A F4A4D915   MOVB     RL5,[R4+#0x15D9]\n82953E E4A00200   MOVB     [R0+#0x0002],RL5\n829542 E6F7421D   MOV      R7,#0x1D42\n"
+  },
+  {
+    "cpu": "0x82d694",
+    "m": "0x160d",
+    "raw": "f49f0d16",
+    "context": "82D690 3233F6F4   SUBC     CC19,0xF4F6\n82D694 F49F0D16   MOVB     RH4,[R15+#0x160D]\n82D698 E7F8FB00   MOVB     RL4,#0x00FB\n82D69C 65F828B1   ANDB     0xB128,RL4\n"
+  },
+  {
+    "cpu": "0x848970",
+    "m": "0x15dc",
+    "raw": "e6fcdc15",
+    "context": "84896C F6F44A93   MOV      0x934A,R4\n848970 E6FCDC15   MOV      R12,#0x15DC\n848974 E6FD0602   MOV      R13,#0x0206\n848978 F2FE3C9E   MOV      R14,0x9E3C\n"
+  },
+  {
+    "cpu": "0x848984",
+    "m": "0x15f1",
+    "raw": "e6fcf115",
+    "context": "848980 F7F81D8A   MOVB     0x8A1D,RL4\n848984 E6FCF115   MOV      R12,#0x15F1\n848988 E6FD0602   MOV      R13,#0x0206\n84898C F2FE3C9E   MOV      R14,0x9E3C\n"
+  },
+  {
+    "cpu": "0x8489c8",
+    "m": "0x15e3",
+    "raw": "e6fce315",
+    "context": "8489C4 F7F81D8A   MOVB     0x8A1D,RL4\n8489C8 E6FCE315   MOV      R12,#0x15E3\n8489CC E6FD0602   MOV      R13,#0x0206\n8489D0 F2FE3C9E   MOV      R14,0x9E3C\n"
+  },
+  {
+    "cpu": "0x848a06",
+    "m": "0x15ea",
+    "raw": "e6fcea15",
+    "context": "848A02 F7F81D8A   MOVB     0x8A1D,RL4\n848A06 E6FCEA15   MOV      R12,#0x15EA\n848A0A E6FD0602   MOV      R13,#0x0206\n848A0E F2FE3C9E   MOV      R14,0x9E3C\n"
+  },
+  {
+    "cpu": "0x848a1e",
+    "m": "0x15f8",
+    "raw": "e6fcf815",
+    "context": "848A1A 8A240A10   JB       0xFD48.1,0x00848A32\n848A1E E6FCF815   MOV      R12,#0x15F8\n848A22 E6FD0602   MOV      R13,#0x0206\n848A26 C2FE1B8A   MOVBZ    R14,0x8A1B\n"
+  },
+  {
+    "cpu": "0x849b4c",
+    "m": "0x1608",
+    "raw": "e6fc0816",
+    "context": "849B48 4CF8       SHL      R15,R8\n849B4A DB00       RETS\n849B4C E6FC0816   MOV      R12,#0x1608\n849B50 E6FD0602   MOV      R13,#0x0206\n849B54 F2FE689E   MOV      R14,0x9E68\n"
+  },
+  {
+    "cpu": "0x84c7bc",
+    "m": "0x1656",
+    "raw": "e6fc5616",
+    "context": "84C7B8 EA50D6C8   JMPA     CC_NV,0xC8D6\n84C7BC E6FC5616   MOV      R12,#0x1656\n84C7C0 E6FD0602   MOV      R13,#0x0206\n84C7C4 C2FE44F8   MOVBZ    R14,0xF844\n"
+  },
+  {
+    "cpu": "0x84c7fe",
+    "m": "0x1643",
+    "raw": "e6fc4316",
+    "context": "84C7FA F7F8A68A   MOVB     0x8AA6,RL4\n84C7FE E6FC4316   MOV      R12,#0x1643\n84C802 E6FD0602   MOV      R13,#0x0206\n84C806 C2FE1A8A   MOVBZ    R14,0x8A1A\n"
+  }
+]

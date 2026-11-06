@@ -1,0 +1,102 @@
+{
+  "generated": "2026-11-06T21:57:01.499801+00:00",
+  "symbol": "KRKTE",
+  "verdict": "PROVEN",
+  "addr": "0x19CC4",
+  "cpu": "0x819CC4",
+  "stock_raw": 86,
+  "phys_ms_per_pct": 0.18346666666666667,
+  "qstat_g_per_min": 150.61,
+  "vh_dm3": 0.54975,
+  "consumer": {
+    "ea": "0x803738",
+    "raw_hex": "d7400602c2f4c41c5c84f6f42ea2",
+    "decoded": "EXTP #0x206,#1; MOVBZ R4,0x1CC4; SHL R4,#8; MOV 0xA22E,R4",
+    "phys": "0x819CC4",
+    "page": "0x206",
+    "listing": [
+      "803734 D7400602   EXTP     #0x206,#1",
+      "803738 C2F4C41C   MOVBZ    R4,0x1CC4 ; EXTP physical=0x819CC4",
+      "80373C 5C84       SHL      R4,#8",
+      "80373E F6F42EA2   MOV      0xA22E,R4"
+    ],
+    "secondary_sites": [
+      "0x803756",
+      "0x85E6F2",
+      "0x85E70E",
+      "0x85E542",
+      "0x85E55E"
+    ],
+    "runtime_ram": "0xA22E / 0xA230 (FRKTE-like 8.8); clamp cal±2 @ 0x85E6F2"
+  },
+  "clamp_listing": [
+    "85E6EE D7400602   EXTP     #0x206,#1",
+    "85E6F2 C2F4C41C   MOVBZ    R4,0x1CC4 ; EXTP physical=0x819CC4",
+    "85E6F6 0842       ADD      R4,#2",
+    "85E6F8 C0C5       MOVBZ    R5,RL6",
+    "85E6FA 4054       CMP      R5,R4",
+    "85E6FC BD06       JMPR     CC_SLE,0x0085E70A",
+    "85E6FE 43FCD78C   CMPB     RL6,0x8CD7",
+    "85E702 FD10       JMPR     CC_ULE,0x0085E724",
+    "85E704 F7FCD78C   MOVB     0x8CD7,RL6",
+    "85E708 0D0D       JMPR     CC_UC,0x0085E724",
+    "85E70A D7400602   EXTP     #0x206,#1",
+    "85E70E C2F4C41C   MOVBZ    R4,0x1CC4 ; EXTP physical=0x819CC4",
+    "85E712 2842       SUB      R4,#2",
+    "85E714 C0C5       MOVBZ    R5,RL6",
+    "85E716 4054       CMP      R5,R4",
+    "85E718 DD05       JMPR     CC_SGE,0x0085E724",
+    "85E71A 43FCD38C   CMPB     RL6,0x8CD3",
+    "85E71E 9D02       JMPR     CC_NC,0x0085E724"
+  ],
+  "neighbor_cwpkapp": {
+    "addr": "0x19CC3",
+    "raw": 115,
+    "listing": [
+      "8524EE D7400602   EXTP     #0x206,#1",
+      "8524F2 F3F8C31C   MOVB     RL4,0x1CC3 ; EXTP physical=0x819CC3",
+      "8524F6 E4880300   MOVB     [R8+#0x0003],RL4",
+      "8524FA E148       MOVB     RL4,#4",
+      "8524FC EA007A25   JMPA     CC_UC,0x257A",
+      "852500 D7400602   EXTP     #0x206,#1",
+      "852504 F3F8C31C   MOVB     RL4,0x1CC3 ; EXTP physical=0x819CC3",
+      "852508 E4880300   MOVB     [R8+#0x0003],RL4"
+    ]
+  },
+  "falsifiers": [
+    {
+      "claim": "If EXTP page were 0x205, physical would not be cal 0x19CC4",
+      "check": "page 0x205 → 0x815cc4 file 0x15cc4 ≠ 0x19CC4",
+      "result": "DID_NOT_FIRE"
+    },
+    {
+      "claim": "If byte were TATELL (E5A0 @KRKTE+1), code would not SHL#8 into factor RAM and clamp adapted value to cal±2",
+      "check": "0x19CC5=0x00; consumer uses 0x19CC4 with SHL#8 and ±2 vs adapted FRKTE",
+      "result": "DID_NOT_FIRE"
+    },
+    {
+      "claim": "If reloc were old catalog 0x19CD3, consumer mem would be 0x1CD3",
+      "check": "loads are 0x1CC4 only; stock[0x19CD3]=0x00",
+      "result": "DID_NOT_FIRE"
+    }
+  ],
+  "semantic": {
+    "sources": [
+      "FR AES: ti = rk * frkte + tvu; frkte includes KRKTE translation",
+      "FR APP: KRKTE = 50.2624 * Vh / Qstat",
+      "E5A0 A2L: KRKTE @0x819BC4 VALUE rkti_sy; neighbor CWPKAPP @0x819BC3",
+      "6901 code: EXTP#206 load 0x1CC4 → A22E (<<8); clamp adapted factor to cal±2",
+      "6901 code: EXTP#206 load 0x1CC3 (CWPKAPP neighbor) confirms +0x100 reloc pair",
+      "stock raw=86 → KRKTE=0.183467 ms/% → Qstat≈150.6 g/min (Vh=4.398/8)"
+    ],
+    "summary": "KRKTE @0x19CC4 consumed as injection-time conversion factor base (FRKTE init/clamp)"
+  },
+  "policy": "triple evidence; review_decode only",
+  "damos_updated": 1,
+  "status_counts": {
+    "PROVEN": 155,
+    "STRUCT": 99,
+    "UNLINKED": 80,
+    "HYP": 298
+  }
+}

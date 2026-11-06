@@ -1,0 +1,2734 @@
+{
+  "reports_scanned": 64,
+  "unique_references": 117,
+  "status_counts": {
+    "bundled_by_basename": 13,
+    "bundled_exact": 49,
+    "bundled_relocated": 5,
+    "external_input_or_generated_asset_not_distributed": 6,
+    "external_url": 1,
+    "local_input_not_distributed": 4,
+    "missing_research_dependency": 13,
+    "private_artifact_not_distributed": 23,
+    "symbolic_pattern_or_example": 3
+  },
+  "rule": "Presence audit only; basename resolution does not certify matching versions or reproducibility.",
+  "references": [
+    {
+      "reference": "/absolute/path/to/20261106_deep_review/tools/review_decode.py",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "09_re_tools/review_decode.py"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 479
+        }
+      ]
+    },
+    {
+      "reference": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "00_stock/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 12
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 12
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MISC_REPORT.json",
+          "line": 12
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW_REPORT.json",
+          "line": 12
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 12
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/damos_lite/PROMOTION_KRKTE_REPORT.json",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "04_reports/PROMOTION_KRKTE_REPORT.json",
+        "07_evidence/catalog/PROMOTION_KRKTE_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 11245
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 26177
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/damos_lite/PROMOTION_POWER_MAPS_PASS3_REPORT.json",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_POWER_MAPS_PASS3_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 12933
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18610
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18760
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23073
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23136
+        }
+      ]
+    },
+    {
+      "reference": "10_review/20261106_deep_review/tools/review_decode.py",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "09_re_tools/review_decode.py"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW2_REPORT.json",
+          "line": 6
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_RU.md",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MISC_REPORT.json",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_RU.md",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_RU.md",
+          "line": 9
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW_REPORT.json",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json",
+          "line": 5
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "reference": "FR_APPLICABILITY_6901I41D_RU.md",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "10_references/fr_index/FR_APPLICABILITY_6901I41D_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_FR_INDEX_RU.md",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "reference": "REVIEW_RU.md",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/exploratory/README_RU.md",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "reference": "REVIEW_V2_RU.md",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/exploratory/README_RU.md",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "reference": "key_evidence_verification.json",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/key_evidence_verification.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/exploratory/README_RU.md",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "reference": "research/02_definitions/6901I41D_proven/ME72_7532675_6901I41D_from_damos.xdf",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "02_xdf/ME72_7532675_6901I41D_from_damos.xdf"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/GENERATION_REPORT_before_packaging.json",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "reference": "review_decode.py",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "09_re_tools/review_decode.py"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/KFZW_OFFLINE_BLOCK_PASS3_RU.md",
+          "line": 5
+        },
+        {
+          "report": "04_reports/PROMOTION_KRKTE_RU.md",
+          "line": 7
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_SEQUENTIAL_RU.md",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_SUMMARY_RU.md",
+          "line": 23
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MISC_RU.md",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 34
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW2_RU.md",
+          "line": 6
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KF_FARPTR_REPORT.json",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW_RU.md",
+          "line": 4
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 35
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_RU.md",
+          "line": 7
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KRKTE_RU.md",
+          "line": 7
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "reference": "verification.json",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/verification.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/exploratory/README_RU.md",
+          "line": 1
+        }
+      ]
+    },
+    {
+      "reference": "…/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+      "status": "bundled_by_basename",
+      "resolved_to": [
+        "00_stock/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_RU.md",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "reference": "CJ_init_mode11_clear.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/CJ_init_mode11_clear.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "reference": "CLA_indexed_access.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/CLA_indexed_access.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 258
+        }
+      ]
+    },
+    {
+      "reference": "DFPM_dispatch.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/DFPM_dispatch.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 258
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "DFSTT_full.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/DFSTT_full.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 89
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "DKAT_fault_dispatch.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/DKAT_fault_dispatch.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 277
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "ESKONF_init_and_runtime_copy.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/ESKONF_init_and_runtime_copy.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "reference": "ESKONF_init_review_decoder.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/ESKONF_init_review_decoder.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 181
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "KFZW_OFFLINE_BLOCK_PASS3_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/KFZW_OFFLINE_BLOCK_PASS3_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/STATUS_ALL_MAPS_PROVEN_RU.md",
+          "line": 30
+        },
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "reference": "KF_SHAPE_RESOLUTION.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/KF_SHAPE_RESOLUTION.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1321
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1365
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 17938
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18201
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18286
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18382
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18482
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18580
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18732
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18898
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19011
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19439
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19552
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19701
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19800
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19893
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19982
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20083
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20164
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20359
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20506
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20653
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20747
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20852
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20941
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21032
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21136
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21783
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21872
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21973
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22059
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22173
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22832
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22937
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23045
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23287
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23395
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23515
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23623
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23723
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23810
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23924
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24007
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24094
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24204
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24311
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24414
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24527
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24672
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24763
+        }
+      ]
+    },
+    {
+      "reference": "KOS_fault_dispatch.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/KOS_fault_dispatch.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 275
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "MISSING_INPUTS_SUMMARY_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/MISSING_INPUTS_SUMMARY_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "reference": "PROKON_full.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/PROKON_full.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "reference": "PROKON_review_decoder.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/PROKON_review_decoder.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_CLA_PROKON_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_SUMMARY_RU.md",
+          "line": 4
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_SUMMARY.json",
+          "line": 51
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_RU.md",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 91
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 100
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 130
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 139
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 163
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 172
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 198
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 207
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 274
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 283
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 311
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 320
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 348
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 443
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 452
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 479
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 488
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 515
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 524
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 551
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 560
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 588
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 597
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 624
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 633
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 660
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 669
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 696
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 705
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 750
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 759
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 786
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 795
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 822
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 831
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1658
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_EWS_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_EWS_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 27
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1548
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_KFZW2_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_KFZW2_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_FINAL_STRUCT_RU.md",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_KFZW_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_KFZW_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1185
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1214
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1244
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1274
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 2126
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_KF_FARPTR_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_KF_FARPTR_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 17937
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18200
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18285
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18381
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18481
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18579
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18731
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 18897
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19010
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19438
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19551
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19700
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19799
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19892
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 19981
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20082
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20163
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20358
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20505
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20652
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20746
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20851
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 20940
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21031
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21135
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21782
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21871
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 21972
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22057
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22172
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22831
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 22936
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23044
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23286
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23394
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23514
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23622
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23722
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23809
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 23923
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24006
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24093
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24203
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24310
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24413
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24526
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24671
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 24762
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_KF_FARPTR_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/PROMOTION_KF_FARPTR_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_KRKTE_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/PROMOTION_KRKTE_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_MISC_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_MISC_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_SUMMARY_RU.md",
+          "line": 4
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MISC_RU.md",
+          "line": 4
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 128
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 210
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 16
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 24
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 246
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 385
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 980
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1444
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1470
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1496
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1522
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 2070
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_POWER_MAPS_PASS3_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/PROMOTION_POWER_MAPS_PASS3_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_REMAINING3_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_FINAL_STRUCT_RU.md",
+          "line": 7
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_RU.md",
+          "line": 76
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 971
+        }
+      ]
+    },
+    {
+      "reference": "PROMOTION_STRUCT_CLA_CW_REPORT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_STRUCT_CLA_CW_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4497
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4567
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4637
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4707
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4781
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4855
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 4929
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5003
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5077
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5149
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5223
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5295
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5367
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5439
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5511
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5583
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5655
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5727
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5799
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5871
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 5943
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6067
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6139
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6211
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6281
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6353
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6425
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6497
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6569
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6641
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6711
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6789
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 6865
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7009
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7097
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7187
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7275
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7363
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7451
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7539
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7627
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7715
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7805
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7893
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 7981
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 8069
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 9173
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 9253
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 9323
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 9787
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 10203
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 10453
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 10527
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 10761
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 11103
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 11395
+        }
+      ]
+    },
+    {
+      "reference": "PUBLIC_RELEASE_CHECK.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/PUBLIC_RELEASE_CHECK.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "reference": "REPORT_REFERENCES.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/REPORT_REFERENCES.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "reference": "REPORT_REFERENCES_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/REPORT_REFERENCES_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 4
+        },
+        {
+          "report": "04_reports/REPOSITORY_AUDIT_RU.md",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "reference": "REPOSITORY_AUDIT_CURRENT.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/REPOSITORY_AUDIT_CURRENT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 6
+        },
+        {
+          "report": "04_reports/REPOSITORY_AUDIT_RU.md",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "reference": "SLP_ESKONF_callback.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/SLP_ESKONF_callback.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "reference": "SLV_ESKONF_callback.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/SLV_ESKONF_callback.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 179
+        }
+      ]
+    },
+    {
+      "reference": "TEST_RESULTS_CURRENT.txt",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "04_reports/TEST_RESULTS_CURRENT.txt"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "04_reports/README_RU.md",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "reference": "VALIDATION_PLAN_RU.md",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/VALIDATION_PLAN_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 220
+        }
+      ]
+    },
+    {
+      "reference": "actual_6901_LREB_parameters.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/actual_6901_LREB_parameters.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 111
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 466
+        }
+      ]
+    },
+    {
+      "reference": "actual_LREB_and_B_lr_review_decoder.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/actual_LREB_and_B_lr_review_decoder.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 111
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "actual_LR_parameters.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/actual_LR_parameters.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 54
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        }
+      ]
+    },
+    {
+      "reference": "actual_selected_CLA_paths.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/actual_selected_CLA_paths.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 467
+        }
+      ]
+    },
+    {
+      "reference": "binary_audit.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/binary_audit.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "reference": "heater_CLA_dispatch.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/heater_CLA_dispatch.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 291
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 470
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "reference": "independent_binary_audit.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/independent_binary_audit.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/per_patch_review.json",
+          "line": 297
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 406
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 469
+        }
+      ]
+    },
+    {
+      "reference": "independent_verification.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v3_validation/independent_verification.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/VALIDATION_RU.md",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "reference": "key_evidence_verification.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/key_evidence_verification.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 485
+        }
+      ]
+    },
+    {
+      "reference": "per_patch_review.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/per_patch_review.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 374
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 465
+        }
+      ]
+    },
+    {
+      "reference": "rear_aging_faults.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/rear_aging_faults.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 258
+        }
+      ]
+    },
+    {
+      "reference": "rear_fault_dispatch.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/rear_fault_dispatch.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 258
+        }
+      ]
+    },
+    {
+      "reference": "rear_heater_permission_analysis.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/rear_heater_permission_analysis.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "reference": "review_summary.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/review_summary.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 464
+        }
+      ]
+    },
+    {
+      "reference": "runtime_override_generation.asm",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/runtime_override_generation.asm"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "reference": "runtime_reinterpretation.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_deep_review/runtime_reinterpretation.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 351
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 468
+        }
+      ]
+    },
+    {
+      "reference": "verification.json",
+      "status": "bundled_exact",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v2_review/verification.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "reference": "02_definitions/6901I41D_proven/PROMOTION_KFZW_REPORT.json",
+      "status": "bundled_relocated",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_KFZW_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW2_REPORT.json",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/damos_lite/PROMOTION_ZOFF_EXACT_REPORT.json",
+      "status": "bundled_relocated",
+      "resolved_to": [
+        "07_evidence/catalog/PROMOTION_ZOFF_EXACT_REPORT.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 12821
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md",
+      "status": "bundled_relocated",
+      "resolved_to": [
+        "10_references/fr_index/FR_APPLICABILITY_6901I41D_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 237
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 376
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 416
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1304
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1348
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1392
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1420
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1583
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1747
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1889
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1933
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 1977
+        },
+        {
+          "report": "07_evidence/catalog/damos_lite_before_packaging.json",
+          "line": 2037
+        }
+      ]
+    },
+    {
+      "reference": "10_review/20261106_v3_validation/VALIDATION_RU.md",
+      "status": "bundled_relocated",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v3_validation/VALIDATION_RU.md"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "reference": "10_review/20261106_v3_validation/independent_verification.json",
+      "status": "bundled_relocated",
+      "resolved_to": [
+        "07_evidence/reviews/20261106_v3_validation/independent_verification.json"
+      ],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "reference": "10_review/20261106_deep_review/FR_relevant_pages.txt",
+      "status": "external_input_or_generated_asset_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 79
+        }
+      ]
+    },
+    {
+      "reference": "FR_813_ESKONF.png",
+      "status": "external_input_or_generated_asset_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 181
+        }
+      ]
+    },
+    {
+      "reference": "FR_885_PROKON.png",
+      "status": "external_input_or_generated_asset_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "reference": "V8/E650_000.a2l",
+      "status": "external_input_or_generated_asset_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "reference": "figures/FR_813_ESKONF.png",
+      "status": "external_input_or_generated_asset_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 181
+        }
+      ]
+    },
+    {
+      "reference": "figures/FR_885_PROKON.png",
+      "status": "external_input_or_generated_asset_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 91
+        }
+      ]
+    },
+    {
+      "reference": "https://www.keil.com/dd/docs/datashts/infineon/c166ism.pdf",
+      "status": "external_url",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 148
+        }
+      ]
+    },
+    {
+      "reference": "01_documentation/BMW-XDFs/Me7.2/Funktionsramen_full/BMW Me7_2_English_Funktionsramen.pdf",
+      "status": "local_input_not_distributed",
+      "resolved_to": [],
+      "local_asset": "full-fr",
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 491
+        }
+      ]
+    },
+    {
+      "reference": "01_documentation/Infineon_C166_Instruction_Set_OpenGK_mirror.pdf",
+      "status": "local_input_not_distributed",
+      "resolved_to": [],
+      "local_asset": "c166-manual",
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "reference": "Me7_2_English_Funktionsramen.pdf",
+      "status": "local_input_not_distributed",
+      "resolved_to": [],
+      "local_asset": "full-fr",
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 23
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "reference": "V8/E5A0_000.a2l",
+      "status": "local_input_not_distributed",
+      "resolved_to": [],
+      "local_asset": "e5a0-a2l",
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "reference": "/absolute/path/to/20261106_deep_review/tools/independent_binary_audit.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 478
+        }
+      ]
+    },
+    {
+      "reference": "/absolute/path/to/20261106_deep_review/tools/verify_key_evidence.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 480
+        }
+      ]
+    },
+    {
+      "reference": "/absolute/path/to/20261106_v2_review/tools/audit_v2.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 227
+        }
+      ]
+    },
+    {
+      "reference": "/absolute/path/to/20261106_v2_review/tools/rebuild_traces.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 228
+        }
+      ]
+    },
+    {
+      "reference": "02_definitions/sostisoft/6901.6902.ME72.xdf",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 43
+        }
+      ]
+    },
+    {
+      "reference": "08_analysis_tools/me72_dtc_code_xref.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 440
+        }
+      ]
+    },
+    {
+      "reference": "6901.xdf",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "reference": "Findings.txt",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 138
+        }
+      ]
+    },
+    {
+      "reference": "REVIEW_IMMO_88C_IGN.md",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "reference": "REVIEW_LREB_FORM.md",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 210
+        }
+      ]
+    },
+    {
+      "reference": "tools/audit_v2.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "reference": "tools/independent_binary_audit.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 406
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 118
+        }
+      ]
+    },
+    {
+      "reference": "verify_key_evidence.py",
+      "status": "missing_research_dependency",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 118
+        }
+      ]
+    },
+    {
+      "reference": "../../09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/VALIDATION_RU.md",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "reference": "../../09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z_RU.md",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/VALIDATION_RU.md",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "reference": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW2_REPORT.json",
+          "line": 12
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 11
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MSLBAS_REPORT.json",
+          "line": 11
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_MISC_REPORT.json",
+          "line": 11
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_RU.md",
+          "line": 7
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_KFZW_REPORT.json",
+          "line": 11
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 11
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 13
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 3
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/live_adapt_warm_idle_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json",
+          "line": 71
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 48
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 299
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/live_dtc_A0_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 63
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/live_lreb_bits_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 53
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/runtime_reinterpretation.json",
+          "line": 2
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 28
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 233
+        }
+      ]
+    },
+    {
+      "reference": "07_analysis/live_lreb_why_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "reference": "08_analysis_tools/build_me72_v3_norear_heater_classes.py",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "reference": "08_analysis_tools/verify_me72_v3_norear_heater_classes.py",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_LR_nosap_norear_20261105T212916Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 8
+        },
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_LR_nosap_norear_20261105T212916Z_REPORT.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_LR_nosap_norear_20261105T212916Z_RU.md",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/source_inputs_sha256.json",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_v2_nosap_norear_20261105T221449Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 23
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_v2_nosap_norear_20261105T221449Z_REPORT.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_v2_nosap_norear_20261105T221449Z_RU.md",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z_REPORT.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z_RU.md",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/FILES_SHA256.json",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "reference": "09_patched/REJECTED_ME72_7532675_LR_nosap_norear_20261105T212916Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/source_inputs_sha256.json",
+          "line": 8
+        },
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "reference": "ME72_7532675_v3_nosap_norear_20261105T223316Z.bin",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v3_validation/VALIDATION_RU.md",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "reference": "live_adapt_warm_idle_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_EWS_REPORT.json",
+          "line": 154
+        }
+      ]
+    },
+    {
+      "reference": "live_dtc_A0_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_v2_review/REVIEW_V2_RU.md",
+          "line": 233
+        }
+      ]
+    },
+    {
+      "reference": "live_lreb_bits_20261105.json",
+      "status": "private_artifact_not_distributed",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 314
+        }
+      ]
+    },
+    {
+      "reference": "FR_*_pages.txt",
+      "status": "symbolic_pattern_or_example",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/REVIEW_RU.md",
+          "line": 472
+        }
+      ]
+    },
+    {
+      "reference": "_RU.md",
+      "status": "symbolic_pattern_or_example",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/catalog/PROMOTION_FINAL_STRUCT_RU.md",
+          "line": 6
+        },
+        {
+          "report": "07_evidence/catalog/PROMOTION_FINAL_STRUCT_RU.md",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "reference": "_raw_decoder.asm",
+      "status": "symbolic_pattern_or_example",
+      "resolved_to": [],
+      "local_asset": null,
+      "cited_by": [
+        {
+          "report": "07_evidence/reviews/20261106_deep_review/exploratory/README_RU.md",
+          "line": 3
+        }
+      ]
+    }
+  ],
+  "conceptual_missing_inputs": [
+    "Internal ROM/IROM image or runtime trace for unresolved page-204 consumers.",
+    "Authorized external BMW programming/coding environment for full factory programming and vehicle-specific commissioning.",
+    "Original private vehicle trials are not distributed; published conclusions are summaries, not reproducible raw trial evidence."
+  ]
+}

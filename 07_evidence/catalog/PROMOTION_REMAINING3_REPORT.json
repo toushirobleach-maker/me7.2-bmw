@@ -1,0 +1,296 @@
+{
+  "title": "Triple-evidence attempt — remaining STRUCT trio (EWS word / VMAX words / TLRHS scale)",
+  "date_utc": "2026-11-06",
+  "sw": "6901I41D / 7532675",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "decoder_calibration": [
+    {"raw": "9F17", "decoded": "BSET 0xFD2E.9"},
+    {"raw": "D7400602", "decoded": "EXTP #0x206,#1"},
+    {"raw": "C2F43016", "decoded": "MOVBZ R4,0x1630"}
+  ],
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "stock": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "policy": "PROVEN only with (1) consumer+raw+EXTP/DPP phys (2) independent semantic (3) falsifier checked and DID_NOT_FIRE. Foreign XDF/A2L alone is not evidence_2 for naming/units on 6901.",
+  "verdicts_first_lines": {
+    "A_EWS_0x380032": "STILL_STRUCT",
+    "B_speed_0x1BBCx": "STILL_STRUCT",
+    "C_TLRHS_scale": "STILL_STRUCT"
+  },
+  "items": [
+    {
+      "id": "A",
+      "name": "EWS / RAM 0x380032 (mem16 0x8032)",
+      "claim_tested": "phys 0x380032 is EWS/immobilizer release (B_ews_ok / Wegfahrsperre Freigabe) on 6901I41D",
+      "verdict": "STILL_STRUCT",
+      "allowed_labels": ["PROVEN_EWS", "PROVEN_OTHER_NAME", "STILL_STRUCT"],
+      "prior": {
+        "source": "PROMOTION_EWS_REPORT.json",
+        "prior_verdict": "STILL_STRUCT"
+      },
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "phys": "DPP2=0x00E0 @0x80BCEC → mem16 0x8032 = phys 0x380032",
+        "writers": [
+          {"cpu": "0x85FFAC", "raw": "F6F53280", "text": "MOV 0x8032,R5", "note": "with R5=#0xFF00"},
+          {"cpu": "0x85FFD4", "raw": "F68F3280", "text": "MOV 0x8032,ONES"},
+          {"cpu": "0x85FFDE", "raw": "F6F53280", "text": "MOV 0x8032,R5"}
+        ],
+        "gate_car": "0x85FFB2..CA = 13×NOP; then BCLR PSW.6; BMOV FD4A.5,PSW.6; path forces 0xFF00→0x8032",
+        "readers_OR_8032": [
+          {"cpu": "0x830778", "raw": "72F13280", "follow": "CMP R1,#0xFFFF; JMPA NZ"},
+          {"cpu": "0x83078E", "raw": "72F23280", "follow": "MOV 0xF922,R2"},
+          {"cpu": "0x830A3A", "follow": "MOV 0xF922,R2"},
+          {"cpu": "0x830B40", "follow": "MOV 0xF922,R2"},
+          {"cpu": "0x830C34", "follow": "MOV 0xF922,R2"},
+          {"cpu": "0x830D28", "follow": "MOV 0xF922,R2"},
+          {"cpu": "0x830E2E", "follow": "MOV 0xF92A,R2"}
+        ],
+        "F922_F92A_true_mem16_ops": {
+          "method": "linear review_decode; only accept when decoded mem field is F922/F92A",
+          "writers_only": ["0x830792", "0x830A3E", "0x830B44", "0x830C38", "0x830D2C", "0x830E32"],
+          "readers": [],
+          "note": "Unaligned byte scan can false-hit CMP R10,0xF922 inside MOV R9,0xFA42; verified decode shows ZERO true readers"
+        },
+        "FD4A_5_sidepath": {
+          "set_at_gate": "BMOV 0xFD4A.5,0xFF10.6 @0x85FFCE",
+          "readers": [
+            {"cpu": "0x862F20", "raw": "9A250150", "text": "JNB 0xFD4A.5", "follow": "BMOVN 0xFDAC.3,0xFF10.6"},
+            {"cpu": "0x863140", "raw": "9A250150", "text": "JNB 0xFD4A.5", "follow": "BMOVN 0xFDAC.3,0xFF10.6"}
+          ],
+          "not_named_on_6901": "FDAC.3 has JB @0x85AC9E — no FR/DME name closed to injector/starter/CAN-EWS on this pass"
+        }
+      },
+      "evidence_2_independent_semantic": {
+        "status": "FAIL_FOR_EWS_AND_OTHER_NAME",
+        "tried": [
+          {
+            "source": "FR STECK / SY WFS / B ECULOCK / EEDAT EWS-Werte",
+            "result": "EWS system exists in FR (pin STECK p.716; starter via EWS ECU p.707; B ECULOCK=immobilizer locking request→AEVAB p.196/197; EEDAT EWS-Werte p.943). No FR text ties phys 0x380032, mem16 0x8032, or mailbox F922/F92A to Freigabe/WFS."
+          },
+          {
+            "source": "Live B_EWS_OK in 07_analysis/live_adapt_warm_idle_20261105.json",
+            "result": "samples[].s7.B_EWS_OK = false throughout; no KWP↔0x380032 map on 6901."
+          },
+          {
+            "source": "Foreign A2L B_ews_ok vs 6901 0xB150",
+            "result": "E5A0: B_ews_ok Freigabebit @0x383150 bit0. E650: B_ews_ok @0x38315D bit0. 6901 mem16 0xB150 (=DPP2 phys 0x383150) traffic compares/stores magic 0x7A61 (CMPB @0x86CD90/0x86CEC4; MOVB from 0x7A61 @0x842270) — not Freigabebit API. Gate tests 0xB154/0xB17A bit0 + FDDC.2, not 0xB150.0. Status: перенесено / negative ID."
+          },
+          {
+            "source": "Foreign A2L B_eculock @ FD4A bit5 (mask 0x20) E5A0+E650",
+            "result": "Matches gate bit FD4A.5 mechanically, but is foreign MEASUREMENT — usable as HYPOTHESIS for side-flag, NOT evidence_2 to name 0x380032 as EWS release. No PROVEN_OTHER_NAME for 0x8032."
+          },
+          {
+            "source": "Fuel cut / starter / CAN-EWS consumer of F922",
+            "result": "No mem16 reader of F922/F92A in 512KiB under review_decode. Path stops at mask assembly."
+          }
+        ]
+      },
+      "evidence_3_falsifiers": [
+        {
+          "falsifier": "If DPP2≠0xE0, phys of 0x8032 ≠ 0x380032",
+          "result": "DID_NOT_FIRE",
+          "note": "0x80BCEC MOV DPP2,#0x00E0"
+        },
+        {
+          "falsifier": "If 0x8032 were B_ews_ok, writers/tests would hit 0xB150 / phys 0x383150",
+          "result": "FIRED",
+          "note": "Disjoint from 0x8032 writers; B150 uses 0x7A61 magic — myth 0x383150≡this release word rejected"
+        },
+        {
+          "falsifier": "If F922 were fuel/starter/EWS enable mailbox, a mem16 consumer would exist",
+          "result": "FIRED_AS_GAP",
+          "note": "writers only → cannot close EWS business effect"
+        },
+        {
+          "falsifier": "If FR named a release-word at this RAM, query would hit 8032/380032/F922",
+          "result": "FIRED_AS_GAP",
+          "note": "FR has EWS system, not this address"
+        }
+      ],
+      "status_tags": {
+        "gate_and_0xFF00_write": "доказано кодом",
+        "OR_CMP_FFFF_F922_assembly": "доказано кодом",
+        "F922_readers": "не найдены (доказано отсутствием mem16 read)",
+        "name_EWS_release": "гипотеза",
+        "identity_B_ews_ok": "опровергнуто как ID",
+        "FD4A_5_as_B_eculock": "перенесено из другого SW (HYP)",
+        "PROVEN_OTHER_NAME": "нет кандидата с тройным доказательством"
+      },
+      "missing_for_PROVEN_EWS": "6901 anchor naming 0x380032 or F922 as WFS Freigabe, OR code path from F922/0x8032 to documented EWS/CAN/starter/injector lock API on this SW."
+    },
+    {
+      "id": "B",
+      "name": "Speed limiter words 0x1BBC0/C4/C8/CC (+ sibling C2/C6/CA/CE)",
+      "claim_tested": "These calibration words are vehicle-speed (km/h) VMAX/VVORH-family thresholds with proven scale on 6901I41D",
+      "verdict": "STILL_STRUCT",
+      "allowed_labels": ["PROVEN_units", "STILL_STRUCT"],
+      "prior": {
+        "source": "PROMOTION_MISC_REPORT.json item I",
+        "prior_verdict": "STILL_STRUCT"
+      },
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites_normal_path_B17E0_clear": [
+          {"cpu": "0x868210", "raw": "D7400602 F2F4C83B", "text": "EXTP #0x206,#1; MOV R4,0x3BC8", "phys": "0x81BBC8"},
+          {"cpu": "0x86822C", "raw": "D7400602 F2F7C43B", "phys": "0x81BBC4"},
+          {"cpu": "0x868234", "raw": "D7400602 F2F8CC3B", "phys": "0x81BBCC"},
+          {"cpu": "0x86823C", "raw": "D7400602 F2F9C03B", "phys": "0x81BBC0"}
+        ],
+        "sites_alt_path_B17E0_set": [
+          {"cpu": "0x8681D2", "phys": "0x81BBCA"},
+          {"cpu": "0x8681F2", "phys": "0x81BBC6"},
+          {"cpu": "0x8681FA", "phys": "0x81BBCE"},
+          {"cpu": "0x868202", "phys": "0x81BBC2"}
+        ],
+        "runtime_compare": "SUB/CMP against RAM 0xA4B6 (built from FE0E / F9FC / A1CA @0x868174..C6); flag bit in 0xA4BA; maps/curves via 0x3BAC/0x3BB6 under EXTP#206",
+        "stock_le": {
+          "0x1BBC0": "8065",
+          "0x1BBC2": "8021",
+          "0x1BBC4": "0066",
+          "0x1BBC6": "0022",
+          "0x1BBC8": "0067",
+          "0x1BBCA": "0023",
+          "0x1BBCC": "8066",
+          "0x1BBCE": "8022"
+        },
+        "car_le_delta_hi": {
+          "note": "car dump high byte = stock high byte + 47 on BBC0/C4/C8/CC",
+          "examples": {
+            "0x1BBC0": {"stock_hi": 101, "car_hi": 148, "delta": 47},
+            "0x1BBC8": {"stock_hi": 103, "car_hi": 150, "delta": 47}
+          }
+        }
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL_STRUCT_FAIL_UNITS",
+        "pass_for_struct_role": [
+          "FR VMAXMD: torque request of Vmax regulation; VVORH FW = Vmax guide threshold, variant-coded; predicted vfzg vs VVORH activates VMAX (FR p.78+)",
+          "Code: eight-word cluster + B17E.0 selects normal vs low-range sibling set — same shape as family VABSCH/VHYST/VMAXO/VVORH ± LR",
+          "Stock /128 interpret: normal ~203/204/206/205, LR siblings ~67/68/70/69 — plausible VMAX vs low-range pair (not proof)"
+        ],
+        "fail_for_PROVEN_units": [
+          "Foreign A2L (E650/E5A0) conversion vfzg_uw_q0p00781 (= raw/128 km/h) and addresses 0x81BC00/0x81B882 clusters ≠ 0x81BBC0 on 6901 — status: перенесено, not evidence_2 for 6901 units",
+          "0xA4B6 not independently proven as vfzg_w on 6901 (F9FC has no F6/F7 writer hit in whole BIN under decode scan)",
+          "Ambiguous popular scales: /256 ⇒ stock ~101–103 km/h; /128 ⇒ ~203–206 km/h; +47 on high byte ⇒ +47 km/h (/256) or +94 km/h (/128) — neither closed by 6901-native factor",
+          "Exact FR symbol↔address map (which of BBC0/C4/C8/CC is VVORH vs VMAXO vs VHYST vs VABSCH) not proven on this SW"
+        ]
+      },
+      "evidence_3_falsifiers": [
+        {
+          "falsifier": "If unused islands, no EXTP#206 loads of 0x3BCx",
+          "result": "DID_NOT_FIRE — consumers present"
+        },
+        {
+          "falsifier": "If scale were proven by A2L address identity, 6901 addrs would match E650 0x81BC0x / E5A0 0x81B88x",
+          "result": "FIRED",
+          "note": "0x81BBC0 cluster is different — blocks address-transfer units proof"
+        },
+        {
+          "falsifier": "If high-byte-as-km/h (/256) were forced by code, compares would use ASHR#8 of thresholds before CMP",
+          "result": "FIRED_AS_GAP",
+          "note": "CMP uses full u16 vs A4B6; ASHR#8 only on A4B8→0x8D34 side path — does not prove threshold scale"
+        }
+      ],
+      "status_tags": {
+        "EXTP_phys_loads": "доказано кодом",
+        "threshold_vs_A4B6": "доказано кодом",
+        "FR_VMAX_VVORH_function_exists": "доказано FR (роль семейства)",
+        "km_h_scale": "не доказан на 6901",
+        "symbol_names_per_offset": "гипотеза / перенос раскладки"
+      },
+      "missing_for_PROVEN_units": "6901-native link of A4B6 (or compare path) to vfzg with known km/h factor, OR live vfzg vs raw threshold, OR same-SW A2L/DAMOS for 0x81BBC0."
+    },
+    {
+      "id": "C",
+      "name": "TLRHS @0x1A753 scale",
+      "claim_tested": "TLRHS LSB = 0.1 s (stock 0x14 → 2.0 s) because counter ticks once per 100 ms task",
+      "verdict": "STILL_STRUCT",
+      "allowed_labels": ["PROVEN_scale", "STILL_STRUCT"],
+      "prior": {
+        "source": "PROMOTION_MISC_REPORT.json item G; REVIEW_LREB_FORM.md",
+        "prior_verdict": "STILL_STRUCT"
+      },
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "entry": "0x87508A (function after RETS @0x875088)",
+        "sites": [
+          {
+            "cpu": "0x8750C4",
+            "raw": "9A240B10",
+            "text": "JNB 0xFD48.1 → reload path 0x8750DE"
+          },
+          {
+            "cpu": "0x8750D8",
+            "raw": "058FEAA7",
+            "text": "ADDB 0xA7EA,ONES (decrement while FD48.1 set and A7EA≠0)"
+          },
+          {
+            "cpu": "0x8750E6",
+            "raw": "D7400602 F3F85327 F7F8EAA7",
+            "text": "EXTP #0x206,#1; MOVB RL4,0x2753; MOVB 0xA7EA,RL4",
+            "phys": "0x81A753",
+            "stock": "0x14"
+          }
+        ],
+        "A7EA_only_sites": ["0x8750C8", "0x8750D8", "0x8750EE"],
+        "note": "Reload when FD48.1 clear; decrement when FD48.1 set — timebase = call period of this function, not the bit itself"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "FAIL_FOR_SCALE",
+        "role_ok": [
+          "FR LREB p.329/335: TLRHS FW = blocking time LC during hot start (TASHS/TMSHS); operates as of end of start",
+          "FR LREB100MS: 'Activation conditions for control upstream catalyst determined in the 100 ms cycle'",
+          "FR B_stend examples: end-of-start condition (not a time quantum)"
+        ],
+        "FD48_1_what_sets": {
+          "real_code_writer": {
+            "cpu": "0x870F28",
+            "raw": "1F24",
+            "text": "BSET 0xFD48.1",
+            "context": "after temp/map compares; paired BCLR FD48.0; clear path @0x870F4C 1E24",
+            "callers": ["0x86BF28 CALLS 0x87,0x0EF0"]
+          },
+          "foreign_A2L": "E650 MEASUREMENT B_stend @ ECU_ADDRESS 0xFD48 BIT_MASK 0x2 (=bit1) — перенесено; matches bit index, labels level 'Startende', NOT 100ms tick",
+          "data_island_false_hits": "many raw 1F24 in non-code regions (e.g. 0x8122B0) — ignore without coherent decode context"
+        },
+        "fail_for_PROVEN_scale": [
+          "No 6901 instruction proves the enclosing task that calls 0x87508A runs at 100 ms",
+          "Far-pointer table hit 8A508700 @0x816DAC is STRUCT (dispatcher table candidate) without proven raster ID→100ms binding",
+          "E650 TLRHS conversion t100msxs_ub_b25p5 (0.1 s/LSB) is transfer, not 6901 proof",
+          "FD48.1 gates on B_stend-level semantics (FR+foreign A2L) — does not supply LSB period"
+        ]
+      },
+      "evidence_3_falsifiers": [
+        {
+          "falsifier": "If 0x1A753 were not reload source, EXTP MOVB 0x2753 under page 206 would resolve elsewhere",
+          "result": "DID_NOT_FIRE — phys 0x81A753"
+        },
+        {
+          "falsifier": "If FD48.1 were a 100ms tick generator, it would be toggled by a periodic timer ISR/task each quantum rather than set/cleared by start-end logic @0x870F28",
+          "result": "FIRED_AGAINST_TICK_HYPOTHESIS",
+          "note": "Setter is start/condition logic; FR B_stend = end of start. Tick hypothesis for the bit fails; task-period for 87508A still unproven → scale remains STRUCT"
+        },
+        {
+          "falsifier": "If counter decremented in multiple rasters, A7EA would have other writers/decs",
+          "result": "DID_NOT_FIRE for extra sites — only 8750xx touches A7EA (supports single-task tick, still unknown period)"
+        }
+      ],
+      "status_tags": {
+        "addr_and_reload_counter": "доказано кодом",
+        "FR_role_blocking_time": "доказано FR",
+        "FD48_1_gates_path": "доказано кодом",
+        "FD48_1_is_100ms_tick": "опровергнуто как гипотеза такта (скорее B_stend level)",
+        "0_1s_per_LSB": "не доказан на 6901 (перенос E650 / допущение 100ms-слота)"
+      },
+      "missing_for_PROVEN_scale": "Identify scheduler raster for CPU 0x87508A on 6901 (e.g. prove task table slot = 100ms) OR live measure of A7EA decrement period."
+    }
+  ],
+  "summary": {
+    "PROVEN_EWS": 0,
+    "PROVEN_OTHER_NAME": 0,
+    "PROVEN_units": 0,
+    "PROVEN_scale": 0,
+    "STILL_STRUCT": 3,
+    "patch_promotion": "none — no byte changes authorized from this pass"
+  }
+}

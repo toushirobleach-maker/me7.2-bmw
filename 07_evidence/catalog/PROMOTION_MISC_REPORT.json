@@ -1,0 +1,432 @@
+{
+  "title": "Triple-evidence promotion pass — MISC STRUCT/HYP",
+  "date_utc": "2026-11-06",
+  "sw": "6901I41D / 7532675",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "decoder_calibration": [
+    {"raw": "9F17", "decoded": "BSET 0xFD2E.9"},
+    {"raw": "D7400602", "decoded": "EXTP #0x206,#1"},
+    {"raw": "C2F43016", "decoded": "MOVBZ R4,0x1630"}
+  ],
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "stock": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "dpp": {"DPP0": "0x204", "DPP1": "0x205", "DPP2": "0x0E0", "source": "0x80BCE4"},
+  "policy": "PROVEN only with (1) consumer+raw+EXTP/DPP phys (2) independent semantic (3) falsifier checked and failed to fire. No promotion on plausibility or foreign A2L alone.",
+  "counts": {
+    "PROVEN": 0,
+    "STILL_STRUCT": 8,
+    "STILL_HYP": 2,
+    "promoted_hyp_to_struct": ["B_MSLUB", "I_SPEED_WORDS"],
+    "promoted_to_proven": []
+  },
+  "items": [
+    {
+      "id": "A",
+      "name": "MSLBAS",
+      "addr": "0x19612",
+      "cpu": "0x819612",
+      "prior_status": "HYPOTHESIS",
+      "verdict": "STILL_HYP",
+      "stock_hex": "1D",
+      "claim_tested": "Byte is Bosch MSLBAS (secondary-air base mass); zeroing is a proven SAP-off strategy",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x849C7A",
+            "raw": "D7400602 F3F81216",
+            "text": "EXTP #0x206,#1; MOVB RL4,0x1612",
+            "phys": "0x819612"
+          },
+          {
+            "cpu": "0x849CAA",
+            "raw": "D7400602 F3F61216",
+            "text": "EXTP #0x206,#1; MOVB RL3,0x1612",
+            "phys": "0x819612"
+          },
+          {
+            "cpu": "0x84BEE2",
+            "raw": "D7400602 F3F81216",
+            "text": "EXTP #0x206,#1; MOVB RL4,0x1612",
+            "phys": "0x819612"
+          },
+          {
+            "cpu": "0x84BF8C",
+            "raw": "D7400602 F3F81216",
+            "text": "EXTP #0x206,#1; MOVB RL4,0x1612",
+            "phys": "0x819612"
+          }
+        ],
+        "note": "Loaded into AF2C/AF2D (and related). Address resolution proven."
+      },
+      "evidence_2_independent_semantic": {
+        "status": "FAIL",
+        "tried": [
+          "FR SLS/BMSL pages name MSLUB extensively; MSLBAS string not found in FR_relevant_pages for this SW family dump",
+          "No DFPM/DTC/live label on 6901 naming 0x819612",
+          "Prior REVIEW_RU prose 'начальная масса' is not an independent source"
+        ],
+        "result": "Bosch name / SAP role / zero-is-off remain unproven"
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If 0x19612 were inside the MSLUB curve object (hdr/axis/values at 0x196A9..), consumers would use 0x16A9 far-pointer form rather than direct EXTP MOVB 0x1612",
+        "result": "Did not fire: scalar consumers use 0x1612; curve uses 0x16A9. Does not prove MSLBAS name."
+      }
+    },
+    {
+      "id": "B",
+      "name": "MSLUB values / header",
+      "addr_values": "0x196B2",
+      "addr_header": "0x196A9",
+      "cpu_curve": "0x8196A9",
+      "cpu_values": "0x8196B2",
+      "prior_status": "HYPOTHESIS",
+      "verdict": "STILL_STRUCT",
+      "promotion": "HYP→STRUCT for curve layout+consumer; Bosch name/zero-effect still short of PROVEN",
+      "stock_hex": {
+        "header_axis": "0855606A757F8A959F",
+        "values": "0F1F2C373E434647"
+      },
+      "claim_tested": "Eight value bytes of KL MSLUB=f(ub); zeroing disables SAP mass",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x84C7EA",
+            "raw": "E6FCA916 E6FD0602 C2FE968C DA0124B5",
+            "text": "MOV R12,#0x16A9; MOV R13,#0x0206; MOVBZ R14,0x8C96; CALLS 0x01,0xB524",
+            "phys_curve": "page 0x206 + 0x16A9 → 0x8196A9"
+          }
+        ],
+        "layout": "hdr 08 @0x196A9; axis 8 B @0x196AA; values 8 B @0x196B2"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL",
+        "pass_for_struct": true,
+        "sources": [
+          "FR SLS: 'MSLUB UBF KL Secondary air mass depending on battery voltage'; 'MSLUB = f(ub)'",
+          "Same SLS region compares 0x8C96 to nearby cals (0x8196CB/0x8196CC) and feeds this KL via R14"
+        ],
+        "fail_for_proven": [
+          "0x8C96 is copied from 0x8A0B (0x858552/556); 0x8A0B writer at 0x8033E0 is scaled raw — not independently labeled UBF/ADC on 6901",
+          "Zeroing-all-values as SAP-off strategy not independently demonstrated"
+        ]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If values began at 0x196A9, first data byte would be 0x08 (count), not 0x0F",
+        "result": "Did not fire for 8+8 layout. Old 'patch header' claim would fail."
+      }
+    },
+    {
+      "id": "C",
+      "name": "CWDAGR bit0 → FDC0.4",
+      "addr": "0x11FC9",
+      "cpu": "0x811FC9",
+      "prior_status": "HYPOTHESIS",
+      "verdict": "STILL_HYP",
+      "stock_hex": "01",
+      "claim_tested": "Codeword CWDAGR; clearing bit0 disables AGR/EGR monitor",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x86B5DE",
+            "raw": "F3FAC91F 69A1 3A888836 4A886064",
+            "text": "MOVB RL5,0x1FC9; ANDB RL5,#1; BMOVN PSW.6,PSW.3; BMOV 0xFDC0.4,PSW.6",
+            "phys": "DPP0=0x204 → 0x204*0x4000+(0x1FC9&0x3FFF)=0x811FC9",
+            "bitword_note": "bitoff 0x60 → word 0xFDC0 (not FDBE)"
+          }
+        ]
+      },
+      "evidence_2_independent_semantic": {
+        "status": "FAIL",
+        "tried": [
+          "FR PROKON lists CDAGR / B_cdagr / SY AGR — different symbol family; no FR line ties 0x811FC9 bit0 or FDC0.4 to AGR on 6901",
+          "Car dump 01→00 is basedata equality, not semantic proof",
+          "Many other FDC0.4 consumers exist; none naming AGR in this SW"
+        ],
+        "result": "Transport proven; AGR identity and off-effect unproven"
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If bit mapping used bitoff 0x60 as FDBE, decoder/bitword would disagree with 0xFD00+2*0x60=0xFDC0",
+        "result": "Did not fire for address math. Does not prove AGR meaning."
+      }
+    },
+    {
+      "id": "D",
+      "name": "Thermostat map A",
+      "addr_hdr": "0x19B80",
+      "addr_z": "0x19B8D",
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "stock_shape": "hdr 05 06; x@0x19B82 n=5; y@0x19B87 n=6; z@0x19B8D 6x5=30B",
+      "claim_tested": "KFETRD / 88C thermostat map with proven physical axes",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x85B9DE",
+            "raw": "E6FC801B E6FD0602 C2FECEF8 C2FF608A DA0104B7",
+            "text": "MOV R12,#0x1B80; MOV R13,#0x0206; MOVBZ R14,0xF8CE; MOVBZ R15,0x8A60; CALLS 0x01,0xB704",
+            "phys": "0x206*0x4000+0x1B80=0x819B80"
+          }
+        ]
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL",
+        "pass_for_struct": true,
+        "sources": ["Binary header 05 06 matches 5×6 interpolator contract at consumer"],
+        "fail_for_proven": ["Bosch name KFETRD / road-speed / throttle / °C formulas are community or foreign-SW transfer, not 6901-coded"]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If shape were 6×7 starting at header, first 'x' samples would be 05 06",
+        "result": "Would fire for wrong XDF; stock header confirms 5×6. Name still STRUCT."
+      }
+    },
+    {
+      "id": "E",
+      "name": "Thermostat map B",
+      "addr_hdr": "0x19BB2",
+      "addr_z": "0x19BBF",
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "stock_shape": "hdr 05 06; x@0x19BB4 n=5; y@0x19BB9 n=6; z@0x19BBF 6x5=30B (NOT 42B)",
+      "claim_tested": "KFETRT 6×7/42B thermostat map",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x85B9FE",
+            "raw": "E6FCB21B E6FD0602 C2FECEF8 C2FF108A DA0104B7",
+            "text": "MOV R12,#0x1BB2; MOV R13,#0x0206; … CALLS 0x01,0xB704",
+            "phys": "0x819BB2"
+          }
+        ]
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL",
+        "pass_for_struct": true,
+        "sources": ["Header+consumer fix shape to 6×5/30B"],
+        "fail_for_proven": ["Name KFETRT / 88C units transferred; bytes 0x19BDD..0x19BE8 have no consumer"]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED_AND_FIRED_ON_OLD_CLAIM",
+        "falsifier": "Claimed 6×7 with x@0x19BB2 length 7",
+        "result": "FIRED: 0x19BB2.. = 05 06 … are dimension header, not axis. Corrected span 30B only."
+      }
+    },
+    {
+      "id": "F",
+      "name": "Fan curve 7+7",
+      "addr_axis": "0x1A575",
+      "addr_values": "0x1A57C",
+      "addr_hdr": "0x1A574",
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "stock_hex": "07 AAABB8BFC5C9CB 001A5487BFC7E5",
+      "claim_tested": "TAMLTKA fan coolant axis with 0.75*X-48 °C",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x866FF6",
+            "raw": "E6FC7425 E6FD0602 C2FEF48C DA0124B5",
+            "text": "MOV R12,#0x2574; MOV R13,#0x0206; MOVBZ R14,0x8CF4; CALLS 0x01,0xB524",
+            "phys": "0x81A574"
+          }
+        ]
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL",
+        "pass_for_struct": true,
+        "sources": ["hdr 07 + 7 axis + 7 values matches 1D interpolator B524"],
+        "fail_for_proven": ["Fan/TAMLTKA/°C/% labels and 0.75*X-48 transferred, not proven on 6901"]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If axis included header byte, first axis sample would be 0x07",
+        "result": "Did not fire for axis@+1 / values@+8 layout."
+      }
+    },
+    {
+      "id": "G",
+      "name": "TLRHS timebase",
+      "addr": "0x1A753",
+      "cpu": "0x81A753",
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "stock_hex": "14",
+      "claim_tested": "TLRHS LSB = 0.1 s (stock 0x14 → 2.0 s)",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x8750E6",
+            "raw": "D7400602 F3F85327 F7F8EAA7",
+            "text": "EXTP #0x206,#1; MOVB RL4,0x2753; MOVB 0xA7EA,RL4",
+            "phys": "0x81A753"
+          },
+          {
+            "cpu": "0x8750D8",
+            "raw": "058FEAA7",
+            "text": "ADDB 0xA7EA,ONES (byte decrement while gated)",
+            "role": "delay counter"
+          }
+        ],
+        "note": "FR LREB: TLRHS is hot-start blocking delay for LC upstream cat — role STRUCT/PROVEN-grade; scale separate."
+      },
+      "evidence_2_independent_semantic": {
+        "status": "FAIL_FOR_SCALE",
+        "sources_role_ok": [
+          "FR LREB: 'TLRHS FW blocking time LC during hot start'; LREB100MS 100 ms cycle text"
+        ],
+        "fail_for_proven_scale": [
+          "No 6901 instruction proves the enclosing task period is 100 ms",
+          "FD48.1 gates the path; foreign A2L labels FD48 as B_stend (level), not a 100 ms tick",
+          "E650 conversion t100ms / 0.1s/LSB is transfer, not 6901 proof",
+          "Live TLRHS at other CPU addresses is other SW"
+        ]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If 0x1A753 were not the reload source, EXTP MOVB 0x2753 would resolve elsewhere under page 206",
+        "result": "Did not fire for address. Scale falsifier (counter period ≠100 ms) not instrumentable offline → scale remains unproven."
+      }
+    },
+    {
+      "id": "H",
+      "name": "Gate @0x5FFB2 / readers of 0x380032",
+      "addr_code": "0x5FFB2",
+      "cpu_code": "0x85FFB2",
+      "ram_word": "0x8032",
+      "phys_ram": "0x380032",
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "claim_tested": "Site is EWS/IMMO release; NOP is IMMO OFF",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "stock_gate_raw": "C2F454B1 6841 2D07 C2F47AB1 6841 2D03 8A6E0120 0D02 6F88 0D01",
+        "stock_decode_summary": "MOVBZ R4,0xB154; AND #1; JZ; MOVBZ R4,0xB17A; AND #1; JZ; JB FDDC.2; else BSET PSW.6; BMOV FD4A.5,PSW.6; on fail MOV 0x8032,ONES else MOV R5,#0xFF00 / MOV 0x8032,R5",
+        "dpp2_phys": "DPP2=0x0E0 → 0x0E0*0x4000+0x0032=0x380032",
+        "writers_cpu": ["0x85FFAC", "0x85FFD4", "0x85FFDE"],
+        "readers_or_8032_cpu": [
+          "0x830778",
+          "0x83078E",
+          "0x830A3A",
+          "0x830B40",
+          "0x830C34",
+          "0x830D28",
+          "0x830E2E"
+        ],
+        "reader_pattern": "OR Rn,0x8032 then CMP #0xFFFF and/or write composed mask to 0xF922 — permission/mask consumer, not a named EWS API"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "FAIL",
+        "tried": [
+          "FR SY WFS immobilizer system constant — no link to 0x380032",
+          "Live B_EWS_OK on other session — not mapped to 0x380032 on 6901",
+          "DTC 0x27 EWS3 unresolved to this RAM word"
+        ],
+        "result": "Gate effect + 0xFF00 write proven; EWS/IMMO business name remains HYPOTHESIS"
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If DPP2 were not 0x0E0, phys would not be 0x380032",
+        "result": "Did not fire: DPP init 0x80BCEC MOV DPP2,#0x00E0. Name falsifier unavailable."
+      }
+    },
+    {
+      "id": "I",
+      "name": "Speed words 0x1BBC0/C4/C8/CC",
+      "addrs": ["0x1BBC0", "0x1BBC4", "0x1BBC8", "0x1BBCC"],
+      "prior_status": "HYPOTHESIS",
+      "verdict": "STILL_STRUCT",
+      "promotion": "HYP→STRUCT: consumers+EXTP phys proven; Vmax/km/h scale still HYP",
+      "stock_le_hex": ["8065", "0066", "0067", "8066"],
+      "claim_tested": "Vehicle speed limiter thresholds in km/h (high byte)",
+      "evidence_1_consumer": {
+        "status": "PASS",
+        "sites": [
+          {
+            "cpu": "0x868210",
+            "raw": "D7400602 F2F4C83B",
+            "text": "EXTP #0x206,#1; MOV R4,0x3BC8",
+            "phys": "0x81BBC8"
+          },
+          {
+            "cpu": "0x86822C",
+            "raw": "D7400602 F2F7C43B",
+            "text": "EXTP #0x206,#1; MOV R7,0x3BC4",
+            "phys": "0x81BBC4"
+          },
+          {
+            "cpu": "0x868234",
+            "raw": "D7400602 F2F8CC3B",
+            "text": "EXTP #0x206,#1; MOV R8,0x3BCC",
+            "phys": "0x81BBCC"
+          },
+          {
+            "cpu": "0x86823C",
+            "raw": "D7400602 F2F9C03B",
+            "text": "EXTP #0x206,#1; MOV R9,0x3BC0",
+            "phys": "0x81BBC0"
+          }
+        ],
+        "runtime_compare": "Compared to 0xA4B6 (built from FE0E/F9FC/A1CA paths at 0x86816x); also sibling words 0x3BC2/C6/CA/CE loaded on alternate branch"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "PARTIAL",
+        "pass_for_struct": true,
+        "sources": ["Code uses all four words as CMP/threshold operands against one runtime word"],
+        "fail_for_proven": [
+          "0xA4B6 not independently identified as vfzg on 6901",
+          "km/h high-byte interpretation and 'Vmax' name are dump/community transfer"
+        ]
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If these were unused calibration islands, no EXTP #206 loads of 0x3BCx would exist",
+        "result": "Did not fire — consumers present. Scale/name still unproven."
+      }
+    },
+    {
+      "id": "J",
+      "name": "KFZWOP / KFZW1 consumers and sizes",
+      "addrs": {
+        "KFZWOP": "0x10220",
+        "KFZWOP2": "0x10320",
+        "KFZW1": "0x10BC2",
+        "KFZW2": "0x10D42"
+      },
+      "prior_status": "STRUCT",
+      "verdict": "STILL_STRUCT",
+      "claim_tested": "6901 code consumes KFZWOP as 16×16 and KFZW1 as 16×24 at these addresses",
+      "evidence_1_consumer": {
+        "status": "FAIL",
+        "searched": [
+          "MOV R12,#0x0220 / #0x0BC2 with page 0x204/205/206",
+          "EXTP #0x204/#0x205/#0x206 windows loading mem 0x0220/0x0BC2",
+          "Packed far pointers 20 02 04 02 and C2 0B 04 02 in BIN"
+        ],
+        "result": "No direct consumer found on 6901 with review_decode annotation rules"
+      },
+      "evidence_2_independent_semantic": {
+        "status": "TRANSFER_ONLY",
+        "sources": [
+          "E5A0/E650 A2L same file offsets for KFZWOP 16×16 / KFZW1 16×24",
+          "Exact stock↔car spans on dump"
+        ],
+        "note": "Foreign A2L is explicitly insufficient for PROVEN per workspace rules"
+      },
+      "evidence_3_falsifier": {
+        "status": "CHECKED",
+        "falsifier": "If a 6901 far-pointer or EXTP load to 0x810220 / 0x810BC2 existed, search would hit",
+        "result": "Search empty → cannot promote sizes/names beyond STRUCT transfer"
+      }
+    }
+  ]
+}

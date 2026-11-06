@@ -1,0 +1,202 @@
+{
+  "title": "Promotion pass — RAM 0x380032 / mem16 0x8032 (gate @0x85FFB2)",
+  "date_utc": "2026-11-06",
+  "sw": "6901I41D / 7532675",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "decoder_calibration": [
+    {"raw": "9F17", "decoded": "BSET 0xFD2E.9"},
+    {"raw": "D7400602", "decoded": "EXTP #0x206,#1"},
+    {"raw": "C2F43016", "decoded": "MOVBZ R4,0x1630"}
+  ],
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "stock": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "dpp": {
+    "DPP0": "0x204",
+    "DPP1": "0x205",
+    "DPP2": "0x0E0",
+    "source_cpu": "0x80BCEC",
+    "raw": "E602E000",
+    "text": "MOV DPP2,#0x00E0",
+    "phys_0x8032": "0x0E0*0x4000 + 0x0032 = 0x380032"
+  },
+  "policy": "PROVEN only with (1) consumer+raw+EXTP/DPP phys (2) independent semantic (3) falsifier checked and DID_NOT_FIRE. Foreign XDF/A2L alone is not evidence_2 for naming.",
+  "prior": {
+    "source": "PROMOTION_MISC_REPORT.json item H; REVIEW_IMMO_88C_IGN.md",
+    "prior_status": "STRUCT",
+    "prior_verdict": "STILL_STRUCT",
+    "claim_tested_prior": "Site is EWS/IMMO release; NOP is IMMO OFF"
+  },
+  "claim_tested": "RAM word phys 0x380032 (DPP2 mem16 0x8032) is EWS/immobilizer release (B_ews_ok / Wegfahrsperre Freigabe) on 6901I41D",
+  "verdict": "STILL_STRUCT",
+  "verdict_line": "STILL_STRUCT — gate bypass + 0xFF00/ONES write + OR-mask readers PROVEN by code; EWS/immobilizer business name remains HYPOTHESIS",
+  "xdf_title_if_listed": "[STRUCT] Gate@0x5FFB2 forces 0xFF00→0x380032 (EWS name unproven)",
+  "evidence_1_consumer": {
+    "status": "PASS",
+    "method": "review_decode.py on stock for writer; whole-BIN opcode-first scan for mem16 0x8032 (F6/F2/F7/72/… + LE 32 80)",
+    "writers": [
+      {
+        "cpu": "0x85FFAC",
+        "raw": "F6F53280",
+        "text": "MOV 0x8032,R5",
+        "context": "0x85FFA6..: BCLR FD4A.5; MOV R5,#0xFF00; MOV 0x8032,R5; RETS"
+      },
+      {
+        "cpu": "0x85FFD4",
+        "raw": "F68F3280",
+        "text": "MOV 0x8032,ONES",
+        "context": "fail/deny branch after gate (stock)"
+      },
+      {
+        "cpu": "0x85FFDE",
+        "raw": "F6F53280",
+        "text": "MOV 0x8032,R5",
+        "context": "pass branch: MOV R5,#0xFF00 then store"
+      }
+    ],
+    "stock_gate_cpu": "0x85FFB2",
+    "stock_gate_raw": "C2F454B1 6841 2D07 C2F47AB1 6841 2D03 8A6E0120 0D02 6F88 0D01 6E88 4A882565 7D03 F68F3280 DB00 E6F500FF F6F53280 DB00",
+    "stock_gate_decode_summary": "MOVBZ R4,0xB154; AND #1; JZ→deny; MOVBZ R4,0xB17A; AND #1; JZ→deny; JB FDDC.2→deny; else BCLR PSW.6; BMOV FD4A.5,PSW.6; CC_NN→ MOV R5,#0xFF00 / MOV 0x8032,R5 else MOV 0x8032,ONES",
+    "car_dump_at_0x85FFB2": "13× NOP (CC00) through 0x85FFCA; then BCLR PSW.6; BMOV FD4A.5,PSW.6; always takes 0xFF00 write (proven effect)",
+    "stock_vs_dump_gate_bytes_differ": true,
+    "scheduler_call": {
+      "cpu": "0x86C05C",
+      "raw": "DA85B2FF",
+      "text": "CALLS 0x85,0xFFB2"
+    },
+    "readers_or_8032": [
+      {
+        "cpu": "0x830778",
+        "raw": "72F13280",
+        "text": "OR R1,0x8032",
+        "follow": "46F1FFFF CMP R1,#0xFFFF; JMPA CC_NZ → 0x83087A"
+      },
+      {
+        "cpu": "0x83078E",
+        "raw": "72F23280",
+        "text": "OR R2,0x8032",
+        "follow": "F6F222F9 MOV 0xF922,R2"
+      },
+      {
+        "cpu": "0x830A3A",
+        "raw": "72F23280",
+        "text": "OR R2,0x8032",
+        "follow": "MOV 0xF922,R2"
+      },
+      {
+        "cpu": "0x830B40",
+        "raw": "72F23280",
+        "text": "OR R2,0x8032",
+        "follow": "MOV 0xF922,R2"
+      },
+      {
+        "cpu": "0x830C34",
+        "raw": "72F23280",
+        "text": "OR R2,0x8032",
+        "follow": "MOV 0xF922,R2"
+      },
+      {
+        "cpu": "0x830D28",
+        "raw": "72F23280",
+        "text": "OR R2,0x8032",
+        "follow": "MOV 0xF922,R2"
+      },
+      {
+        "cpu": "0x830E2E",
+        "raw": "72F23280",
+        "text": "OR R2,0x8032",
+        "follow": "F6F22AF9 MOV 0xF92A,R2"
+      }
+    ],
+    "false_positive_3280_hits_not_mem16_8032": [
+      {
+        "cpu": "0x8196E5",
+        "note": "BFLDL 0xFD64,#0x80,#0x80 — LE 32 80 is immediate, not address 0x8032"
+      },
+      {
+        "cpu": "0x82E446",
+        "note": "JNB 0xFD86.8 — LE 32 80 inside bit/rel encoding"
+      }
+    ],
+    "ff00_vs_ffff_trace": {
+      "status": "PROVEN_MECHANISM_ONLY",
+      "ONES_0xFFFF": "OR Rn,0x8032 forces Rn=0xFFFF; CMP #FFFF always Z; rotated seed 0xFEFE|FFFF → F922/F92A = 0xFFFF",
+      "FF00": "OR forces high byte 0xFF, low byte unchanged; CMP #FFFF passes only if low byte already 0xFF; F922 = (ROL 0xFEFE by F911) | 0xFF00",
+      "not_shown": [
+        "No mem16 READ of F922/F92A anywhere in 512KiB (only F6 writers) — fuel cut / starter / CAN-to-EWS module not closed by code on this word",
+        "FD4A.5 side-flag used at 0x862F20 / 0x863140 (with FDDC.3) into BMOVN FDAC.3 — not named EWS API"
+      ]
+    }
+  },
+  "evidence_2_independent_semantic": {
+    "status": "FAIL_FOR_EWS_NAME",
+    "tried": [
+      {
+        "source": "E5A0 A2L MEASUREMENT B_ews_ok",
+        "result": "Freigabebit elektronische Wegfahrsperre @ ECU_ADDRESS 0x383150 BIT_MASK 0x1 — NOT 0x380032. A2L has zero hits for 0x380032/0x8032. Status: перенесено из другого SW (usable as negative ID vs claim, not as PROVEN name for 0x8032)."
+      },
+      {
+        "source": "EWS Findings.txt (project)",
+        "result": "Same B_EWS_OK @ 0x383150; DFPM_EWS3 codewords CLAWFS/CDKWFS/… — no link to 0x380032."
+      },
+      {
+        "source": "6901 code at mem16 0xB150 (DPP2 phys 0x383150)",
+        "result": "Separate traffic (e.g. MOVB 0xB150 @0x86CD8C/0x86CDB4, 0x842270). Gate at 0x85FFB2 tests 0xB154 / 0xB17A bit0 and FDDC.2 — not 0xB150.0. 0x8032 is a different RAM word."
+      },
+      {
+        "source": "FR / Funktionsrahmen (project FR text/pages)",
+        "result": "No usable hit tying 0x8032/0x380032/F922 to Wegfahrsperre/EWS Freigabe message path on this SW."
+      },
+      {
+        "source": "DTC 0x27 EWS3 / CLADWA / 0x153F2",
+        "result": "EWS3 module known; unresolved to this RAM word (DTC_CODE_MAP_6901I41D)."
+      },
+      {
+        "source": "Live B_EWS_OK in live_adapt_warm_idle_20261105.json",
+        "result": "Signal present as false in session; no mapping of that KWP bit to phys 0x380032 on 6901."
+      },
+      {
+        "source": "Community IMMO OFF / MS4X patches (05A0/0650/0690)",
+        "result": "Different code sites; not admissible as evidence_2."
+      }
+    ],
+    "result": "Gate effect + mask role proven structurally; EWS/immobilizer release name NOT established for 0x380032."
+  },
+  "evidence_3_falsifiers": [
+    {
+      "falsifier": "If DPP2 were not 0x00E0, phys of mem16 0x8032 would not be 0x380032",
+      "result": "DID_NOT_FIRE",
+      "note": "DPP init 0x80BCEC MOV DPP2,#0x00E0 confirmed."
+    },
+    {
+      "falsifier": "If 0x8032 only fed a checksum/diagnostic counter, readers would not OR it into a FFFF permission compare / F922 mask assembly",
+      "result": "DID_NOT_FIRE",
+      "note": "Control-path OR/CMP/F922 writes exist — not a pure diag counter. Does NOT prove EWS."
+    },
+    {
+      "falsifier": "If 0x8032 were the Bosch B_ews_ok Freigabebit, family A2L and/or 6901 would treat the same phys as 0x383150 (mem16 0xB150), and the gate would write/test that byte",
+      "result": "FIRED",
+      "note": "B_ews_ok address (foreign A2L) and 6901 0xB150 traffic are disjoint from writers of 0x8032. EWS-identification claim for 0x380032 fails this check."
+    },
+    {
+      "falsifier": "If NOP@0x5FFB2 proved IMMO OFF via fuel/starter/CAN-EWS disable, F922/FFFF path would show a named injector/starter/EWS-CAN consumer of F922 or 0x8032",
+      "result": "FIRED_AS_GAP",
+      "note": "No mem16 reader of F922/F92A in BIN; no FR/DME message-to-EWS link closed. Effect of NOP is only proven as forcing 0xFF00→0x8032 + FD4A.5 clear path."
+    }
+  ],
+  "status_tags": {
+    "phys_0x380032_via_DPP2": "доказано кодом",
+    "stock_gate_B154_B17A_FDDC2_to_8032": "доказано кодом",
+    "car_NOP_forces_FF00": "доказано кодом",
+    "readers_OR_CMP_FFFF_F922": "доказано кодом",
+    "name_EWS_immobilizer_release": "гипотеза",
+    "identity_as_B_ews_ok": "опровергнуто как ID (чужой A2L 0x383150 + раздельный код 0xB150) — не PROVEN EWS",
+    "fuel_starter_CAN_EWS_effect": "не доказано",
+    "community_IMMO_OFF_lore": "не основание"
+  },
+  "missing_piece_for_PROVEN_EWS": "Independent 6901I41D anchor: FR/DAMOS/live that names phys 0x380032 (or F922 mailbox) as Wegfahrsperre Freigabe / DME↔EWS release, OR code path from 0x8032/F922 to documented EWS CAN/K-line telegram enable — not merely gate→mask mechanics.",
+  "related": {
+    "PROMOTION_MISC_H": "prior STILL_STRUCT confirmed",
+    "REVIEW_IMMO_88C_IGN": "DOWNGRADE of EWS title stands",
+    "candidate_B_ews_ok_phys_foreign": "0x383150 / mem16 0xB150"
+  }
+}

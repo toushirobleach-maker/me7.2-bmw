@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "scope": "Offline packaging validation; no vehicle connection, flash or publication",
+  "tests": [
+    {
+      "python": "3.11",
+      "tests": 38,
+      "result": "PASS",
+      "fixtures": "synthetic only"
+    },
+    {
+      "python": "3.14",
+      "tests": 38,
+      "result": "PASS",
+      "fixtures": "synthetic only"
+    }
+  ],
+  "actual_spdaten_rebuild": {
+    "result": "BYTE_EXACT_MATCH",
+    "assembly_zusb": "7533625",
+    "hardware": "7532675",
+    "data_id": "7533626",
+    "bytes": 524288,
+    "sha256": "5ec2443311b6173e4f0bb770eb1f84c0a15a270d3bd6ac52648a77d450db5dd9",
+    "inputs": "Owner-supplied files used offline; not distributed"
+  },
+  "stock_integrity": {
+    "passed": 37,
+    "total": 38,
+    "flash_ready": false,
+    "reason": "Sparse calibration input leaves 904 bytes uncovered including end marker; ROMSYS parameter checksum fails"
+  },
+  "catalog": {
+    "symbols": 632,
+    "status_counts": {
+      "PROVEN": 155,
+      "STRUCT": 99,
+      "UNLINKED": 80,
+      "HYP": 298
+    },
+    "consumer_byte_checks": 128,
+    "unmatched": 0,
+    "semantic_reaudit": false
+  },
+  "reports": {
+    "scanned": 64,
+    "status_counts": {
+      "bundled_by_basename": 13,
+      "bundled_exact": 49,
+      "bundled_relocated": 5,
+      "external_input_or_generated_asset_not_distributed": 6,
+      "external_url": 1,
+      "local_input_not_distributed": 4,
+      "missing_research_dependency": 13,
+      "private_artifact_not_distributed": 23,
+      "symbolic_pattern_or_example": 3
+    },
+    "missing_research_basenames": [
+      "6901.6902.ME72.xdf",
+      "6901.xdf",
+      "Findings.txt",
+      "REVIEW_IMMO_88C_IGN.md",
+      "REVIEW_LREB_FORM.md",
+      "audit_v2.py",
+      "independent_binary_audit.py",
+      "me72_dtc_code_xref.py",
+      "rebuild_traces.py",
+      "verify_key_evidence.py"
+    ]
+  },
+  "git": {
+    "history": "Fresh public history; previous private .git archived outside public root",
+    "scope": "This receipt records offline validation before publication; repository access settings are verified on GitHub."
+  },
+  "hardware_access": false
+}

@@ -1,0 +1,566 @@
+{
+  "sw": "6901I41D",
+  "bin": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+  "stock_cal": "00_original/stock_from_SP-Daten_E53_EK726/ME72_7532675_6901I41D_stock_from_G7533626_512KiB.bin",
+  "decoder": "10_review/20261106_deep_review/tools/review_decode.py",
+  "dpp": {
+    "DPP0": "0x204",
+    "DPP1": "0x205",
+    "DPP2": "0x0E0"
+  },
+  "evidence_contract": [
+    "consumer with EXTP/DPP + raw bytes via review_decode.py",
+    "independent semantic: FR / DFPM→DTC 0x153F2 / live / DME own code (not foreign XDF alone)",
+    "pre-stated falsifier checked and DID_NOT_FIRE"
+  ],
+  "generated_utc": "2026-11-06T06:51:37Z",
+  "counts": {
+    "total": 17,
+    "PROVEN": 17,
+    "STILL_STRUCT": 0,
+    "STILL_HYP": 0
+  },
+  "items": [
+    {
+      "title": "CWKONLS",
+      "addr": "0x1A5EA",
+      "verdict": "PROVEN",
+      "stock_hex": "33",
+      "dump_hex": "33",
+      "consumer": {
+        "ea": "0x86B506",
+        "raw_hex": "D7400602 F3F8EA25 6981 3A888836 4A88286C",
+        "decoded": "EXTP #0x206,#1; MOVB RL4,0x25EA ; EXTP physical=0x81A5EA; ANDB RL4,#1; BMOVN FF10.6,FF10.3; BMOV FD50.12,FF10.6",
+        "phys": "0x81A5EA",
+        "page": "EXTP #0x206",
+        "also": [
+          {
+            "ea": "0x86B518",
+            "bits": "bit1→FD50.10",
+            "raw_hex": "D7400602 F3F8EA25 6982 … 4A88286A"
+          },
+          {
+            "ea": "0x86B52A",
+            "bits": "bit4→FD50.13",
+            "raw_hex": "D7400602 F3F8EA25 67F81000 … 4A88286D"
+          },
+          {
+            "ea": "0x86B53E",
+            "bits": "bit5→FD50.11",
+            "raw_hex": "D7400602 F3F8EA25 67F82000 … 4A88286B"
+          }
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR GGLSV/GGLSH (FR_relevant_pages): CWKONLS Bit0=B_lsv, Bit1=B_lsh, Bit4=B_lsv2, Bit5=B_lsh2; all-four sum 0x33 (=51d)",
+          "FR PROKON p.884 diagram: CWKONLS→B_lsv/B_lsh/B_lsv2/B_lsh2",
+          "DME PROKON maps those bits to FD50.12/.10/.13/.11"
+        ],
+        "summary": "Codeword наличия λ: биты 0/1/4/5 = передний/задний банк1/2. Stock 0x33 = все четыре."
+      },
+      "falsifier": {
+        "claim": "Если 0x1A5EA — соседний CWKONABG, бит0 уйдёт в FDC0.7, а не в FD50.12",
+        "check": "CWKONABG@0x1A5E9 bit0→FDC0.7 (86B570..57E); CWKONLS@0x1A5EA bit0→FD50.12 (86B514). Адреса различны.",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Класс регистрации не затрагивает. Патч 33→11 снимает только задние биты 1 и 5 (FD50.10/11=0); проверка (FD50&0x3C00)==0x3000."
+    },
+    {
+      "title": "CWKONABG",
+      "addr": "0x1A5E9",
+      "verdict": "PROVEN",
+      "stock_hex": "05",
+      "dump_hex": "00",
+      "consumer": {
+        "ea": "0x86B570",
+        "raw_hex": "D7400602 F3FAE925 69A1 3A888836 4A886067",
+        "decoded": "EXTP #0x206,#1; MOVB RL5,0x25E9 ; phys=0x81A5E9; ANDB RL5,#1; BMOV FDC0.7,FF10.6",
+        "phys": "0x81A5E9",
+        "page": "EXTP #0x206",
+        "also": [
+          {
+            "ea": "0x86B582",
+            "bits": "bit1→FDC0.8",
+            "raw_hex": "D7400602 F3FAE925 69A2 … 4A886068"
+          },
+          {
+            "ea": "0x86B594",
+            "bits": "bit2→FDC0.13",
+            "raw_hex": "D7400602 F3FAE925 69A4 … 4A88606D"
+          }
+        ]
+      },
+      "semantic": {
+        "sources": [
+          "FR PROKON p.884/886: CWKONABG FW code word exhaust emission treatment; Bit0→B_katfz, Bit1→B_kath",
+          "FR abbreviations: B_KATFZ=cat fitted, B_KATH=cat-heater, B_UHRRMIN=clock minutes",
+          "This SW: bit2→FDC0.13 (=B_uhrrmin), NOT B_slsfz (B_slsfz sourced from 0x1A5EC→FDC0.11)"
+        ],
+        "summary": "Кодовое слово выхлопной конфигурации. Stock 05; dump already 00. Bit2 в 6901 ≠ community B_slsfz."
+      },
+      "falsifier": {
+        "claim": "Если bit2 CWKONABG — B_slsfz (как FR/community), он должен писать FDC0.11",
+        "check": "bit2→FDC0.13 (86B5A2); FDC0.11 пишется только из 0x1A5EC (86B560)",
+        "result": "DID_NOT_FIRE (опровергнута community-модель; адрес CWKONABG и bit0/1 подтверждены)"
+      },
+      "notes": "Не путать с SAP passport 0x1A5EC. Не подставлять community=01 без разбора битов."
+    },
+    {
+      "title": "SAP passport (B_slsfz source)",
+      "addr": "0x1A5EC",
+      "verdict": "PROVEN",
+      "stock_hex": "01",
+      "dump_hex": "01",
+      "consumer": {
+        "ea": "0x86B552",
+        "raw_hex": "D7400602 F3F8EC25 6981 3A888836 4A88606B",
+        "decoded": "EXTP #0x206,#1; MOVB RL4,0x25EC ; phys=0x81A5EC; ANDB RL4,#1; BMOV FDC0.11,FF10.6",
+        "phys": "0x81A5EC",
+        "page": "EXTP #0x206"
+      },
+      "semantic": {
+        "sources": [
+          "FR SLS/PROKON: B_slsfz = SLS fitted (0=no SAP / lean KH; 1=with SAP)",
+          "DME: FDC0.11 gates multiple SLS/KH paths (JB/JNB @85F184,86500E,8665EE,870060,…)",
+          "This SW relocates cal source of B_slsfz to 0x1A5EC (FR diagram still shows CWKONABG.2 — address mapping differs, flag meaning does not)"
+        ],
+        "summary": "Паспорт наличия SAP: cal bit0 → RAM FDC0.11 (B_slsfz). Stock/dump 01."
+      },
+      "falsifier": {
+        "claim": "Если паспорт SAP — CWKONABG@0x1A5E9, bit0→FDC0.11",
+        "check": "0x1A5E9 bit0→FDC0.7; 0x1A5EC bit0→FDC0.11. Разные цели.",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Снятие паспорта ≠ отключение мониторов SLP/SLV; для inactive нужны ESKONF+путь очистки B9CC/B9D6."
+    },
+    {
+      "title": "CWDKAT",
+      "addr": "0x11FD3",
+      "verdict": "PROVEN",
+      "stock_hex": "01",
+      "dump_hex": "01",
+      "consumer": {
+        "ea": "0x86B4B6",
+        "raw_hex": "F3F8D31F 6981 2D07 8A6C0570 E6F40001 74F44A90",
+        "decoded": "MOVB RL4,0x1FD3 (DPP0=0x204 → phys 0x811FD3); ANDB RL4,#1; if NZ and !FDD8.7: OR 0x904A,#0x0100 else AND 0x904A,#0xFEFF",
+        "phys": "0x811FD3",
+        "page": "DPP0=0x204 (no EXTP)"
+      },
+      "semantic": {
+        "sources": [
+          "FR PROKON p.885: CWDKAT BIT0.0 & B_nokatfz → B_cdkat (catalyst diagnosis enable)",
+          "DME: FDD8.7 used as B_nokatfz gate on same path (matches FR AND)",
+          "KATV FR p.324–325: B_nokatfz disables DKAT/DHLS/LR fault entries for no-cat vehicles"
+        ],
+        "summary": "Кодовое слово диагностики катализатора. Stock 01; bit0 включает маску 0x0100 в 0x904A при !B_nokatfz."
+      },
+      "falsifier": {
+        "claim": "Если по 0x11FD3 лежит заголовок кривой/не скаляр, или сосед 0x1FD1 — тот же путь DKAT",
+        "check": "Байт stock/dump=01 (скаляр). Сосед 0x1FD1 управляет 0x904C bit2 (86B4D4..), не маской 0x0100.",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "CWDKAT=0 снимает enable монитора DKAT (B_cdkat путь), не CLA-регистрацию задних λ."
+    },
+    {
+      "title": "ESKONF[3] SLP",
+      "addr": "0x11B2F",
+      "verdict": "PROVEN",
+      "stock_hex": "F3",
+      "dump_hex": "F3",
+      "consumer": {
+        "ea": "0x85AAA6",
+        "raw_hex": "E03C E01D F4AD2458 E6F4B18C 004C A964 716A B964",
+        "decoded": "MOV R12,#3; MOV R13,#1; MOVB RL5,[R13+#0x5824] (=0x815824[1]=0x0C); ADD R4,#0x8CB1+3; ORB runtime ESKONF[3], mask 0x0C",
+        "phys": "0x811B2F (cal) / runtime 0x8CB4",
+        "page": "DPP for 0x5824 → 0x815824 (DPP0); cal ESKONF base 0x11B2C under DPP0→0x811B2C"
+      },
+      "semantic": {
+        "sources": [
+          "FR DECJ p.813 ESKONF table: [3] bits3:2 = SLP (Sekundärluftpumpe); pair 11 = Diagnose inaktiv",
+          "DME own mask table 0x815824: [0]=03,[1]=0C,[2]=30,[3]=C0 — OR 0x0C into [3] is the inactive-SLP path",
+          "SLP callback 0x8634AA returns idx 0x73; status B9CC feeds LROBD @875838"
+        ],
+        "summary": "Пара SLP в ESKONF[3]. Stock F3 (bits3:2=00 active). Inactive = OR 0x0C → FF."
+      },
+      "falsifier": {
+        "claim": "Если inactive-маска для [3] — 0x03 (как для SLV), XOR stock→FF затронет неверные биты",
+        "check": "table[1]=0x0C; sequence loads R13=#1 then [R13+#5824]; (F3^FF)=0x0C only bits3:2",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "85AAA6 = MOV R12,#3, не ORB. ORB at 85AAB6."
+    },
+    {
+      "title": "ESKONF[5] SLV",
+      "addr": "0x11B31",
+      "verdict": "PROVEN",
+      "stock_hex": "F0",
+      "dump_hex": "F0",
+      "consumer": {
+        "ea": "0x85AABA",
+        "raw_hex": "E05C E00D F48D2458 E6F5B18C 005C A965 7168 B965",
+        "decoded": "MOV R12,#5; MOV R13,#0; MOVB RL4,[R13+#0x5824] (=0x815824[0]=0x03); ORB runtime ESKONF[5], mask 0x03",
+        "phys": "0x811B31 (cal) / runtime 0x8CB6",
+        "page": "DPP0 for mask table and cal"
+      },
+      "semantic": {
+        "sources": [
+          "FR DECJ p.813: ESKONF[5] rightmost pair = SLV; 11 = Diagnose inaktiv",
+          "DME mask table[0]=0x03 applied to index 5",
+          "SLV callback returns idx 0x78; status B9D6 → LROBD @875840"
+        ],
+        "summary": "Пара SLV в ESKONF[5]. Stock F0 (bits1:0=00). Inactive = OR 0x03 → F3."
+      },
+      "falsifier": {
+        "claim": "Если SLV сидит в bits3:2 [5], маска была бы 0x0C",
+        "check": "table[0]=0x03; FR column order LDP/LDR/EV5/SLV → SLV=bits1:0; (F0^F3)=0x03",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "85AABA = MOV R12,#5; ORB at 85AACA."
+    },
+    {
+      "title": "CLALSH",
+      "addr": "0x1162F",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x56",
+      "dtc_ort": "0x0C",
+      "consumer": {
+        "ea": "0x857E02",
+        "raw_hex": "E6FC5600 DA82E296",
+        "decoded": "MOV R12,#0x0056; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x1162F",
+        "phys": "0x811162F",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x56 → BMW Ort 0x0C (Lambdasonde hinter Kat) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x56=0x1162F; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x56; CALLS 0x82,0x96E2 (DFPM) @ 0x857E02",
+          "Live A0 2026-11-05: Ort 0x0C present"
+        ],
+        "summary": "Класс DFPM idx 0x56: DTC 0x0C = Lambdasonde hinter Kat. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x0C / адрес класса не 0x1162F",
+        "check": "idx-1 DTC=0x73, idx+1 DTC=0x14; 0x115D9+0x56=0x1162F exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Задний λ банк1. Class0=suppress registration only."
+    },
+    {
+      "title": "CLALSH2",
+      "addr": "0x11630",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x57",
+      "dtc_ort": "0x14",
+      "consumer": {
+        "ea": "0x857E10",
+        "raw_hex": "E6FC5700 DA82E296",
+        "decoded": "MOV R12,#0x0057; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11630",
+        "phys": "0x8111630",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x57 → BMW Ort 0x14 (Lambda-Sonde2 hinter Kat) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x57=0x11630; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x57; CALLS 0x82,0x96E2 (DFPM) @ 0x857E10",
+          "Live A0: Ort 0x14 present"
+        ],
+        "summary": "Класс DFPM idx 0x57: DTC 0x14 = Lambda-Sonde2 hinter Kat. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x14 / адрес класса не 0x11630",
+        "check": "idx-1 DTC=0x0C, idx+1 DTC=0x0A; 0x115D9+0x57=0x11630 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Class 00 ≠ monitor off."
+    },
+    {
+      "title": "CLALASH",
+      "addr": "0x11624",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x4B",
+      "dtc_ort": "0x11",
+      "consumer": {
+        "ea": "0x82C38E",
+        "raw_hex": "E6FC4B00 DA82E296",
+        "decoded": "MOV R12,#0x004B; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11624",
+        "phys": "0x8111624",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x4B → BMW Ort 0x11 (Lambda-Sondenalterung h. Kat) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x4B=0x11624; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x4B; CALLS 0x82,0x96E2 (DFPM) @ 0x82C38E",
+          "Aging rear λ bank1 per FORTTEXTE 0x11"
+        ],
+        "summary": "Класс DFPM idx 0x4B: DTC 0x11 = Lambda-Sondenalterung h. Kat. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x11 / адрес класса не 0x11624",
+        "check": "idx-1 DTC=0x68, idx+1 DTC=0x17; 0x115D9+0x4B=0x11624 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Class 00 ≠ monitor off."
+    },
+    {
+      "title": "CLALASH2",
+      "addr": "0x11625",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x4C",
+      "dtc_ort": "0x17",
+      "consumer": {
+        "ea": "0x82C39C",
+        "raw_hex": "E6FC4C00 DA82E296",
+        "decoded": "MOV R12,#0x004C; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11625",
+        "phys": "0x8111625",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x4C → BMW Ort 0x17 (Lambda-Sondenalterung h. Kat Bank2) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x4C=0x11625; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x4C; CALLS 0x82,0x96E2 (DFPM) @ 0x82C39C"
+        ],
+        "summary": "Класс DFPM idx 0x4C: DTC 0x17 = Lambda-Sondenalterung h. Kat Bank2. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x17 / адрес класса не 0x11625",
+        "check": "idx-1 DTC=0x11, idx+1 DTC=0x0F; 0x115D9+0x4C=0x11625 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Class 00 ≠ monitor off."
+    },
+    {
+      "title": "CLAHSH",
+      "addr": "0x11613",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x3A",
+      "dtc_ort": "0x0E",
+      "consumer": {
+        "ea": "0x854D6C",
+        "raw_hex": "E6FC3A00 DA82E296",
+        "decoded": "MOV R12,#0x003A; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11613",
+        "phys": "0x8111613",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x3A → BMW Ort 0x0E (Lambdasonden-Heizung hinter Kat) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x3A=0x11613; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x3A; CALLS 0x82,0x96E2 (DFPM) @ 0x854D6C",
+          "Live A0: Ort 0x0E present"
+        ],
+        "summary": "Класс DFPM idx 0x3A: DTC 0x0E = Lambdasonden-Heizung hinter Kat. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x0E / адрес класса не 0x11613",
+        "check": "idx-1 DTC=0x7F, idx+1 DTC=0x04; 0x115D9+0x3A=0x11613 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Задний нагрев банк1. Не CLAHSV."
+    },
+    {
+      "title": "CLAHSH2",
+      "addr": "0x11614",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x3B",
+      "dtc_ort": "0x04",
+      "consumer": {
+        "ea": "0x854E46",
+        "raw_hex": "E6FC3B00 DA82E296",
+        "decoded": "MOV R12,#0x003B; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11614",
+        "phys": "0x8111614",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x3B → BMW Ort 0x04 (Lambdasonden-Heizung hinter Kat (Bank2)) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x3B=0x11614; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x3B; CALLS 0x82,0x96E2 (DFPM) @ 0x854E46",
+          "Live A0: Ort 0x04 present"
+        ],
+        "summary": "Класс DFPM idx 0x3B: DTC 0x04 = Lambdasonden-Heizung hinter Kat (Bank2). Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x04 / адрес класса не 0x11614",
+        "check": "idx-1 DTC=0x0E, idx+1 DTC=0x0D; 0x115D9+0x3B=0x11614 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Class 00 ≠ monitor off."
+    },
+    {
+      "title": "CLASLPE",
+      "addr": "0x1164C",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x73",
+      "dtc_ort": "0x54",
+      "consumer": {
+        "ea": "0x85B592",
+        "raw_hex": "E6FC7300 DA82E296",
+        "decoded": "MOV R12,#0x0073; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x1164C",
+        "phys": "0x811164C",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x73 → BMW Ort 0x54 (Endstufe Relais Sekundaerluftpumpe) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x73=0x1164C; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x73; CALLS 0x82,0x96E2 (DFPM) @ 0x85B592",
+          "Live A0: Ort 0x54 present",
+          "Status word B9CC @85B53E; LROBD reads B9CC.0 @875838→FDD8.9"
+        ],
+        "summary": "Класс DFPM idx 0x73: DTC 0x54 = Endstufe Relais Sekundaerluftpumpe. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x54 / адрес класса не 0x1164C",
+        "check": "idx-1 DTC=0x1F, idx+1 DTC=0x00; 0x115D9+0x73=0x1164C exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "SAP pump output class. Class0≠monitor off; ESKONF inactive clears LROBD contribution separately."
+    },
+    {
+      "title": "CLASLVE",
+      "addr": "0x11651",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x78",
+      "dtc_ort": "0x55",
+      "consumer": {
+        "ea": "0x85B618",
+        "raw_hex": "E6FC7800 DA82E296",
+        "decoded": "MOV R12,#0x0078; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11651",
+        "phys": "0x8111651",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x78 → BMW Ort 0x55 (Sekundaerluftventil Endstufe) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x78=0x11651; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x78; CALLS 0x82,0x96E2 (DFPM) @ 0x85B618",
+          "Live A0: Ort 0x55 present",
+          "Status word B9D6; LROBD @875840"
+        ],
+        "summary": "Класс DFPM idx 0x78: DTC 0x55 = Sekundaerluftventil Endstufe. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x55 / адрес класса не 0x11651",
+        "check": "idx-1 DTC=0xFF, idx+1 DTC=0xED; 0x115D9+0x78=0x11651 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "SAP valve output class."
+    },
+    {
+      "title": "CLAHSV",
+      "addr": "0x11615",
+      "verdict": "PROVEN",
+      "stock_hex": "21",
+      "dump_hex": "00",
+      "dfpm_index": "0x3C",
+      "dtc_ort": "0x0D",
+      "consumer": {
+        "ea": "0x854BB8",
+        "raw_hex": "E6FC3C00 DA82E296",
+        "decoded": "MOV R12,#0x003C; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11615",
+        "phys": "0x8111615",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x3C → BMW Ort 0x0D (Lambdasonden-Heizung vor Kat) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x3C=0x11615; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x3C; CALLS 0x82,0x96E2 (DFPM) @ 0x854BB8",
+          "FR DHLS: CLAHSV = Heating O2 sensor pre cat"
+        ],
+        "summary": "Класс DFPM idx 0x3C: DTC 0x0D = Lambdasonden-Heizung vor Kat. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x0D / адрес класса не 0x11615",
+        "check": "idx-1 DTC=0x04, idx+1 DTC=0x05; 0x115D9+0x3C=0x11615 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Передний нагрев банк1. Dump already 00 (car cleared); stock 21."
+    },
+    {
+      "title": "CLAHSV2",
+      "addr": "0x11616",
+      "verdict": "PROVEN",
+      "stock_hex": "21",
+      "dump_hex": "00",
+      "dfpm_index": "0x3D",
+      "dtc_ort": "0x05",
+      "consumer": {
+        "ea": "0x854C92",
+        "raw_hex": "E6FC3D00 DA82E296",
+        "decoded": "MOV R12,#0x003D; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x11616",
+        "phys": "0x8111616",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x3D → BMW Ort 0x05 (Lambdasonden-Heizung vor Kat (Bank2)) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x3D=0x11616; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x3D; CALLS 0x82,0x96E2 (DFPM) @ 0x854C92",
+          "FR DHLS: CLAHSV2 pre-cat heater bank2"
+        ],
+        "summary": "Класс DFPM idx 0x3D: DTC 0x05 = Lambdasonden-Heizung vor Kat (Bank2). Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x05 / адрес класса не 0x11616",
+        "check": "idx-1 DTC=0x0D, idx+1 DTC=0x28; 0x115D9+0x3D=0x11616 exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Dump already 00; stock 21. Не задний CLAHSH."
+    },
+    {
+      "title": "DTEVE/CLATEVE",
+      "addr": "0x1165B",
+      "verdict": "PROVEN",
+      "stock_hex": "25",
+      "dump_hex": "25",
+      "dfpm_index": "0x82",
+      "dtc_ort": "0x62",
+      "consumer": {
+        "ea": "0x85B724",
+        "raw_hex": "E6FC8200 DA82E296",
+        "decoded": "MOV R12,#0x0082; CALLS 0x82,0x96E2 ; DFPM then reads class via [idx+0x15D9]→0x1165B",
+        "phys": "0x811165B",
+        "page": "class byte via DPP0=0x204 on mem 0x15D9; index immediate (no EXTP on MOV R12)"
+      },
+      "semantic": {
+        "sources": [
+          "DFPM→DTC table file 0x153F2: idx 0x82 → BMW Ort 0x62 (Tankentlueftungsventil Endstufe) [ME72KWP1_jobs / FORTTEXTE]",
+          "Class table 0x115D9+0x82=0x1165B; DFPM path MOVB [R4+#0x15D9] @82938A (DPP0→0x8115D9)",
+          "Fault site MOV R12,#0x82; CALLS 0x82,0x96E2 (DFPM) @ 0x85B724",
+          "Live A0: Ort 0x62 present; B_ten/TEV context in LREB analysis",
+          "Fault body uses status 0xB9EA before idx 0x82 dispatch",
+          "Falsifier vs wrong addr 0x11611: idx0x38 DTC=0xE2 ≠ 0x62"
+        ],
+        "summary": "Класс DFPM idx 0x82: DTC 0x62 = Tankentlueftungsventil Endstufe. Class 0 = подавление регистрации, не выключение монитора."
+      },
+      "falsifier": {
+        "claim": "Если индекс соседний, DTC не 0x62 / адрес класса не 0x1165B",
+        "check": "idx-1 DTC=0xB7, idx+1 DTC=0xFF; 0x115D9+0x82=0x1165B exact",
+        "result": "DID_NOT_FIRE"
+      },
+      "notes": "Правильный класс TEV Endstufe = 0x1165B (idx82), не 0x11611."
+    }
+  ]
+}

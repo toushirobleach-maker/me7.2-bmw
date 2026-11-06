@@ -1,0 +1,156 @@
+name,addr,judge,note
+CDAGR,0x11fc9,keep_PROVEN,transport proven; AGR HYP
+CDAGR,,keep_PROVEN,stock↔car
+CLADMPME,0x115ee,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADSL,0x115f3,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADSU,0x115f5,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADSVLU,0x115f6,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVEE,0x115f7,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVEF,0x115f8,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVEL,0x115f9,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVEN,0x115fa,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVER,0x115fb,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVEU,0x115fc,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLADVEV,0x115fd,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAETS,0x11600,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV1,0x11601,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV2,0x11602,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV3,0x11603,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV4,0x11604,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV5,0x11605,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV6,0x11606,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV7,0x11607,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAEV8,0x11608,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAHSH,0x11613,keep_PROVEN,DFPM+DTC; 0x854D6C
+CLAHSH2,0x11614,keep_PROVEN,DFPM+DTC; 0x854E46
+CLAHSV,0x11615,keep_PROVEN,0x854BB8
+CLAHSV2,0x11616,keep_PROVEN,0x854C92
+CLAKOS,0x1161a,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAKRNT,0x1161c,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAKROF,0x1161d,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAKRTP,0x1161e,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAKUPPL,0x11623,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALASH,0x11624,keep_PROVEN,DFPM+DTC; 0x82C38E
+CLALASH2,0x11625,keep_PROVEN,DFPM+DTC; 0x82C39C
+CLALATP,0x11626,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALATP2,0x11627,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALATV,0x11628,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALATV2,0x11629,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALDPE,0x1162c,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALM,0x1162e,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALSH,0x1162f,keep_PROVEN,DFPM+DTC; 0x857E02
+CLALSH2,0x11630,keep_PROVEN,DFPM+DTC; 0x857E10
+CLALSV2,0x11632,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLALSVV,0x11633,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAMILE,0x11640,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAN,0x11641,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLANWSE,0x11644,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAPH,0x11646,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLAPH2,0x11647,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASLPE,0x1164c,keep_PROVEN,DFPM+DTC; 0x85B592
+CLASLS,0x1164d,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASLS2,0x1164e,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASLV,0x1164f,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASLV2,0x11650,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASLVE,0x11651,keep_PROVEN,DFPM+DTC; 0x85B618
+CLASTA,0x11652,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASTAE,0x11653,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLASTS,0x11654,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLATA,0x11656,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CLRZWTMS,0x1a723,keep_PROVEN,LREB
+CRC32,0x1fc0e,keep_PROVEN,recomputed on stock/v3
+CWDDMTL,0x1a603,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWDDMTL2,0x1a604,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWDEGFE,0x19cb6,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWDKAT,0x11fd3,keep_PROVEN,0x86B4B6 path
+CWDSLSY,0x1960e,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWFASL,0x1963d,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWGGFST,0x1a601,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWGGLSH,0x193e9,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWKHZ,0x1a2a9,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWKONABG,0x1a5e9,keep_PROVEN,PROKON; stock↔dump
+CWKONLS,0x1a5ea,keep_PROVEN,PROKON 0x86B506 EXTP#206
+CWNOCINS,0x1a5eb,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+CWSLSOF,0x1963e,promote_triple_evidence,E5A0 local reloc; NOT 6901-native proof
+DECAT / rear O2 registration suppress,,keep_PROVEN,v2+v3 on stock
+DFPM class window [0..0x7F],0x115d9,keep_PROVEN,0x829384.. → 0x8115D9+idx
+DTEVE,0x1165b,keep_PROVEN,DTC table; needs idx-82 consumer
+DTMR,0x1a724,keep_PROVEN,LREB; review formula fix
+DTMTMRW,0x1a725,keep_PROVEN,LREB; review formula fix
+DTVKAML2,0x1a827,promote_zoff_exact_fr,DTVKAML2: z_off exact match far-ptr #206
+DZWSPM,0x19628,promote_power_maps_pass,DZWSPM: consumed via far-ptr #206 @ 0x849b4c
+ESKONF,0x11b2f,keep_PROVEN,FR + DME mask table 0x815824
+ESKONF,0x11b31,keep_PROVEN,FR + DME mask table
+ESKONF,0x11b2c,keep_PROVEN,FR + init
+KFABAK,0x192cd,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFANS,0x19df5,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFATMLA,0x19837,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFATMLA2,0x19856,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFATMLAE,0x1987a,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFATMLAE2,0x1989e,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFATMZW,0x19964,promote_power_maps_pass,KFATMZW: consumed via far-ptr #206 @ 0x85380e
+KFATMZW2,0x199b6,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFATMZWE,0x198c2,promote_power_maps_pass,KFATMZWE COM via BB94 @0x85401E
+KFAVAK,0x1930c,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFBAKL,0x1934b,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFDYES,0x1a8d3,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFDYESOF,0x1a936,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFETRD,0x19b8d,keep_PROVEN,interpolator+header
+KFETRD,,keep_PROVEN,stock↔car; size fix
+KFETRD,,keep_PROVEN,union
+KFETRT,0x19bbf,keep_PROVEN,review FAIL fixed
+KFFMSML,0x19666,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFFTEAN,0x194b8,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFFTEAX,0x19543,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFFTV,0x1a754,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFFTV2,0x1a786,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFFWL,0x19f47,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFFWTBR,0x19c3d,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFKRMX,0x191f9,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFLAMFA,0x1a08b,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFLASKH,0x1a313,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFLASWLR,0x19fd7,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFLF,0x19e44,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFLMSKH,0x1a385,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFLMSKH2,0x1a3c9,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFMDKO,0x1a4d4,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFMDKOG,0x1a50b,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFMIRED,0x1a58c,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFMIRED1,0x1a83c,promote_kf_farptr206,Far-ptr PROVEN to 0x1a83c; local 02 02 header parse rejected (false dims). Size/axes need COM_AXIS follow-up.
+KFMIRLR,0x1a5ae,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFQTE,0x19559,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFRI,0x1a61e,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFRI2,0x1a651,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFRINH,0x19aea,promote_power_maps_pass,KFRINH: consumed via far-ptr #206 @ 0x803486
+KFRINH2,0x19b1c,promote_power_maps_pass,KFRINH2: consumed via far-ptr #206 @ 0x82ea9a
+KFRP,0x1a67b,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFRP2,0x1a6a5,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFRTV,0x1a6cf,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFRTV2,0x1a6f9,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFTATM,0x19a06,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFTATM2,0x19a55,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFTATX,0x19577,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFTEKA,0x1ab3c,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFTEVP,0x19458,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFTPKOR,0x19b16,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFUSHK,0x1a7aa,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFUSHK2,0x1a7ce,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFVAKL,0x1938a,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFWEE,0x19cfa,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KFWEEK,0x19d45,promote_kf_farptr206,E5A0 local reloc; NOT 6901-native proof
+KRKTE,0x19cc4,promote_krkte,KRKTE: rk→te conversion constant; stock raw 0x56
+MP descriptor start CPU LE,0x17c7c,keep_PROVEN,MP region; stock 34/34
+MSLBAS,0x19612,keep_PROVEN,addr resolve; name HYP
+MSLUB,0x196b2,keep_PROVEN,curve ptr 0206:16A9
+SAP,0x1a5ec,keep_PROVEN,0x86B552..560
+SAP,,keep_PROVEN,v2 bytes; stock basedata
+SAP,,keep_PROVEN,v2+v3
+TAMLTKA,0x1a575,keep_PROVEN,shape coded
+TAMLTKA,0x1a57c,keep_PROVEN,paired
+TAMLTKA,,keep_PROVEN,stock↔car
+TARAU,0x1a749,keep_PROVEN,LREB decode
+TASHS,0x1a74a,keep_PROVEN,LREB
+TMRA1,0x1a75c,keep_PROVEN,LREB
+TMRA2,0x1a75d,keep_PROVEN,LREB
+TMRAK,0x1a75e,keep_PROVEN,LREB
+TMSHS,0x1a75f,keep_PROVEN,LREB

@@ -1,0 +1,831 @@
+{
+  "passed": 86,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "v2 pinned SHA",
+      "ok": true
+    },
+    {
+      "name": "v3 pinned SHA",
+      "ok": true
+    },
+    {
+      "name": "original pinned SHA",
+      "ok": true
+    },
+    {
+      "name": "all complete512KiB files",
+      "ok": true
+    },
+    {
+      "name": "independent CRC known vector",
+      "ok": true
+    },
+    {
+      "name": "only two intended functional bytes changed",
+      "ok": true
+    },
+    {
+      "name": "both rear heater classes25 to00",
+      "ok": true
+    },
+    {
+      "name": "10 total differing bytes vs v2",
+      "ok": true
+    },
+    {
+      "name": "8 differing checksum bytes vs v2",
+      "ok": true
+    },
+    {
+      "name": "complete executable regions unchanged",
+      "ok": true
+    },
+    {
+      "name": "correct class table index3A",
+      "ok": true
+    },
+    {
+      "name": "unchanged rear heater callsite854D6C",
+      "ok": true
+    },
+    {
+      "name": "correct class table index3B",
+      "ok": true
+    },
+    {
+      "name": "unchanged rear heater callsite854E46",
+      "ok": true
+    },
+    {
+      "name": "DFPM reads class table",
+      "ok": true
+    },
+    {
+      "name": "zero class bypasses error registration",
+      "ok": true
+    },
+    {
+      "name": "front heater classes preserved from original",
+      "ok": true
+    },
+    {
+      "name": "FFRITMS and I/P/TV maps preserved from original",
+      "ok": true
+    },
+    {
+      "name": "real LREB cluster preserved from original",
+      "ok": true
+    },
+    {
+      "name": "fuel level diagnosis preserved from original",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original1A623",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original1A624",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original1A62D",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original1A5FE",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original1A5FF",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original11B30",
+      "ok": true
+    },
+    {
+      "name": "v1 rejected byte remains original1161A",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained11624",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained1162F",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained1164C",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained11651",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained11B2F",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained11B31",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained11FD3",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained19612",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained196B2",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained1A5EA",
+      "ok": true
+    },
+    {
+      "name": "v2 accepted functional change retained1A5EC",
+      "ok": true
+    },
+    {
+      "name": "rear heater monitor permission code intentionally unchanged",
+      "ok": true
+    },
+    {
+      "name": "v2 integrity independently valid",
+      "ok": true
+    },
+    {
+      "name": "ROMSYS startup 0x8038",
+      "ok": true
+    },
+    {
+      "name": "ROMSYS parameter endpoints 0x18000",
+      "ok": true
+    },
+    {
+      "name": "ROMSYS program endpoints 0x803c",
+      "ok": true
+    },
+    {
+      "name": "CRC32 bitwise 0x1fc0e",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x17c7c",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x17c8c",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eaa6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eab6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eac6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ead6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eae6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eaf6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb06",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb16",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb26",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb36",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb46",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb56",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb66",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb76",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb86",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eb96",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1eba6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ebb6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ebc6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ebd6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ebe6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ebf6",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec06",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec16",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec26",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec36",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec46",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec56",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec66",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec76",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec86",
+      "ok": true
+    },
+    {
+      "name": "multipoint 0x1ec96",
+      "ok": true
+    },
+    {
+      "name": "calibration CRC B85703CD",
+      "ok": true
+    },
+    {
+      "name": "MP sum09A70D35",
+      "ok": true
+    },
+    {
+      "name": "rear class corruption detected by independent CRC and MP",
+      "ok": true
+    },
+    {
+      "name": "unrelated program corruption detected",
+      "ok": true
+    },
+    {
+      "name": "REPORT SHA matches candidate",
+      "ok": true
+    },
+    {
+      "name": "REPORT source SHA matches v2",
+      "ok": true
+    },
+    {
+      "name": "REPORT effect explicitly limited",
+      "ok": true
+    },
+    {
+      "name": "REPORT lists exactly intended class changes",
+      "ok": true
+    }
+  ],
+  "sha256": "PRIVATE_IMAGE_SHA256_REMOVED",
+  "diff_vs_v2": [
+    {
+      "start": 71187,
+      "end_exclusive": 71189,
+      "offset": "0x11613",
+      "old": "2525",
+      "new": "0000",
+      "length": 2
+    },
+    {
+      "start": 125678,
+      "end_exclusive": 125680,
+      "offset": "0x1eaee",
+      "old": "5A32",
+      "new": "350D",
+      "length": 2
+    },
+    {
+      "start": 125682,
+      "end_exclusive": 125684,
+      "offset": "0x1eaf2",
+      "old": "A5CD",
+      "new": "CAF2",
+      "length": 2
+    },
+    {
+      "start": 130062,
+      "end_exclusive": 130066,
+      "offset": "0x1fc0e",
+      "old": "D1FEFADA",
+      "new": "CD0357B8",
+      "length": 4
+    }
+  ],
+  "diff_vs_original": [
+    {
+      "start": 71187,
+      "end_exclusive": 71189,
+      "offset": "0x11613",
+      "old": "2525",
+      "new": "0000",
+      "length": 2
+    },
+    {
+      "start": 71204,
+      "end_exclusive": 71206,
+      "offset": "0x11624",
+      "old": "2525",
+      "new": "0000",
+      "length": 2
+    },
+    {
+      "start": 71215,
+      "end_exclusive": 71217,
+      "offset": "0x1162f",
+      "old": "2525",
+      "new": "0000",
+      "length": 2
+    },
+    {
+      "start": 71244,
+      "end_exclusive": 71245,
+      "offset": "0x1164c",
+      "old": "25",
+      "new": "00",
+      "length": 1
+    },
+    {
+      "start": 71249,
+      "end_exclusive": 71250,
+      "offset": "0x11651",
+      "old": "25",
+      "new": "00",
+      "length": 1
+    },
+    {
+      "start": 72495,
+      "end_exclusive": 72496,
+      "offset": "0x11b2f",
+      "old": "F3",
+      "new": "FF",
+      "length": 1
+    },
+    {
+      "start": 72497,
+      "end_exclusive": 72498,
+      "offset": "0x11b31",
+      "old": "F0",
+      "new": "F3",
+      "length": 1
+    },
+    {
+      "start": 73683,
+      "end_exclusive": 73684,
+      "offset": "0x11fd3",
+      "old": "01",
+      "new": "00",
+      "length": 1
+    },
+    {
+      "start": 103954,
+      "end_exclusive": 103955,
+      "offset": "0x19612",
+      "old": "1D",
+      "new": "00",
+      "length": 1
+    },
+    {
+      "start": 104114,
+      "end_exclusive": 104122,
+      "offset": "0x196b2",
+      "old": "0F1F2C373E434647",
+      "new": "0000000000000000",
+      "length": 8
+    },
+    {
+      "start": 108010,
+      "end_exclusive": 108011,
+      "offset": "0x1a5ea",
+      "old": "33",
+      "new": "11",
+      "length": 1
+    },
+    {
+      "start": 108012,
+      "end_exclusive": 108013,
+      "offset": "0x1a5ec",
+      "old": "01",
+      "new": "00",
+      "length": 1
+    },
+    {
+      "start": 125678,
+      "end_exclusive": 125680,
+      "offset": "0x1eaee",
+      "old": "C993",
+      "new": "350D",
+      "length": 2
+    },
+    {
+      "start": 125682,
+      "end_exclusive": 125684,
+      "offset": "0x1eaf2",
+      "old": "366C",
+      "new": "CAF2",
+      "length": 2
+    },
+    {
+      "start": 125710,
+      "end_exclusive": 125713,
+      "offset": "0x1eb0e",
+      "old": "12DA78",
+      "new": "13F977",
+      "length": 3
+    },
+    {
+      "start": 125714,
+      "end_exclusive": 125717,
+      "offset": "0x1eb12",
+      "old": "ED2587",
+      "new": "EC0688",
+      "length": 3
+    },
+    {
+      "start": 130062,
+      "end_exclusive": 130066,
+      "offset": "0x1fc0e",
+      "old": "6B70EB3E",
+      "new": "CD0357B8",
+      "length": 4
+    }
+  ],
+  "changed_vs_v2": 10,
+  "functional_changed_vs_v2": 2,
+  "checksum_changed_vs_v2": 8,
+  "changed_vs_original": 36,
+  "checksum_results": [
+    {
+      "name": "ROMSYS startup",
+      "offset": "0x8038",
+      "stored": "0000FB11",
+      "calculated": "0000FB11",
+      "ok": true
+    },
+    {
+      "name": "ROMSYS parameter endpoints",
+      "offset": "0x18000",
+      "stored": "0000971D",
+      "calculated": "0000971D",
+      "ok": true
+    },
+    {
+      "name": "ROMSYS program endpoints",
+      "offset": "0x803c",
+      "stored": "00151423",
+      "calculated": "00151423",
+      "ok": true
+    },
+    {
+      "name": "CRC32 bitwise",
+      "offset": "0x1fc0e",
+      "stored": "B85703CD",
+      "calculated": "B85703CD",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x17c7c",
+      "stored": "0C06F02A",
+      "calculated": "0C06F02A",
+      "inverse": "F3F90FD5",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x17c8c",
+      "stored": "006967FF",
+      "calculated": "006967FF",
+      "inverse": "FF969800",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eaa6",
+      "stored": "1067186C",
+      "calculated": "1067186C",
+      "inverse": "EF98E793",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eab6",
+      "stored": "1E060832",
+      "calculated": "1E060832",
+      "inverse": "E1F9F7CD",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eac6",
+      "stored": "010C0928",
+      "calculated": "010C0928",
+      "inverse": "FEF3F6D7",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ead6",
+      "stored": "1D73616B",
+      "calculated": "1D73616B",
+      "inverse": "E28C9E94",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eae6",
+      "stored": "09A70D35",
+      "calculated": "09A70D35",
+      "inverse": "F658F2CA",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eaf6",
+      "stored": "0699884E",
+      "calculated": "0699884E",
+      "inverse": "F96677B1",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb06",
+      "stored": "0D77F913",
+      "calculated": "0D77F913",
+      "inverse": "F28806EC",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb16",
+      "stored": "13556AB6",
+      "calculated": "13556AB6",
+      "inverse": "ECAA9549",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb26",
+      "stored": "1111B593",
+      "calculated": "1111B593",
+      "inverse": "EEEE4A6C",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb36",
+      "stored": "0DFD654E",
+      "calculated": "0DFD654E",
+      "inverse": "F2029AB1",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb46",
+      "stored": "0FDB884E",
+      "calculated": "0FDB884E",
+      "inverse": "F02477B1",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb56",
+      "stored": "0FCE2CBC",
+      "calculated": "0FCE2CBC",
+      "inverse": "F031D343",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb66",
+      "stored": "1193EBB8",
+      "calculated": "1193EBB8",
+      "inverse": "EE6C1447",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb76",
+      "stored": "1155E676",
+      "calculated": "1155E676",
+      "inverse": "EEAA1989",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb86",
+      "stored": "00000000",
+      "calculated": "00000000",
+      "inverse": "FFFFFFFF",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eb96",
+      "stored": "00000000",
+      "calculated": "00000000",
+      "inverse": "FFFFFFFF",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1eba6",
+      "stored": "122D1511",
+      "calculated": "122D1511",
+      "inverse": "EDD2EAEE",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ebb6",
+      "stored": "0FEF2D0D",
+      "calculated": "0FEF2D0D",
+      "inverse": "F010D2F2",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ebc6",
+      "stored": "0FF176B6",
+      "calculated": "0FF176B6",
+      "inverse": "F00E8949",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ebd6",
+      "stored": "10A202B1",
+      "calculated": "10A202B1",
+      "inverse": "EF5DFD4E",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ebe6",
+      "stored": "0FF332B3",
+      "calculated": "0FF332B3",
+      "inverse": "F00CCD4C",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ebf6",
+      "stored": "0FCF7D40",
+      "calculated": "0FCF7D40",
+      "inverse": "F03082BF",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec06",
+      "stored": "107B1025",
+      "calculated": "107B1025",
+      "inverse": "EF84EFDA",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec16",
+      "stored": "11C7B49D",
+      "calculated": "11C7B49D",
+      "inverse": "EE384B62",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec26",
+      "stored": "0F1DBB14",
+      "calculated": "0F1DBB14",
+      "inverse": "F0E244EB",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec36",
+      "stored": "1066B7E8",
+      "calculated": "1066B7E8",
+      "inverse": "EF994817",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec46",
+      "stored": "100D4F57",
+      "calculated": "100D4F57",
+      "inverse": "EFF2B0A8",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec56",
+      "stored": "106BABFD",
+      "calculated": "106BABFD",
+      "inverse": "EF945402",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec66",
+      "stored": "10143671",
+      "calculated": "10143671",
+      "inverse": "EFEBC98E",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec76",
+      "stored": "14A5E800",
+      "calculated": "14A5E800",
+      "inverse": "EB5A17FF",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec86",
+      "stored": "1FFFE000",
+      "calculated": "1FFFE000",
+      "inverse": "E0001FFF",
+      "ok": true
+    },
+    {
+      "name": "multipoint",
+      "offset": "0x1ec96",
+      "stored": "1FD12005",
+      "calculated": "1FD12005",
+      "inverse": "E02EDFFA",
+      "ok": true
+    }
+  ],
+  "negative_controls_memory_only": true,
+  "limitations": "Static validation of calibration change and checksums. No ECU execution or proof of runtime fuel trims/readiness."
+}

@@ -1,0 +1,14 @@
+---
+description: Public ME7.2 evidence, privacy and offline/hardware boundaries
+alwaysApply: true
+---
+
+Read AGENTS.md and03_docs/STOCK_FLASHING_RU.md. Reply in Russian. Active tools05_tools; old pipeline snapshots are not a standalone reproducible workflow.
+
+Only one allowlisted stock-analysis BIN may be public. No vehicle images/builds/cal64/raw logs/real seed replies, home paths or ECU identifiers. Never publish the full1043-page FR PDF/text or links to that PDF/containing archives. Keep own inputs in local/, results in runs/; both gitignored.
+
+PROVEN requires consumer+semantics+falsifier. Do not force B_lr, do not equate class0 with monitor off. Checksum validity does not make sparse SP-Daten flash-ready. The stock BIN has37/38 and no cal end marker.
+
+Real hardware needs explicit user scope and--execute. Writer is cal64 only, exact own baseline, no retry after destructive timeout, no automatic recovery. Stock preparation preserves gaps/known service fields and rejects known program mismatch; it does not perform coding/EWS or full program restore.
+
+Run synthetic tests, public-tree scan, manifest verification and report-reference audit before publication. Missing private inputs are deliberate; disclose reproducibility limits.

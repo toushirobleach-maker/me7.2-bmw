@@ -1,0 +1,1034 @@
+<!-- 6901I41D proven XDF v2 — post independent review -->
+<XDFFORMAT version="1.60">
+  <XDFHEADER>
+    <flags>0x1</flags>
+    <fileversion>2</fileversion>
+    <deftitle>ME7.2 6901I41D / 7532675 proven v2</deftitle>
+    <description>BMW ME7.2 SW 6901I41D (ZB 7532675). Full 512 KiB file offsets. Tags: [PROVEN]/[STRUCT]/[HYP]. Patch basedata=SP-Daten stock. After patch: multipoint THEN CRC32. Class0=registration suppress. Never BSET B_lr. Reviews 2026-11-06 applied.</description>
+    <author>ME72_6901I41D_research</author>
+    <BASEOFFSET offset="0" subtract="0" />
+    <DEFAULTS datasizeinbits="8" sigdigits="2" outputtype="1" signed="0" lsbfirst="0" float="0" />
+    <REGION type="0xFFFFFFFF" startaddress="0x0" size="0x80000" regionflags="0x0" name="Full 512KiB flash" desc="cal 0x10000=CPU 0x810000" />
+    <CATEGORY index="0x0" name="00 Identity / checksums" />
+    <CATEGORY index="0x1" name="01 Config PROKON / ESKONF" />
+    <CATEGORY index="0x2" name="02 DFPM error classes" />
+    <CATEGORY index="0x3" name="03 LREB / lambda enable" />
+    <CATEGORY index="0x4" name="04 Ignition [STRUCT]" />
+    <CATEGORY index="0x5" name="05 Thermostat / fan" />
+    <CATEGORY index="0x6" name="06 Limiters [HYP]" />
+    <CATEGORY index="0x7" name="07 PATCHES" />
+  </XDFHEADER>
+  <XDFCONSTANT uniqueid="0x69020001">
+    <title>[PROVEN] CRC32 calibration stored LE</title>
+    <description>zlib CRC32 of raw[0x10000:0x1FC04], little-endian dword.\n\nSTATUS: PROVEN\nEVIDENCE: recomputed on stock/v3\nFILE: 0x1fc0e CPU: 0x81fc0e</description>
+    <CATEGORYMEM index="0" category="0" />
+    <EMBEDDEDDATA mmedaddress="0x1fc0e" mmedelementsizebits="32" mmedtypeflags="0x2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>hex</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020002">
+    <title>[PROVEN] MP descriptor start CPU LE</title>
+    <description>First dword of multipoint descriptor (CPU start). Full descriptor is 16 bytes.\n\nSTATUS: PROVEN\nEVIDENCE: MP region; stock 34/34\nFILE: 0x17c7c CPU: 0x817c7c</description>
+    <CATEGORYMEM index="0" category="0" />
+    <EMBEDDEDDATA mmedaddress="0x17c7c" mmedelementsizebits="32" mmedtypeflags="0x2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020003">
+    <title>[PROVEN] CWKONLS</title>
+    <description>PROKON @0x81A5EA bits 0/1/4/5 → FD50.12/.10/.13/.11. Stock 0x33; rear-delete candidate 0x11.\n\nSTATUS: PROVEN\nEVIDENCE: PROKON 0x86B506 EXTP#206\nFILE: 0x1a5ea CPU: 0x81a5ea</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x1a5ea" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>bitfield</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020004">
+    <title>[PROVEN] CWKONABG</title>
+    <description>PROKON @0x81A5E9. Stock 0x05; car/v3 0x00. NOT SAP passport (0x1A5EC).\n\nSTATUS: PROVEN\nEVIDENCE: PROKON; stock↔dump\nFILE: 0x1a5e9 CPU: 0x81a5e9</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x1a5e9" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>bitfield</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020005">
+    <title>[PROVEN] SAP passport bit @0x1A5EC</title>
+    <description>EXTP#206 MOVB 0x25EC ANDB#1 → FDC0.11. Stock 01; off candidate 00.\n\nSTATUS: PROVEN\nEVIDENCE: 0x86B552..560\nFILE: 0x1a5ec CPU: 0x81a5ec</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x1a5ec" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>bool</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020006">
+    <title>[PROVEN] CWDKAT</title>
+    <description>Bit0 gates 0x904A mask 0x0100. Stock 01; candidate 00.\n\nSTATUS: PROVEN\nEVIDENCE: 0x86B4B6 path\nFILE: 0x11fd3 CPU: 0x811fd3</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x11fd3" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>bool</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020007">
+    <title>[PROVEN] CDAGR @0x11FC9 — EURO DAGR inactiv codeword (FR PROKON; was misnamed CWDAGR)</title>
+    <description>Bit0 → FDC0.4 @0x86B5DE. Stock 01, car 00. AGR meaning HYP.\n\nSTATUS: PROVEN\nEVIDENCE: transport proven; AGR HYP\nFILE: 0x11fc9 CPU: 0x811fc9</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x11fc9" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>bool</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020008">
+    <title>[PROVEN] ESKONF[3] SLP bits</title>
+    <description>Bits 3:2; inactive mask 0x0C via MOV R12,#3 / table[1] / OR (0x85AAA6/AA/B6). Stock F3; candidate FF.\n\nSTATUS: PROVEN\nEVIDENCE: FR + DME mask table 0x815824\nFILE: 0x11b2f CPU: 0x811b2f</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x11b2f" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020009">
+    <title>[PROVEN] ESKONF[5] SLV bits</title>
+    <description>Bits 1:0; inactive mask 0x03 via MOV R12,#5 / table[0] / OR (0x85AABA/BE/CA). Stock F0; candidate F3.\n\nSTATUS: PROVEN\nEVIDENCE: FR + DME mask table\nFILE: 0x11b31 CPU: 0x811b31</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x11b31" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFTABLE uniqueid="0x6902000a" flags="0x0">
+    <title>[PROVEN] ESKONF[0..8]</title>
+    <description>9-byte ESKONF. [3]=SLP [5]=SLV.\n\nSTATUS: PROVEN\nEVIDENCE: FR + init\nFILE: 0x11b2c 1x9</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>9</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x11b2c" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="9" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x6902000b">
+    <title>[PROVEN] MSLBAS @0x19612 — Ini. secondary air mass (FR DSLSLR)</title>
+    <description>EXTP#206 consumers 849C7E/CAE/84BEE6/84BF90. Stock 1D. Name/role HYP.\n\nSTATUS: PROVEN\nEVIDENCE: addr resolve; name HYP\nFILE: 0x19612 CPU: 0x819612</description>
+    <CATEGORYMEM index="0" category="1" />
+    <EMBEDDEDDATA mmedaddress="0x19612" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFTABLE uniqueid="0x6902000c" flags="0x0">
+    <title>[PROVEN] MSLUB values — secondary air mass f(ub) (FR SLS)</title>
+    <description>8 values of curve hdr@0x8196A9. Layout STRUCT; SAP identity HYP.\n\nSTATUS: PROVEN\nEVIDENCE: curve ptr 0206:16A9\nFILE: 0x196b2 1x8</description>
+    <CATEGORYMEM index="0" category="1" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>8</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x196b2" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x6902000d">
+    <title>[PROVEN] CLALSH class</title>
+    <description>DFPM class 0x115D9+0x56. DTC LE @0x153F2+2*0x56=0x0C. Site 0x857E02. Class00=registration suppress only. rear λ bank1\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x857E02\nFILE: 0x1162f CPU: 0x81162f</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x1162f" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902000e">
+    <title>[PROVEN] CLALSH2 class</title>
+    <description>DFPM class 0x115D9+0x57. DTC LE @0x153F2+2*0x57=0x14. Site 0x857E10. Class00=registration suppress only. rear λ bank2\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x857E10\nFILE: 0x11630 CPU: 0x811630</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11630" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902000f">
+    <title>[PROVEN] CLALASH class</title>
+    <description>DFPM class 0x115D9+0x4B. DTC LE @0x153F2+2*0x4B=0x11. Site 0x82C38E. Class00=registration suppress only. rear aging b1\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x82C38E\nFILE: 0x11624 CPU: 0x811624</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11624" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020010">
+    <title>[PROVEN] CLALASH2 class</title>
+    <description>DFPM class 0x115D9+0x4C. DTC LE @0x153F2+2*0x4C=0x17. Site 0x82C39C. Class00=registration suppress only. rear aging b2\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x82C39C\nFILE: 0x11625 CPU: 0x811625</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11625" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020011">
+    <title>[PROVEN] CLAHSH class</title>
+    <description>DFPM class 0x115D9+0x3A. DTC LE @0x153F2+2*0x3A=0x0E. Site 0x854D6C. Class00=registration suppress only. rear heater b1\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x854D6C\nFILE: 0x11613 CPU: 0x811613</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11613" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020012">
+    <title>[PROVEN] CLAHSH2 class</title>
+    <description>DFPM class 0x115D9+0x3B. DTC LE @0x153F2+2*0x3B=0x04. Site 0x854E46. Class00=registration suppress only. rear heater b2\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x854E46\nFILE: 0x11614 CPU: 0x811614</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11614" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020013">
+    <title>[PROVEN] CLASLPE class</title>
+    <description>DFPM class 0x115D9+0x73. DTC LE @0x153F2+2*0x73=0x54. Site 0x85B592. Class00=registration suppress only. SAP pump/B9CC\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x85B592\nFILE: 0x1164c CPU: 0x81164c</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x1164c" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020014">
+    <title>[PROVEN] CLASLVE class</title>
+    <description>DFPM class 0x115D9+0x78. DTC LE @0x153F2+2*0x78=0x55. Site 0x85B618. Class00=registration suppress only. SAP valve/B9D6\n\nSTATUS: PROVEN\nEVIDENCE: DFPM+DTC; 0x85B618\nFILE: 0x11651 CPU: 0x811651</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11651" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020015">
+    <title>[PROVEN] DTEVE/TEV class (DTC 0x62 idx 0x82)</title>
+    <description>Idx 0x82 → DTC 0x62; stock class 0x25. Old 0x11611 was idx 0x38/DTC 0xE2/class 0 — REMOVED.\n\nSTATUS: STRUCT\nEVIDENCE: DTC table; needs idx-82 consumer\nFILE: 0x1165b CPU: 0x81165b</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x1165b" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020016">
+    <title>[PROVEN] CLAHSV class (car cleared)</title>
+    <description>Front heater b1 idx 0x3C @0x854BB8. Stock 21, car 00. Not in v3.\n\nSTATUS: PROVEN\nEVIDENCE: 0x854BB8\nFILE: 0x11615 CPU: 0x811615</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11615" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020017">
+    <title>[PROVEN] CLAHSV2 class (car cleared)</title>
+    <description>Front heater b2 idx 0x3D @0x854C92. Stock 21, car 00.\n\nSTATUS: STRUCT\nEVIDENCE: 0x854C92\nFILE: 0x11616 CPU: 0x811616</description>
+    <CATEGORYMEM index="0" category="2" />
+    <EMBEDDEDDATA mmedaddress="0x11616" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>class</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFTABLE uniqueid="0x69020018" flags="0x0">
+    <title>[PROVEN] DFPM class window [0..0x7F]</title>
+    <description>DFPM class window (dispatcher indexes can exceed 0x7F).\n\nSTATUS: PROVEN\nEVIDENCE: 0x829384.. → 0x8115D9+idx\nFILE: 0x115d9 1x128</description>
+    <CATEGORYMEM index="0" category="2" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>128</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <LABEL index="16" value="16" />
+      <LABEL index="17" value="17" />
+      <LABEL index="18" value="18" />
+      <LABEL index="19" value="19" />
+      <LABEL index="20" value="20" />
+      <LABEL index="21" value="21" />
+      <LABEL index="22" value="22" />
+      <LABEL index="23" value="23" />
+      <LABEL index="24" value="24" />
+      <LABEL index="25" value="25" />
+      <LABEL index="26" value="26" />
+      <LABEL index="27" value="27" />
+      <LABEL index="28" value="28" />
+      <LABEL index="29" value="29" />
+      <LABEL index="30" value="30" />
+      <LABEL index="31" value="31" />
+      <LABEL index="32" value="32" />
+      <LABEL index="33" value="33" />
+      <LABEL index="34" value="34" />
+      <LABEL index="35" value="35" />
+      <LABEL index="36" value="36" />
+      <LABEL index="37" value="37" />
+      <LABEL index="38" value="38" />
+      <LABEL index="39" value="39" />
+      <LABEL index="40" value="40" />
+      <LABEL index="41" value="41" />
+      <LABEL index="42" value="42" />
+      <LABEL index="43" value="43" />
+      <LABEL index="44" value="44" />
+      <LABEL index="45" value="45" />
+      <LABEL index="46" value="46" />
+      <LABEL index="47" value="47" />
+      <LABEL index="48" value="48" />
+      <LABEL index="49" value="49" />
+      <LABEL index="50" value="50" />
+      <LABEL index="51" value="51" />
+      <LABEL index="52" value="52" />
+      <LABEL index="53" value="53" />
+      <LABEL index="54" value="54" />
+      <LABEL index="55" value="55" />
+      <LABEL index="56" value="56" />
+      <LABEL index="57" value="57" />
+      <LABEL index="58" value="58" />
+      <LABEL index="59" value="59" />
+      <LABEL index="60" value="60" />
+      <LABEL index="61" value="61" />
+      <LABEL index="62" value="62" />
+      <LABEL index="63" value="63" />
+      <LABEL index="64" value="64" />
+      <LABEL index="65" value="65" />
+      <LABEL index="66" value="66" />
+      <LABEL index="67" value="67" />
+      <LABEL index="68" value="68" />
+      <LABEL index="69" value="69" />
+      <LABEL index="70" value="70" />
+      <LABEL index="71" value="71" />
+      <LABEL index="72" value="72" />
+      <LABEL index="73" value="73" />
+      <LABEL index="74" value="74" />
+      <LABEL index="75" value="75" />
+      <LABEL index="76" value="76" />
+      <LABEL index="77" value="77" />
+      <LABEL index="78" value="78" />
+      <LABEL index="79" value="79" />
+      <LABEL index="80" value="80" />
+      <LABEL index="81" value="81" />
+      <LABEL index="82" value="82" />
+      <LABEL index="83" value="83" />
+      <LABEL index="84" value="84" />
+      <LABEL index="85" value="85" />
+      <LABEL index="86" value="86" />
+      <LABEL index="87" value="87" />
+      <LABEL index="88" value="88" />
+      <LABEL index="89" value="89" />
+      <LABEL index="90" value="90" />
+      <LABEL index="91" value="91" />
+      <LABEL index="92" value="92" />
+      <LABEL index="93" value="93" />
+      <LABEL index="94" value="94" />
+      <LABEL index="95" value="95" />
+      <LABEL index="96" value="96" />
+      <LABEL index="97" value="97" />
+      <LABEL index="98" value="98" />
+      <LABEL index="99" value="99" />
+      <LABEL index="100" value="100" />
+      <LABEL index="101" value="101" />
+      <LABEL index="102" value="102" />
+      <LABEL index="103" value="103" />
+      <LABEL index="104" value="104" />
+      <LABEL index="105" value="105" />
+      <LABEL index="106" value="106" />
+      <LABEL index="107" value="107" />
+      <LABEL index="108" value="108" />
+      <LABEL index="109" value="109" />
+      <LABEL index="110" value="110" />
+      <LABEL index="111" value="111" />
+      <LABEL index="112" value="112" />
+      <LABEL index="113" value="113" />
+      <LABEL index="114" value="114" />
+      <LABEL index="115" value="115" />
+      <LABEL index="116" value="116" />
+      <LABEL index="117" value="117" />
+      <LABEL index="118" value="118" />
+      <LABEL index="119" value="119" />
+      <LABEL index="120" value="120" />
+      <LABEL index="121" value="121" />
+      <LABEL index="122" value="122" />
+      <LABEL index="123" value="123" />
+      <LABEL index="124" value="124" />
+      <LABEL index="125" value="125" />
+      <LABEL index="126" value="126" />
+      <LABEL index="127" value="127" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x115d9" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="128" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x69020019">
+    <title>[PROVEN] TARAU</title>
+    <description>IAT LR cold-air threshold. Stock 0x31=-11.25°C. 0x8750FE/102.\n\nSTATUS: PROVEN\nEVIDENCE: LREB decode\nFILE: 0x1a749 CPU: 0x81a749</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a749" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X - 48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902001a">
+    <title>[PROVEN] TASHS</title>
+    <description>IAT hot-start. Stock 0x97=65.25°C. 0x87511C/120.\n\nSTATUS: PROVEN\nEVIDENCE: LREB\nFILE: 0x1a74a CPU: 0x81a74a</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a74a" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X - 48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902001b">
+    <title>[PROVEN] TMSHS</title>
+    <description>Coolant hot-start for TLRHS. Stock 0xB8=90°C. NOT min for B_lr. 0x87510E/112.\n\nSTATUS: PROVEN\nEVIDENCE: LREB\nFILE: 0x1a75f CPU: 0x81a75f</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a75f" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X - 48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902001c">
+    <title>[STRUCT] TLRHS raw</title>
+    <description>Delay counter @0x81A753. Stock 0x14. Timebase NOT proven on 6901 (0.1s/LSB=E650 transfer).\n\nSTATUS: STRUCT\nEVIDENCE: addr proven; scale transferred\nFILE: 0x1a753 CPU: 0x81a753</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a753" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902001d">
+    <title>[PROVEN] TMRA1</title>
+    <description>Stock 0x59=18.75°C. 0x875158/15C.\n\nSTATUS: PROVEN\nEVIDENCE: LREB\nFILE: 0x1a75c CPU: 0x81a75c</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a75c" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X - 48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902001e">
+    <title>[PROVEN] TMRA2</title>
+    <description>Stock 0x59=18.75°C. 0x875192/196.\n\nSTATUS: PROVEN\nEVIDENCE: LREB\nFILE: 0x1a75d CPU: 0x81a75d</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a75d" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X - 48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902001f">
+    <title>[PROVEN] TMRAK</title>
+    <description>Stock 0x59=18.75°C. 0x8751CC/1D0.\n\nSTATUS: PROVEN\nEVIDENCE: LREB\nFILE: 0x1a75e CPU: 0x81a75e</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a75e" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X - 48">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020020">
+    <title>[PROVEN] CLRZWTMS</title>
+    <description>Raw. Stock 0x00. 0x87529C/2A0.\n\nSTATUS: PROVEN\nEVIDENCE: LREB\nFILE: 0x1a723 CPU: 0x81a723</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a723" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020021">
+    <title>[PROVEN] DTMR (delta)</title>
+    <description>DELTA temperature. Stock 0x05=+3.75°C. Equation 0.75*X (NO -48). 0x875160/164.\n\nSTATUS: PROVEN\nEVIDENCE: LREB; review formula fix\nFILE: 0x1a724 CPU: 0x81a724</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a724" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>Δ°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x69020022">
+    <title>[PROVEN] DTMTMRW (delta)</title>
+    <description>DELTA temperature. Stock 0x08=+6.0°C. Equation 0.75*X (NO -48). 0x87528E/292.\n\nSTATUS: PROVEN\nEVIDENCE: LREB; review formula fix\nFILE: 0x1a725 CPU: 0x81a725</description>
+    <CATEGORYMEM index="0" category="3" />
+    <EMBEDDEDDATA mmedaddress="0x1a725" mmedelementsizebits="8" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>Δ°C</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="0.75 * X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFTABLE uniqueid="0x69020023" flags="0x0">
+    <title>[STRUCT] KFZWOP bank1 (no 6901 consumer yet)</title>
+    <description>Ignition map candidate. Size/name transferred; stock↔car often +3 LSB. Signed 0.75°/LSB.\n\nSTATUS: STRUCT\nEVIDENCE: A2L transfer + span\nFILE: 0x10220 16x16</description>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>16</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>16</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x10220" mmedelementsizebits="8" mmedtypeflags="0x1" mmedrowcount="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x69020024" flags="0x0">
+    <title>[STRUCT] KFZWOP2 bank2 (no 6901 consumer yet)</title>
+    <description>Bank2. Signed.\n\nSTATUS: STRUCT\nEVIDENCE: paired span\nFILE: 0x10320 16x16</description>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>16</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>16</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x10320" mmedelementsizebits="8" mmedtypeflags="0x1" mmedrowcount="16" mmedcolcount="16" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x69020025" flags="0x0">
+    <title>[STRUCT] KFZW1 base bank1 (no 6901 consumer yet)</title>
+    <description>384B base ign. 16x24 transferred; car mostly +4 LSB. Signed.\n\nSTATUS: STRUCT\nEVIDENCE: exact 384B\nFILE: 0x10bc2 16x24</description>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>24</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <LABEL index="16" value="16" />
+      <LABEL index="17" value="17" />
+      <LABEL index="18" value="18" />
+      <LABEL index="19" value="19" />
+      <LABEL index="20" value="20" />
+      <LABEL index="21" value="21" />
+      <LABEL index="22" value="22" />
+      <LABEL index="23" value="23" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>16</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x10bc2" mmedelementsizebits="8" mmedtypeflags="0x1" mmedrowcount="16" mmedcolcount="24" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x69020026" flags="0x0">
+    <title>[STRUCT] KFZW2 base bank2 (no 6901 consumer yet)</title>
+    <description>Bank2 384B. Signed.\n\nSTATUS: STRUCT\nEVIDENCE: exact span\nFILE: 0x10d42 16x24</description>
+    <CATEGORYMEM index="0" category="4" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>24</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <LABEL index="16" value="16" />
+      <LABEL index="17" value="17" />
+      <LABEL index="18" value="18" />
+      <LABEL index="19" value="19" />
+      <LABEL index="20" value="20" />
+      <LABEL index="21" value="21" />
+      <LABEL index="22" value="22" />
+      <LABEL index="23" value="23" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>16</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <LABEL index="7" value="7" />
+      <LABEL index="8" value="8" />
+      <LABEL index="9" value="9" />
+      <LABEL index="10" value="10" />
+      <LABEL index="11" value="11" />
+      <LABEL index="12" value="12" />
+      <LABEL index="13" value="13" />
+      <LABEL index="14" value="14" />
+      <LABEL index="15" value="15" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x10d42" mmedelementsizebits="8" mmedtypeflags="0x1" mmedrowcount="16" mmedcolcount="24" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x69020027" flags="0x30">
+    <title>[PROVEN] KFETRD setpoint electr. thermostat (vfzg×wdkba; FR ETR)</title>
+    <description>Shape coded (hdr+0x85B9DE). Community name KFETRD. Units transferred. Car flattens to 0xB4.\n\nSTATUS: STRUCT\nEVIDENCE: interpolator+header</description>
+    <CATEGORYMEM index="0" category="5" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedaddress="0x19b82" mmedelementsizebits="8" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>raw</units>
+      <indexcount>5</indexcount><embedinfo type="1" /><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedaddress="0x19b87" mmedelementsizebits="8" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>raw</units>
+      <indexcount>6</indexcount><embedinfo type="1" /><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x19b8d" mmedelementsizebits="8" mmedrowcount="6" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°C?</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X - 48"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x69020028" flags="0x30">
+    <title>[PROVEN] KFETRT setpoint electr. thermostat (vfzg×tans; FR ETR)</title>
+    <description>FIXED: 6x5/30B, x@0x19BB4 (not 7-wide). Consumer 0x85B9FE. Old 42B ate header+12 foreign bytes.\n\nSTATUS: STRUCT\nEVIDENCE: review FAIL fixed</description>
+    <CATEGORYMEM index="0" category="5" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedaddress="0x19bb4" mmedelementsizebits="8" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>raw</units>
+      <indexcount>5</indexcount><embedinfo type="1" /><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedaddress="0x19bb9" mmedelementsizebits="8" mmedcolcount="6" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>raw</units>
+      <indexcount>6</indexcount><embedinfo type="1" /><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x19bbf" mmedelementsizebits="8" mmedrowcount="6" mmedcolcount="5" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°C?</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X - 48"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x69020029" flags="0x0">
+    <title>[PROVEN] TAMLTKA E-fan PWM axis from radiator temp (FR MLS)</title>
+    <description>Hdr 07 @0x1A574; consumer 0x866FF6. °C interpretation transferred.\n\nSTATUS: STRUCT\nEVIDENCE: shape coded\nFILE: 0x1a575 1x7</description>
+    <CATEGORYMEM index="0" category="5" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>7</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x1a575" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>°C?</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="0.75 * X - 48"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFTABLE uniqueid="0x6902002a" flags="0x0">
+    <title>[PROVEN] TAMLTKA-related E-fan duty values (FR MLS; paired with axis)</title>
+    <description>Paired values. PWM/% transferred.\n\nSTATUS: STRUCT\nEVIDENCE: paired\nFILE: 0x1a57c 1x7</description>
+    <CATEGORYMEM index="0" category="5" />
+    <XDFAXIS id="x" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>7</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <LABEL index="1" value="1" />
+      <LABEL index="2" value="2" />
+      <LABEL index="3" value="3" />
+      <LABEL index="4" value="4" />
+      <LABEL index="5" value="5" />
+      <LABEL index="6" value="6" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="y" uniqueid="0x0"><EMBEDDEDDATA mmedelementsizebits="8" mmedmajorstridebits="-32" mmedminorstridebits="0" />
+      <indexcount>1</indexcount><datatype>0</datatype><unittype>0</unittype><DALINK index="0" />
+      <LABEL index="0" value="0" />
+      <MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+    <XDFAXIS id="z"><EMBEDDEDDATA mmedaddress="0x1a57c" mmedelementsizebits="8" mmedrowcount="1" mmedcolcount="7" mmedmajorstridebits="0" mmedminorstridebits="0" />
+      <units>raw</units>
+      <decimalpl>2</decimalpl><datatype>0</datatype><unittype>0</unittype><DALINK index="0" /><MATH equation="X"><VAR id="X" /></MATH></XDFAXIS>
+  </XDFTABLE>
+  <XDFCONSTANT uniqueid="0x6902002b">
+    <title>[STRUCT] Speed-limiter-related word 1</title>
+    <description>16-bit LE. Car +47 on high byte vs stock. Function unproven.\n\nSTATUS: STRUCT\nEVIDENCE: stock↔dump\nFILE: 0x1bbc0 CPU: 0x81bbc0</description>
+    <CATEGORYMEM index="0" category="6" />
+    <EMBEDDEDDATA mmedaddress="0x1bbc0" mmedelementsizebits="16" mmedtypeflags="0x2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902002c">
+    <title>[STRUCT] Speed-limiter-related word 2</title>
+    <description>16-bit LE. Car +47 on high byte vs stock. Function unproven.\n\nSTATUS: STRUCT\nEVIDENCE: stock↔dump\nFILE: 0x1bbc4 CPU: 0x81bbc4</description>
+    <CATEGORYMEM index="0" category="6" />
+    <EMBEDDEDDATA mmedaddress="0x1bbc4" mmedelementsizebits="16" mmedtypeflags="0x2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902002d">
+    <title>[STRUCT] Speed-limiter-related word 3</title>
+    <description>16-bit LE. Car +47 on high byte vs stock. Function unproven.\n\nSTATUS: STRUCT\nEVIDENCE: stock↔dump\nFILE: 0x1bbc8 CPU: 0x81bbc8</description>
+    <CATEGORYMEM index="0" category="6" />
+    <EMBEDDEDDATA mmedaddress="0x1bbc8" mmedelementsizebits="16" mmedtypeflags="0x2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFCONSTANT uniqueid="0x6902002e">
+    <title>[STRUCT] Speed-limiter-related word 4</title>
+    <description>16-bit LE. Car +47 on high byte vs stock. Function unproven.\n\nSTATUS: HYPOTHESIS\nEVIDENCE: stock↔dump\nFILE: 0x1bbcc CPU: 0x81bbcc</description>
+    <CATEGORYMEM index="0" category="6" />
+    <EMBEDDEDDATA mmedaddress="0x1bbcc" mmedelementsizebits="16" mmedtypeflags="0x2" mmedmajorstridebits="0" mmedminorstridebits="0" />
+    <units>raw</units>
+    <datatype>0</datatype>
+    <unittype>0</unittype>
+    <DALINK index="0" />
+    <MATH equation="X">
+      <VAR id="X" />
+    </MATH>
+  </XDFCONSTANT>
+  <XDFPATCH uniqueid="0x6902002f">
+    <title>[STRUCT] Release-word gate NOP @0x5FFB2 → 0x380032 (EWS name NOT proven)</title>
+    <description>NOP 26B over B154.0/B17A.0/FDDC.2 checks; path writes 0xFF00 to 0x380032 (DPP2:0x8032). EWS/IMMO name = HYPOTHESIS. Legal risk. Needs code-segment MP repair.\n\nSTATUS: STRUCT\nEVIDENCE: disasm effect proven; name HYP\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="gate_nop" address="0x5ffb2" datasize="0x1a" patchdata="CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00" basedata="C2F454B168412D07C2F47AB168412D038A6E01200D026F880D01" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020030">
+    <title>[PROVEN] SAP OFF bundle (passport+ESKONF+CLA+MSL*)</title>
+    <description>Passport clear, inactive SLP/SLV masks, SAP DFPM classes→0, MSL* zero. Class0≠monitor off. No B_lr force.\n\nSTATUS: STRUCT\nEVIDENCE: v2 bytes; stock basedata\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="SAP_passport" address="0x1a5ec" datasize="0x1" patchdata="00" basedata="01" />
+    <XDFPATCHENTRY name="ESKONF3_SLP" address="0x11b2f" datasize="0x1" patchdata="FF" basedata="F3" />
+    <XDFPATCHENTRY name="ESKONF5_SLV" address="0x11b31" datasize="0x1" patchdata="F3" basedata="F0" />
+    <XDFPATCHENTRY name="CLASLPE" address="0x1164c" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLASLVE" address="0x11651" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="MSLBAS" address="0x19612" datasize="0x1" patchdata="00" basedata="1D" />
+    <XDFPATCHENTRY name="MSLUB" address="0x196b2" datasize="0x8" patchdata="0000000000000000" basedata="0F1F2C373E434647" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020031">
+    <title>[PROVEN] DECAT / rear O2 registration suppress</title>
+    <description>Front-only λ candidate, cat-diag/CWKONABG clear, rear classes→00. Not monitor/readiness removal proof.\n\nSTATUS: STRUCT\nEVIDENCE: v2+v3 on stock\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="CWKONLS" address="0x1a5ea" datasize="0x1" patchdata="11" basedata="33" />
+    <XDFPATCHENTRY name="CWDKAT" address="0x11fd3" datasize="0x1" patchdata="00" basedata="01" />
+    <XDFPATCHENTRY name="CWKONABG" address="0x1a5e9" datasize="0x1" patchdata="00" basedata="05" />
+    <XDFPATCHENTRY name="CLALSH" address="0x1162f" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLALSH2" address="0x11630" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLALASH" address="0x11624" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLALASH2" address="0x11625" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLAHSH" address="0x11613" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLAHSH2" address="0x11614" datasize="0x1" patchdata="00" basedata="25" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020032">
+    <title>[PROVEN] COMBO SAP OFF + rear/decat (v3 on stock)</title>
+    <description>Union of SAP+rear with stock basedata.\n\nSTATUS: STRUCT\nEVIDENCE: v2+v3\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="SAP_passport" address="0x1a5ec" datasize="0x1" patchdata="00" basedata="01" />
+    <XDFPATCHENTRY name="ESKONF3_SLP" address="0x11b2f" datasize="0x1" patchdata="FF" basedata="F3" />
+    <XDFPATCHENTRY name="ESKONF5_SLV" address="0x11b31" datasize="0x1" patchdata="F3" basedata="F0" />
+    <XDFPATCHENTRY name="CLASLPE" address="0x1164c" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLASLVE" address="0x11651" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="MSLBAS" address="0x19612" datasize="0x1" patchdata="00" basedata="1D" />
+    <XDFPATCHENTRY name="MSLUB" address="0x196b2" datasize="0x8" patchdata="0000000000000000" basedata="0F1F2C373E434647" />
+    <XDFPATCHENTRY name="CWKONLS" address="0x1a5ea" datasize="0x1" patchdata="11" basedata="33" />
+    <XDFPATCHENTRY name="CWDKAT" address="0x11fd3" datasize="0x1" patchdata="00" basedata="01" />
+    <XDFPATCHENTRY name="CWKONABG" address="0x1a5e9" datasize="0x1" patchdata="00" basedata="05" />
+    <XDFPATCHENTRY name="CLALSH" address="0x1162f" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLALSH2" address="0x11630" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLALASH" address="0x11624" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLALASH2" address="0x11625" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLAHSH" address="0x11613" datasize="0x1" patchdata="00" basedata="25" />
+    <XDFPATCHENTRY name="CLAHSH2" address="0x11614" datasize="0x1" patchdata="00" basedata="25" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020033">
+    <title>[PROVEN] 88C thermostat KFETRD+KFETRT from car dump</title>
+    <description>Car dump flatten to 0xB4. Map B FIXED to 30 bytes (was wrong 42).\n\nSTATUS: STRUCT\nEVIDENCE: stock↔car; size fix\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="mapA_z" address="0x19b8d" datasize="0x1e" patchdata="B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4" basedata="D8B1B1B1B1B1D8D8B1B1B1B1D8D8D8B1B1B1D8D8D8D8B1B1D8D8D8D8D8B1" />
+    <XDFPATCHENTRY name="mapB_z" address="0x19bbf" datasize="0x1e" patchdata="B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4" basedata="D8D8D8D8D8B1D8D8D8B1B1B1D8D8D8B1B1B1D8D8B1B1B1B1D8B1B1B1B1B1" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020034">
+    <title>[PROVEN] 88C fan TAMLTKA curve from car dump</title>
+    <description>7+7 axis/values from car. Units transferred.\n\nSTATUS: STRUCT\nEVIDENCE: stock↔car\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="fan_axis" address="0x1a575" datasize="0x7" patchdata="90919BA4AFB1B8" basedata="AAABB8BFC5C9CB" />
+    <XDFPATCHENTRY name="fan_vals" address="0x1a57c" datasize="0x7" patchdata="001A5487BFCBFA" basedata="001A5487BFC7E5" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020035">
+    <title>[PROVEN] 88C FULL KFETRD/T + TAMLTKA from car dump</title>
+    <description>Union thermostat 30+30 + fan 7+7.\n\nSTATUS: STRUCT\nEVIDENCE: union\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="mapA_z" address="0x19b8d" datasize="0x1e" patchdata="B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4" basedata="D8B1B1B1B1B1D8D8B1B1B1B1D8D8D8B1B1B1D8D8D8D8B1B1D8D8D8D8D8B1" />
+    <XDFPATCHENTRY name="mapB_z" address="0x19bbf" datasize="0x1e" patchdata="B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4" basedata="D8D8D8D8D8B1D8D8D8B1B1B1D8D8D8B1B1B1D8D8B1B1B1B1D8B1B1B1B1B1" />
+    <XDFPATCHENTRY name="fan_axis" address="0x1a575" datasize="0x7" patchdata="90919BA4AFB1B8" basedata="AAABB8BFC5C9CB" />
+    <XDFPATCHENTRY name="fan_vals" address="0x1a57c" datasize="0x7" patchdata="001A5487BFCBFA" basedata="001A5487BFC7E5" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020036">
+    <title>[PROVEN] CDAGR → 00 (EURO DAGR inactiv)</title>
+    <description>As on car dump. AGR effect HYP.\n\nSTATUS: HYPOTHESIS\nEVIDENCE: stock↔car\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="CWDAGR" address="0x11fc9" datasize="0x1" patchdata="00" basedata="01" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020037">
+    <title>[STRUCT] Speed limiter bytes from car (+47)</title>
+    <description>Four bytes. Units unproven.\n\nSTATUS: HYPOTHESIS\nEVIDENCE: stock↔car\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="b0" address="0x1bbc1" datasize="0x1" patchdata="94" basedata="65" />
+    <XDFPATCHENTRY name="b1" address="0x1bbc5" datasize="0x1" patchdata="95" basedata="66" />
+    <XDFPATCHENTRY name="b2" address="0x1bbc9" datasize="0x1" patchdata="96" basedata="67" />
+    <XDFPATCHENTRY name="b3" address="0x1bbcd" datasize="0x1" patchdata="95" basedata="66" />
+  </XDFPATCH>
+  <XDFPATCH uniqueid="0x69020038">
+    <title>[STRUCT] Ignition maps from car dump (KFZW consumer unproven on 6901)</title>
+    <description>Exact car KFZW* spans. Not safety/optimality claim. Prefer 95+ RON.\n\nSTATUS: STRUCT\nEVIDENCE: exact spans\nBASEDATA=SP-Daten stock. After apply: multipoint THEN CRC32.</description>
+    <CATEGORYMEM index="0" category="7" />
+    <XDFPATCHENTRY name="KFZWOP" address="0x10220" datasize="0x100" patchdata="13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2C2825221E1C1B1916141433333333332F2B282623211F1D191717393939393735312E2B2624211F1B1919404040403634302D2B282624221E1C1C434343433A393532302C2A2725211F1F4844433F373735302F2D2A28282727274C44423E373634312F2C2B29282828284E4644423737342F2F2E2D2B2A2A29294F474544383835343231302F2D2B2A2A504845443B3B3A393836353332302E2E4F4743403B3B39383633302E2D2E2E2E4B45403C36383B3A373432302F2C2C2C4C46403C383A3B3B3B3B3A3735333333" basedata="13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2925221F1B19181613111133333333332C282523201E1C1A1614143939393937322E2B2823211E1C1816164040404036312D2A282523211F1B1919434343433A36322F2D292724221E1C1C4844433F3734322D2C2A2725252424244C44423E3733312E2C292826252525254E4644423734312C2C2B2A28272726264F474544383532312F2E2D2C2A282727504845443B383736353332302F2D2B2B4F4743403B38363533302D2B2A2B2B2B4B45403C3635383734312F2D2C2929294C46403C383738383838373432303030" />
+    <XDFPATCHENTRY name="KFZWOP2" address="0x10320" datasize="0x100" patchdata="13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2C2825221E1C1B1916141433333333332F2B282623211F1D191717393939393735312E2B2624211F1B1919404040403634302D2B282624221E1C1C434343433A393532302C2A2725211F1F4844433F373735302F2D2A28282727274C44423E373634312F2C2B29282828284E4644423737342F2F2E2D2B2A2A29294F474544383835343231302F2D2B2A2A504845443B3B3A393836353332302E2E4F4743403B3B39383633302E2D2E2E2E4B45403C36383B3A373432302F2C2C2C4C46403C383A3B3B3B3B3A3735333333" basedata="13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2925221F1B19181613111133333333332C282523201E1C1A1614143939393937322E2B2823211E1C1816164040404036312D2A282523211F1B1919434343433A36322F2D292724221E1C1C4844433F3734322D2C2A2725252424244C44423E3733312E2C292826252525254E4644423734312C2C2B2A28272726264F474544383532312F2E2D2C2A282727504845443B383736353332302F2D2B2B4F4743403B38363533302D2B2A2B2B2B4B45403C3635383734312F2D2C2929294C46403C383738383838373432303030" />
+    <XDFPATCHENTRY name="KFZW1" address="0x10bc2" datasize="0x180" patchdata="111111111110100E0B09070605040404171717171716161412100E0B0A0806051C1C1C1C1C1C1C1B1A14100C0B0A09071F1F1F1F1F2225241F1713100C0B090721212B2D2E2C2A28241C19150F0E0D0C2C3437373634322E28211D1916141211303A403E37322E2D2A231F1C19181716333C42413B35302C2B2624211E1D1C1B363E44423E3934312F2A272524232221373F44433F3B383734322F2C282726253C414443403C3A383735322F2A2726253F424443403C39363632312E2927262544444443403A34312F2D2A2927252422444343423F3935312D292827262524234442403F3D3936312D2827262524232244413E3E3C3936332F29282726252423443F3C3C3C393634312B2A2827262524444341403F3C3A36332F2D292726252244434241403E3C37332E2D2B2827262444434242413E3C37322D2C2B2827262444444343433F3C37322D2B2A282726244444434343403C37322F2B2A282726244444444444403C3733302D2B2A2827254444444444403C3733302D2B2A282725" basedata="0D0D0D0D0D0C0C0A070503020100000013131313131212100E0C0A0706040201181818181818181716100C08070605031B1B1B1B1B1E21201B130F0C080705031D1D27292A282624201815110B0A09082830333332302E2A241D191512100E0D2C363C3A332E2A29261F1B18151413122F383E3D37312C282722201D1A191817323A403E3A35302D2B262321201F1E1D333B403F3B373433302E2B2824232221383D403F3C38363433312E2B262322213B3E403F3C383532322E2D2A252322214040403F3C36302D2B2926252321201E403F3F3E3B35312D292524232221201F403E3C3B3935322D2924232221201F1E403D3A3A3835322F2B2524232221201F403B3838383532302D27262423222120403F3D3C3B3836322F2B29252322211E403F3E3D3C3A38332F2A292724232220403F3E3E3D3A38332E2928272423222040403F3F3F3B38332E2927262423222040403F3F3F3C38332E2B27262423222040404040403C38332F2C29272624232140404040403C38332F2C292726242321" />
+    <XDFPATCHENTRY name="KFZW2" address="0x10d42" datasize="0x180" patchdata="0F0F0F0F0F0E0E0C09070504030202021515151515141412100E0C09080604031A1A1A1A1A1A1A1918120E0A090807051D1D1D1D1D2023221D15110E0A0907051F1F292B2C2A2826221A17130D0C0B0A2A3235353432302C261F1B171412100F2E383E3C35302C2B28211D1A17161514313A403F39332E2A2924221F1C1B1A19343C42403C37322F2D2825232221201F353D42413D39363532302D2A262524233C414443403C3A383735322F2A2726253F424443403C39363632312E2927262544444443403A34312F2D2A2927252422444343423F3935312D292827262524234442403F3D3936312D2827262524232244413E3E3C3936332F29282726252423443F3C3C3C393634312B2A2827262524444341403F3C3A36332F2D292726252244434241403E3C37332E2D2B2827262444434242413E3C37322D2C2B2827262444444343433F3C37322D2B2A282726244444434343403C37322F2B2A282726244444444444403C3733302D2B2A2827254444444444403C3733302D2B2A282725" basedata="0D0D0D0D0D0C0C0A070503020100000013131313131212100E0C0A0706040201181818181818181716100C08070605031B1B1B1B1B1E21201B130F0C080705031D1D27292A282624201815110B0A09082830333332302E2A241D191512100E0D2C363C3A332E2A29261F1B18151413122F383E3D37312C282722201D1A191817323A403E3A35302D2B262321201F1E1D333B403F3B373433302E2B2824232221383D403F3C38363433312E2B262322213B3E403F3C383532322E2D2A252322214040403F3C36302D2B2926252321201E403F3F3E3B35312D292524232221201F403E3C3B3935322D2924232221201F1E403D3A3A3835322F2B2524232221201F403B3838383532302D27262423222120403F3D3C3B3836322F2B29252322211E403F3E3D3C3A38332F2A292724232220403F3E3E3D3A38332E2928272423222040403F3F3F3B38332E2927262423222040403F3F3F3C38332E2B27262423222040404040403C38332F2C29272624232140404040403C38332F2C292726242321" />
+  </XDFPATCH>
+</XDFFORMAT>

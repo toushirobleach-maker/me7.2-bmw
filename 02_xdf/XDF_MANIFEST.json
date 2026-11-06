@@ -1,0 +1,1063 @@
+{
+  "epk": "6901I41D",
+  "hw_zb": "7532675",
+  "version": 3,
+  "bin_region": "full 512 KiB file offsets (CPU = 0x800000 + file_off)",
+  "stock_sha256": "5ec2443311b6173e4f0bb770eb1f84c0a15a270d3bd6ac52648a77d450db5dd9",
+  "created_utc": "20261106T065430Z",
+  "review_applied": [
+    "REVIEW_SAP_DECAT.md",
+    "REVIEW_IMMO_88C_IGN.md",
+    "REVIEW_LREB_FORM.md"
+  ],
+  "policy": "PROVEN=coded on 6901 + semantic anchor. STRUCT=bytes/shape. HYP=not flash-grade.",
+  "items": [
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CRC32 calibration stored LE",
+      "addr": "0x1fc0e",
+      "status": "PROVEN",
+      "evidence": "recomputed on stock/v3",
+      "sizebits": 32,
+      "equation": "X",
+      "le": true,
+      "signed": false,
+      "stock_hex": "C49A4884"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] MP descriptor start CPU LE",
+      "addr": "0x17c7c",
+      "status": "PROVEN",
+      "evidence": "MP region; stock 34/34",
+      "sizebits": 32,
+      "equation": "X",
+      "le": true,
+      "signed": false,
+      "stock_hex": "00008400"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CWKONLS",
+      "addr": "0x1a5ea",
+      "status": "PROVEN",
+      "evidence": "PROKON 0x86B506 EXTP#206",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "33",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CWKONABG",
+      "addr": "0x1a5e9",
+      "status": "PROVEN",
+      "evidence": "PROKON; stock↔dump",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "05",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] SAP passport bit @0x1A5EC",
+      "addr": "0x1a5ec",
+      "status": "PROVEN",
+      "evidence": "0x86B552..560",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "01",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CWDKAT",
+      "addr": "0x11fd3",
+      "status": "PROVEN",
+      "evidence": "0x86B4B6 path",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "01",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CDAGR @0x11FC9 — EURO DAGR inactiv codeword (FR PROKON; was misnamed CWDAGR)",
+      "addr": "0x11fc9",
+      "status": "PROVEN",
+      "evidence": "transport proven; AGR HYP",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "01",
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] ESKONF[3] SLP bits",
+      "addr": "0x11b2f",
+      "status": "PROVEN",
+      "evidence": "FR + DME mask table 0x815824",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "F3",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] ESKONF[5] SLV bits",
+      "addr": "0x11b31",
+      "status": "PROVEN",
+      "evidence": "FR + DME mask table",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "F0",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] ESKONF[0..8]",
+      "addr": "0x11b2c",
+      "rows": 1,
+      "cols": 9,
+      "status": "PROVEN",
+      "evidence": "FR + init",
+      "signed": false,
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] MSLBAS @0x19612 — Ini. secondary air mass (FR DSLSLR)",
+      "addr": "0x19612",
+      "status": "PROVEN",
+      "evidence": "addr resolve; name HYP",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "1D",
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] MSLUB values — secondary air mass f(ub) (FR SLS)",
+      "addr": "0x196b2",
+      "rows": 1,
+      "cols": 8,
+      "status": "PROVEN",
+      "evidence": "curve ptr 0206:16A9",
+      "signed": false,
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLALSH class",
+      "addr": "0x1162f",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x857E02",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLALSH2 class",
+      "addr": "0x11630",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x857E10",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLALASH class",
+      "addr": "0x11624",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x82C38E",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLALASH2 class",
+      "addr": "0x11625",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x82C39C",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLAHSH class",
+      "addr": "0x11613",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x854D6C",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLAHSH2 class",
+      "addr": "0x11614",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x854E46",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLASLPE class",
+      "addr": "0x1164c",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x85B592",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLASLVE class",
+      "addr": "0x11651",
+      "status": "PROVEN",
+      "evidence": "DFPM+DTC; 0x85B618",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] DTEVE/TEV class (DTC 0x62 idx 0x82)",
+      "addr": "0x1165b",
+      "status": "PROVEN",
+      "evidence": "DTC table; needs idx-82 consumer",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "25",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLAHSV class (car cleared)",
+      "addr": "0x11615",
+      "status": "PROVEN",
+      "evidence": "0x854BB8",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "21",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLAHSV2 class (car cleared)",
+      "addr": "0x11616",
+      "status": "PROVEN",
+      "evidence": "0x854C92",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "21",
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] DFPM class window [0..0x7F]",
+      "addr": "0x115d9",
+      "rows": 1,
+      "cols": 128,
+      "status": "PROVEN",
+      "evidence": "0x829384.. → 0x8115D9+idx",
+      "signed": false
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] TARAU",
+      "addr": "0x1a749",
+      "status": "PROVEN",
+      "evidence": "LREB decode",
+      "sizebits": 8,
+      "equation": "0.75 * X - 48",
+      "le": false,
+      "signed": false,
+      "stock_hex": "31"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] TASHS",
+      "addr": "0x1a74a",
+      "status": "PROVEN",
+      "evidence": "LREB",
+      "sizebits": 8,
+      "equation": "0.75 * X - 48",
+      "le": false,
+      "signed": false,
+      "stock_hex": "97"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] TMSHS",
+      "addr": "0x1a75f",
+      "status": "PROVEN",
+      "evidence": "LREB",
+      "sizebits": 8,
+      "equation": "0.75 * X - 48",
+      "le": false,
+      "signed": false,
+      "stock_hex": "B8"
+    },
+    {
+      "kind": "constant",
+      "title": "[STRUCT] TLRHS raw",
+      "addr": "0x1a753",
+      "status": "STRUCT",
+      "evidence": "addr proven; scale transferred",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "14",
+      "blocked_reason": "timebase_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] TMRA1",
+      "addr": "0x1a75c",
+      "status": "PROVEN",
+      "evidence": "LREB",
+      "sizebits": 8,
+      "equation": "0.75 * X - 48",
+      "le": false,
+      "signed": false,
+      "stock_hex": "59"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] TMRA2",
+      "addr": "0x1a75d",
+      "status": "PROVEN",
+      "evidence": "LREB",
+      "sizebits": 8,
+      "equation": "0.75 * X - 48",
+      "le": false,
+      "signed": false,
+      "stock_hex": "59"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] TMRAK",
+      "addr": "0x1a75e",
+      "status": "PROVEN",
+      "evidence": "LREB",
+      "sizebits": 8,
+      "equation": "0.75 * X - 48",
+      "le": false,
+      "signed": false,
+      "stock_hex": "59"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] CLRZWTMS",
+      "addr": "0x1a723",
+      "status": "PROVEN",
+      "evidence": "LREB",
+      "sizebits": 8,
+      "equation": "X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "00"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] DTMR (delta)",
+      "addr": "0x1a724",
+      "status": "PROVEN",
+      "evidence": "LREB; review formula fix",
+      "sizebits": 8,
+      "equation": "0.75 * X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "05"
+    },
+    {
+      "kind": "constant",
+      "title": "[PROVEN] DTMTMRW (delta)",
+      "addr": "0x1a725",
+      "status": "PROVEN",
+      "evidence": "LREB; review formula fix",
+      "sizebits": 8,
+      "equation": "0.75 * X",
+      "le": false,
+      "signed": false,
+      "stock_hex": "08"
+    },
+    {
+      "kind": "table",
+      "title": "[STRUCT] KFZWOP bank1 (no 6901 consumer yet)",
+      "addr": "0x10220",
+      "rows": 16,
+      "cols": 16,
+      "status": "STRUCT",
+      "evidence": "A2L transfer + span",
+      "signed": true,
+      "promotion_ref": "PROMOTION_KFZW_REPORT.json",
+      "blocked_reason": "no_address_consumer_6901",
+      "last_attempt": "PROMOTION_KFZW2_REPORT.json"
+    },
+    {
+      "kind": "table",
+      "title": "[STRUCT] KFZWOP2 bank2 (no 6901 consumer yet)",
+      "addr": "0x10320",
+      "rows": 16,
+      "cols": 16,
+      "status": "STRUCT",
+      "evidence": "paired span",
+      "signed": true,
+      "promotion_ref": "PROMOTION_KFZW_REPORT.json",
+      "blocked_reason": "no_address_consumer_6901",
+      "last_attempt": "PROMOTION_KFZW2_REPORT.json"
+    },
+    {
+      "kind": "table",
+      "title": "[STRUCT] KFZW1 base bank1 (no 6901 consumer yet)",
+      "addr": "0x10bc2",
+      "rows": 16,
+      "cols": 24,
+      "status": "STRUCT",
+      "evidence": "exact 384B",
+      "signed": true,
+      "promotion_ref": "PROMOTION_KFZW_REPORT.json",
+      "blocked_reason": "no_address_consumer_6901",
+      "last_attempt": "PROMOTION_KFZW2_REPORT.json"
+    },
+    {
+      "kind": "table",
+      "title": "[STRUCT] KFZW2 base bank2 (no 6901 consumer yet)",
+      "addr": "0x10d42",
+      "rows": 16,
+      "cols": 24,
+      "status": "STRUCT",
+      "evidence": "exact span",
+      "signed": true,
+      "promotion_ref": "PROMOTION_KFZW_REPORT.json",
+      "blocked_reason": "no_address_consumer_6901",
+      "last_attempt": "PROMOTION_KFZW2_REPORT.json"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] KFETRD setpoint electr. thermostat (vfzg×wdkba; FR ETR)",
+      "addr": "0x19b8d",
+      "x": "0x19b82",
+      "y": "0x19b87",
+      "rows": 6,
+      "cols": 5,
+      "status": "PROVEN",
+      "evidence": "interpolator+header",
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] KFETRT setpoint electr. thermostat (vfzg×tans; FR ETR)",
+      "addr": "0x19bbf",
+      "x": "0x19bb4",
+      "y": "0x19bb9",
+      "rows": 6,
+      "cols": 5,
+      "status": "PROVEN",
+      "evidence": "review FAIL fixed",
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] TAMLTKA E-fan PWM axis from radiator temp (FR MLS)",
+      "addr": "0x1a575",
+      "rows": 1,
+      "cols": 7,
+      "status": "PROVEN",
+      "evidence": "shape coded",
+      "signed": false,
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "table",
+      "title": "[PROVEN] TAMLTKA-related E-fan duty values (FR MLS; paired with axis)",
+      "addr": "0x1a57c",
+      "rows": 1,
+      "cols": 7,
+      "status": "PROVEN",
+      "evidence": "paired",
+      "signed": false,
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "constant",
+      "title": "[STRUCT] Speed-limiter-related word 1",
+      "addr": "0x1bbc0",
+      "status": "STRUCT",
+      "evidence": "stock↔dump",
+      "sizebits": 16,
+      "equation": "X",
+      "le": true,
+      "signed": false,
+      "stock_hex": "8065",
+      "promotion_ref": "PROMOTION_MISC_REPORT.json",
+      "blocked_reason": "units_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[STRUCT] Speed-limiter-related word 2",
+      "addr": "0x1bbc4",
+      "status": "STRUCT",
+      "evidence": "stock↔dump",
+      "sizebits": 16,
+      "equation": "X",
+      "le": true,
+      "signed": false,
+      "stock_hex": "0066",
+      "promotion_ref": "PROMOTION_MISC_REPORT.json",
+      "blocked_reason": "units_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[STRUCT] Speed-limiter-related word 3",
+      "addr": "0x1bbc8",
+      "status": "STRUCT",
+      "evidence": "stock↔dump",
+      "sizebits": 16,
+      "equation": "X",
+      "le": true,
+      "signed": false,
+      "stock_hex": "0067",
+      "promotion_ref": "PROMOTION_MISC_REPORT.json",
+      "blocked_reason": "units_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "constant",
+      "title": "[STRUCT] Speed-limiter-related word 4",
+      "addr": "0x1bbcc",
+      "status": "STRUCT",
+      "evidence": "stock↔dump",
+      "sizebits": 16,
+      "equation": "X",
+      "le": true,
+      "signed": false,
+      "stock_hex": "8066",
+      "promotion_ref": "PROMOTION_MISC_REPORT.json",
+      "blocked_reason": "units_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "patch",
+      "title": "[STRUCT] Release-word gate NOP @0x5FFB2 → 0x380032 (EWS name NOT proven)",
+      "status": "STRUCT",
+      "evidence": "disasm effect proven; name HYP",
+      "entries": [
+        {
+          "name": "gate_nop",
+          "addr": "0x5ffb2",
+          "len": 26,
+          "patch": "CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00CC00",
+          "base": "C2F454B168412D07C2F47AB168412D038A6E01200D026F880D01"
+        }
+      ],
+      "promotion_ref": "PROMOTION_EWS_REPORT.json",
+      "blocked_reason": "ews_name_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] SAP OFF bundle (passport+ESKONF+CLA+MSL*)",
+      "status": "PROVEN",
+      "evidence": "v2 bytes; stock basedata",
+      "entries": [
+        {
+          "name": "SAP_passport",
+          "addr": "0x1a5ec",
+          "len": 1,
+          "patch": "00",
+          "base": "01"
+        },
+        {
+          "name": "ESKONF3_SLP",
+          "addr": "0x11b2f",
+          "len": 1,
+          "patch": "FF",
+          "base": "F3"
+        },
+        {
+          "name": "ESKONF5_SLV",
+          "addr": "0x11b31",
+          "len": 1,
+          "patch": "F3",
+          "base": "F0"
+        },
+        {
+          "name": "CLASLPE",
+          "addr": "0x1164c",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLASLVE",
+          "addr": "0x11651",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "MSLBAS",
+          "addr": "0x19612",
+          "len": 1,
+          "patch": "00",
+          "base": "1D"
+        },
+        {
+          "name": "MSLUB",
+          "addr": "0x196b2",
+          "len": 8,
+          "patch": "0000000000000000",
+          "base": "0F1F2C373E434647"
+        }
+      ],
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] DECAT / rear O2 registration suppress",
+      "status": "PROVEN",
+      "evidence": "v2+v3 on stock",
+      "entries": [
+        {
+          "name": "CWKONLS",
+          "addr": "0x1a5ea",
+          "len": 1,
+          "patch": "11",
+          "base": "33"
+        },
+        {
+          "name": "CWDKAT",
+          "addr": "0x11fd3",
+          "len": 1,
+          "patch": "00",
+          "base": "01"
+        },
+        {
+          "name": "CWKONABG",
+          "addr": "0x1a5e9",
+          "len": 1,
+          "patch": "00",
+          "base": "05"
+        },
+        {
+          "name": "CLALSH",
+          "addr": "0x1162f",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLALSH2",
+          "addr": "0x11630",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLALASH",
+          "addr": "0x11624",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLALASH2",
+          "addr": "0x11625",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLAHSH",
+          "addr": "0x11613",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLAHSH2",
+          "addr": "0x11614",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        }
+      ],
+      "promotion_ref": "PROMOTION_CLA_PROKON_REPORT.json (all entries)"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] COMBO SAP OFF + rear/decat (v3 on stock)",
+      "status": "PROVEN",
+      "evidence": "v2+v3",
+      "entries": [
+        {
+          "name": "SAP_passport",
+          "addr": "0x1a5ec",
+          "len": 1,
+          "patch": "00",
+          "base": "01"
+        },
+        {
+          "name": "ESKONF3_SLP",
+          "addr": "0x11b2f",
+          "len": 1,
+          "patch": "FF",
+          "base": "F3"
+        },
+        {
+          "name": "ESKONF5_SLV",
+          "addr": "0x11b31",
+          "len": 1,
+          "patch": "F3",
+          "base": "F0"
+        },
+        {
+          "name": "CLASLPE",
+          "addr": "0x1164c",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLASLVE",
+          "addr": "0x11651",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "MSLBAS",
+          "addr": "0x19612",
+          "len": 1,
+          "patch": "00",
+          "base": "1D"
+        },
+        {
+          "name": "MSLUB",
+          "addr": "0x196b2",
+          "len": 8,
+          "patch": "0000000000000000",
+          "base": "0F1F2C373E434647"
+        },
+        {
+          "name": "CWKONLS",
+          "addr": "0x1a5ea",
+          "len": 1,
+          "patch": "11",
+          "base": "33"
+        },
+        {
+          "name": "CWDKAT",
+          "addr": "0x11fd3",
+          "len": 1,
+          "patch": "00",
+          "base": "01"
+        },
+        {
+          "name": "CWKONABG",
+          "addr": "0x1a5e9",
+          "len": 1,
+          "patch": "00",
+          "base": "05"
+        },
+        {
+          "name": "CLALSH",
+          "addr": "0x1162f",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLALSH2",
+          "addr": "0x11630",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLALASH",
+          "addr": "0x11624",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLALASH2",
+          "addr": "0x11625",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLAHSH",
+          "addr": "0x11613",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        },
+        {
+          "name": "CLAHSH2",
+          "addr": "0x11614",
+          "len": 1,
+          "patch": "00",
+          "base": "25"
+        }
+      ],
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] 88C thermostat KFETRD+KFETRT from car dump",
+      "status": "PROVEN",
+      "evidence": "stock↔car; size fix",
+      "entries": [
+        {
+          "name": "mapA_z",
+          "addr": "0x19b8d",
+          "len": 30,
+          "patch": "B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4",
+          "base": "D8B1B1B1B1B1D8D8B1B1B1B1D8D8D8B1B1B1D8D8D8D8B1B1D8D8D8D8D8B1"
+        },
+        {
+          "name": "mapB_z",
+          "addr": "0x19bbf",
+          "len": 30,
+          "patch": "B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4",
+          "base": "D8D8D8D8D8B1D8D8D8B1B1B1D8D8D8B1B1B1D8D8B1B1B1B1D8B1B1B1B1B1"
+        }
+      ],
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] 88C fan TAMLTKA curve from car dump",
+      "status": "PROVEN",
+      "evidence": "stock↔car",
+      "entries": [
+        {
+          "name": "fan_axis",
+          "addr": "0x1a575",
+          "len": 7,
+          "patch": "90919BA4AFB1B8",
+          "base": "AAABB8BFC5C9CB"
+        },
+        {
+          "name": "fan_vals",
+          "addr": "0x1a57c",
+          "len": 7,
+          "patch": "001A5487BFCBFA",
+          "base": "001A5487BFC7E5"
+        }
+      ],
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] 88C FULL KFETRD/T + TAMLTKA from car dump",
+      "status": "PROVEN",
+      "evidence": "union",
+      "entries": [
+        {
+          "name": "mapA_z",
+          "addr": "0x19b8d",
+          "len": 30,
+          "patch": "B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4",
+          "base": "D8B1B1B1B1B1D8D8B1B1B1B1D8D8D8B1B1B1D8D8D8D8B1B1D8D8D8D8D8B1"
+        },
+        {
+          "name": "mapB_z",
+          "addr": "0x19bbf",
+          "len": 30,
+          "patch": "B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4B4",
+          "base": "D8D8D8D8D8B1D8D8D8B1B1B1D8D8D8B1B1B1D8D8B1B1B1B1D8B1B1B1B1B1"
+        },
+        {
+          "name": "fan_axis",
+          "addr": "0x1a575",
+          "len": 7,
+          "patch": "90919BA4AFB1B8",
+          "base": "AAABB8BFC5C9CB"
+        },
+        {
+          "name": "fan_vals",
+          "addr": "0x1a57c",
+          "len": 7,
+          "patch": "001A5487BFCBFA",
+          "base": "001A5487BFC7E5"
+        }
+      ],
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "patch",
+      "title": "[PROVEN] CDAGR → 00 (EURO DAGR inactiv)",
+      "status": "PROVEN",
+      "evidence": "stock↔car",
+      "entries": [
+        {
+          "name": "CWDAGR",
+          "addr": "0x11fc9",
+          "len": 1,
+          "patch": "00",
+          "base": "01"
+        }
+      ],
+      "promotion_ref": "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md + PROMOTION_MSLBAS_REPORT + review_decode"
+    },
+    {
+      "kind": "patch",
+      "title": "[STRUCT] Speed limiter bytes from car (+47)",
+      "status": "STRUCT",
+      "evidence": "stock↔car",
+      "entries": [
+        {
+          "name": "b0",
+          "addr": "0x1bbc1",
+          "len": 1,
+          "patch": "94",
+          "base": "65"
+        },
+        {
+          "name": "b1",
+          "addr": "0x1bbc5",
+          "len": 1,
+          "patch": "95",
+          "base": "66"
+        },
+        {
+          "name": "b2",
+          "addr": "0x1bbc9",
+          "len": 1,
+          "patch": "96",
+          "base": "67"
+        },
+        {
+          "name": "b3",
+          "addr": "0x1bbcd",
+          "len": 1,
+          "patch": "95",
+          "base": "66"
+        }
+      ],
+      "promotion_ref": "PROMOTION_MISC_REPORT.json",
+      "blocked_reason": "units_unproven",
+      "last_attempt": "PROMOTION_REMAINING3_REPORT.json"
+    },
+    {
+      "kind": "patch",
+      "title": "[STRUCT] Ignition maps from car dump (KFZW consumer unproven on 6901)",
+      "status": "STRUCT",
+      "evidence": "exact spans",
+      "entries": [
+        {
+          "name": "KFZWOP",
+          "addr": "0x10220",
+          "len": 256,
+          "patch": "13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2C2825221E1C1B1916141433333333332F2B282623211F1D191717393939393735312E2B2624211F1B1919404040403634302D2B282624221E1C1C434343433A393532302C2A2725211F1F4844433F373735302F2D2A28282727274C44423E373634312F2C2B29282828284E4644423737342F2F2E2D2B2A2A29294F474544383835343231302F2D2B2A2A504845443B3B3A393836353332302E2E4F4743403B3B39383633302E2D2E2E2E4B45403C36383B3A373432302F2C2C2C4C46403C383A3B3B3B3B3A3735333333",
+          "base": "13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2925221F1B19181613111133333333332C282523201E1C1A1614143939393937322E2B2823211E1C1816164040404036312D2A282523211F1B1919434343433A36322F2D292724221E1C1C4844433F3734322D2C2A2725252424244C44423E3733312E2C292826252525254E4644423734312C2C2B2A28272726264F474544383532312F2E2D2C2A282727504845443B383736353332302F2D2B2B4F4743403B38363533302D2B2A2B2B2B4B45403C3635383734312F2D2C2929294C46403C383738383838373432303030"
+        },
+        {
+          "name": "KFZWOP2",
+          "addr": "0x10320",
+          "len": 256,
+          "patch": "13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2C2825221E1C1B1916141433333333332F2B282623211F1D191717393939393735312E2B2624211F1B1919404040403634302D2B282624221E1C1C434343433A393532302C2A2725211F1F4844433F373735302F2D2A28282727274C44423E373634312F2C2B29282828284E4644423737342F2F2E2D2B2A2A29294F474544383835343231302F2D2B2A2A504845443B3B3A393836353332302E2E4F4743403B3B39383633302E2D2E2E2E4B45403C36383B3A373432302F2C2C2C4C46403C383A3B3B3B3B3A3735333333",
+          "base": "13131313110E0C0B09070504030100001717171717141211100E0C0B0A08060622222222211D1A1817151312100E0C0C2D2D2D2D2C2925221F1B19181613111133333333332C282523201E1C1A1614143939393937322E2B2823211E1C1816164040404036312D2A282523211F1B1919434343433A36322F2D292724221E1C1C4844433F3734322D2C2A2725252424244C44423E3733312E2C292826252525254E4644423734312C2C2B2A28272726264F474544383532312F2E2D2C2A282727504845443B383736353332302F2D2B2B4F4743403B38363533302D2B2A2B2B2B4B45403C3635383734312F2D2C2929294C46403C383738383838373432303030"
+        },
+        {
+          "name": "KFZW1",
+          "addr": "0x10bc2",
+          "len": 384,
+          "patch": "111111111110100E0B09070605040404171717171716161412100E0B0A0806051C1C1C1C1C1C1C1B1A14100C0B0A09071F1F1F1F1F2225241F1713100C0B090721212B2D2E2C2A28241C19150F0E0D0C2C3437373634322E28211D1916141211303A403E37322E2D2A231F1C19181716333C42413B35302C2B2624211E1D1C1B363E44423E3934312F2A272524232221373F44433F3B383734322F2C282726253C414443403C3A383735322F2A2726253F424443403C39363632312E2927262544444443403A34312F2D2A2927252422444343423F3935312D292827262524234442403F3D3936312D2827262524232244413E3E3C3936332F29282726252423443F3C3C3C393634312B2A2827262524444341403F3C3A36332F2D292726252244434241403E3C37332E2D2B2827262444434242413E3C37322D2C2B2827262444444343433F3C37322D2B2A282726244444434343403C37322F2B2A282726244444444444403C3733302D2B2A2827254444444444403C3733302D2B2A282725",
+          "base": "0D0D0D0D0D0C0C0A070503020100000013131313131212100E0C0A0706040201181818181818181716100C08070605031B1B1B1B1B1E21201B130F0C080705031D1D27292A282624201815110B0A09082830333332302E2A241D191512100E0D2C363C3A332E2A29261F1B18151413122F383E3D37312C282722201D1A191817323A403E3A35302D2B262321201F1E1D333B403F3B373433302E2B2824232221383D403F3C38363433312E2B262322213B3E403F3C383532322E2D2A252322214040403F3C36302D2B2926252321201E403F3F3E3B35312D292524232221201F403E3C3B3935322D2924232221201F1E403D3A3A3835322F2B2524232221201F403B3838383532302D27262423222120403F3D3C3B3836322F2B29252322211E403F3E3D3C3A38332F2A292724232220403F3E3E3D3A38332E2928272423222040403F3F3F3B38332E2927262423222040403F3F3F3C38332E2B27262423222040404040403C38332F2C29272624232140404040403C38332F2C292726242321"
+        },
+        {
+          "name": "KFZW2",
+          "addr": "0x10d42",
+          "len": 384,
+          "patch": "0F0F0F0F0F0E0E0C09070504030202021515151515141412100E0C09080604031A1A1A1A1A1A1A1918120E0A090807051D1D1D1D1D2023221D15110E0A0907051F1F292B2C2A2826221A17130D0C0B0A2A3235353432302C261F1B171412100F2E383E3C35302C2B28211D1A17161514313A403F39332E2A2924221F1C1B1A19343C42403C37322F2D2825232221201F353D42413D39363532302D2A262524233C414443403C3A383735322F2A2726253F424443403C39363632312E2927262544444443403A34312F2D2A2927252422444343423F3935312D292827262524234442403F3D3936312D2827262524232244413E3E3C3936332F29282726252423443F3C3C3C393634312B2A2827262524444341403F3C3A36332F2D292726252244434241403E3C37332E2D2B2827262444434242413E3C37322D2C2B2827262444444343433F3C37322D2B2A282726244444434343403C37322F2B2A282726244444444444403C3733302D2B2A2827254444444444403C3733302D2B2A282725",
+          "base": "0D0D0D0D0D0C0C0A070503020100000013131313131212100E0C0A0706040201181818181818181716100C08070605031B1B1B1B1B1E21201B130F0C080705031D1D27292A282624201815110B0A09082830333332302E2A241D191512100E0D2C363C3A332E2A29261F1B18151413122F383E3D37312C282722201D1A191817323A403E3A35302D2B262321201F1E1D333B403F3B373433302E2B2824232221383D403F3C38363433312E2B262322213B3E403F3C383532322E2D2A252322214040403F3C36302D2B2926252321201E403F3F3E3B35312D292524232221201F403E3C3B3935322D2924232221201F1E403D3A3A3835322F2B2524232221201F403B3838383532302D27262423222120403F3D3C3B3836322F2B29252322211E403F3E3D3C3A38332F2A292724232220403F3E3E3D3A38332E2928272423222040403F3F3F3B38332E2927262423222040403F3F3F3C38332E2B27262423222040404040403C38332F2C29272624232140404040403C38332F2C292726242321"
+        }
+      ],
+      "promotion_ref": "PROMOTION_KFZW_REPORT.json",
+      "blocked_reason": "no_address_consumer_6901",
+      "last_attempt": "PROMOTION_KFZW2_REPORT.json"
+    }
+  ],
+  "promotion_applied_utc": "20261106T065430Z",
+  "promotion_sources": [
+    "PROMOTION_CLA_PROKON_REPORT.json",
+    "PROMOTION_MISC_REPORT.json"
+  ],
+  "status_counts": {
+    "PROVEN": 44,
+    "STRUCT": 12
+  },
+  "sequential_promotion_utc": "20261106T071905Z",
+  "sequential_passes": [
+    "PROMOTION_MSLBAS_REPORT.json",
+    "PROMOTION_EWS_REPORT.json",
+    "PROMOTION_KFZW_REPORT.json"
+  ],
+  "fr_index_promotion_utc": "20261106T073138Z",
+  "fr_index": "07_analysis/fr_full_index/",
+  "final_struct_pass": "PROMOTION_FINAL_STRUCT_RU.md"
+}

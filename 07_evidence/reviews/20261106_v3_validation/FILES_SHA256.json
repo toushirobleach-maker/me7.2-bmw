@@ -1,0 +1,37 @@
+[
+  {
+    "path": "09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z.bin",
+    "size": 524288,
+    "sha256": "PRIVATE_IMAGE_SHA256_REMOVED"
+  },
+  {
+    "path": "09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z_REPORT.json",
+    "size": 8481,
+    "sha256": "da58dbbf155c25f4376cef5eecf23ad967a85d0a881de15c7e54623fe841b98b"
+  },
+  {
+    "path": "09_patched/ME72_7532675_v3_nosap_norear_20261105T223316Z_RU.md",
+    "size": 11939,
+    "sha256": "9302e0cd3bb775461a687c4f3e0678cfc8bfcd839960bfead86e351ff3cde06f"
+  },
+  {
+    "path": "08_analysis_tools/build_me72_v3_norear_heater_classes.py",
+    "size": 6801,
+    "sha256": "0e32dcd01a98e101ef36e1f2b3c10f0c4f58fdede8e97c08a04f3b4012767ede"
+  },
+  {
+    "path": "08_analysis_tools/verify_me72_v3_norear_heater_classes.py",
+    "size": 8367,
+    "sha256": "d3c8e97d35dcdf43229621e49cb0535c5fc3b47dcf57f263c35b7bc06d0692e1"
+  },
+  {
+    "path": "10_review/20261106_v3_validation/independent_verification.json",
+    "size": 16834,
+    "sha256": "493cf545c1fd7f656e1423b90d7b1531c46545f17a9203219906a1566b6f9491"
+  },
+  {
+    "path": "10_review/20261106_v3_validation/VALIDATION_RU.md",
+    "size": 2219,
+    "sha256": "0cccb3ef26359c3913990497b8251ff1782b2e826563fb24347eb179f011fea2"
+  }
+]

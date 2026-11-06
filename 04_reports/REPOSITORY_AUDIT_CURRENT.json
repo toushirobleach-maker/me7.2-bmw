@@ -1,0 +1,1127 @@
+{
+  "catalog_symbols": 632,
+  "status_counts": {
+    "PROVEN": 155,
+    "STRUCT": 99,
+    "UNLINKED": 80,
+    "HYP": 298
+  },
+  "proven_symbols": 155,
+  "proven_csv_rows": 155,
+  "xdf": [
+    {
+      "file": "02_xdf/ME72_7532675_6901I41D_from_damos.xdf",
+      "objects": 552,
+      "status_counts": {
+        "PROVEN": 155,
+        "STRUCT": 99,
+        "HYP": 298
+      }
+    },
+    {
+      "file": "02_xdf/ME72_7532675_6901I41D_proven.xdf",
+      "objects": 56,
+      "status_counts": {
+        "PROVEN": 44,
+        "STRUCT": 12
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "bundled analysis stock",
+      "bytes": 524288,
+      "sha256": "5ec2443311b6173e4f0bb770eb1f84c0a15a270d3bd6ac52648a77d450db5dd9",
+      "checks_passed": 37,
+      "checks_total": 38,
+      "failed": [
+        {
+          "name": "ROMSYS parameter endpoints",
+          "offset": "0x18000",
+          "stored": 38685,
+          "calculated": 88665,
+          "ok": false
+        }
+      ],
+      "calibration_end_marker": "ffffffff"
+    }
+  ],
+  "evidence_reference_resolution": {
+    "PROMOTION_CLA_PROKON_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_CLA_PROKON_REPORT.json"
+    ],
+    "07_analysis/fr_full_index/FR_APPLICABILITY_6901I41D_RU.md": [
+      "10_references/fr_index/FR_APPLICABILITY_6901I41D_RU.md"
+    ],
+    "PROMOTION_MISC_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_MISC_REPORT.json"
+    ],
+    "PROMOTION_REMAINING3_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_REMAINING3_REPORT.json"
+    ],
+    "PROMOTION_KFZW_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_KFZW_REPORT.json"
+    ],
+    "KF_SHAPE_RESOLUTION.json": [
+      "07_evidence/catalog/KF_SHAPE_RESOLUTION.json"
+    ],
+    "PROMOTION_EWS_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_EWS_REPORT.json"
+    ],
+    "PROMOTION_STRUCT_CLA_CW_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_STRUCT_CLA_CW_REPORT.json"
+    ],
+    "07_analysis/damos_lite/PROMOTION_KRKTE_REPORT.json": [
+      "04_reports/PROMOTION_KRKTE_REPORT.json",
+      "07_evidence/catalog/PROMOTION_KRKTE_REPORT.json"
+    ],
+    "07_analysis/damos_lite/PROMOTION_ZOFF_EXACT_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_ZOFF_EXACT_REPORT.json"
+    ],
+    "07_analysis/damos_lite/PROMOTION_POWER_MAPS_PASS3_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_POWER_MAPS_PASS3_REPORT.json"
+    ],
+    "PROMOTION_KF_FARPTR_REPORT.json": [
+      "07_evidence/catalog/PROMOTION_KF_FARPTR_REPORT.json"
+    ]
+  },
+  "missing_referenced_basenames": {},
+  "consumer_byte_spot_checks": [
+    {
+      "symbol": "CWKONLS",
+      "declared_ea": "0x86B506",
+      "raw_hex": "D7400602F3F8EA2569813A8888364A88286C",
+      "matches": {
+        "local_input": "0x86b506"
+      }
+    },
+    {
+      "symbol": "CWKONABG",
+      "declared_ea": "0x86B570",
+      "raw_hex": "D7400602F3FAE92569A13A8888364A886067",
+      "matches": {
+        "local_input": "0x86b570"
+      }
+    },
+    {
+      "symbol": "SAP",
+      "declared_ea": "0x86B552",
+      "raw_hex": "D7400602F3F8EC2569813A8888364A88606B",
+      "matches": {
+        "local_input": "0x86b552"
+      }
+    },
+    {
+      "symbol": "CWDKAT",
+      "declared_ea": "0x86B4B6",
+      "raw_hex": "F3F8D31F69812D078A6C0570E6F4000174F44A90",
+      "matches": {
+        "local_input": "0x86b4b6"
+      }
+    },
+    {
+      "symbol": "ESKONF",
+      "declared_ea": "0x85AAA6",
+      "raw_hex": "E03CE01DF4AD2458E6F4B18C004CA964716AB964",
+      "matches": {
+        "local_input": "0x85aaa6"
+      }
+    },
+    {
+      "symbol": "ESKONF",
+      "declared_ea": "0x85AABA",
+      "raw_hex": "E05CE00DF48D2458E6F5B18C005CA9657168B965",
+      "matches": {
+        "local_input": "0x85aaba"
+      }
+    },
+    {
+      "symbol": "CLALSH",
+      "declared_ea": "0x857E02",
+      "raw_hex": "E6FC5600DA82E296",
+      "matches": {
+        "local_input": "0x857e02"
+      }
+    },
+    {
+      "symbol": "CLALSH2",
+      "declared_ea": "0x857E10",
+      "raw_hex": "E6FC5700DA82E296",
+      "matches": {
+        "local_input": "0x857e10"
+      }
+    },
+    {
+      "symbol": "CLALASH",
+      "declared_ea": "0x82C38E",
+      "raw_hex": "E6FC4B00DA82E296",
+      "matches": {
+        "local_input": "0x82c38e"
+      }
+    },
+    {
+      "symbol": "CLALASH2",
+      "declared_ea": "0x82C39C",
+      "raw_hex": "E6FC4C00DA82E296",
+      "matches": {
+        "local_input": "0x82c39c"
+      }
+    },
+    {
+      "symbol": "CLAHSH",
+      "declared_ea": "0x854D6C",
+      "raw_hex": "E6FC3A00DA82E296",
+      "matches": {
+        "local_input": "0x854d6c"
+      }
+    },
+    {
+      "symbol": "CLAHSH2",
+      "declared_ea": "0x854E46",
+      "raw_hex": "E6FC3B00DA82E296",
+      "matches": {
+        "local_input": "0x854e46"
+      }
+    },
+    {
+      "symbol": "CLASLPE",
+      "declared_ea": "0x85B592",
+      "raw_hex": "E6FC7300DA82E296",
+      "matches": {
+        "local_input": "0x85b592"
+      }
+    },
+    {
+      "symbol": "CLASLVE",
+      "declared_ea": "0x85B618",
+      "raw_hex": "E6FC7800DA82E296",
+      "matches": {
+        "local_input": "0x85b618"
+      }
+    },
+    {
+      "symbol": "DTEVE",
+      "declared_ea": "0x85B724",
+      "raw_hex": "E6FC8200DA82E296",
+      "matches": {
+        "local_input": "0x85b724"
+      }
+    },
+    {
+      "symbol": "CLAHSV",
+      "declared_ea": "0x854BB8",
+      "raw_hex": "E6FC3C00DA82E296",
+      "matches": {
+        "local_input": "0x854bb8"
+      }
+    },
+    {
+      "symbol": "CLAHSV2",
+      "declared_ea": "0x854C92",
+      "raw_hex": "E6FC3D00DA82E296",
+      "matches": {
+        "local_input": "0x854c92"
+      }
+    },
+    {
+      "symbol": "CLADMPME",
+      "declared_ea": "0x83466e",
+      "raw_hex": "e6fc1500da82e296",
+      "matches": {
+        "local_input": "0x83466e"
+      }
+    },
+    {
+      "symbol": "CLADSL",
+      "declared_ea": "0x870948",
+      "raw_hex": "e6fc1a00da82e296",
+      "matches": {
+        "local_input": "0x870948"
+      }
+    },
+    {
+      "symbol": "CLADSU",
+      "declared_ea": "0x82f5a8",
+      "raw_hex": "e6fc1c00da82e296",
+      "matches": {
+        "local_input": "0x82f5a8"
+      }
+    },
+    {
+      "symbol": "CLADSVLU",
+      "declared_ea": "0x8494f6",
+      "raw_hex": "e6fc1d00da82e296",
+      "matches": {
+        "local_input": "0x8494f6"
+      }
+    },
+    {
+      "symbol": "CLADVEE",
+      "declared_ea": "0x859a68",
+      "raw_hex": "e6fc1e00da82e296",
+      "matches": {
+        "local_input": "0x859a68"
+      }
+    },
+    {
+      "symbol": "CLADVEF",
+      "declared_ea": "0x8494da",
+      "raw_hex": "e6fc1f00da82e296",
+      "matches": {
+        "local_input": "0x8494da"
+      }
+    },
+    {
+      "symbol": "CLADVEL",
+      "declared_ea": "0x859a76",
+      "raw_hex": "e6fc2000da82e296",
+      "matches": {
+        "local_input": "0x859a76"
+      }
+    },
+    {
+      "symbol": "CLADVEN",
+      "declared_ea": "0x8494e8",
+      "raw_hex": "e6fc2100da82e296",
+      "matches": {
+        "local_input": "0x8494e8"
+      }
+    },
+    {
+      "symbol": "CLADVER",
+      "declared_ea": "0x859a92",
+      "raw_hex": "e6fc2200da82e296",
+      "matches": {
+        "local_input": "0x859a92"
+      }
+    },
+    {
+      "symbol": "CLADVEU",
+      "declared_ea": "0x8588e0",
+      "raw_hex": "e6fc2300da82e296",
+      "matches": {
+        "local_input": "0x8588e0"
+      }
+    },
+    {
+      "symbol": "CLADVEV",
+      "declared_ea": "0x873c58",
+      "raw_hex": "e6fc2400da82e296",
+      "matches": {
+        "local_input": "0x873c58"
+      }
+    },
+    {
+      "symbol": "CLAETS",
+      "declared_ea": "0x85ae8e",
+      "raw_hex": "e6fc2700da82e296",
+      "matches": {
+        "local_input": "0x85ae8e"
+      }
+    },
+    {
+      "symbol": "CLAEV1",
+      "declared_ea": "0x85aed2",
+      "raw_hex": "e6fc2800da82e296",
+      "matches": {
+        "local_input": "0x85aed2"
+      }
+    },
+    {
+      "symbol": "CLAEV2",
+      "declared_ea": "0x85af16",
+      "raw_hex": "e6fc2900da82e296",
+      "matches": {
+        "local_input": "0x85af16"
+      }
+    },
+    {
+      "symbol": "CLAEV3",
+      "declared_ea": "0x85af5c",
+      "raw_hex": "e6fc2a00da82e296",
+      "matches": {
+        "local_input": "0x85af5c"
+      }
+    },
+    {
+      "symbol": "CLAEV4",
+      "declared_ea": "0x85afa2",
+      "raw_hex": "e6fc2b00da82e296",
+      "matches": {
+        "local_input": "0x85afa2"
+      }
+    },
+    {
+      "symbol": "CLAEV5",
+      "declared_ea": "0x85afe8",
+      "raw_hex": "e6fc2c00da82e296",
+      "matches": {
+        "local_input": "0x85afe8"
+      }
+    },
+    {
+      "symbol": "CLAEV6",
+      "declared_ea": "0x85b02e",
+      "raw_hex": "e6fc2d00da82e296",
+      "matches": {
+        "local_input": "0x85b02e"
+      }
+    },
+    {
+      "symbol": "CLAEV7",
+      "declared_ea": "0x85b074",
+      "raw_hex": "e6fc2e00da82e296",
+      "matches": {
+        "local_input": "0x85b074"
+      }
+    },
+    {
+      "symbol": "CLAEV8",
+      "declared_ea": "0x849894",
+      "raw_hex": "e6fc2f00da82e296",
+      "matches": {
+        "local_input": "0x849894"
+      }
+    },
+    {
+      "symbol": "CLAKOS",
+      "declared_ea": "0x85b424",
+      "raw_hex": "e6fc4100da82e296",
+      "matches": {
+        "local_input": "0x85b424"
+      }
+    },
+    {
+      "symbol": "CLAKRNT",
+      "declared_ea": "0x8469a0",
+      "raw_hex": "e6fc4300da82e296",
+      "matches": {
+        "local_input": "0x8469a0"
+      }
+    },
+    {
+      "symbol": "CLAKROF",
+      "declared_ea": "0x846a14",
+      "raw_hex": "e6fc4400da82e296",
+      "matches": {
+        "local_input": "0x846a14"
+      }
+    },
+    {
+      "symbol": "CLAKRTP",
+      "declared_ea": "0x84686e",
+      "raw_hex": "e6fc4500da82e296",
+      "matches": {
+        "local_input": "0x84686e"
+      }
+    },
+    {
+      "symbol": "CLAKUPPL",
+      "declared_ea": "0x8583a6",
+      "raw_hex": "e6fc4a00da82e296",
+      "matches": {
+        "local_input": "0x8583a6"
+      }
+    },
+    {
+      "symbol": "CLALATP",
+      "declared_ea": "0x856f6a",
+      "raw_hex": "e6fc4d00da82e296",
+      "matches": {
+        "local_input": "0x856f6a"
+      }
+    },
+    {
+      "symbol": "CLALATP2",
+      "declared_ea": "0x857062",
+      "raw_hex": "e6fc4e00da82e296",
+      "matches": {
+        "local_input": "0x857062"
+      }
+    },
+    {
+      "symbol": "CLALATV",
+      "declared_ea": "0x857128",
+      "raw_hex": "e6fc4f00da82e296",
+      "matches": {
+        "local_input": "0x857128"
+      }
+    },
+    {
+      "symbol": "CLALATV2",
+      "declared_ea": "0x8571ee",
+      "raw_hex": "e6fc5000da82e296",
+      "matches": {
+        "local_input": "0x8571ee"
+      }
+    },
+    {
+      "symbol": "CLALDPE",
+      "declared_ea": "0x85b4a2",
+      "raw_hex": "e6fc5300da82e296",
+      "matches": {
+        "local_input": "0x85b4a2"
+      }
+    },
+    {
+      "symbol": "CLALM",
+      "declared_ea": "0x85e12e",
+      "raw_hex": "e6fc5500da82e296",
+      "matches": {
+        "local_input": "0x85e12e"
+      }
+    },
+    {
+      "symbol": "CLALSV2",
+      "declared_ea": "0x82d9c2",
+      "raw_hex": "e6fc5900da82e296",
+      "matches": {
+        "local_input": "0x82d9c2"
+      }
+    },
+    {
+      "symbol": "CLALSVV",
+      "declared_ea": "0x874c7a",
+      "raw_hex": "e6fc5a00da82e296",
+      "matches": {
+        "local_input": "0x874c7a"
+      }
+    },
+    {
+      "symbol": "CLAMILE",
+      "declared_ea": "0x859f02",
+      "raw_hex": "e6fc6700da82e296",
+      "matches": {
+        "local_input": "0x859f02"
+      }
+    },
+    {
+      "symbol": "CLAN",
+      "declared_ea": "0x8532c0",
+      "raw_hex": "e6fc6800da82e296",
+      "matches": {
+        "local_input": "0x8532c0"
+      }
+    },
+    {
+      "symbol": "CLANWSE",
+      "declared_ea": "0x85b7c6",
+      "raw_hex": "e6fc6b00da82e296",
+      "matches": {
+        "local_input": "0x85b7c6"
+      }
+    },
+    {
+      "symbol": "CLAPH",
+      "declared_ea": "0x8535da",
+      "raw_hex": "e6fc6d00da82e296",
+      "matches": {
+        "local_input": "0x8535da"
+      }
+    },
+    {
+      "symbol": "CLAPH2",
+      "declared_ea": "0x85369c",
+      "raw_hex": "e6fc6e00da82e296",
+      "matches": {
+        "local_input": "0x85369c"
+      }
+    },
+    {
+      "symbol": "CLASLS",
+      "declared_ea": "0x84be0a",
+      "raw_hex": "e6fc7400da82e296",
+      "matches": {
+        "local_input": "0x84be0a"
+      }
+    },
+    {
+      "symbol": "CLASLS2",
+      "declared_ea": "0x84be26",
+      "raw_hex": "e6fc7500da82e296",
+      "matches": {
+        "local_input": "0x84be26"
+      }
+    },
+    {
+      "symbol": "CLASLV",
+      "declared_ea": "0x84be18",
+      "raw_hex": "e6fc7600da82e296",
+      "matches": {
+        "local_input": "0x84be18"
+      }
+    },
+    {
+      "symbol": "CLASLV2",
+      "declared_ea": "0x84be34",
+      "raw_hex": "e6fc7700da82e296",
+      "matches": {
+        "local_input": "0x84be34"
+      }
+    },
+    {
+      "symbol": "CLASTA",
+      "declared_ea": "0x87023c",
+      "raw_hex": "e6fc7900da82e296",
+      "matches": {
+        "local_input": "0x87023c"
+      }
+    },
+    {
+      "symbol": "CLASTAE",
+      "declared_ea": "0x85b6aa",
+      "raw_hex": "e6fc7a00da82e296",
+      "matches": {
+        "local_input": "0x85b6aa"
+      }
+    },
+    {
+      "symbol": "CLASTS",
+      "declared_ea": "0x86ff08",
+      "raw_hex": "e6fc7b00da82e296",
+      "matches": {
+        "local_input": "0x86ff08"
+      }
+    },
+    {
+      "symbol": "CLATA",
+      "declared_ea": "0x861b66",
+      "raw_hex": "e6fc7d00da82e296",
+      "matches": {
+        "local_input": "0x861b66"
+      }
+    },
+    {
+      "symbol": "CWDDMTL",
+      "declared_ea": "0x830fc2",
+      "raw_hex": "d7400602c2f20326",
+      "matches": {
+        "local_input": "0x830fc2"
+      }
+    },
+    {
+      "symbol": "CWDDMTL2",
+      "declared_ea": "0x831aac",
+      "raw_hex": "d7400602c2f40426",
+      "matches": {
+        "local_input": "0x831aac"
+      }
+    },
+    {
+      "symbol": "CWDEGFE",
+      "declared_ea": "0x8523d6",
+      "raw_hex": "d7400602f3f8b51ce4880400d7400602f3f8b61c",
+      "matches": {
+        "local_input": "0x8523d6"
+      }
+    },
+    {
+      "symbol": "CWDSLSY",
+      "declared_ea": "0x849ddc",
+      "raw_hex": "d7400602c2f40e16",
+      "matches": {
+        "local_input": "0x849ddc"
+      }
+    },
+    {
+      "symbol": "CWFASL",
+      "declared_ea": "0x84c074",
+      "raw_hex": "d740060243f8c0168d02ff320d01fe328a3204f0f2f4228f8af42350d7400602f3f83d16",
+      "matches": {
+        "local_input": "0x84c074"
+      }
+    },
+    {
+      "symbol": "CWGGFST",
+      "declared_ea": "0x804746",
+      "raw_hex": "d7400602f3f80126",
+      "matches": {
+        "local_input": "0x804746"
+      }
+    },
+    {
+      "symbol": "CWGGLSH",
+      "declared_ea": "0x82199e",
+      "raw_hex": "d7400602f3fae913",
+      "matches": {
+        "local_input": "0x82199e"
+      }
+    },
+    {
+      "symbol": "CWKHZ",
+      "declared_ea": "0x86396e",
+      "raw_hex": "d7400602c2f5a922",
+      "matches": {
+        "local_input": "0x86396e"
+      }
+    },
+    {
+      "symbol": "CWNOCINS",
+      "declared_ea": "0x86b5fa",
+      "raw_hex": "d7400602f3faeb25",
+      "matches": {
+        "local_input": "0x86b5fa"
+      }
+    },
+    {
+      "symbol": "CWSLSOF",
+      "declared_ea": "0x84c2aa",
+      "raw_hex": "d7400602f3f83e16",
+      "matches": {
+        "local_input": "0x84c2aa"
+      }
+    },
+    {
+      "symbol": "DTVKAML2",
+      "declared_ea": "0x87665e",
+      "raw_hex": "e6fc1a28e6fd0602",
+      "matches": {
+        "local_input": "0x87665e"
+      }
+    },
+    {
+      "symbol": "DZWSPM",
+      "declared_ea": "0x849b4c",
+      "raw_hex": "e6fc0816e6fd0602",
+      "matches": {
+        "local_input": "0x849b4c"
+      }
+    },
+    {
+      "symbol": "KFABAK",
+      "declared_ea": "0x8465ea",
+      "raw_hex": "e6fccd12e6fd0602",
+      "matches": {
+        "local_input": "0x8465ea"
+      }
+    },
+    {
+      "symbol": "KFANS",
+      "declared_ea": "0x85f608",
+      "raw_hex": "e6fce71de6fd0602",
+      "matches": {
+        "local_input": "0x85f608"
+      }
+    },
+    {
+      "symbol": "KFATMLA",
+      "declared_ea": "0x853cb0",
+      "raw_hex": "e6fc3718e6fd0602",
+      "matches": {
+        "local_input": "0x853cb0"
+      }
+    },
+    {
+      "symbol": "KFATMLA2",
+      "declared_ea": "0x853a34",
+      "raw_hex": "e6fc5618e6fd0602",
+      "matches": {
+        "local_input": "0x853a34"
+      }
+    },
+    {
+      "symbol": "KFATMLAE",
+      "declared_ea": "0x853b28",
+      "raw_hex": "e6fc7a18e6fd0602",
+      "matches": {
+        "local_input": "0x853b28"
+      }
+    },
+    {
+      "symbol": "KFATMLAE2",
+      "declared_ea": "0x853df6",
+      "raw_hex": "e6fc9e18e6fd0602",
+      "matches": {
+        "local_input": "0x853df6"
+      }
+    },
+    {
+      "symbol": "KFATMZW",
+      "declared_ea": "0x85380e",
+      "raw_hex": "e6fc5219e6fd0602",
+      "matches": {
+        "local_input": "0x85380e"
+      }
+    },
+    {
+      "symbol": "KFATMZW2",
+      "declared_ea": "0x853826",
+      "raw_hex": "e6fca419e6fd0602",
+      "matches": {
+        "local_input": "0x853826"
+      }
+    },
+    {
+      "symbol": "KFATMZWE",
+      "declared_ea": "0x85401e",
+      "raw_hex": "e6fcc218e6fd0602e6feca30e6ff0602",
+      "matches": {
+        "local_input": "0x85401e"
+      }
+    },
+    {
+      "symbol": "KFAVAK",
+      "declared_ea": "0x846610",
+      "raw_hex": "e6fc0c13e6fd0602",
+      "matches": {
+        "local_input": "0x846610"
+      }
+    },
+    {
+      "symbol": "KFBAKL",
+      "declared_ea": "0x846720",
+      "raw_hex": "e6fc4b13e6fd0602",
+      "matches": {
+        "local_input": "0x846720"
+      }
+    },
+    {
+      "symbol": "KFDYES",
+      "declared_ea": "0x8447e8",
+      "raw_hex": "e6fcca28e6fd0602",
+      "matches": {
+        "local_input": "0x8447e8"
+      }
+    },
+    {
+      "symbol": "KFDYESOF",
+      "declared_ea": "0x8462a2",
+      "raw_hex": "e6fc3629e6fd0602",
+      "matches": {
+        "local_input": "0x8462a2"
+      }
+    },
+    {
+      "symbol": "KFFMSML",
+      "declared_ea": "0x84c7bc",
+      "raw_hex": "e6fc5616e6fd0602",
+      "matches": {
+        "local_input": "0x84c7bc"
+      }
+    },
+    {
+      "symbol": "KFFTEAN",
+      "declared_ea": "0x847f7c",
+      "raw_hex": "e6fcb814e6fd0602",
+      "matches": {
+        "local_input": "0x847f7c"
+      }
+    },
+    {
+      "symbol": "KFFTEAX",
+      "declared_ea": "0x848066",
+      "raw_hex": "e6fc3a15e6fd0602",
+      "matches": {
+        "local_input": "0x848066"
+      }
+    },
+    {
+      "symbol": "KFFTV",
+      "declared_ea": "0x8752f4",
+      "raw_hex": "e6fc5427e6fd0602",
+      "matches": {
+        "local_input": "0x8752f4"
+      }
+    },
+    {
+      "symbol": "KFFTV2",
+      "declared_ea": "0x87667e",
+      "raw_hex": "e6fc8627e6fd0602",
+      "matches": {
+        "local_input": "0x87667e"
+      }
+    },
+    {
+      "symbol": "KFFWL",
+      "declared_ea": "0x85f960",
+      "raw_hex": "e6fc1d1fe6fd0602",
+      "matches": {
+        "local_input": "0x85f960"
+      }
+    },
+    {
+      "symbol": "KFFWTBR",
+      "declared_ea": "0x85dc58",
+      "raw_hex": "e6fc291ce6fd0602",
+      "matches": {
+        "local_input": "0x85dc58"
+      }
+    },
+    {
+      "symbol": "KFKRMX",
+      "declared_ea": "0x846168",
+      "raw_hex": "e6fce411e6fd0602",
+      "matches": {
+        "local_input": "0x846168"
+      }
+    },
+    {
+      "symbol": "KFLAMFA",
+      "declared_ea": "0x85feec",
+      "raw_hex": "e6fc7320e6fd0602",
+      "matches": {
+        "local_input": "0x85feec"
+      }
+    },
+    {
+      "symbol": "KFLASKH",
+      "declared_ea": "0x8640fc",
+      "raw_hex": "e6fc1323e6fd0602",
+      "matches": {
+        "local_input": "0x8640fc"
+      }
+    },
+    {
+      "symbol": "KFLASWLR",
+      "declared_ea": "0x86131e",
+      "raw_hex": "e6fcd71fe6fd0602",
+      "matches": {
+        "local_input": "0x86131e"
+      }
+    },
+    {
+      "symbol": "KFLF",
+      "declared_ea": "0x85f5f2",
+      "raw_hex": "e6fc271ee6fd0602",
+      "matches": {
+        "local_input": "0x85f5f2"
+      }
+    },
+    {
+      "symbol": "KFLMSKH",
+      "declared_ea": "0x864390",
+      "raw_hex": "e6fc7723e6fd0602",
+      "matches": {
+        "local_input": "0x864390"
+      }
+    },
+    {
+      "symbol": "KFLMSKH2",
+      "declared_ea": "0x86435c",
+      "raw_hex": "e6fcc923e6fd0602",
+      "matches": {
+        "local_input": "0x86435c"
+      }
+    },
+    {
+      "symbol": "KFMDKO",
+      "declared_ea": "0x866c68",
+      "raw_hex": "e6fccc24e6fd0602",
+      "matches": {
+        "local_input": "0x866c68"
+      }
+    },
+    {
+      "symbol": "KFMDKOG",
+      "declared_ea": "0x866c52",
+      "raw_hex": "e6fcfe24e6fd0602",
+      "matches": {
+        "local_input": "0x866c52"
+      }
+    },
+    {
+      "symbol": "KFMIRED",
+      "declared_ea": "0x867e4c",
+      "raw_hex": "e6fc8c25e6fd0602",
+      "matches": {
+        "local_input": "0x867e4c"
+      }
+    },
+    {
+      "symbol": "KFMIRED1",
+      "declared_ea": "0x8378fc",
+      "raw_hex": "e6fc3c28e6fd0602",
+      "matches": {
+        "local_input": "0x8378fc"
+      }
+    },
+    {
+      "symbol": "KFMIRLR",
+      "declared_ea": "0x8682c2",
+      "raw_hex": "e6fcae25e6fd0602",
+      "matches": {
+        "local_input": "0x8682c2"
+      }
+    },
+    {
+      "symbol": "KFQTE",
+      "declared_ea": "0x847f62",
+      "raw_hex": "e6fc5915e6fd0602",
+      "matches": {
+        "local_input": "0x847f62"
+      }
+    },
+    {
+      "symbol": "KFRI",
+      "declared_ea": "0x874df2",
+      "raw_hex": "e6fc1e26e6fd0602",
+      "matches": {
+        "local_input": "0x874df2"
+      }
+    },
+    {
+      "symbol": "KFRI2",
+      "declared_ea": "0x874f96",
+      "raw_hex": "e6fc5126e6fd0602",
+      "matches": {
+        "local_input": "0x874f96"
+      }
+    },
+    {
+      "symbol": "KFRINH",
+      "declared_ea": "0x803486",
+      "raw_hex": "e6fce41ae6fd0602",
+      "matches": {
+        "local_input": "0x803486"
+      }
+    },
+    {
+      "symbol": "KFRINH2",
+      "declared_ea": "0x82ea9a",
+      "raw_hex": "e6fc161be6fd0602",
+      "matches": {
+        "local_input": "0x82ea9a"
+      }
+    },
+    {
+      "symbol": "KFRP",
+      "declared_ea": "0x874ec2",
+      "raw_hex": "e6fc7b26e6fd0602",
+      "matches": {
+        "local_input": "0x874ec2"
+      }
+    },
+    {
+      "symbol": "KFRP2",
+      "declared_ea": "0x874fbc",
+      "raw_hex": "e6fca526e6fd0602",
+      "matches": {
+        "local_input": "0x874fbc"
+      }
+    },
+    {
+      "symbol": "KFRTV",
+      "declared_ea": "0x874ee8",
+      "raw_hex": "e6fccf26e6fd0602",
+      "matches": {
+        "local_input": "0x874ee8"
+      }
+    },
+    {
+      "symbol": "KFRTV2",
+      "declared_ea": "0x874fe2",
+      "raw_hex": "e6fcf926e6fd0602",
+      "matches": {
+        "local_input": "0x874fe2"
+      }
+    },
+    {
+      "symbol": "KFTATM",
+      "declared_ea": "0x82b184",
+      "raw_hex": "e6fc061ae6fd0602",
+      "matches": {
+        "local_input": "0x82b184"
+      }
+    },
+    {
+      "symbol": "KFTATM2",
+      "declared_ea": "0x82b2b6",
+      "raw_hex": "e6fc4b1ae6fd0602",
+      "matches": {
+        "local_input": "0x82b2b6"
+      }
+    },
+    {
+      "symbol": "KFTATX",
+      "declared_ea": "0x8480aa",
+      "raw_hex": "e6fc7715e6fd0602",
+      "matches": {
+        "local_input": "0x8480aa"
+      }
+    },
+    {
+      "symbol": "KFTEKA",
+      "declared_ea": "0x847f90",
+      "raw_hex": "e6fc3c2be6fd0602",
+      "matches": {
+        "local_input": "0x847f90"
+      }
+    },
+    {
+      "symbol": "KFTEVP",
+      "declared_ea": "0x847e6c",
+      "raw_hex": "e6fc4814e6fd0602",
+      "matches": {
+        "local_input": "0x847e6c"
+      }
+    },
+    {
+      "symbol": "KFTPKOR",
+      "declared_ea": "0x82ea9a",
+      "raw_hex": "e6fc161be6fd0602",
+      "matches": {
+        "local_input": "0x82ea9a"
+      }
+    },
+    {
+      "symbol": "KFUSHK",
+      "declared_ea": "0x8760e0",
+      "raw_hex": "e6fcaa27e6fd0602",
+      "matches": {
+        "local_input": "0x8760e0"
+      }
+    },
+    {
+      "symbol": "KFUSHK2",
+      "declared_ea": "0x876562",
+      "raw_hex": "e6fcce27e6fd0602",
+      "matches": {
+        "local_input": "0x876562"
+      }
+    },
+    {
+      "symbol": "KFVAKL",
+      "declared_ea": "0x8466d6",
+      "raw_hex": "e6fc8a13e6fd0602",
+      "matches": {
+        "local_input": "0x8466d6"
+      }
+    },
+    {
+      "symbol": "KFWEE",
+      "declared_ea": "0x85f4c6",
+      "raw_hex": "e6fce81ce6fd0602",
+      "matches": {
+        "local_input": "0x85f4c6"
+      }
+    },
+    {
+      "symbol": "KFWEEK",
+      "declared_ea": "0x85f492",
+      "raw_hex": "e6fc3a1de6fd0602",
+      "matches": {
+        "local_input": "0x85f492"
+      }
+    },
+    {
+      "symbol": "KRKTE",
+      "declared_ea": "0x803738",
+      "raw_hex": "d7400602c2f4c41c5c84f6f42ea2",
+      "matches": {
+        "local_input": "0x803734"
+      }
+    }
+  ],
+  "consumer_byte_spot_checks_not_matched": [],
+  "consumer_bytes_independently_reverified": true,
+  "vehicle_images_distributed": false,
+  "known_limitations": [
+    "No vehicle BINs, calibration transfer logs or personal identifiers are distributed.",
+    "Only the stock analysis BIN is distributed; raw SP-Daten/PDF/complete FR text require local inputs.",
+    "The known analysis SP-Daten reconstruction has 37/38 checks and a missing cal end marker.",
+    "PROVEN statuses are inherited claims; consumer-byte spot checks against analysis stock do not re-establish semantics.",
+    "Legacy reports may refer to deliberately excluded private or external artifacts; see REPORT_REFERENCES.json.",
+    "The packaged writer and stock-overlay preparer have offline tests, not a new physical stock-restore qualification."
+  ],
+  "not_a_semantic_reaudit": true
+}

@@ -1,0 +1,36 @@
+{
+  "source": "07_analysis/live_lreb_bits_20261105.json",
+  "fdd8_raw": "10 26",
+  "fdd8_le": "0x2610",
+  "corrected_flags": [
+    {
+      "word": "0xFDD8",
+      "bit": 9,
+      "value": true,
+      "meaning": "OBD summary lambda-control inhibit bank1",
+      "setter": "0x87582C..0x87584C"
+    },
+    {
+      "word": "0xFDD8",
+      "bit": 10,
+      "value": true,
+      "meaning": "OBD summary lambda-control inhibit bank2",
+      "setter": "0x875946"
+    },
+    {
+      "word": "0xFDD8",
+      "bit": 13,
+      "value": true,
+      "meaning": "combined load/temperature/start warmup prerequisite",
+      "setter": "0x8753B2..0x8753C2"
+    }
+  ],
+  "obd_summary_sources": [
+    "FD8E.13",
+    "FD72.9",
+    "FD42.6",
+    "B9CC.0 (DFPM path 0x73 / SLP)",
+    "B9D6.0 (DFPM path 0x78 / SLV)"
+  ],
+  "limitation": "Source bits not synchronously captured; SAP faults fit this causal path but cannot uniquely exclude the three other inputs. Old flags_le labels use E5A0 layout and must not be trusted."
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "00_original/ME72_7532675_full_512KiB_20261105T164440Z.bin",
+    "size": 524288,
+    "sha256": "PRIVATE_IMAGE_SHA256_REMOVED"
+  },
+  {
+    "path": "09_patched/REJECTED_ME72_7532675_LR_nosap_norear_20261105T212916Z.bin",
+    "size": 524288,
+    "sha256": "ad06db2cd348bf67ef6a5043565c68c756a33c19556839900165778fa9c77d3a"
+  },
+  {
+    "path": "09_patched/ME72_7532675_v2_nosap_norear_20261105T221449Z_REPORT.json",
+    "size": 7512,
+    "sha256": "26a11d1617ecc1ba1ede1405950850dd2a585ef14a5fb07e6d245792f84d945c"
+  },
+  {
+    "path": "09_patched/ME72_7532675_v2_nosap_norear_20261105T221449Z_RU.md",
+    "size": 12502,
+    "sha256": "c4f8ba1b6424b7963a3b885b591255bf8401504fa6d3cc52a451999672a35f05"
+  },
+  {
+    "path": "09_patched/ME72_7532675_v2_nosap_norear_20261105T221449Z.bin",
+    "size": 524288,
+    "sha256": "5f7fb754d61ef929922802a54241c23c4f9e62b6bb7ef9b1d353d0b6f9edcf7a"
+  },
+  {
+    "path": "07_analysis/live_lreb_bits_20261105.json",
+    "size": 4903,
+    "sha256": "2c5fe604428b5df592bc339cf90d605a28baf7812f71572f2e254465cd38aa01"
+  },
+  {
+    "path": "07_analysis/live_dtc_A0_20261105.json",
+    "size": 5417,
+    "sha256": "fd070e2b0fdac542af75d1131400aade8cfe1f9d2d02a03504aef370397a93db"
+  },
+  {
+    "path": "01_documentation/BMW-XDFs/Me7.2/Funktionsramen_full/BMW Me7_2_English_Funktionsramen.pdf",
+    "size": 14372145,
+    "sha256": "485d0483dfc41d667711c90a526031afe798f27c29ec825b0e6df8fa56726535"
+  },
+  {
+    "path": "10_review/20261106_deep_review/tools/review_decode.py",
+    "size": 4924,
+    "sha256": "cf61bcbe69fc5f312410442fe4cd8e1ee8fc6ea049b33007f743608dae84f0e9"
+  }
+]

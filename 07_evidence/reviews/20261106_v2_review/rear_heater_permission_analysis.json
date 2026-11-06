@@ -1,0 +1,59 @@
+{
+  "formula": "(CDHSH & 1) OR NOT B_nokatfz",
+  "truth_table": [
+    {
+      "CDHSH_bit0": 0,
+      "B_nokatfz": false,
+      "permission_904A_0080": true,
+      "trace": [
+        "86B47A load CDHSH",
+        "86B47E AND #1",
+        "86B480 JMPR NZ not taken",
+        "86B482 JB not taken",
+        "86B486..86B48A SET mask0080"
+      ]
+    },
+    {
+      "CDHSH_bit0": 0,
+      "B_nokatfz": true,
+      "permission_904A_0080": false,
+      "trace": [
+        "86B47A load CDHSH",
+        "86B47E AND #1",
+        "86B480 JMPR NZ not taken",
+        "86B482 JB taken",
+        "86B490..86B494 CLEAR mask0080"
+      ]
+    },
+    {
+      "CDHSH_bit0": 1,
+      "B_nokatfz": false,
+      "permission_904A_0080": true,
+      "trace": [
+        "86B47A load CDHSH",
+        "86B47E AND #1",
+        "86B480 JMPR NZ taken",
+        "86B486..86B48A SET mask0080"
+      ]
+    },
+    {
+      "CDHSH_bit0": 1,
+      "B_nokatfz": true,
+      "permission_904A_0080": true,
+      "trace": [
+        "86B47A load CDHSH",
+        "86B47E AND #1",
+        "86B480 JMPR NZ taken",
+        "86B486..86B48A SET mask0080"
+      ]
+    }
+  ],
+  "v2_CDHSH": 0,
+  "v2_CLAHSH": 37,
+  "v2_CLAHSH2": 37,
+  "original_saved_FDD8": "0x2610",
+  "original_saved_no_cat": false,
+  "permission_for_v2_calibration_and_saved_variant": true,
+  "limitation": "Combines v2 static calibration with an original-firmware logged variant condition. No v2 vehicle runtime result is claimed.",
+  "CWKONLS_not_checked_in_cited_DHLS_permission_or_DFPM_dispatch": true
+}

@@ -1,0 +1,1871 @@
+{
+  "epk": "6901I41D",
+  "method": {
+    "STD_AXIS": "CALLS B704 + monotonic ubyte header ncols,nrows,X,Y,Z (KFETRD @0x19B80)",
+    "COM_AXIS_B524": "CALLS B524 + R12=Z only; dims A2L/blob",
+    "COM_AXIS_EXPLICIT": "CALLS BB94/BB20 + R12/R13=Z#206 + R14/R15=AXIS_PTS far (often #204)",
+    "UNRESOLVED": "B704 but ubyte-STD header fail (word axes etc.)"
+  },
+  "stats": {
+    "STD_AXIS_PROVEN": 17,
+    "COM_AXIS": 19,
+    "UNKNOWN": 5,
+    "STD_UNRESOLVED": 6,
+    "COM_AXIS_AXES_PROVEN": 5
+  },
+  "items": [
+    {
+      "name": "KFETRD",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19b80",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 6,
+        "header_off": "0x19b80",
+        "x_off": "0x19b82",
+        "y_off": "0x19b87",
+        "z_off": "0x19b8d",
+        "z_len": 30,
+        "span": 43,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85b9de",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 50
+      }
+    },
+    {
+      "name": "KFETRT",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19bb2",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 6,
+        "header_off": "0x19bb2",
+        "x_off": "0x19bb4",
+        "y_off": "0x19bb9",
+        "z_off": "0x19bbf",
+        "z_len": 30,
+        "span": 43,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85b9fe",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFABAK",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x192cd",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "header_off": null,
+        "x_off": "0x19742",
+        "y_off": null,
+        "z_off": "0x192cd",
+        "z_len": 63,
+        "axis_pts_ref": [
+          "STM09ESUB",
+          "SNM07ESUB"
+        ],
+        "axis_far": {
+          "off": "0x1742",
+          "page": "0x206",
+          "phys": "0x819742",
+          "file_off": "0x19742"
+        },
+        "axis_proven": {
+          "x_off": "0x19742",
+          "n": 8,
+          "x_hex": "070f141926324b64",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x8465ea",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "blob": 63
+      }
+    },
+    {
+      "name": "KFANS",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19de7",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 7,
+        "rows": 5,
+        "header_off": "0x19de7",
+        "x_off": "0x19de9",
+        "y_off": "0x19df0",
+        "z_off": "0x19df5",
+        "z_len": 35,
+        "span": 49,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85f608",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 6,
+        "blob": 64
+      }
+    },
+    {
+      "name": "KFATMLA",
+      "status": "PROVEN",
+      "callee": "CALLS_01_BA34",
+      "far_off": "0x19837",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "UNKNOWN_CALLEE",
+        "callee": "CALLS_01_BA34",
+        "consumer_ea": "0x853cb0",
+        "header_off": "0x19837",
+        "shape_status": "UNKNOWN"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFATMLA2",
+      "status": "PROVEN",
+      "callee": "BB94_COM_EXPLICIT",
+      "far_off": "0x19856",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x19856",
+        "z_len": 36,
+        "axis_pts_ref": [
+          "SML06TMUB",
+          "SLY06TMUW"
+        ],
+        "axis_far": {
+          "off": "0x30bc",
+          "page": "0x206",
+          "phys": "0x81b0bc",
+          "file_off": "0x1b0bc"
+        },
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB94_COM_EXPLICIT",
+        "consumer_ea": "0x853a34",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFATMLAE",
+      "status": "PROVEN",
+      "callee": "BB94_COM_EXPLICIT",
+      "far_off": "0x1987a",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x1987a",
+        "z_len": 36,
+        "axis_pts_ref": [
+          "SML06TMUB",
+          "SLX06TMUW"
+        ],
+        "axis_far": {
+          "off": "0x30ca",
+          "page": "0x206",
+          "phys": "0x81b0ca",
+          "file_off": "0x1b0ca"
+        },
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB94_COM_EXPLICIT",
+        "consumer_ea": "0x853b28",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFATMLAE2",
+      "status": "PROVEN",
+      "callee": "BB94_COM_EXPLICIT",
+      "far_off": "0x1989e",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x1989e",
+        "z_len": 36,
+        "axis_pts_ref": [
+          "SML06TMUB",
+          "SLY06TMUW"
+        ],
+        "axis_far": {
+          "off": "0x30bc",
+          "page": "0x206",
+          "phys": "0x81b0bc",
+          "file_off": "0x1b0bc"
+        },
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB94_COM_EXPLICIT",
+        "consumer_ea": "0x853df6",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFATMZW2",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x199a4",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "header_off": "0x199a4",
+        "x_off": "0x199a6",
+        "y_off": "0x199ae",
+        "z_off": "0x199b6",
+        "z_len": 64,
+        "span": 82,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x853826",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFAVAK",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1930c",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "header_off": null,
+        "x_off": "0x19742",
+        "y_off": null,
+        "z_off": "0x1930c",
+        "z_len": 63,
+        "axis_pts_ref": [
+          "STM09ESUB",
+          "SNM07ESUB"
+        ],
+        "axis_far": {
+          "off": "0x1742",
+          "page": "0x206",
+          "phys": "0x819742",
+          "file_off": "0x19742"
+        },
+        "axis_proven": {
+          "x_off": "0x19742",
+          "n": 8,
+          "x_hex": "070f141926324b64",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x846610",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "blob": 63
+      }
+    },
+    {
+      "name": "KFBAKL",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1934b",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "header_off": null,
+        "x_off": "0x19742",
+        "y_off": null,
+        "z_off": "0x1934b",
+        "z_len": 63,
+        "axis_pts_ref": [
+          "STM09ESUB",
+          "SNM07ESUB"
+        ],
+        "axis_far": {
+          "off": "0x1742",
+          "page": "0x206",
+          "phys": "0x819742",
+          "file_off": "0x19742"
+        },
+        "axis_proven": {
+          "x_off": "0x19742",
+          "n": 8,
+          "x_hex": "070f141926324b64",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x846720",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "blob": 63
+      }
+    },
+    {
+      "name": "KFDYES",
+      "status": "PROVEN",
+      "callee": "CALLS_01_B598",
+      "far_off": "0x1a8ca",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "UNKNOWN_CALLEE",
+        "callee": "CALLS_01_B598",
+        "consumer_ea": "0x8447e8",
+        "header_off": "0x1a8ca",
+        "shape_status": "UNKNOWN"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 8,
+        "rows": 6,
+        "blob": 96
+      }
+    },
+    {
+      "name": "KFDYESOF",
+      "status": "PROVEN",
+      "callee": "CALLS_01_BC08",
+      "far_off": "0x1a936",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 8,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x1b12e",
+        "y_off": null,
+        "z_off": "0x1a936",
+        "z_len": 48,
+        "axis_pts_ref": [
+          "SNM08KRUW",
+          "SWD06KRSW"
+        ],
+        "axis_far": {
+          "off": "0x312e",
+          "page": "0x206",
+          "phys": "0x81b12e",
+          "file_off": "0x1b12e"
+        },
+        "axis_proven": {
+          "x_off": "0x1b12e",
+          "n": 4,
+          "x_hex": "06000000",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match_word",
+        "callee": "CALLS_01_BC08",
+        "consumer_ea": "0x8462a2",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 8,
+        "rows": 6,
+        "blob": 96
+      }
+    },
+    {
+      "name": "KFFMSML",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19656",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 6,
+        "header_off": "0x19656",
+        "x_off": "0x19658",
+        "y_off": "0x19660",
+        "z_off": "0x19666",
+        "z_len": 48,
+        "span": 64,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x84c7bc",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFFTEAN",
+      "status": "PROVEN",
+      "callee": "B524_1IN",
+      "far_off": "0x194b8",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 10,
+        "rows": 10,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x194b8",
+        "z_len": 100,
+        "axis_pts_ref": [
+          "SNM10TEUB",
+          "SDK10TEUB"
+        ],
+        "axis_far": null,
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "B524_1IN",
+        "consumer_ea": "0x847f7c",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 10,
+        "rows": 10,
+        "blob": 100
+      }
+    },
+    {
+      "name": "KFFTEAX",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1953a",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 2,
+        "header_off": "0x1953a",
+        "x_off": "0x1953c",
+        "y_off": "0x19541",
+        "z_off": "0x19543",
+        "z_len": 10,
+        "span": 19,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x848066",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 4,
+        "blob": 31
+      }
+    },
+    {
+      "name": "KFFTV",
+      "status": "PROVEN",
+      "callee": "CALLS_01_BA34",
+      "far_off": "0x1a754",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "UNKNOWN_CALLEE",
+        "callee": "CALLS_01_BA34",
+        "consumer_ea": "0x8752f4",
+        "header_off": "0x1a754",
+        "shape_status": "UNKNOWN"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFFTV2",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a786",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a3c",
+        "y_off": null,
+        "z_off": "0x1a786",
+        "z_len": 36,
+        "axis_pts_ref": [
+          "SNM06LHUB",
+          "SRL06LHUB"
+        ],
+        "axis_far": {
+          "off": "0x1a3c",
+          "page": "0x204",
+          "phys": "0x811a3c",
+          "file_off": "0x11a3c"
+        },
+        "axis_proven": {
+          "x_off": "0x11a3c",
+          "n": 7,
+          "x_hex": "060d1b28435d78",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x87667e",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFFWL",
+      "status": "PROVEN",
+      "callee": "CALLS_01_BA34",
+      "far_off": "0x19f1d",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "UNKNOWN_CALLEE",
+        "callee": "CALLS_01_BA34",
+        "consumer_ea": "0x85f960",
+        "header_off": "0x19f1d",
+        "shape_status": "UNKNOWN"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 12,
+        "rows": 12,
+        "blob": 144
+      }
+    },
+    {
+      "name": "KFFWTBR",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19c29",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 10,
+        "rows": 8,
+        "header_off": "0x19c29",
+        "x_off": "0x19c2b",
+        "y_off": "0x19c35",
+        "z_off": "0x19c3d",
+        "z_len": 80,
+        "span": 100,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85dc58",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 10,
+        "rows": 8,
+        "blob": 100
+      }
+    },
+    {
+      "name": "KFKRMX",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x191e4",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 16,
+        "rows": 3,
+        "header_off": "0x191e4",
+        "x_off": "0x191e6",
+        "y_off": "0x191f6",
+        "z_off": "0x191f9",
+        "z_len": 48,
+        "span": 69,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x846168",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 16,
+        "rows": 3,
+        "blob": 69
+      }
+    },
+    {
+      "name": "KFLAMFA",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1a073",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 11,
+        "rows": 11,
+        "header_off": "0x1a073",
+        "x_off": "0x1a075",
+        "y_off": "0x1a080",
+        "z_off": "0x1a08b",
+        "z_len": 121,
+        "span": 145,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85feec",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 12,
+        "rows": 16,
+        "blob": 222
+      }
+    },
+    {
+      "name": "KFLASKH",
+      "status": "PROVEN",
+      "callee": "B524_1IN",
+      "far_off": "0x1a313",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x1a313",
+        "z_len": 64,
+        "axis_pts_ref": [],
+        "axis_far": null,
+        "axis_proven": null,
+        "shape_status": "HYP_dims",
+        "callee": "B524_1IN",
+        "consumer_ea": "0x8640fc",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFLASWLR",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x19fd7",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 12,
+        "rows": 12,
+        "header_off": null,
+        "x_off": "0x11a8c",
+        "y_off": null,
+        "z_off": "0x19fd7",
+        "z_len": 144,
+        "axis_pts_ref": [
+          "STM12ESUB",
+          "STS12ESUB"
+        ],
+        "axis_far": {
+          "off": "0x1a8c",
+          "page": "0x204",
+          "phys": "0x811a8c",
+          "file_off": "0x11a8c"
+        },
+        "axis_proven": {
+          "x_off": "0x11a8c",
+          "n": 13,
+          "x_hex": "0c181f252c33404d5b7590abc5",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x86131e",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 12,
+        "rows": 12,
+        "blob": 144
+      }
+    },
+    {
+      "name": "KFLF",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19e27",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 12,
+        "rows": 15,
+        "header_off": "0x19e27",
+        "x_off": "0x19e29",
+        "y_off": "0x19e35",
+        "z_off": "0x19e44",
+        "z_len": 180,
+        "span": 209,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85f5f2",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 12,
+        "rows": 16,
+        "blob": 222
+      }
+    },
+    {
+      "name": "KFLMSKH",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1a377",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 7,
+        "rows": 5,
+        "header_off": "0x1a377",
+        "x_off": "0x1a379",
+        "y_off": "0x1a380",
+        "z_off": "0x1a385",
+        "z_len": 35,
+        "span": 49,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x864390",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFLMSKH2",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1a3c9",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS_UNRESOLVED",
+        "cols": null,
+        "rows": null,
+        "header_off": "0x1a3c9",
+        "x_off": null,
+        "y_off": null,
+        "z_off": null,
+        "z_len": null,
+        "raw_head": "02021419040d8080",
+        "std_attempt": {
+          "ok": false,
+          "cols": 2,
+          "rows": 2,
+          "x_off": "0x1a3cb",
+          "y_off": "0x1a3cd",
+          "z_off": "0x1a3cf",
+          "header_off": "0x1a3c9",
+          "z_len": 4,
+          "span": 10,
+          "x_hex": "1419",
+          "y_hex": "040d"
+        },
+        "shape_status": "UNRESOLVED_dims",
+        "callee": "B704_2D",
+        "consumer_ea": "0x86435c",
+        "a2l_hint": {
+          "cols": 8,
+          "rows": 8,
+          "blob": 82,
+          "mode": "STD_AXIS"
+        },
+        "note": "B704 consumer proven; local ubyte STD header failed (word axes / other packing)"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFMDKO",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1a4cc",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 4,
+        "rows": 2,
+        "header_off": "0x1a4cc",
+        "x_off": "0x1a4ce",
+        "y_off": "0x1a4d2",
+        "z_off": "0x1a4d4",
+        "z_len": 8,
+        "span": 16,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x866c68",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 50
+      }
+    },
+    {
+      "name": "KFMDKOG",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1a4fe",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 6,
+        "header_off": "0x1a4fe",
+        "x_off": "0x1a500",
+        "y_off": "0x1a505",
+        "z_off": "0x1a50b",
+        "z_len": 30,
+        "span": 43,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x866c52",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 50
+      }
+    },
+    {
+      "name": "KFMIRED",
+      "status": "PROVEN",
+      "callee": "B524_1IN",
+      "far_off": "0x1a58c",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 4,
+        "rows": 4,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x1a58c",
+        "z_len": 16,
+        "axis_pts_ref": [
+          "SBF02MFSB",
+          "SRL03MFUW"
+        ],
+        "axis_far": null,
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "B524_1IN",
+        "consumer_ea": "0x867e4c",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 4,
+        "rows": 4,
+        "blob": 16
+      }
+    },
+    {
+      "name": "KFMIRED1",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x1a83c",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS_UNRESOLVED",
+        "cols": null,
+        "rows": null,
+        "header_off": "0x1a83c",
+        "x_off": null,
+        "y_off": null,
+        "z_off": null,
+        "z_len": null,
+        "raw_head": "02020a1414406464",
+        "std_attempt": {
+          "ok": false,
+          "cols": 2,
+          "rows": 2,
+          "x_off": "0x1a83e",
+          "y_off": "0x1a840",
+          "z_off": "0x1a842",
+          "header_off": "0x1a83c",
+          "z_len": 4,
+          "span": 10,
+          "x_hex": "0a14",
+          "y_hex": "1440"
+        },
+        "shape_status": "UNRESOLVED_dims",
+        "callee": "B704_2D",
+        "consumer_ea": "0x8378fc",
+        "a2l_hint": {
+          "cols": 4,
+          "rows": 6,
+          "blob": 40,
+          "mode": "STD_AXIS"
+        },
+        "note": "B704 consumer proven; local ubyte STD header failed (word axes / other packing)"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 4,
+        "rows": 6,
+        "blob": 40
+      }
+    },
+    {
+      "name": "KFMIRLR",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a5ae",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 4,
+        "rows": 4,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x1a5ae",
+        "z_len": 16,
+        "axis_pts_ref": [
+          "SBF02MFLRSB",
+          "SRL03MFLRUW"
+        ],
+        "axis_far": {
+          "off": "0x3bac",
+          "page": "0x206",
+          "phys": "0x81bbac",
+          "file_off": "0x1bbac"
+        },
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x8682c2",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 4,
+        "rows": 4,
+        "blob": 16
+      }
+    },
+    {
+      "name": "KFQTE",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x19559",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 5,
+        "header_off": null,
+        "x_off": "0x19710",
+        "y_off": null,
+        "z_off": "0x19559",
+        "z_len": 30,
+        "axis_pts_ref": [
+          "SML06TEUB",
+          "SFR05TEUB"
+        ],
+        "axis_far": {
+          "off": "0x1710",
+          "page": "0x206",
+          "phys": "0x819710",
+          "file_off": "0x19710"
+        },
+        "axis_proven": {
+          "x_off": "0x19710",
+          "n": 6,
+          "x_hex": "056073808da0",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x847f62",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 5,
+        "blob": 30
+      }
+    },
+    {
+      "name": "KFRI",
+      "status": "PROVEN",
+      "callee": "B524_1IN",
+      "far_off": "0x1a61e",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x1a61e",
+        "z_len": 42,
+        "axis_pts_ref": [
+          "SNM07LRUB",
+          "SRL06LRUB"
+        ],
+        "axis_far": null,
+        "axis_proven": null,
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "B524_1IN",
+        "consumer_ea": "0x874df2",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "blob": 42
+      }
+    },
+    {
+      "name": "KFRI2",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a651",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a43",
+        "y_off": "0x11a4a",
+        "z_off": "0x1a651",
+        "z_len": 42,
+        "axis_pts_ref": [
+          "SNM07LRUB",
+          "SRL06LRUB"
+        ],
+        "axis_far": {
+          "off": "0x1a43",
+          "page": "0x204",
+          "phys": "0x811a43",
+          "file_off": "0x11a43"
+        },
+        "axis_proven": {
+          "x_off": "0x11a43",
+          "y_off": "0x11a4a",
+          "cols": 7,
+          "rows": 6,
+          "x_hex": "0610141b212835",
+          "y_hex": "08141b222f3c",
+          "status": "PROVEN"
+        },
+        "shape_status": "PROVEN_axes_Z_STRUCT_or_blob",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x874f96",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "blob": 42
+      }
+    },
+    {
+      "name": "KFRINH",
+      "status": "HYP",
+      "callee": "B704_2D",
+      "far_off": "0x19ae4",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS_UNRESOLVED",
+        "cols": null,
+        "rows": null,
+        "header_off": "0x19ae4",
+        "x_off": null,
+        "y_off": null,
+        "z_off": null,
+        "z_len": null,
+        "raw_head": "02020019001e7373",
+        "std_attempt": {
+          "ok": false,
+          "cols": 2,
+          "rows": 2,
+          "x_off": "0x19ae6",
+          "y_off": "0x19ae8",
+          "z_off": "0x19aea",
+          "header_off": "0x19ae4",
+          "z_len": 4,
+          "span": 10,
+          "x_hex": "0019",
+          "y_hex": "001e"
+        },
+        "shape_status": "UNRESOLVED_dims",
+        "callee": "B704_2D",
+        "consumer_ea": "0x803486",
+        "a2l_hint": {
+          "cols": 5,
+          "rows": 3,
+          "blob": 25,
+          "mode": "STD_AXIS"
+        },
+        "note": "B704 consumer proven; local ubyte STD header failed (word axes / other packing)"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 3,
+        "blob": 25
+      }
+    },
+    {
+      "name": "KFRINH2",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19ae4",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS_UNRESOLVED",
+        "cols": null,
+        "rows": null,
+        "header_off": "0x19ae4",
+        "x_off": null,
+        "y_off": null,
+        "z_off": null,
+        "z_len": null,
+        "raw_head": "02020019001e7373",
+        "std_attempt": {
+          "ok": false,
+          "cols": 2,
+          "rows": 2,
+          "x_off": "0x19ae6",
+          "y_off": "0x19ae8",
+          "z_off": "0x19aea",
+          "header_off": "0x19ae4",
+          "z_len": 4,
+          "span": 10,
+          "x_hex": "0019",
+          "y_hex": "001e"
+        },
+        "shape_status": "UNRESOLVED_dims",
+        "callee": "B704_2D",
+        "consumer_ea": "0x803486",
+        "a2l_hint": {
+          "cols": 5,
+          "rows": 3,
+          "blob": 25,
+          "mode": "STD_AXIS"
+        },
+        "note": "B704 consumer proven; local ubyte STD header failed (word axes / other packing)"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 3,
+        "blob": 25
+      }
+    },
+    {
+      "name": "KFRP",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a67b",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a43",
+        "y_off": "0x11a4a",
+        "z_off": "0x1a67b",
+        "z_len": 42,
+        "axis_pts_ref": [
+          "SNM07LRUB",
+          "SRL06LRUB"
+        ],
+        "axis_far": {
+          "off": "0x1a43",
+          "page": "0x204",
+          "phys": "0x811a43",
+          "file_off": "0x11a43"
+        },
+        "axis_proven": {
+          "x_off": "0x11a43",
+          "y_off": "0x11a4a",
+          "cols": 7,
+          "rows": 6,
+          "x_hex": "0610141b212835",
+          "y_hex": "08141b222f3c",
+          "status": "PROVEN"
+        },
+        "shape_status": "PROVEN_axes_Z_STRUCT_or_blob",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x874ec2",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "blob": 42
+      }
+    },
+    {
+      "name": "KFRP2",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a6a5",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a43",
+        "y_off": "0x11a4a",
+        "z_off": "0x1a6a5",
+        "z_len": 42,
+        "axis_pts_ref": [
+          "SNM07LRUB",
+          "SRL06LRUB"
+        ],
+        "axis_far": {
+          "off": "0x1a43",
+          "page": "0x204",
+          "phys": "0x811a43",
+          "file_off": "0x11a43"
+        },
+        "axis_proven": {
+          "x_off": "0x11a43",
+          "y_off": "0x11a4a",
+          "cols": 7,
+          "rows": 6,
+          "x_hex": "0610141b212835",
+          "y_hex": "08141b222f3c",
+          "status": "PROVEN"
+        },
+        "shape_status": "PROVEN_axes_Z_STRUCT_or_blob",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x874fbc",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "blob": 42
+      }
+    },
+    {
+      "name": "KFRTV",
+      "status": "PROVEN",
+      "callee": "BB94_COM_EXPLICIT",
+      "far_off": "0x1a6cf",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a43",
+        "y_off": "0x11a4a",
+        "z_off": "0x1a6cf",
+        "z_len": 42,
+        "axis_pts_ref": [
+          "SNM07LRUB",
+          "SRL06LRUB"
+        ],
+        "axis_far": {
+          "off": "0x1a43",
+          "page": "0x204",
+          "phys": "0x811a43",
+          "file_off": "0x11a43"
+        },
+        "axis_proven": {
+          "x_off": "0x11a43",
+          "y_off": "0x11a4a",
+          "cols": 7,
+          "rows": 6,
+          "x_hex": "0610141b212835",
+          "y_hex": "08141b222f3c",
+          "status": "PROVEN"
+        },
+        "shape_status": "PROVEN_axes_Z_STRUCT_or_blob",
+        "callee": "BB94_COM_EXPLICIT",
+        "consumer_ea": "0x874ee8",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "blob": 42
+      }
+    },
+    {
+      "name": "KFRTV2",
+      "status": "PROVEN",
+      "callee": "BB94_COM_EXPLICIT",
+      "far_off": "0x1a6f9",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a43",
+        "y_off": "0x11a4a",
+        "z_off": "0x1a6f9",
+        "z_len": 42,
+        "axis_pts_ref": [
+          "SNM07LRUB",
+          "SRL06LRUB"
+        ],
+        "axis_far": {
+          "off": "0x1a43",
+          "page": "0x204",
+          "phys": "0x811a43",
+          "file_off": "0x11a43"
+        },
+        "axis_proven": {
+          "x_off": "0x11a43",
+          "y_off": "0x11a4a",
+          "cols": 7,
+          "rows": 6,
+          "x_hex": "0610141b212835",
+          "y_hex": "08141b222f3c",
+          "status": "PROVEN"
+        },
+        "shape_status": "PROVEN_axes_Z_STRUCT_or_blob",
+        "callee": "BB94_COM_EXPLICIT",
+        "consumer_ea": "0x874fe2",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 7,
+        "rows": 6,
+        "blob": 42
+      }
+    },
+    {
+      "name": "KFTATM",
+      "status": "PROVEN",
+      "callee": "B524_1IN",
+      "far_off": "0x19a06",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "header_off": null,
+        "x_off": null,
+        "y_off": null,
+        "z_off": "0x19a06",
+        "z_len": 64,
+        "axis_pts_ref": [],
+        "axis_far": null,
+        "axis_proven": null,
+        "shape_status": "HYP_dims",
+        "callee": "B524_1IN",
+        "consumer_ea": "0x82b184",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFTATM2",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19a4b",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 3,
+        "header_off": "0x19a4b",
+        "x_off": "0x19a4d",
+        "y_off": "0x19a52",
+        "z_off": "0x19a55",
+        "z_len": 15,
+        "span": 25,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x82b2b6",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFTATX",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19577",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS_UNRESOLVED",
+        "cols": null,
+        "rows": null,
+        "header_off": "0x19577",
+        "x_off": null,
+        "y_off": null,
+        "z_off": null,
+        "z_len": null,
+        "raw_head": "02020f165a73ffff",
+        "std_attempt": {
+          "ok": false,
+          "cols": 2,
+          "rows": 2,
+          "x_off": "0x19579",
+          "y_off": "0x1957b",
+          "z_off": "0x1957d",
+          "header_off": "0x19577",
+          "z_len": 4,
+          "span": 10,
+          "x_hex": "0f16",
+          "y_hex": "5a73"
+        },
+        "shape_status": "UNRESOLVED_dims",
+        "callee": "B704_2D",
+        "consumer_ea": "0x8480aa",
+        "a2l_hint": {
+          "cols": 10,
+          "rows": 6,
+          "blob": 78,
+          "mode": "STD_AXIS"
+        },
+        "note": "B704 consumer proven; local ubyte STD header failed (word axes / other packing)"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 10,
+        "rows": 6,
+        "blob": 78
+      }
+    },
+    {
+      "name": "KFTEKA",
+      "status": "PROVEN",
+      "callee": "CALLS_01_B612",
+      "far_off": "0x1ab3c",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "UNKNOWN_CALLEE",
+        "callee": "CALLS_01_B612",
+        "consumer_ea": "0x847f90",
+        "header_off": "0x1ab3c",
+        "shape_status": "UNKNOWN"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 5,
+        "blob": 37
+      }
+    },
+    {
+      "name": "KFTEVP",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19448",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 9,
+        "header_off": "0x19448",
+        "x_off": "0x1944a",
+        "y_off": "0x1944f",
+        "z_off": "0x19458",
+        "z_len": 45,
+        "span": 61,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x847e6c",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 5,
+        "rows": 9,
+        "blob": 61
+      }
+    },
+    {
+      "name": "KFTPKOR",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19b16",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS_UNRESOLVED",
+        "cols": null,
+        "rows": null,
+        "header_off": "0x19b16",
+        "x_off": null,
+        "y_off": null,
+        "z_off": null,
+        "z_len": null,
+        "raw_head": "02020019001e7373",
+        "std_attempt": {
+          "ok": false,
+          "cols": 2,
+          "rows": 2,
+          "x_off": "0x19b18",
+          "y_off": "0x19b1a",
+          "z_off": "0x19b1c",
+          "header_off": "0x19b16",
+          "z_len": 4,
+          "span": 10,
+          "x_hex": "0019",
+          "y_hex": "001e"
+        },
+        "shape_status": "UNRESOLVED_dims",
+        "callee": "B704_2D",
+        "consumer_ea": "0x82ea9a",
+        "a2l_hint": {
+          "cols": 8,
+          "rows": 7,
+          "blob": 73,
+          "mode": "STD_AXIS"
+        },
+        "note": "B704 consumer proven; local ubyte STD header failed (word axes / other packing)"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 7,
+        "blob": 73
+      }
+    },
+    {
+      "name": "KFUSHK",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a7aa",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a3c",
+        "y_off": null,
+        "z_off": "0x1a7aa",
+        "z_len": 36,
+        "axis_pts_ref": [
+          "SNM06LHUB",
+          "SRL06LHUB"
+        ],
+        "axis_far": {
+          "off": "0x1a3c",
+          "page": "0x204",
+          "phys": "0x811a3c",
+          "file_off": "0x11a3c"
+        },
+        "axis_proven": {
+          "x_off": "0x11a3c",
+          "n": 7,
+          "x_hex": "060d1b28435d78",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x8760e0",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFUSHK2",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1a7ce",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "header_off": null,
+        "x_off": "0x11a3c",
+        "y_off": null,
+        "z_off": "0x1a7ce",
+        "z_len": 36,
+        "axis_pts_ref": [
+          "SNM06LHUB",
+          "SRL06LHUB"
+        ],
+        "axis_far": {
+          "off": "0x1a3c",
+          "page": "0x204",
+          "phys": "0x811a3c",
+          "file_off": "0x11a3c"
+        },
+        "axis_proven": {
+          "x_off": "0x11a3c",
+          "n": 7,
+          "x_hex": "060d1b28435d78",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x876562",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 6,
+        "rows": 6,
+        "blob": 36
+      }
+    },
+    {
+      "name": "KFVAKL",
+      "status": "PROVEN",
+      "callee": "BB20_COM_EXPLICIT",
+      "far_off": "0x1938a",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "header_off": null,
+        "x_off": "0x19742",
+        "y_off": null,
+        "z_off": "0x1938a",
+        "z_len": 63,
+        "axis_pts_ref": [
+          "STM09ESUB",
+          "SNM07ESUB"
+        ],
+        "axis_far": {
+          "off": "0x1742",
+          "page": "0x206",
+          "phys": "0x819742",
+          "file_off": "0x19742"
+        },
+        "axis_proven": {
+          "x_off": "0x19742",
+          "n": 8,
+          "x_hex": "070f141926324b64",
+          "status": "PROVEN_one_axis"
+        },
+        "shape_status": "STRUCT_dims_blob_match",
+        "callee": "BB20_COM_EXPLICIT",
+        "consumer_ea": "0x8466d6",
+        "a2l_note": "Z via far-ptr; dims from AXIS_PTS on 6901 if proven else E5A0 transfer",
+        "falsifier": "STD ncols/nrows at Z rejected; COM path uses separate AXIS_PTS"
+      },
+      "a2l": {
+        "mode": "COM_AXIS",
+        "cols": 9,
+        "rows": 7,
+        "blob": 63
+      }
+    },
+    {
+      "name": "KFWEE",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19ce8",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "header_off": "0x19ce8",
+        "x_off": "0x19cea",
+        "y_off": "0x19cf2",
+        "z_off": "0x19cfa",
+        "z_len": 64,
+        "span": 82,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85f4c6",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    },
+    {
+      "name": "KFWEEK",
+      "status": "PROVEN",
+      "callee": "B704_2D",
+      "far_off": "0x19d3a",
+      "match_dist": 0,
+      "shape": {
+        "axis_mode": "STD_AXIS",
+        "cols": 4,
+        "rows": 5,
+        "header_off": "0x19d3a",
+        "x_off": "0x19d3c",
+        "y_off": "0x19d40",
+        "z_off": "0x19d45",
+        "z_len": 20,
+        "span": 31,
+        "shape_status": "PROVEN",
+        "callee": "B704_2D",
+        "consumer_ea": "0x85f492",
+        "falsifier": "monotonic X/Y + diversity + zlen>=6; matches KFETRD layout"
+      },
+      "a2l": {
+        "mode": "STD_AXIS",
+        "cols": 8,
+        "rows": 8,
+        "blob": 82
+      }
+    }
+  ]
+}
